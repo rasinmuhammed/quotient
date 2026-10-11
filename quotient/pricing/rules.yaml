@@ -1,0 +1,99 @@
+# Pricing rules. Every priced line lists the ids of the rules it used, and every breakdown step names one.
+# A change to a rule's behaviour gets a new id (v2); old quotes keep citing the version they were priced under.
+ruleset: quotient-pricing
+version: "2026.10.1"
+effective_from: "2026-10-01"
+
+rules:
+  UNIT-CONV-v1:
+    title: Unit conversion
+    text: >-
+      Quantities are converted to the SKU's unit of measure (kg or L). 1 MT = 1000 kg, 1 lb = 0.45359237 kg,
+      1 US gal = 3.785411784 L. kg and L convert through the product's density at 20 C. A pack count converts
+      through the pack's nominal size. Solids have no density, so a volume for a solid cannot be converted.
+
+  PACK-DEFAULT-v1:
+    title: Default pack
+    text: >-
+      When the RFQ names no pack, use the largest offered pack for which rounding up to whole packs adds at most
+      max_overshoot_pct to the quantity; when no pack is that close, the pack that adds the least.
+    params: {max_overshoot_pct: "5"}
+
+  PACK-OFFERED-v1:
+    title: Pack must be offered
+    text: >-
+      A pack the SKU is not offered in is not substituted silently: the line is priced in the default pack
+      and flagged so a human confirms the change with the customer.
+
+  PACK-ROUNDUP-v1:
+    title: Whole packs
+    text: >-
+      Goods ship in whole packs. The quantity is rounded up to a whole number of packs, and that quantity is
+      what is priced and quoted. A drum's or IBC's content in kg is its nominal volume times density.
+
+  PRICE-TIER-v1:
+    title: Volume tier
+    text: >-
+      The list price is the price-list row for the SKU and pack whose band (min inclusive, max exclusive)
+      contains the quoted quantity.
+
+  PRICE-VALIDITY-v1:
+    title: Price validity
+    text: >-
+      A price row is valid from valid_from to valid_to inclusive. Outside that window the row is still shown
+      as the last known price, but the line is blocked until a human confirms or reprices it.
+
+  MOQ-v1:
+    title: Minimum order quantity
+    text: >-
+      A quoted quantity below the SKU's MOQ is priced as asked at the tier it falls in and flagged. The
+      quantity is never raised to the MOQ without a human.
+
+  DISC-TIER-v1:
+    title: Customer discount
+    text: Customers get a fixed discount off list by their discount tier. Unknown senders get list price.
+    params: {A: "6.0", B: "4.0", C: "2.0", D: "0.0"}
+
+  MARGIN-FLOOR-v1:
+    title: Margin floor
+    text: >-
+      The net price may not give less than the floor margin over standard cost: (net - cost) / net >= floor.
+      Below it, the net price is raised to cost / (1 - floor), rounded up, and the line is flagged.
+    params: {min_margin_pct: "12.0"}
+
+  FREIGHT-v1:
+    title: Freight by incoterm
+    text: >-
+      EXW carries no freight. FOB adds origin handling at the SKU's origin port. CFR and CIF add ocean freight
+      to the destination country's main port; DAP adds delivery to the buyer. Rates are per kg; a per-litre
+      SKU pays rate x density. Other incoterms (FCA, CPT, CIP, DDP) are not modelled and are flagged.
+    params: {supported: [EXW, FOB, CFR, CIF, DAP]}
+
+  DG-SURCHARGE-v1:
+    title: Dangerous goods surcharge
+    text: Goods with a UN number pay a surcharge per kg on main carriage (CFR, CIF, DAP).
+    params: {usd_per_kg: "0.035"}
+
+  CIF-INSURANCE-v1:
+    title: CIF insurance
+    text: Under CIF the seller insures 110% of the CFR value (net + freight + surcharge) at the cargo rate.
+    params: {cover_pct: "110", rate_pct: "0.15"}
+
+  FX-v1:
+    title: Currency conversion
+    text: USD amounts convert to the quote currency at the dated FX snapshot. The snapshot date is on the quote.
+
+  ROUND-v1:
+    title: Rounding
+    text: >-
+      Breakdown components are rounded half-up to 4 decimals in USD, so they add up exactly. The unit price is
+      rounded once, after conversion, to 3 decimals (JPY: 1). The line total is unit price x quoted quantity,
+      rounded to 2 decimals (JPY: 0). The quote total is the sum of line totals.
+    params:
+      component_decimals: 4
+      unit_decimals: {default: 3, JPY: 1}
+      total_decimals: {default: 2, JPY: 0}
+
+  HAZMAT-DOCS-v1:
+    title: Hazmat documentation
+    text: Goods with a UN number need an SDS and a dangerous goods declaration; the line is flagged for the shipping team.

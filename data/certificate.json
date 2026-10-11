@@ -5,7 +5,7 @@
     "found": 0,
     "score": 100.0
   },
-  "blueprint_hash": "c8a25d5f42f094ff8a097720798440d1f0b8b742929b71429e22f522347a1dcd",
+  "blueprint_hash": "e05fcf4737a8795d2e9eafb3732d06171339a73a1ccaf895d3972d7140ce6118",
   "claims": [],
   "content": {},
   "degraded": false,
@@ -18,7 +18,7 @@
   },
   "invariants": {
     "checks": 14,
-    "clean_tables": 0.9,
+    "clean_tables": 0.909,
     "findings": [
       {
         "bar": "a name, code or label distinct across its rows",
@@ -48,7 +48,7 @@
     "held": 0,
     "unmeasured": []
   },
-  "run_id": "34cbc5472b19",
+  "run_id": "76e08d9b70ef",
   "scenario": {
     "future": true,
     "note": "The window ends in the future: this is a simulated scenario built from structural assumptions and the events you described, not a forecast.",
@@ -81,7 +81,7 @@
       "rows": 30
     },
     "freight_rates": {
-      "digest": "fbe33d5172a0c3a9",
+      "digest": "30387fdf75cdff38",
       "rows": 72
     },
     "fx_rates": {
@@ -93,8 +93,12 @@
       "rows": 4
     },
     "lanes": {
-      "digest": "36d5549cd7aeb88f",
+      "digest": "f13330e68d6befbd",
       "rows": 18
+    },
+    "origin_ports": {
+      "digest": "9ab7fb4370271fd7",
+      "rows": 3
     },
     "packs": {
       "digest": "ca65b7cd56750ba5",

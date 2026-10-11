@@ -1,5 +1,5 @@
 {
-  "blueprint_hash": "c8a25d5f42f094ff8a097720798440d1f0b8b742929b71429e22f522347a1dcd",
+  "blueprint_hash": "e05fcf4737a8795d2e9eafb3732d06171339a73a1ccaf895d3972d7140ce6118",
   "engine_passed": true,
   "files": {
     "customers.csv": {
@@ -8,7 +8,7 @@
     },
     "freight_rates.csv": {
       "rows": 72,
-      "sha256": "0694839e01b1e7f54fc428c92336c0bb491825917d446d43cfc5877048fa504e"
+      "sha256": "6f530150fc0930d167bab9b0295758dde6a4ef72ac9b3c97c54ab3ec8c041305"
     },
     "fx_rates.csv": {
       "rows": 6,
@@ -38,6 +38,7 @@
     "density exactly for liquids",
     "lapsed price rows exist",
     "freight FOB < CFR = CIF < DAP on every lane",
+    "FOB handling one rate per origin port",
     "customers in every destination",
     "unique customers and emails"
   ],

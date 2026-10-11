@@ -401,6 +401,18 @@ def build_blueprint(chems: list[dict]) -> Blueprint:
         ],
     )
 
+    # origin handling (FOB) depends on the port the goods leave from, not on where they go
+    origin_ports = Entity(
+        name="origin_ports",
+        rows=[{"port_code": code, "port_name": name} for code, name in ORIGIN_PORTS.items()],
+        attributes=[
+            _a("origin_port_id", Role.PRIMARY_KEY),
+            _a("port_code", Role.CODE),
+            _a("port_name", Role.SHORT_LABEL),
+            _f("origin_charge", "round(uniform(0.018, 0.030), 4)", decimals=4),
+        ],
+    )
+
     lanes = Entity(
         name="lanes",
         rows=lane_rows,
@@ -415,7 +427,7 @@ def build_blueprint(chems: list[dict]) -> Blueprint:
             _a("inland_anchor", Role.QUANTITY, decimals=4),
             _f("ocean_rate", "round(lognormal(ocean_anchor, 0.06), 4)", decimals=4),
             _f("inland_rate", "round(lognormal(inland_anchor, 0.10), 4)", decimals=4),
-            _f("origin_charge", "round(uniform(0.018, 0.030), 4)", decimals=4),
+            _f("origin_charge", "lookup('origin_ports', 'port_code', 'origin_charge', origin_port)", decimals=4),
             _f("transit_days", "transit_anchor + int_uniform(-1, 2)"),
         ],
     )
@@ -557,7 +569,7 @@ def build_blueprint(chems: list[dict]) -> Blueprint:
         seed=SEED,
         window_start="2026-01-01",
         window_end="2026-12-31",
-        entities=[chemicals, grades, packs, skus, sku_packs, price_tiers, lanes, freight, customers, fx],
+        entities=[chemicals, grades, packs, skus, sku_packs, price_tiers, origin_ports, lanes, freight, customers, fx],
     )
 
 
@@ -701,6 +713,8 @@ def check(out: dict[str, pd.DataFrame]) -> list[str]:
         "some price rows have lapsed (an RFQ needs one)"
     )
     order = {"FOB": 0, "CFR": 1, "CIF": 1, "DAP": 2}
+    fob = fr[fr["incoterm"] == "FOB"].groupby("origin_port")["rate_usd_per_kg"].nunique()
+    assert (fob == 1).all(), "FOB handling depends on the origin port only"
     for _, g in fr.groupby(["origin_port", "destination_country"]):
         r = g.set_index("incoterm")["rate_usd_per_kg"]
         assert r["FOB"] < r["CFR"] == r["CIF"] < r["DAP"], "freight grows with the seller's obligations"
@@ -716,6 +730,7 @@ def check(out: dict[str, pd.DataFrame]) -> list[str]:
         "density exactly for liquids",
         "lapsed price rows exist",
         "freight FOB < CFR = CIF < DAP on every lane",
+        "FOB handling one rate per origin port",
         "customers in every destination",
         "unique customers and emails",
     ]
