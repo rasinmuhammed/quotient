@@ -150,6 +150,7 @@ class FreightRate(Model):
     destination_country: str
     destination_country_code: str
     destination_port: str
+    destination_port_name: str
     incoterm: str
     rate_usd_per_kg: Decimal
     transit_days: int

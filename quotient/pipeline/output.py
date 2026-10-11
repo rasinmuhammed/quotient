@@ -78,7 +78,7 @@ def _place(draft: QuoteDraft, catalog: Catalog) -> str | None:
     for ln in draft.lines:
         if ln.priced and ln.priced.freight_row_id:
             f = next(f for f in catalog.freight.values() if f.freight_row_id == ln.priced.freight_row_id)
-            return f.origin_port_name if h.incoterm == "FOB" else f.destination_port
+            return f.origin_port_name if h.incoterm == "FOB" else f.destination_port_name
     return None
 
 

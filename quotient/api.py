@@ -9,6 +9,7 @@ re-priced on the server, so a price shown or exported always comes from the engi
 from __future__ import annotations
 
 import json
+import re
 import threading
 import time
 from collections import defaultdict, deque
@@ -147,6 +148,15 @@ def rules() -> dict[str, Any]:
             "rules": {k: {"title": v.title, "text": v.text, "params": v.params} for k, v in r.rules.items()}}
 
 
+_GREETING = re.compile(r"^(hi|hello|dear|good (morning|afternoon)|hallo|guten tag|to whom)\b|^(from|to|date|sent):", re.I)
+
+
+def _title(text: str) -> str:
+    """The first line of a document that says something (not a greeting or a mail header)."""
+    lines = [ln.strip(" ,:") for ln in text.splitlines() if ln.strip()]
+    return next((ln for ln in lines if not _GREETING.match(ln) and len(ln) > 12), lines[0] if lines else "")[:90]
+
+
 @lru_cache
 def _sample_index() -> tuple[dict[str, Any], ...]:
     holdout = set(_split()["holdout"])
@@ -155,7 +165,7 @@ def _sample_index() -> tuple[dict[str, Any], ...]:
         g = json.loads(path.read_text())
         doc = ingest((EVALS / "rfqs" / g["file"]).read_bytes(), g["file"])
         out.append({"id": g["id"], "file": g["file"], "format": g["format"], "split": "holdout" if g["id"] in holdout else "dev",
-                    "title": doc.subject or doc.text.splitlines()[0][:90], "lines": len(g["lines"]),
+                    "title": doc.subject or _title(doc.text), "lines": len(g["lines"]),
                     "sender": doc.sender_email, "received": g["received"]})
     return tuple(out)
 

@@ -677,6 +677,7 @@ def shape(t: dict[str, pd.DataFrame]) -> dict[str, pd.DataFrame]:
             "destination_country": fr["dest_country"],
             "destination_country_code": fr["country_code"],
             "destination_port": fr["dest_port"],
+            "destination_port_name": fr["dest_country"].map(lambda n: COUNTRIES[n][2]),
             "incoterm": fr["incoterm"],
             "rate_usd_per_kg": fr["rate_usd_per_kg"],
             "transit_days": fr["transit_days"].astype(int),

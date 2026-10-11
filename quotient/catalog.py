@@ -85,6 +85,7 @@ SCHEMAS: dict[str, dict[str, str]] = {
         "destination_country": "VARCHAR",
         "destination_country_code": "VARCHAR",
         "destination_port": "VARCHAR",
+        "destination_port_name": "VARCHAR",
         "incoterm": "VARCHAR",
         "rate_usd_per_kg": "DECIMAL(10,4)",
         "transit_days": "INTEGER",

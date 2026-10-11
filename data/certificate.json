@@ -48,7 +48,7 @@
     "held": 0,
     "unmeasured": []
   },
-  "run_id": "6bb5e22d939c",
+  "run_id": "f37cdb67577a",
   "scenario": {
     "future": true,
     "note": "The window ends in the future: this is a simulated scenario built from structural assumptions and the events you described, not a forecast.",
