@@ -4,11 +4,13 @@ from __future__ import annotations
 
 import json
 from datetime import date
+from decimal import Decimal
 from pathlib import Path
 
 from evals.oracle import oracle_llm
 from evals.run import score_rfq, summarise
 from quotient.llm import ScriptedLLM
+from quotient.pipeline.extract import numbers_in
 from quotient.pipeline.ingest import ingest
 from quotient.pipeline.run import Pipeline
 
@@ -61,3 +63,13 @@ def test_a_failed_rfq_scores_as_all_wrong(catalog):
     s = summarise([rec])
     assert s["failed"] == 1 and s["match"]["overall"]["correct"] == 0
     assert s["routing"]["silent_errors"] == len(g["lines"]) and s["flags"]["recall"] == 0
+
+
+def test_every_gold_quantity_is_written_in_its_document():
+    """The reader must copy numbers, so the gold may not hold one it would have to compute ("20 x 25L" is 20)."""
+    for path in sorted((EVALS / "gold").glob("rfq-*.json")):
+        g = json.loads(path.read_text())
+        doc = ingest((EVALS / "rfqs" / g["file"]).read_bytes(), g["file"])
+        written = numbers_in(doc.text)
+        for ln in g["lines"]:
+            assert ln["quantity"] is None or Decimal(ln["quantity"]) in written, f"{path.stem} line {ln['line_no']}"
