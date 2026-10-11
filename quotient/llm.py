@@ -13,6 +13,7 @@ from dataclasses import dataclass
 from decimal import Decimal
 from typing import Any, Protocol
 
+from quotient import tracing
 from quotient.config import settings
 
 # USD per million tokens: input, cached input, output. Groq console model pages, checked 2026-10-11.
@@ -85,6 +86,20 @@ class GroqLLM:
             return min(2.0 ** attempt, 30.0)
 
     def json(self, *, name: str, schema: dict[str, Any], system: str, user: str) -> tuple[dict[str, Any], LLMCall]:
+        with tracing.generation(name, self.model, input=[{"role": "system", "content": system},
+                                                         {"role": "user", "content": user}],
+                                model_parameters={"reasoning_effort": self.reasoning_effort, "temperature": 0}) as gen:
+            data, call = self._json(name=name, schema=schema, system=system, user=user)
+            if gen is not None:
+                gen.update(output=data, usage_details={"input": call.prompt_tokens - call.cached_tokens,
+                                                       "input_cached": call.cached_tokens,
+                                                       "output": call.completion_tokens,
+                                                       "output_reasoning": call.reasoning_tokens},
+                           cost_details={"total": float(call.cost_usd)},
+                           metadata={"waited_seconds": call.waited_seconds, "request_id": call.request_id})
+        return data, call
+
+    def _json(self, *, name: str, schema: dict[str, Any], system: str, user: str) -> tuple[dict[str, Any], LLMCall]:
         import groq
 
         kwargs: dict[str, Any] = {}

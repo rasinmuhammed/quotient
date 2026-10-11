@@ -29,6 +29,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from evals.oracle import oracle_llm  # noqa: E402
+from quotient import tracing  # noqa: E402
 from quotient.catalog import Catalog, default_catalog  # noqa: E402
 from quotient.config import settings  # noqa: E402
 from quotient.domain import SEVERITY, FlagCode, Severity  # noqa: E402
@@ -253,20 +254,20 @@ def summarise(records: list[dict]) -> dict:
 # ------------------------------------------------------------------------------------------------ running
 
 
-def run_one(gold: dict, pipeline_for, catalog: Catalog, reply: bool) -> dict:
+def run_one(gold: dict, pipeline_for, catalog: Catalog, reply: bool) -> tuple[dict, QuoteDraft | None]:
     data = (EVALS / "rfqs" / gold["file"]).read_bytes()
     started = time.perf_counter()
     try:
         doc = ingest(data, gold["file"])
         draft = pipeline_for(gold).run(doc, date.fromisoformat(gold["received"]), reply=reply)
     except Exception as exc:  # a failed RFQ is scored as all wrong, never skipped
-        return score_rfq(gold, None, catalog, error=f"{type(exc).__name__}: {exc}")
+        return score_rfq(gold, None, catalog, error=f"{type(exc).__name__}: {exc}"), None
     wall = time.perf_counter() - started
     rec = score_rfq(gold, draft, catalog)
     rec["timing"] = {"wall_s": round(wall, 3), "active_s": round(wall - draft.llm.waited_seconds, 3),
                      "waited_s": draft.llm.waited_seconds, "stages": {t.stage: t.seconds for t in draft.timings}}
     rec["llm"] = json.loads(draft.llm.model_dump_json())
-    return rec
+    return rec, draft
 
 
 def _git() -> str:
@@ -347,8 +348,12 @@ def main() -> None:
     print(f"running {len(golds)} RFQs with {model}" + (f" (reasoning {effort})" if effort else ""), file=sys.stderr)
     started = time.perf_counter()
 
+    drafts: dict[str, QuoteDraft] = {}
+
     def one(g):
-        rec = run_one(g, pipeline_for, catalog, reply=not args.no_reply and not args.oracle)
+        rec, draft = run_one(g, pipeline_for, catalog, reply=not args.no_reply and not args.oracle)
+        if draft is not None:
+            drafts[g["id"]] = draft
         status = rec["error"] or f"{sum(ln['sku']['ok'] for ln in rec['lines'])}/{len(rec['lines'])} SKUs, " \
                                  f"{sum(1 for ln in rec['lines'] if ln['price']['exact'])} exact prices"
         print(f"  {g['id']}: {status}" + (f" [{rec['timing']['wall_s']:.1f}s]" if rec["timing"] else ""), file=sys.stderr)
@@ -356,6 +361,7 @@ def main() -> None:
 
     with ThreadPoolExecutor(max_workers=max(1, args.workers)) as pool:
         records = list(pool.map(one, golds))
+    tracing.flush()
 
     holdout = set(split["holdout"])
     splits = {"dev": summarise([r for r in records if r["id"] not in holdout]),
@@ -378,6 +384,12 @@ def main() -> None:
         out = RESULTS / f"{datetime.now(UTC):%Y%m%d-%H%M%S}-{slug}.json"
         out.write_text(json.dumps(result, indent=1, default=str) + "\n")
         print(f"\nsaved {out.relative_to(ROOT)}", file=sys.stderr)
+        if not args.oracle:  # the latest live drafts per model: the demo replays these instead of spending a call
+            ddir = RESULTS / "drafts" / slug
+            ddir.mkdir(parents=True, exist_ok=True)
+            for rid, d in drafts.items():
+                (ddir / f"{rid}.json").write_text(json.dumps({"run": out.name, "model": model, "effort": effort,
+                                                              "draft": d.model_dump(mode="json")}, indent=1) + "\n")
 
 
 if __name__ == "__main__":

@@ -17,6 +17,7 @@ from dataclasses import dataclass, field
 from datetime import date
 from decimal import Decimal
 
+from quotient import tracing
 from quotient.catalog import Catalog, default_catalog
 from quotient.domain import Flag, FlagCode, PricingRequest
 from quotient.llm import LLM, LLMCall
@@ -126,6 +127,15 @@ class Pipeline:
     # ------------------------------------------------------------------------------------------- one RFQ
 
     def run(self, doc: RFQDocument, quote_date: date | None = None, *, reply: bool = True) -> QuoteDraft:
+        with tracing.span("rfq", input={"source": doc.source_name, "format": doc.format},
+                          metadata={"rules": self.rules.version, "data": self.catalog.version}) as obs:
+            draft = self._run(doc, quote_date, reply=reply)
+            if obs is not None:
+                obs.update(output={"id": draft.id, "lines": len(draft.lines), "needs_human": draft.needs_human,
+                                   "total": str(draft.total), "currency": draft.currency})
+        return draft
+
+    def _run(self, doc: RFQDocument, quote_date: date | None, *, reply: bool) -> QuoteDraft:
         if self.llm is None:
             raise ValueError("reading an RFQ needs a model; set GROQ_API_KEY")
         quote_date = quote_date or doc.received or date.today()
