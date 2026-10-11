@@ -269,3 +269,12 @@ def test_the_engine_refuses_a_rule_set_missing_a_rule_it_uses(catalog, rules):
 def test_rules_file_documents_every_rule_the_engine_cites(rules: RuleSet):
     rules.require(*RULES_USED, "UNIT-CONV-v1")
     assert all(r.title and r.text for r in rules.rules.values())
+
+
+def test_the_default_pack_avoids_a_lapsed_price_when_a_valid_one_exists(engine, catalog):
+    # USP sodium bicarbonate: the fibre-drum price lapsed, the bag price is current; both packs hold 25 kg
+    assert catalog.price_rows[("QX-NAHCO3-USP", "FDRUM25")][0].valid_to < TODAY
+    line = engine.price(req("QX-NAHCO3-USP", "2000"))
+    assert line.pack_code == "BAG25" and FlagCode.PRICE_EXPIRED not in codes(line)
+    asked = engine.price(req("QX-NAHCO3-USP", "2000", pack_code="FDRUM25"))  # asked for explicitly: priced, flagged
+    assert asked.pack_code == "FDRUM25" and FlagCode.PRICE_EXPIRED in codes(asked)

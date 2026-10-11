@@ -15,7 +15,8 @@ rules:
   PACK-DEFAULT-v1:
     title: Default pack
     text: >-
-      When the RFQ names no pack, use the largest offered pack for which rounding up to whole packs adds at most
+      When the RFQ names no pack, choose among the offered packs with a price valid on the quote date (all
+      offered packs when none is valid): the largest for which rounding up to whole packs adds at most
       max_overshoot_pct to the quantity; when no pack is that close, the pack that adds the least.
     params: {max_overshoot_pct: "5"}
 

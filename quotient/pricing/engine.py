@@ -105,6 +105,10 @@ class PricingEngine:
     def _c(self, value: Decimal) -> Decimal:
         return _q(value, self.cdp)
 
+    def _valid_on(self, sku: str, pack_code: str, day) -> bool:
+        rows = self.catalog.price_rows.get((sku, pack_code), ())
+        return bool(rows) and all(r.valid_from <= day <= r.valid_to for r in rows)
+
     def _choose_pack(self, p: Product, req: PricingRequest, t: _Trace) -> Pack:
         packs = self.catalog.packs
         if req.pack_code and req.pack_code in p.pack_codes:
@@ -112,8 +116,9 @@ class PricingEngine:
             t.step(PACK_OFFERED, f"{pack.description}, as requested", source=pack.pack_code)
             return pack
         tolerance = self.rules.decimal(PACK_DEFAULT, "max_overshoot_pct") / HUNDRED
+        valid = [c for c in p.pack_codes if self._valid_on(p.sku, c, req.quote_date)]
         options = []  # (overshoot, -size, pack): whole packs needed minus what was asked, as a share of what was asked
-        for code in p.pack_codes:
+        for code in valid or p.pack_codes:
             size = pack_size_in_uom(p, packs[code])
             needed = (req.quantity / size).to_integral_value(rounding=ROUND_CEILING) * size
             options.append(((needed - req.quantity) / req.quantity, -size, packs[code]))
