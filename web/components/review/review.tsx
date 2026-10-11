@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { api, ApiError } from "@/lib/api";
-import { date, seconds, usd } from "@/lib/format";
+import { date, modelLabel, seconds, usd } from "@/lib/format";
 import { loadDraft, saveDraft } from "@/lib/store";
 import { CATALOG, RULES, SAMPLES, savedDraft } from "@/lib/demo";
 import type { Edits, QuoteDraft } from "@/lib/types";
@@ -119,9 +119,16 @@ function ReviewLoader({ id, sample, wantLive }: { id: string | null; sample: str
       <div className="mx-auto mt-24 max-w-[460px] px-5 text-center">
         <TriangleAlert className="mx-auto size-6 text-attn" />
         <p className="mt-4 text-[15px] font-medium">{load.kind === "error" ? load.message : "Something went wrong."}</p>
-        <Link href="/" className="mt-6 inline-flex items-center gap-1.5 text-[13px] font-medium text-accent">
-          <ArrowLeft className="size-4" /> Start a new quote
-        </Link>
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[13px] font-medium text-accent">
+          {wantLive && sample && SAMPLES.find((s) => s.id === sample)?.replay && (
+            <Link href={`/review?sample=${encodeURIComponent(sample)}`} className="inline-flex items-center gap-1.5">
+              <Play className="size-4" /> Open the saved run instead
+            </Link>
+          )}
+          <Link href="/" className="inline-flex items-center gap-1.5">
+            <ArrowLeft className="size-4" /> Start a new quote
+          </Link>
+        </div>
       </div>
     );
 
@@ -139,7 +146,7 @@ function ReviewLoader({ id, sample, wantLive }: { id: string | null; sample: str
               className="rounded-full border border-border bg-surface px-2 py-0.5 text-[11.5px] text-muted"
               title={`What ${draft.model} produced for this RFQ in eval run ${replay}. Run live to read it again now.`}
             >
-              Saved run · {draft.model.replace(/^openai\//, "")} · {date(`${replay.slice(0, 4)}-${replay.slice(4, 6)}-${replay.slice(6, 8)}`, { day: "numeric", month: "short" })}
+              Saved run · {modelLabel(draft.model)} · {date(`${replay.slice(0, 4)}-${replay.slice(4, 6)}-${replay.slice(6, 8)}`, { day: "numeric", month: "short" })}
             </span>
           )}
           <div className="ml-auto flex items-center gap-2">

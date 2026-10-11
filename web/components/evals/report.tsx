@@ -58,7 +58,7 @@ function SplitHead({ s }: { s: Partial<Record<string, SplitSummary>> }) {
   );
 }
 
-function Headline({ label, values, hint }: { label: string; values: [ReactNode, ReactNode]; hint?: string }) {
+function Headline({ label, values, counts, hint }: { label: string; values: [ReactNode, ReactNode]; counts?: [string, string]; hint?: string }) {
   return (
     <div className="bg-surface p-4">
       <div className="text-[12px] text-muted">{label}</div>
@@ -66,7 +66,10 @@ function Headline({ label, values, hint }: { label: string; values: [ReactNode, 
         {values.map((v, i) => (
           <div key={i}>
             <div className="num text-[20px] font-semibold tracking-[-0.02em]">{v}</div>
-            <div className="text-[11px] text-faint">{i ? "holdout" : "dev"}</div>
+            <div className="num text-[11px] text-faint">
+              {i ? "holdout" : "dev"}
+              {counts?.[i] && ` · ${counts[i]}`}
+            </div>
           </div>
         ))}
       </div>
@@ -80,6 +83,9 @@ export function EvalReport({ run }: { run: EvalRun }) {
   const dev = s.dev;
   const hold = s.holdout;
   const both = (f: (x: SplitSummary) => ReactNode): [ReactNode, ReactNode] => [dev ? f(dev) : "–", hold ? f(hold) : "–"];
+  // small samples: show the counts behind every rate
+  const n = (f: (x: SplitSummary) => string): [string, string] => [dev ? f(dev) : "", hold ? f(hold) : ""];
+  const of = (a: Acc) => `${a.correct}/${a.total}`;
   const methods = Array.from(new Set(SPLITS.flatMap((k) => Object.keys(s[k]?.match.by_method ?? {}))));
   const codes = Object.keys(s.all?.flags.by_code ?? {}).sort();
 
@@ -113,15 +119,15 @@ export function EvalReport({ run }: { run: EvalRun }) {
 
       {run.run.oracle && (
         <div className="mt-4 rounded-xl border border-border bg-surface-2 px-4 py-3 text-[13px] text-muted">
-          This run replaces the model with a scripted reader that returns the gold reading. It measures the deterministic
-          stages alone (matching rules, grades, units, pricing, flags): anything below 100% here is a logic bug, not a
-          reading error. Live model runs are measured against this ceiling.
+          Pipeline test, not a model result: a scripted reader returns the gold reading, so this measures the
+          deterministic stages alone (matching rules, grades, units, pricing, flags). It shows the rules and pricing
+          are correct given correct readings; anything below 100% here would be a logic bug.
         </div>
       )}
 
       <div className="mt-6 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
-        <Headline label="Right product (SKU)" values={both((x) => pct(x.match.overall.accuracy))} hint="of all gold lines, including lines with no match" />
-        <Headline label="Exact price" values={both((x) => pct(x.price.lines.accuracy))} hint="unit price and line total equal to the gold, to the cent" />
+        <Headline label="Right product (SKU)" values={both((x) => pct(x.match.overall.accuracy))} counts={n((x) => of(x.match.overall))} hint="of all gold lines, including lines with no match" />
+        <Headline label="Exact price" values={both((x) => pct(x.price.lines.accuracy))} counts={n((x) => of(x.price.lines))} hint="unit price and line total equal to the gold, to the cent" />
         <Headline
           label="Flags: recall / precision"
           values={both((x) => (
@@ -131,6 +137,7 @@ export function EvalReport({ run }: { run: EvalRun }) {
               {pct(x.flags.precision, 0)}
             </span>
           ))}
+          counts={n((x) => `${x.flags.tp}/${x.flags.tp + x.flags.fn} · ${x.flags.tp}/${x.flags.tp + x.flags.fp}`)}
           hint="every flag on every line and quote, by code"
         />
         <Headline
@@ -138,10 +145,15 @@ export function EvalReport({ run }: { run: EvalRun }) {
           values={both((x) => (
             <span className={x.routing.silent_errors ? "text-bad" : "text-accent"}>{x.routing.silent_errors}</span>
           ))}
+          counts={n((x) => `of ${x.lines} lines`)}
           hint="lines wrong but not sent to a person: the number that matters most"
         />
-        <Headline label="Lines needing a person, caught" values={both((x) => pct(x.routing.lines_needing_a_person.recall))} />
-        <Headline label="Auto-quoted lines correct" values={both((x) => pct(x.routing.auto_quoted_lines.accuracy))} hint="lines the system would send without asking" />
+        <Headline
+          label="Lines needing a person, caught"
+          values={both((x) => pct(x.routing.lines_needing_a_person.recall))}
+          counts={n(({ routing: { lines_needing_a_person: r } }) => `${r.tp}/${r.tp + r.fn}`)}
+        />
+        <Headline label="Auto-quoted lines correct" values={both((x) => pct(x.routing.auto_quoted_lines.accuracy))} counts={n((x) => of(x.routing.auto_quoted_lines))} hint="lines the system would send without asking" />
         <Headline
           label="Time per RFQ, median / p90"
           values={both((x) => (

@@ -1,4 +1,5 @@
 import data from "@/data/evals.json";
+import { modelLabel } from "./format";
 
 // Shapes written by evals/run.py.
 
@@ -79,11 +80,10 @@ export interface EvalRun {
 export const RUNS = (data as unknown as { runs: EvalRun[] }).runs;
 
 export function runLabel(r: EvalRun): string {
-  if (r.run.oracle) return "Scripted reader (ceiling)";
-  return `${r.run.model.replace(/^openai\//, "")}${r.run.reasoning_effort ? ` · ${r.run.reasoning_effort}` : ""}`;
+  return r.run.oracle ? "Pipeline test (scripted reader)" : modelLabel(r.run.model, r.run.reasoning_effort);
 }
 
-/** The run the Evals page opens on: the newest live run, else the scripted ceiling. */
+/** The run the Evals page opens on: the newest live run, else the pipeline test. */
 export function defaultRun(): EvalRun | undefined {
   return RUNS.find((r) => !r.run.oracle) ?? RUNS[0];
 }

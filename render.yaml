@@ -20,9 +20,9 @@ services:
       - key: GROQ_API_KEY
         sync: false
       - key: QUOTIENT_MODEL
-        value: openai/gpt-oss-120b
+        value: qwen/qwen3.8-27b  # the model with a full eval run; ~5K tokens per RFQ fits the free tier
       - key: QUOTIENT_REASONING_EFFORT
-        value: medium
+        value: none  # qwen instruct mode; for gpt-oss use low, medium or high
       - key: QUOTIENT_CORS_ORIGINS
         sync: false  # the Vercel URL, e.g. https://quotient-web.vercel.app
       - key: LANGFUSE_PUBLIC_KEY

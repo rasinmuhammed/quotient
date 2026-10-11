@@ -14,8 +14,8 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=ROOT / ".env", env_prefix="", extra="ignore")
 
     groq_api_key: str = ""
-    quotient_model: str = "openai/gpt-oss-120b"
-    quotient_reasoning_effort: str = "medium"
+    quotient_model: str = "qwen/qwen3.8-27b"
+    quotient_reasoning_effort: str = "none"
     quotient_data_dir: Path = ROOT / "data"
     quotient_rules_file: Path = ROOT / "quotient" / "pricing" / "rules.yaml"
     quotient_cors_origins: str = "http://localhost:3000"

@@ -2,8 +2,9 @@
 
     uv run python evals/readme.py [--models qwen/qwen3.8-27b openai/gpt-oss-20b]
 
-Uses each model's latest complete (30-RFQ) live run, by default every model that has one, and the latest
-scripted-reader run, and replaces the text between <!-- evals:start --> and <!-- evals:end -->.
+Uses each model's latest complete (30-RFQ) live run, or failing that its latest dev-only run, shown with the
+holdout "not run"; by default every model that has either. Adds the latest scripted-reader run and replaces the
+text between <!-- evals:start --> and <!-- evals:end -->.
 """
 
 from __future__ import annotations
@@ -30,15 +31,27 @@ FIELDS = {"line_found": "Line found", "quantity_written": "Quantity as written",
           "requested_date": "Requested date"}
 METHODS = {"cas": "CAS number", "sku": "SKU code", "synonym": "Synonym table", "translation": "Reader's English name",
            "fuzzy": "Spelling match", "llm": "Model's pick among 5", "none": "No match (right when the gold has none)",
-           "missed": "Line not found"}
+           "missed": "Line not found, or the RFQ failed"}
+
+
+DEV = set(json.loads((ROOT / "evals" / "split.json").read_text())["dev"])
 
 
 def latest(model: str | None, oracle: bool = False) -> dict | None:
-    for path in sorted(RESULTS.glob("*.json"), reverse=True):
-        r = json.loads(path.read_text())
-        if r["run"]["oracle"] == oracle and (oracle or r["run"]["model"] == model) and r["run"]["rfqs"] == 30:
-            return {**rescore(r), "file": path.name}
+    """The latest complete run; for a live model without one, its latest run of the whole dev split."""
+    runs = [(p, json.loads(p.read_text())) for p in sorted(RESULTS.glob("*.json"), reverse=True)]
+    runs = [(p, r) for p, r in runs if r["run"]["oracle"] == oracle and (oracle or r["run"]["model"] == model)]
+    for p, r in runs:
+        if r["run"]["rfqs"] == 30:
+            return {**rescore(r), "file": p.name, "partial": False}
+    for p, r in runs:
+        if not oracle and {x["id"] for x in r["rfqs"]} == DEV:
+            return {**rescore(r), "file": p.name, "partial": True}
     return None
+
+
+def cell(r: dict, split: str, f) -> str:
+    return f(r["splits"][split]) if split in r["splits"] else "not run"
 
 
 def frac(c: int, t: int) -> str:
@@ -82,7 +95,7 @@ ROWS = [
     ("Time per RFQ, median / p90, excl. rate-limit waits", lambda x: f"{secs(x['time']['median_active_s'])} / {secs(x['time']['p90_active_s'])}"),
     ("Time per RFQ, median / p90, incl. waits (free tier)", lambda x: f"{secs(x['time']['median_s'])} / {secs(x['time']['p90_s'])}"),
     ("Model cost per RFQ, mean", lambda x: f"${float(x['cost']['mean_usd']):.4f}" if x["cost"]["mean_usd"] else "–"),
-    ("Model calls per RFQ, mean", lambda x: f"{x['cost']['calls_per_rfq']}"),
+    ("Model calls per RFQ, mean", lambda x: f"{x['cost']['calls_per_rfq']:.1f}"),
     ("RFQs that failed", lambda x: f"{x['failed']} of {x['rfqs']}"),
 ]
 
@@ -100,19 +113,20 @@ def cached(r: dict) -> str:
 def origin(r: dict) -> str:
     parts = r["run"].get("combined_from")
     where = f"runs `{'` + `'.join(parts)}` (dev and holdout on different days, same prompts `{r['run']['prompts']}`)" \
-        if parts else f"run `{r['file']}`"
+        if parts else f"run `{r['file']}`" + (", dev RFQs only" if r["partial"] else "")
     return f"`{short(r['run']['model'])}` {setting(r)}, {where}, code `{r['run']['code']}`"
 
 
 def live_table(runs: list[dict]) -> list[str]:
-    head = ["|"]
+    head = ["| |"]
     for r in runs:
-        s = r["splits"]
-        head += [f" {short(r['run']['model'])}, dev ({s['dev']['rfqs']} RFQs, {s['dev']['lines']} lines) |",
-                 f" {short(r['run']['model'])}, holdout ({s['holdout']['rfqs']} RFQs, {s['holdout']['lines']} lines) |"]
+        s, m = r["splits"], short(r["run"]["model"])
+        head += [f" {m}, dev ({s['dev']['rfqs']} RFQs, {s['dev']['lines']} lines) |",
+                 f" {m}, holdout ({s['holdout']['rfqs']} RFQs, {s['holdout']['lines']} lines) |" if "holdout" in s
+                 else f" {m}, holdout |"]
     out = ["".join(head), "|---|" + "---:|" * (2 * len(runs))]
     for label, f in ROWS:
-        out.append(f"| {label} | " + " | ".join(f(r["splits"][k]) for r in runs for k in ("dev", "holdout")) + " |")
+        out.append(f"| {label} | " + " | ".join(cell(r, k, f) for r in runs for k in ("dev", "holdout")) + " |")
     return out
 
 
@@ -120,13 +134,14 @@ def detail(r: dict) -> list[str]:
     s = r["splits"]
     out = [f"<details><summary>{short(r['run']['model'])}: reading accuracy per field, matching by method, flags "
            f"by code</summary>", "", "| Field | Dev | Holdout |", "|---|---:|---:|"]
-    out += [f"| {lab} | {acc(s['dev']['extraction'].get(k))} | {acc(s['holdout']['extraction'].get(k))} |"
-            for k, lab in FIELDS.items()]
-    keys = [k for k in METHODS if k in s["dev"]["match"]["by_method"] or k in s["holdout"]["match"]["by_method"]]
+    out += [f"| {lab} | {cell(r, 'dev', lambda x, k=k: acc(x['extraction'].get(k)))} | "
+            f"{cell(r, 'holdout', lambda x, k=k: acc(x['extraction'].get(k)))} |" for k, lab in FIELDS.items()]
+    keys = [k for k in METHODS if any(k in x["match"]["by_method"] for x in s.values())]
     out += ["", "| Matched by | Dev | Holdout |", "|---|---:|---:|"]
-    out += [f"| {METHODS[k]} | {acc(s['dev']['match']['by_method'].get(k))} | {acc(s['holdout']['match']['by_method'].get(k))} |"
-            for k in keys]
-    out += ["", "| Flag (all 30 RFQs) | In gold | Caught | Missed | Extra |", "|---|---:|---:|---:|---:|"]
+    out += [f"| {METHODS[k]} | {cell(r, 'dev', lambda x, k=k: acc(x['match']['by_method'].get(k)))} | "
+            f"{cell(r, 'holdout', lambda x, k=k: acc(x['match']['by_method'].get(k)))} |" for k in keys]
+    rfqs = "all 30 RFQs" if "holdout" in s else "dev RFQs"
+    out += ["", f"| Flag ({rfqs}) | In gold | Caught | Missed | Extra |", "|---|---:|---:|---:|---:|"]
     out += [f"| `{c}` | {v['tp'] + v['fn']} | {v['tp']} | {v['fn']} | {v['fp']} |"
             for c, v in sorted(s["all"]["flags"]["by_code"].items())]
     silent = s["all"]["routing"]["silent_error_lines"]
@@ -143,8 +158,8 @@ def pipeline_test(r: dict) -> list[str]:
         f"{acc(c['match']['overall'])}, exact price {acc(c['price']['lines'])}, flag recall "
         f"{frac(c['flags']['tp'], c['flags']['tp'] + c['flags']['fn'])}, flag precision "
         f"{frac(c['flags']['tp'], c['flags']['tp'] + c['flags']['fp'])}, {c['routing']['silent_errors']} silent errors "
-        f"(run `{r['file']}`). This is not a model result; it shows that every miss in the live tables above comes from "
-        "reading or matching.",
+        f"(run `{r['file']}`). This is not a model result; it shows that every miss in the live tables above starts "
+        "with the model's reading or with matching what it read.",
     ]
 
 
@@ -154,13 +169,13 @@ def main() -> None:
     args = ap.parse_args()
     models = args.models or list(dict.fromkeys(
         r["run"]["model"] for p in sorted(RESULTS.glob("*.json"), reverse=True)
-        if not (r := json.loads(p.read_text()))["run"]["oracle"] and r["run"]["rfqs"] == 30))
-    runs = [r for m in models if (r := latest(m))]
+        if not (r := json.loads(p.read_text()))["run"]["oracle"]))
+    runs = sorted((r for m in models if (r := latest(m))), key=lambda r: r["partial"])  # complete runs first
     if not runs:
-        sys.exit("no complete live run in evals/results; run evals/run.py first")
+        sys.exit("no live run in evals/results; run evals/run.py first")
     ceiling = latest(None, oracle=True)
     prices = sorted({r["run"].get("prices_checked") for r in runs} - {None})
-    lines = [START, "", "Live models, one run each on all 30 RFQs after the prompts were frozen:", "", *live_table(runs), ""]
+    lines = [START, "", "Live models, one run each after the prompts were frozen:", "", *live_table(runs), ""]
     lines += ["; ".join(origin(r) for r in runs) + "."]
     lines += [f"Cost uses Groq's list prices per million tokens, checked on {', '.join(prices) or 'the run date'}: "
               + "; ".join(price(r["run"]["model"]) for r in runs) + ". " + "; ".join(cached(r) for r in runs) + ".", ""]

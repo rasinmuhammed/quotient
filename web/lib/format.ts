@@ -104,3 +104,9 @@ export const SOURCE_LABEL: Record<string, string> = {
 };
 
 export const FORMAT_LABEL: Record<string, string> = { eml: "Email", txt: "Text", text: "Text", pdf: "PDF", xlsx: "Excel" };
+
+/** "qwen3.8-27b · no reasoning", "gpt-oss-120b · medium reasoning". */
+export function modelLabel(model: string, effort?: string | null): string {
+  const name = model.split("/").pop() ?? model;
+  return effort ? `${name} · ${effort === "none" ? "no reasoning" : `${effort} reasoning`}` : name;
+}
