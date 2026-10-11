@@ -37,9 +37,10 @@ class LLMCall:
     cached_tokens: int
     completion_tokens: int
     reasoning_tokens: int
-    seconds: float
+    seconds: float  # working time, rate-limit waits excluded
     cost_usd: Decimal
     request_id: str | None = None
+    waited_seconds: float = 0.0  # time spent waiting out rate limits and retrying transient errors
 
 
 def cost_of(model: str, prompt: int, cached: int, completion: int) -> Decimal:
@@ -57,39 +58,58 @@ class GroqLLM:
     """Groq chat completions with strict JSON-schema output (constrained decoding on gpt-oss models).
 
     Prompt caching on Groq is automatic exact-prefix matching, so callers keep the static part of the prompt
-    (instructions and catalog glossary) first and byte-identical across calls.
+    (instructions and catalog glossary) first and byte-identical across calls. Retries are done here rather than
+    in the SDK so the time spent waiting on rate limits is measured apart from the time the model works.
     """
 
+    RETRYABLE = ("RateLimitError", "APIConnectionError", "APITimeoutError", "InternalServerError")
+
     def __init__(self, api_key: str, model: str, reasoning_effort: str = "medium", timeout: float = 90.0,
-                 max_retries: int = 6) -> None:
+                 max_retries: int = 8) -> None:
         from groq import Groq
 
         if not api_key:
             raise LLMError("GROQ_API_KEY is not set; copy .env.example to .env and add a key")
-        self.client = Groq(api_key=api_key, timeout=timeout, max_retries=max_retries)
+        self.client = Groq(api_key=api_key, timeout=timeout, max_retries=0)
         self.model = model
         self.reasoning_effort = reasoning_effort
+        self.max_retries = max_retries
         self.strict = model.startswith("openai/gpt-oss")
+
+    @staticmethod
+    def _retry_after(exc: Exception, attempt: int) -> float:
+        headers = getattr(getattr(exc, "response", None), "headers", None) or {}
+        try:
+            return min(max(float(headers.get("retry-after", "")), 0.5), 60.0)
+        except ValueError:
+            return min(2.0 ** attempt, 30.0)
 
     def json(self, *, name: str, schema: dict[str, Any], system: str, user: str) -> tuple[dict[str, Any], LLMCall]:
         import groq
 
-        started = time.perf_counter()
         kwargs: dict[str, Any] = {}
         if self.model.startswith("openai/gpt-oss"):
             kwargs.update(reasoning_effort=self.reasoning_effort, include_reasoning=False)
-        try:
-            r = self.client.chat.completions.create(
-                model=self.model,
-                messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
-                response_format={"type": "json_schema", "json_schema": {"name": name, "strict": self.strict, "schema": schema}},
-                temperature=0,
-                seed=7,
-                **kwargs,
-            )
-        except groq.APIError as exc:
-            raise LLMError(f"{name}: {type(exc).__name__}: {exc}") from exc
-        seconds = time.perf_counter() - started
+        started, waited = time.perf_counter(), 0.0
+        for attempt in range(self.max_retries + 1):
+            try:
+                r = self.client.chat.completions.create(
+                    model=self.model,
+                    messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
+                    response_format={"type": "json_schema",
+                                     "json_schema": {"name": name, "strict": self.strict, "schema": schema}},
+                    temperature=0,
+                    seed=7,
+                    **kwargs,
+                )
+                break
+            except groq.APIError as exc:
+                if type(exc).__name__ not in self.RETRYABLE or attempt == self.max_retries:
+                    raise LLMError(f"{name}: {type(exc).__name__}: {exc}") from exc
+                pause = self._retry_after(exc, attempt)
+                time.sleep(pause)
+                waited += pause
+        seconds = time.perf_counter() - started - waited
         choice = r.choices[0]
         if choice.finish_reason == "length":
             raise LLMError(f"{name}: output hit the token limit")
@@ -98,12 +118,14 @@ class GroqLLM:
         except json.JSONDecodeError as exc:
             raise LLMError(f"{name}: model returned invalid JSON: {exc}") from exc
         u = r.usage
-        cached = u.prompt_tokens_details.cached_tokens if u and u.prompt_tokens_details else 0
-        reasoning = u.completion_tokens_details.reasoning_tokens if u and u.completion_tokens_details else 0
-        call = LLMCall(name=name, model=self.model, prompt_tokens=u.prompt_tokens if u else 0, cached_tokens=cached,
-                       completion_tokens=u.completion_tokens if u else 0, reasoning_tokens=reasoning, seconds=seconds,
-                       cost_usd=cost_of(self.model, u.prompt_tokens if u else 0, cached, u.completion_tokens if u else 0),
-                       request_id=r.x_groq.id if getattr(r, "x_groq", None) else None)
+        prompt = u.prompt_tokens if u else 0
+        completion = u.completion_tokens if u else 0
+        cached = (u.prompt_tokens_details.cached_tokens or 0) if u and u.prompt_tokens_details else 0
+        reasoning = (u.completion_tokens_details.reasoning_tokens or 0) if u and u.completion_tokens_details else 0
+        call = LLMCall(name=name, model=self.model, prompt_tokens=prompt, cached_tokens=cached,
+                       completion_tokens=completion, reasoning_tokens=reasoning, seconds=round(seconds, 3),
+                       cost_usd=cost_of(self.model, prompt, cached, completion),
+                       request_id=r.x_groq.id if getattr(r, "x_groq", None) else None, waited_seconds=round(waited, 3))
         return data, call
 
 

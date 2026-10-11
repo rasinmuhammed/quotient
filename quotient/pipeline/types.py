@@ -162,6 +162,7 @@ class LLMUsage(Model):
     reasoning_tokens: int = 0
     cost_usd: Decimal = Decimal(0)
     seconds: float = 0.0
+    waited_seconds: float = 0.0  # rate-limit waits, kept out of `seconds`
     models: tuple[str, ...] = ()
 
 

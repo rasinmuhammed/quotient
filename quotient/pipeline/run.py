@@ -91,6 +91,7 @@ def usage(calls: list[LLMCall]) -> LLMUsage:
                     completion_tokens=sum(c.completion_tokens for c in calls),
                     reasoning_tokens=sum(c.reasoning_tokens for c in calls),
                     cost_usd=sum((c.cost_usd for c in calls), Decimal(0)), seconds=round(sum(c.seconds for c in calls), 3),
+                    waited_seconds=round(sum(c.waited_seconds for c in calls), 3),
                     models=tuple(dict.fromkeys(c.model for c in calls)))
 
 
