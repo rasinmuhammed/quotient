@@ -12,11 +12,14 @@ them so a data change cannot silently remove a trap.
 
 from __future__ import annotations
 
+import io
 import json
-from datetime import date, datetime, time
+import re
+import zipfile
+from datetime import date, datetime, time, timedelta, timezone
 from decimal import Decimal
 from email.message import EmailMessage
-from email.utils import format_datetime, make_msgid
+from email.utils import format_datetime
 from pathlib import Path
 
 import yaml
@@ -30,13 +33,14 @@ from reportlab.lib.units import mm
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
 from quotient.catalog import Catalog, default_catalog
-from quotient.domain import FlagCode, PricingRequest, Severity
+from quotient.domain import SEVERITY, FlagCode, PricingRequest, Severity
 from quotient.grades import GRADE_ORDER, default_grade
 from quotient.pricing.engine import PricingEngine, quote_total
 from quotient.pricing.rules import default_rules
 from quotient.pricing.units import to_uom
 
 HERE = Path(__file__).parent
+IST = timezone(timedelta(hours=5, minutes=30))  # the sales desk's clock; received dates are read in it
 SPECS, RFQS, GOLD = HERE / "specs", HERE / "rfqs", HERE / "gold"
 SALES_INBOX = "Sales <sales@quotient-demo.example>"
 
@@ -123,8 +127,8 @@ class Spec(_M):
 def render_eml(s: Spec, path: Path) -> None:
     msg = EmailMessage()
     msg["From"], msg["To"], msg["Subject"] = s.from_, SALES_INBOX, s.subject
-    msg["Date"] = format_datetime(datetime.combine(s.received, time(9, 30)).astimezone())
-    msg["Message-ID"] = make_msgid(idstring=s.id, domain="quotient-demo.example")
+    msg["Date"] = format_datetime(datetime.combine(s.received, time(9, 30), tzinfo=IST))
+    msg["Message-ID"] = f"<{s.id}@quotient-demo.example>"
     msg.set_content(s.body)
     path.write_bytes(bytes(msg))
 
@@ -165,7 +169,22 @@ def render_xlsx(s: Spec, path: Path) -> None:
         ws.column_dimensions[col].width = width
     wb.properties.creator = "buyer"
     wb.properties.created = datetime.combine(s.received, time(9, 0))
-    wb.save(path)
+    buf = io.BytesIO()
+    wb.save(buf)
+    path.write_bytes(_frozen_zip(buf.getvalue(), wb.properties.created))
+
+
+def _frozen_zip(data: bytes, when: datetime) -> bytes:
+    """openpyxl stamps the save time into docProps and every zip entry; pin both so a rebuild is byte-identical."""
+    stamp = when.strftime("%Y-%m-%dT%H:%M:%SZ").encode()
+    out = io.BytesIO()
+    with zipfile.ZipFile(io.BytesIO(data)) as src, zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as dst:
+        for info in src.infolist():
+            body = src.read(info.filename)
+            if info.filename == "docProps/core.xml":
+                body = re.sub(rb"(<dcterms:modified[^>]*>)[^<]*", rb"\g<1>" + stamp, body)
+            dst.writestr(zipfile.ZipInfo(info.filename, date_time=when.timetuple()[:6]), body, zipfile.ZIP_DEFLATED)
+    return out.getvalue()
 
 
 def render_pdf(s: Spec, path: Path) -> None:
@@ -180,6 +199,7 @@ def render_pdf(s: Spec, path: Path) -> None:
         title=d.title,
         author="buyer",
         creator="buyer",
+        invariant=True,  # no creation timestamp or random document id: rebuilds are byte-identical
     )
     fields = Table(
         [[Paragraph(f"<b>{k}</b>", styles["Normal"]), Paragraph(v, styles["Normal"])] for k, v in d.fields.items()],
@@ -307,8 +327,6 @@ def gold_for(s: Spec, catalog: Catalog, engine: PricingEngine) -> dict:
                 )
                 priced.append(line)
         severities = {FlagCode(f): None for f in flags}
-        from quotient.domain import SEVERITY
-
         row["expected"] = expected
         row["flags"] = sorted(str(f) for f in severities)
         row["needs_human"] = any(SEVERITY[f] == Severity.BLOCK for f in flags) or bool(
