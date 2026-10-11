@@ -1,0 +1,33 @@
+# Render Blueprint: the quoting API. The web app deploys separately on Vercel (web/).
+services:
+  - type: web
+    name: quotient-api
+    runtime: python  # version from .python-version; installs from uv.lock
+    plan: free
+    region: frankfurt
+    buildCommand: uv sync --frozen --no-dev --extra tracing
+    startCommand: .venv/bin/uvicorn quotient.api:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    buildFilter:
+      paths:
+        - quotient/**
+        - data/**
+        - evals/**
+        - pyproject.toml
+        - uv.lock
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: QUOTIENT_MODEL
+        value: openai/gpt-oss-120b
+      - key: QUOTIENT_REASONING_EFFORT
+        value: medium
+      - key: QUOTIENT_CORS_ORIGINS
+        sync: false  # the Vercel URL, e.g. https://quotient-web.vercel.app
+      - key: LANGFUSE_PUBLIC_KEY
+        sync: false
+      - key: LANGFUSE_SECRET_KEY
+        sync: false
+      - key: LANGFUSE_HOST
+        value: https://cloud.langfuse.com
