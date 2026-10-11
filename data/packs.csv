@@ -1,0 +1,7 @@
+pack_code,description,size,size_uom,form,premium
+BAG25,25 kg bag,25,kg,solid,1.0
+FIBC1000,1000 kg big bag (FIBC),1000,kg,solid,0.97
+FDRUM25,25 kg fibre drum,25,kg,solid,1.05
+CAN25,25 L jerrycan,25,L,liquid,1.08
+DRUM200,200 L drum,200,L,liquid,1.0
+IBC1000,1000 L IBC,1000,L,liquid,0.98

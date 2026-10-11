@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.env
+.DS_Store
+node_modules/
+.next/
+web/.env.local
+evals/results/*.tmp

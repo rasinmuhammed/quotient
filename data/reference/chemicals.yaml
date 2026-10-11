@@ -1,0 +1,518 @@
+# Curated reference: public physical and regulatory facts about real substances.
+#
+# What is real here: substance identity, CAS number, typical density at 20 C, UN number and transport
+# class for the form listed, and the 6-digit HS subheading. These are public facts, kept real so that CAS
+# matching and kg/L conversion are tested on true values. CAS check digits are verified by data/generate.py.
+#
+# What is fictional: every trade name below, every SKU, cost, price, customer and lane rate generated from
+# this file. cost_anchor_usd_per_kg is a rough order-of-magnitude assumption for technical grade that the
+# generator draws real costs around; it is not market data.
+#
+# Simplifications (see README): density is a single value at 20 C; solutions (H2O2 50%, NaOH 50%, H3PO4 85%)
+# are treated as products in their own right; HS codes are indicative 6-digit subheadings.
+
+chemicals:
+  - code: IPA
+    name: Isopropyl Alcohol
+    cas: 67-63-0
+    form: liquid
+    density: 0.786
+    un: UN1219
+    hazard_class: "3"
+    hs: "2905.12"
+    synonyms: [IPA, isopropanol, 2-propanol, propan-2-ol, isopropyl alcohol]
+    trade_names: [Solvona IP 99]
+    grades: [technical, reagent, pharma_usp]
+    cost_anchor: 1.30
+  - code: ACE
+    name: Acetone
+    cas: 67-64-1
+    form: liquid
+    density: 0.791
+    un: UN1090
+    hazard_class: "3"
+    hs: "2914.11"
+    synonyms: [propanone, 2-propanone, dimethyl ketone, DMK]
+    trade_names: [Ketosolv A]
+    grades: [technical, reagent]
+    cost_anchor: 1.10
+  - code: MEOH
+    name: Methanol
+    cas: 67-56-1
+    form: liquid
+    density: 0.792
+    un: UN1230
+    hazard_class: "3 (6.1)"
+    hs: "2905.11"
+    synonyms: [methyl alcohol, MeOH, wood alcohol]
+    trade_names: []
+    grades: [technical, reagent]
+    cost_anchor: 0.45
+  - code: ETAC
+    name: Ethyl Acetate
+    cas: 141-78-6
+    form: liquid
+    density: 0.902
+    un: UN1173
+    hazard_class: "3"
+    hs: "2915.31"
+    synonyms: [EtOAc, ethyl ethanoate, acetic ether, EA]
+    trade_names: [Esterona EA]
+    grades: [technical, reagent]
+    cost_anchor: 1.20
+  - code: TOL
+    name: Toluene
+    cas: 108-88-3
+    form: liquid
+    density: 0.867
+    un: UN1294
+    hazard_class: "3"
+    hs: "2902.30"
+    synonyms: [toluol, methylbenzene]
+    trade_names: []
+    grades: [technical, reagent]
+    cost_anchor: 1.00
+  - code: MEK
+    name: Methyl Ethyl Ketone
+    cas: 78-93-3
+    form: liquid
+    density: 0.805
+    un: UN1193
+    hazard_class: "3"
+    hs: "2914.12"
+    synonyms: [MEK, 2-butanone, butanone, butan-2-one]
+    trade_names: [Ketosolv M]
+    grades: [technical]
+    cost_anchor: 1.40
+  - code: NBAC
+    name: n-Butyl Acetate
+    cas: 123-86-4
+    form: liquid
+    density: 0.882
+    un: UN1123
+    hazard_class: "3"
+    hs: "2915.33"
+    synonyms: [butyl acetate, n-butyl ethanoate, NBA, BuAc]
+    trade_names: [Esterona BA]
+    grades: [technical]
+    cost_anchor: 1.50
+  - code: MPG
+    name: Propylene Glycol
+    cas: 57-55-6
+    form: liquid
+    density: 1.036
+    un: null
+    hazard_class: null
+    hs: "2905.32"
+    synonyms: [MPG, monopropylene glycol, "1,2-propanediol", "propane-1,2-diol", PG]
+    trade_names: [Glycona PG]
+    grades: [technical, pharma_usp, pharma_ep]
+    cost_anchor: 1.80
+  - code: MEG
+    name: Monoethylene Glycol
+    cas: 107-21-1
+    form: liquid
+    density: 1.113
+    un: null
+    hazard_class: null
+    hs: "2905.31"
+    synonyms: [MEG, ethylene glycol, "ethane-1,2-diol", EG]
+    trade_names: []
+    grades: [technical]
+    cost_anchor: 0.90
+  - code: GLY
+    name: Glycerine
+    cas: 56-81-5
+    form: liquid
+    density: 1.261
+    un: null
+    hazard_class: null
+    hs: "2905.45"
+    synonyms: [glycerol, glycerin, "propane-1,2,3-triol", refined glycerine]
+    trade_names: [Glycona GL 99.7]
+    grades: [technical, pharma_usp, pharma_ep]
+    cost_anchor: 1.10
+  - code: PGME
+    name: Propylene Glycol Methyl Ether
+    cas: 107-98-2
+    form: liquid
+    density: 0.920
+    un: UN3092
+    hazard_class: "3"
+    hs: "2909.49"
+    synonyms: [PGME, PM, 1-methoxy-2-propanol, methoxypropanol]
+    trade_names: [Glycosolve PM]
+    grades: [technical]
+    cost_anchor: 1.90
+  - code: PGMEA
+    name: Propylene Glycol Methyl Ether Acetate
+    cas: 108-65-6
+    form: liquid
+    density: 0.965
+    un: UN3272
+    hazard_class: "3"
+    hs: "2915.39"
+    synonyms: [PGMEA, PMA, 1-methoxy-2-propyl acetate, methoxypropyl acetate]
+    trade_names: [Glycosolve PMA]
+    grades: [technical, reagent]
+    cost_anchor: 2.10
+  - code: NMP
+    name: N-Methyl-2-Pyrrolidone
+    cas: 872-50-4
+    form: liquid
+    density: 1.028
+    un: null
+    hazard_class: null
+    hs: "2933.79"
+    synonyms: [NMP, N-methylpyrrolidone, 1-methyl-2-pyrrolidinone]
+    trade_names: [Pyrrolex M]
+    grades: [technical, reagent]
+    cost_anchor: 3.20
+  - code: DMSO
+    name: Dimethyl Sulfoxide
+    cas: 67-68-5
+    form: liquid
+    density: 1.100
+    un: null
+    hazard_class: null
+    hs: "2930.90"
+    synonyms: [DMSO, dimethyl sulphoxide, methyl sulfoxide, methylsulfinylmethane]
+    trade_names: [Sulfoxa D]
+    grades: [technical, reagent, pharma_usp]
+    cost_anchor: 3.50
+  - code: GAA
+    name: Glacial Acetic Acid
+    cas: 64-19-7
+    form: liquid
+    density: 1.049
+    un: UN2789
+    hazard_class: "8 (3)"
+    hs: "2915.21"
+    synonyms: [GAA, acetic acid, ethanoic acid, acetic acid glacial]
+    trade_names: []
+    grades: [technical, reagent]
+    cost_anchor: 0.70
+  - code: HP50
+    name: Hydrogen Peroxide 50%
+    cas: 7722-84-1
+    form: liquid
+    density: 1.196
+    un: UN2014
+    hazard_class: "5.1 (8)"
+    hs: "2847.00"
+    synonyms: [H2O2 50%, hydrogen peroxide solution 50%, peroxide 50%]
+    trade_names: [Oxyla 50]
+    grades: [technical]
+    cost_anchor: 0.60
+  - code: NAOH50
+    name: Caustic Soda Lye 50%
+    cas: 1310-73-2
+    form: liquid
+    density: 1.520
+    un: UN1824
+    hazard_class: "8"
+    hs: "2815.12"
+    synonyms: [sodium hydroxide solution 50%, NaOH 50%, caustic lye, lye 50%, membrane grade lye]
+    trade_names: []
+    grades: [technical]
+    cost_anchor: 0.35
+  - code: H3PO4
+    name: Phosphoric Acid 85%
+    cas: 7664-38-2
+    form: liquid
+    density: 1.685
+    un: UN1805
+    hazard_class: "8"
+    hs: "2809.20"
+    synonyms: [orthophosphoric acid 85%, H3PO4 85%, phosphoric acid]
+    trade_names: []
+    grades: [technical, reagent]
+    cost_anchor: 1.10
+  - code: TEA
+    name: Triethanolamine
+    cas: 102-71-6
+    form: liquid
+    density: 1.124
+    un: null
+    hazard_class: null
+    hs: "2922.15"
+    synonyms: [TEA, TEOA, trolamine, "2,2',2''-nitrilotriethanol", triethanolamine 99%]
+    trade_names: [Aminex T99]
+    grades: [technical]
+    cost_anchor: 2.00
+  - code: BNOH
+    name: Benzyl Alcohol
+    cas: 100-51-6
+    form: liquid
+    density: 1.044
+    un: null
+    hazard_class: null
+    hs: "2906.21"
+    synonyms: [phenylmethanol, benzenemethanol, BnOH]
+    trade_names: []
+    grades: [technical, pharma_ep]
+    cost_anchor: 2.60
+  - code: XYL
+    name: Xylene (Mixed Isomers)
+    cas: 1330-20-7
+    form: liquid
+    density: 0.864
+    un: UN1307
+    hazard_class: "3"
+    hs: "2902.44"
+    synonyms: [xylene, xylol, mixed xylenes, dimethylbenzene]
+    trade_names: []
+    grades: [technical]
+    cost_anchor: 1.00
+  - code: CYC
+    name: Cyclohexanone
+    cas: 108-94-1
+    form: liquid
+    density: 0.947
+    un: UN1915
+    hazard_class: "3"
+    hs: "2914.22"
+    synonyms: [cyclohexanone, ketohexamethylene, CYC]
+    trade_names: [Ketosolv C6]
+    grades: [technical]
+    cost_anchor: 1.90
+  - code: DCM
+    name: Dichloromethane
+    cas: 75-09-2
+    form: liquid
+    density: 1.326
+    un: UN1593
+    hazard_class: "6.1"
+    hs: "2903.12"
+    synonyms: [DCM, methylene chloride, methylene dichloride, MDC]
+    trade_names: []
+    grades: [technical, reagent]
+    cost_anchor: 0.90
+  - code: THF
+    name: Tetrahydrofuran
+    cas: 109-99-9
+    form: liquid
+    density: 0.889
+    un: UN2056
+    hazard_class: "3"
+    hs: "2932.11"
+    synonyms: [THF, oxolane, tetramethylene oxide]
+    trade_names: []
+    grades: [technical, reagent]
+    cost_anchor: 3.30
+  - code: ACN
+    name: Acetonitrile
+    cas: 75-05-8
+    form: liquid
+    density: 0.786
+    un: UN1648
+    hazard_class: "3"
+    hs: "2926.90"
+    synonyms: [ACN, MeCN, methyl cyanide, ethanenitrile]
+    trade_names: []
+    grades: [technical, reagent]
+    cost_anchor: 2.40
+  - code: PEG400
+    name: Polyethylene Glycol 400
+    cas: 25322-68-3
+    form: liquid
+    density: 1.128
+    un: null
+    hazard_class: null
+    hs: "3907.20"
+    synonyms: [PEG 400, PEG-400, macrogol 400, polyethylene glycol]
+    trade_names: [Macrona 400]
+    grades: [technical, pharma_usp]
+    cost_anchor: 2.20
+  - code: NAHCO3
+    name: Sodium Bicarbonate
+    cas: 144-55-8
+    form: solid
+    density: null
+    un: null
+    hazard_class: null
+    hs: "2836.30"
+    synonyms: [sodium hydrogen carbonate, NaHCO3, bicarb, baking soda]
+    trade_names: []
+    grades: [technical, pharma_usp]
+    cost_anchor: 0.40
+  - code: CAA
+    name: Citric Acid Anhydrous
+    cas: 77-92-9
+    form: solid
+    density: null
+    un: null
+    hazard_class: null
+    hs: "2918.14"
+    synonyms: [citric acid, CAA, E330]
+    trade_names: []
+    grades: [technical, pharma_usp]
+    cost_anchor: 1.00
+  - code: NABZ
+    name: Sodium Benzoate
+    cas: 532-32-1
+    form: solid
+    density: null
+    un: null
+    hazard_class: null
+    hs: "2916.31"
+    synonyms: [benzoate of soda, E211, sodium benzoate]
+    trade_names: []
+    grades: [technical, pharma_usp]
+    cost_anchor: 1.60
+  - code: TIO2
+    name: Titanium Dioxide (Rutile)
+    cas: 13463-67-7
+    form: solid
+    density: null
+    un: null
+    hazard_class: null
+    hs: "3206.11"
+    synonyms: [TiO2, titania, rutile, pigment white 6, PW6]
+    trade_names: [Lumira RT-92]
+    grades: [technical]
+    cost_anchor: 3.00
+  - code: ZNO
+    name: Zinc Oxide
+    cas: 1314-13-2
+    form: solid
+    density: null
+    un: UN3077
+    hazard_class: "9"
+    hs: "2817.00"
+    synonyms: [ZnO, zinc white, pigment white 4]
+    trade_names: []
+    grades: [technical, pharma_usp]
+    cost_anchor: 2.80
+  - code: STEA
+    name: Stearic Acid
+    cas: 57-11-4
+    form: solid
+    density: null
+    un: null
+    hazard_class: null
+    hs: "3823.11"
+    synonyms: [octadecanoic acid, stearic acid triple pressed, C18 fatty acid]
+    trade_names: [Stearona TP]
+    grades: [technical]
+    cost_anchor: 1.40
+  - code: K2CO3
+    name: Potassium Carbonate
+    cas: 584-08-7
+    form: solid
+    density: null
+    un: null
+    hazard_class: null
+    hs: "2836.40"
+    synonyms: [K2CO3, potash, pearl ash, carbonate of potash]
+    trade_names: []
+    grades: [technical]
+    cost_anchor: 1.20
+  - code: SMBS
+    name: Sodium Metabisulfite
+    cas: 7681-57-4
+    form: solid
+    density: null
+    un: null
+    hazard_class: null
+    hs: "2832.10"
+    synonyms: [SMBS, sodium metabisulphite, sodium pyrosulfite, sodium disulfite, E223]
+    trade_names: []
+    grades: [technical]
+    cost_anchor: 0.60
+  - code: MGST
+    name: Magnesium Stearate
+    cas: 557-04-0
+    form: solid
+    density: null
+    un: null
+    hazard_class: null
+    hs: "2915.70"
+    synonyms: [Mg stearate, MgSt, magnesium octadecanoate]
+    trade_names: []
+    grades: [technical, pharma_usp, pharma_ep]
+    cost_anchor: 4.50
+  - code: MCC
+    name: Microcrystalline Cellulose
+    cas: 9004-34-6
+    form: solid
+    density: null
+    un: null
+    hazard_class: null
+    hs: "3912.90"
+    synonyms: [MCC, cellulose microcrystalline, E460]
+    trade_names: [Cellora 102]
+    grades: [pharma_usp, pharma_ep]
+    cost_anchor: 3.80
+  - code: APAP
+    name: Paracetamol
+    cas: 103-90-2
+    form: solid
+    density: null
+    un: null
+    hazard_class: null
+    hs: "2924.29"
+    synonyms: [acetaminophen, APAP, 4-acetamidophenol, N-acetyl-p-aminophenol]
+    trade_names: []
+    grades: [pharma_usp, pharma_ep]
+    cost_anchor: 6.50
+  - code: ASC
+    name: Ascorbic Acid
+    cas: 50-81-7
+    form: solid
+    density: null
+    un: null
+    hazard_class: null
+    hs: "2936.27"
+    synonyms: [vitamin C, L-ascorbic acid, E300]
+    trade_names: []
+    grades: [technical, pharma_usp]
+    cost_anchor: 5.50
+  - code: BZA
+    name: Benzoic Acid
+    cas: 65-85-0
+    form: solid
+    density: null
+    un: null
+    hazard_class: null
+    hs: "2916.31"
+    synonyms: [benzenecarboxylic acid, E210, benzoic acid flakes]
+    trade_names: []
+    grades: [technical, pharma_usp]
+    cost_anchor: 1.70
+  - code: MAN
+    name: Maleic Anhydride
+    cas: 108-31-6
+    form: solid
+    density: null
+    un: UN2215
+    hazard_class: "8"
+    hs: "2917.14"
+    synonyms: [MA, MAN, maleic acid anhydride, "2,5-furandione"]
+    trade_names: []
+    grades: [technical]
+    cost_anchor: 1.60
+  - code: PAN
+    name: Phthalic Anhydride
+    cas: 85-44-9
+    form: solid
+    density: null
+    un: UN2214
+    hazard_class: "8"
+    hs: "2917.35"
+    synonyms: [PAN, phthalic acid anhydride, "1,3-isobenzofurandione"]
+    trade_names: []
+    grades: [technical]
+    cost_anchor: 1.30
+  - code: NA2SO4
+    name: Sodium Sulfate Anhydrous
+    cas: 7757-82-6
+    form: solid
+    density: null
+    un: null
+    hazard_class: null
+    hs: "2833.11"
+    synonyms: [sodium sulphate, Na2SO4, salt cake, disodium sulfate]
+    trade_names: []
+    grades: [technical]
+    cost_anchor: 0.25

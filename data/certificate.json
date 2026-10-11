@@ -1,0 +1,117 @@
+{
+  "audit": {
+    "checked": false,
+    "fixed": 0,
+    "found": 0,
+    "score": 100.0
+  },
+  "blueprint_hash": "c8a25d5f42f094ff8a097720798440d1f0b8b742929b71429e22f522347a1dcd",
+  "claims": [],
+  "content": {},
+  "degraded": false,
+  "engine_version": "0.1.0",
+  "findings": {
+    "critical": 0,
+    "load": 0,
+    "major": 0,
+    "minor": 0
+  },
+  "invariants": {
+    "checks": 14,
+    "clean_tables": 0.9,
+    "findings": [
+      {
+        "bar": "a name, code or label distinct across its rows",
+        "check": "nameless",
+        "column": null,
+        "fix": {
+          "kind": "name"
+        },
+        "table": "lanes",
+        "text": "lanes (18 rows, pointed to by other tables) has no name, code or label that tells its rows apart",
+        "value": 0.0
+      }
+    ]
+  },
+  "open_findings": [],
+  "passed": true,
+  "patterns": [],
+  "realism": {
+    "facts": [],
+    "measured": 0,
+    "typical": 0
+  },
+  "route": "blueprint",
+  "rules": {
+    "broken": [],
+    "declared": 0,
+    "held": 0,
+    "unmeasured": []
+  },
+  "run_id": "34cbc5472b19",
+  "scenario": {
+    "future": true,
+    "note": "The window ends in the future: this is a simulated scenario built from structural assumptions and the events you described, not a forecast.",
+    "window": [
+      "2026-01-01",
+      "2026-12-31"
+    ]
+  },
+  "scorecard": {
+    "checks": [],
+    "families": {
+      "artifacts": {
+        "fail": 0,
+        "pass": 0,
+        "score": 100.0,
+        "weak": 0
+      }
+    },
+    "measured_on": "the whole run",
+    "score": 100.0
+  },
+  "seed": 20261001,
+  "tables": {
+    "chemicals": {
+      "digest": "3afb415c396da6ea",
+      "rows": 42
+    },
+    "customers": {
+      "digest": "446b27967867d23f",
+      "rows": 30
+    },
+    "freight_rates": {
+      "digest": "fbe33d5172a0c3a9",
+      "rows": 72
+    },
+    "fx_rates": {
+      "digest": "a5ad1810eef0a955",
+      "rows": 6
+    },
+    "grades": {
+      "digest": "a5c9392ba09cc5e9",
+      "rows": 4
+    },
+    "lanes": {
+      "digest": "36d5549cd7aeb88f",
+      "rows": 18
+    },
+    "packs": {
+      "digest": "ca65b7cd56750ba5",
+      "rows": 6
+    },
+    "price_tiers": {
+      "digest": "60d6ea936e03c62a",
+      "rows": 584
+    },
+    "sku_packs": {
+      "digest": "a155a0a09580b9e4",
+      "rows": 146
+    },
+    "skus": {
+      "digest": "d8cdfae3869275d3",
+      "rows": 73
+    }
+  },
+  "understanding": {}
+}

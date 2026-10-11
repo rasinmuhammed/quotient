@@ -1,0 +1,31 @@
+customer_id,name,country,country_code,currency,default_incoterm,payment_terms,discount_tier,contact_name,contact_email
+C-001,Corniche Chemical Trading FZE,United Arab Emirates,AE,AED,CIF,Net 60,D,Kwame Nwankwo,kwame.nwankwo@cornichechemicaltrading.ae
+C-002,Rio Claro Farmacêutica Ltda,Brazil,BR,USD,CIF,Net 30,A,Dominik Merkel,dominik.merkel@rioclarofarmaceutica.com.br
+C-003,Merwede Specialties BV,Netherlands,NL,EUR,FOB,Net 30,B,Shankar Pandey,shankar.pandey@merwedespecialties.nl
+C-004,Vale Verde Farmacêutica Ltda,Brazil,BR,BRL,CFR,Net 90,B,Dewi Pagano,dewi.pagano@valeverdefarmaceutica.com.br
+C-005,Ridgefield Coatings Inc,United States,US,USD,DAP,Net 30,C,Susan May,susan.may@ridgefieldcoatings.com
+C-006,Al Noor Paints FZE,United Arab Emirates,AE,USD,FOB,Net 60,B,Lian Kato,lian.kato@alnoorpaints.ae
+C-007,Botlek Chemie BV,Netherlands,NL,EUR,CFR,Net 30,A,Shankar Saxena,shankar.saxena@botlekchemie.nl
+C-008,Harbor Point Coatings Inc,United States,US,USD,CFR,Net 45,B,Hazel Martinez,hazel.martinez@harborpointcoatings.com
+C-009,Al Rawda Chemical Trading FZE,United Arab Emirates,AE,USD,CFR,Net 30,C,Naomi Cao,naomi.cao@alrawdachemicaltrading.ae
+C-010,Paranapanema Farmacêutica Ltda,Brazil,BR,USD,FOB,"30% advance, 70% against BL copy",B,Kenta Wang,kenta.wang@paranapanemafarmaceutica.com.br
+C-011,Lindeboom Coatings BV,Netherlands,NL,USD,DAP,Net 45,A,Tyler Velasquez,tyler.velasquez@lindeboomcoatings.nl
+C-012,Weserland Klebstoffwerke GmbH,Germany,DE,EUR,EXW,Net 30,B,Abdoulaye Ogunleye,abdoulaye.ogunleye@weserlandklebstoffwerke.de
+C-013,Rheinau Pharma GmbH,Germany,DE,EUR,FOB,Net 30,B,Yu Zhu,yu.zhu@rheinaupharma.de
+C-014,Elbtal Lackfabrik GmbH,Germany,DE,EUR,DAP,LC at sight,B,Kuldeep Chauhan,kuldeep.chauhan@elbtallackfabrik.de
+C-015,"Hoshino Kagaku Co., Ltd",Japan,JP,JPY,CIF,Net 30,B,Douglas Craig,douglas.craig@hoshinokagaku.co.jp
+C-016,Bluestem Polymers Inc,United States,US,USD,CFR,Net 45,B,Theresa Logan,theresa.logan@bluestempolymers.com
+C-017,"Kawabe Toryo Co., Ltd",Japan,JP,JPY,CIF,LC at sight,A,Viola Lefevre,viola.lefevre@kawabetoryo.co.jp
+C-018,Moselgrund Pharma GmbH,Germany,DE,EUR,FOB,Net 30,D,Yong Li,yong.li@moselgrundpharma.de
+C-019,"Kawabe Kasei Co., Ltd",Japan,JP,JPY,CIF,Net 60,B,Harm Schmid,harm.schmid@kawabekasei.co.jp
+C-020,Granite Bay Specialty Products LLC,United States,US,USD,FOB,Net 45,C,Cody Powers,cody.powers@granitebayspecialtyproducts.com
+C-021,"Arakawa Toryo Co., Ltd",Japan,JP,JPY,CIF,Net 45,A,Su-bin Nguyen,su-bin.nguyen@arakawatoryo.co.jp
+C-022,Kinderdijk Chemie BV,Netherlands,NL,EUR,CIF,Net 45,B,Caitlin Cameron,caitlin.cameron@kinderdijkchemie.nl
+C-023,Westbrook Adhesives LLC,United States,US,USD,CIF,Net 45,A,Jijo Rawat,jijo.rawat@westbrookadhesives.com
+C-024,Waalhaven Chemie BV,Netherlands,NL,EUR,CIF,Net 45,D,Austin Lindgren,austin.lindgren@waalhavenchemie.nl
+C-025,Serra Azul Química Ltda,Brazil,BR,USD,CFR,Net 30,D,Imogen Jefferson,imogen.jefferson@serraazulquimica.com.br
+C-026,Rheinau Kunststoffe GmbH,Germany,DE,EUR,DAP,Net 30,B,Gary Goodwin,gary.goodwin@rheinaukunststoffe.de
+C-027,Al Noor Industrial Chemicals LLC,United Arab Emirates,AE,AED,CFR,Net 45,C,Freek Ferrer,freek.ferrer@alnoorindustrialchemicals.ae
+C-028,Copperline Coatings Inc,United States,US,USD,CIF,Net 30,B,Callum Knox,callum.knox@copperlinecoatings.com
+C-029,Bluestem Laboratories LLC,United States,US,USD,CFR,LC at sight,B,Leo Rios,leo.rios@bluestemlaboratories.com
+C-030,Moselgrund Kunststoffe GmbH,Germany,DE,USD,DAP,Net 30,A,Alexander Lambert,alexander.lambert@moselgrundkunststoffe.de

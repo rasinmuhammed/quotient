@@ -1,0 +1,47 @@
+{
+  "blueprint_hash": "c8a25d5f42f094ff8a097720798440d1f0b8b742929b71429e22f522347a1dcd",
+  "engine_passed": true,
+  "files": {
+    "customers.csv": {
+      "rows": 30,
+      "sha256": "8106c87bc4b85ab0ecc2342a66d70c1f3954f8fa7b360705f822b7b14b465c18"
+    },
+    "freight_rates.csv": {
+      "rows": 72,
+      "sha256": "0694839e01b1e7f54fc428c92336c0bb491825917d446d43cfc5877048fa504e"
+    },
+    "fx_rates.csv": {
+      "rows": 6,
+      "sha256": "04c783d4b799dfc90e4548b2e8f133bbe47ffc5676b6c25038e1e8db89a58a2a"
+    },
+    "packs.csv": {
+      "rows": 6,
+      "sha256": "e08265218cb7b8f53d495b22c978c746507379c1bfc71b36c4918fa36dec380f"
+    },
+    "price_list.csv": {
+      "rows": 584,
+      "sha256": "a82d77cd88af323c15fc393aa554df11589835cd00387f8a27115e6830fe7864"
+    },
+    "products.csv": {
+      "rows": 73,
+      "sha256": "43b95d2e568b932cc22273c82f508c3fa1ef718b8420318b21e11f30047efd17"
+    }
+  },
+  "fx_snapshot_date": "2026-10-01",
+  "generator": "misata_engine (Misata Studio engine) 0.1.0",
+  "independent_checks": [
+    "unique ids",
+    "every SKU priced",
+    "tier prices strictly fall",
+    "one validity window per offer",
+    "list price above cost",
+    "density exactly for liquids",
+    "lapsed price rows exist",
+    "freight FOB < CFR = CIF < DAP on every lane",
+    "customers in every destination",
+    "unique customers and emails"
+  ],
+  "reference": "data/reference/chemicals.yaml",
+  "route": "blueprint",
+  "seed": 20261001
+}

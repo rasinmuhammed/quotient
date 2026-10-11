@@ -1,0 +1,7 @@
+fx_row_id,snapshot_date,base,quote,rate,source
+FX-01,2026-10-01,USD,USD,1.0,"synthetic snapshot, not market data"
+FX-02,2026-10-01,USD,EUR,0.861,"synthetic snapshot, not market data"
+FX-03,2026-10-01,USD,AED,3.6725,"synthetic snapshot, not market data"
+FX-04,2026-10-01,USD,JPY,147.2,"synthetic snapshot, not market data"
+FX-05,2026-10-01,USD,BRL,5.412,"synthetic snapshot, not market data"
+FX-06,2026-10-01,USD,INR,88.65,"synthetic snapshot, not market data"
