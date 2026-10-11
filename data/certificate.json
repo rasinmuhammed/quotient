@@ -5,7 +5,7 @@
     "found": 0,
     "score": 100.0
   },
-  "blueprint_hash": "e05fcf4737a8795d2e9eafb3732d06171339a73a1ccaf895d3972d7140ce6118",
+  "blueprint_hash": "042a6a38d036df14f207de7ad07253cb071a447cf012f7336a30154a488aa226",
   "claims": [],
   "content": {},
   "degraded": false,
@@ -48,7 +48,7 @@
     "held": 0,
     "unmeasured": []
   },
-  "run_id": "76e08d9b70ef",
+  "run_id": "6bb5e22d939c",
   "scenario": {
     "future": true,
     "note": "The window ends in the future: this is a simulated scenario built from structural assumptions and the events you described, not a forecast.",
@@ -105,15 +105,15 @@
       "rows": 6
     },
     "price_tiers": {
-      "digest": "60d6ea936e03c62a",
+      "digest": "279c71a20d80c7e2",
       "rows": 584
     },
     "sku_packs": {
-      "digest": "a155a0a09580b9e4",
+      "digest": "01e7d833b678503e",
       "rows": 146
     },
     "skus": {
-      "digest": "d8cdfae3869275d3",
+      "digest": "016f24436200c8c0",
       "rows": 73
     }
   },

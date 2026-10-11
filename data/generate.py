@@ -351,7 +351,7 @@ def build_blueprint(chems: list[dict]) -> Blueprint:
                 " * lognormal(1, 0.15) * where(uom == 'L', chemicals.density@chemical_id, 1), 3)",
                 decimals=3,
             ),
-            _f("markup", "round(uniform(0.22, 0.42), 3)", decimals=3),
+            _f("markup", "round(uniform(0.30, 0.55), 3)", decimals=3),
             _f("list_price", "round(standard_cost * (1 + markup), 3)", decimals=3),
             _f(
                 "purity_pct",

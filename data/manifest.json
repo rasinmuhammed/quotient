@@ -1,5 +1,5 @@
 {
-  "blueprint_hash": "e05fcf4737a8795d2e9eafb3732d06171339a73a1ccaf895d3972d7140ce6118",
+  "blueprint_hash": "042a6a38d036df14f207de7ad07253cb071a447cf012f7336a30154a488aa226",
   "engine_passed": true,
   "files": {
     "customers.csv": {
@@ -20,7 +20,7 @@
     },
     "price_list.csv": {
       "rows": 584,
-      "sha256": "a82d77cd88af323c15fc393aa554df11589835cd00387f8a27115e6830fe7864"
+      "sha256": "f8caec1c200f37f135260e0fd3598a8a6567a235db67f4e2cbe444c9814a888d"
     },
     "products.csv": {
       "rows": 73,
