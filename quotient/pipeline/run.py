@@ -75,7 +75,7 @@ class Edits(Model):
 def review_flags(line: ExtractedLine, min_confidence: float) -> tuple[Flag, ...]:
     """A line goes to a person when its product or amount could not be found in the document as read."""
     why = []
-    if not line.mention.verified:
+    if not line.mention.verified and not line.cas.verified:  # a line named only by a CAS number is identified
         why.append("the product name was not found in the document")
     if line.quantity.value is not None and not line.quantity.verified:
         why.append(f"the quantity '{line.quantity.value}' was not found in the document")

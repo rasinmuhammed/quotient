@@ -10,13 +10,35 @@ from decimal import Decimal, InvalidOperation
 
 from quotient.catalog import Catalog
 from quotient.domain import Flag, FlagCode, Product
+from quotient.pipeline.extract import norm
 from quotient.pipeline.types import CustomerMatch, ExtractedLine, Extraction, Header, Quantity
-from quotient.pricing.units import is_pack_word, pack_from_packaging, to_uom
+from quotient.pricing.units import is_pack_word, pack_from_packaging, pack_word_in, sized_pack, to_uom
 
 INCOTERM_RULE = "INCOTERM-v1"
 INCOTERMS_2020 = {"EXW", "FCA", "FAS", "FOB", "CFR", "CIF", "CPT", "CIP", "DAP", "DPU", "DDP"}
 INCOTERM_ALIASES = {"C&F": "CFR", "CNF": "CFR", "C+F": "CFR", "C AND F": "CFR"}
 FALLBACK_INCOTERM = "EXW"
+ORIGIN_TERMS = {"EXW", "FCA", "FAS", "FOB"}  # the named place is on the seller's side
+_WEEK = re.compile(r"\b(?:kw|cw|wk|week|woche|kalenderwoche|calendar week)\.?\s*(\d{1,2})\b(?:\s*[/']\s*(\d{4}|\d{2})\b|\s+(\d{4})\b)?",
+                   re.IGNORECASE)
+
+
+def week_end(text: str, after: date) -> date | None:
+    """'KW 48', 'week 12/2027', 'CW48': the Sunday that ends that ISO week. Without a year, the first such week
+    ending on or after `after`. Calendar arithmetic is code's job, not the reader's."""
+    m = _WEEK.search(text)
+    if not m:
+        return None
+    week, y = int(m.group(1)), m.group(2) or m.group(3)
+    years = [int(y) + (2000 if len(y) == 2 else 0)] if y else [after.year, after.year + 1]
+    for year in years:
+        try:
+            end = date.fromisocalendar(year, week, 7)
+        except ValueError:
+            continue
+        if y or end >= after:
+            return end
+    return None
 
 
 def _incoterm(term: str) -> str | None:
@@ -48,7 +70,11 @@ def resolve_header(extraction: Extraction | None, customer: CustomerMatch, catal
         incoterm, source = FALLBACK_INCOTERM, "fallback"
 
     dest = extraction.destination_country if extraction else None
-    if dest and dest.verified and dest.value and re.fullmatch(r"[A-Za-z]{2}", dest.value.strip()):
+    # "FOB Nhava Sheva" names the port of loading; a destination read from it is the seller's country
+    origin_places = [norm(m.place) for m in (extraction.incoterms if extraction else ())
+                     if m.verified and m.place and m.place.strip() and _incoterm(m.term) in ORIGIN_TERMS]
+    from_origin = bool(dest and dest.span and any(place in norm(dest.span) for place in origin_places))
+    if dest and dest.verified and dest.value and re.fullmatch(r"[A-Za-z]{2}", dest.value.strip()) and not from_origin:
         destination, dest_source = dest.value.strip().upper(), "document"
     elif known:
         destination, dest_source = known.country_code, "customer"
@@ -68,7 +94,7 @@ def resolve_header(extraction: Extraction | None, customer: CustomerMatch, catal
     rd = extraction.requested_date if extraction else None
     if rd and rd.verified and rd.value:
         try:
-            requested = date.fromisoformat(rd.value.strip())
+            requested = week_end(rd.span or "", quote_date) or date.fromisoformat(rd.value.strip())
         except ValueError:
             requested = None
 
@@ -109,6 +135,12 @@ def resolve_quantity(line: ExtractedLine, product: Product | None, catalog: Cata
     if not unit:
         return Quantity(value=None, uom=product.uom, pack_code=None), (
             Flag.of(FlagCode.UNIT_CONVERSION, f"'{line.quantity.value}' has no unit", "UNIT-CONV-v1"),)
+    if not re.search(r"\d", unit) and pack_word_in(unit):
+        sized = sized_pack(f"{line.quantity.value} {unit}", product.form, catalog.packs)
+        if sized and sized[2]:  # "in 25 L cans": the number is the size of one pack we sell, not an amount
+            return Quantity(value=None, uom=product.uom, pack_code=sized[2]), (Flag.of(
+                FlagCode.QUANTITY_MISSING, f"'{line.quantity.value} {unit}' is a pack size; the RFQ gives no amount",
+                "UNIT-CONV-v1"),)
 
     conv = to_uom(value, unit, product, catalog.packs, country_code)
     flags = list(conv.flags)

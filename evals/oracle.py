@@ -35,8 +35,8 @@ def oracle_llm(gold: dict, catalog: Catalog) -> ScriptedLLM:
         decisions = []
         for no in re.findall(r"^Line (\d+): ", user, flags=re.M):
             sku = gold["lines"][int(no) - 1]["sku"]
-            decisions.append({"line": int(no), "choice": catalog.product(sku).chemical_code if sku else "none",
-                              "reason": "gold answer"})
+            decisions.append({"line": int(no), "substance": catalog.product(sku).chemical_name if sku else "unknown",
+                              "choice": catalog.product(sku).chemical_code if sku else "none", "reason": "gold answer"})
         return {"decisions": decisions}
 
     return ScriptedLLM({"rfq_extraction": extraction, "catalog_match": match}, model="oracle")

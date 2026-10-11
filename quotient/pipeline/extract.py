@@ -11,7 +11,6 @@ import re
 import unicodedata
 from datetime import date
 from decimal import Decimal, InvalidOperation
-from itertools import pairwise
 
 from rapidfuzz import fuzz
 
@@ -20,21 +19,25 @@ from quotient.llm import LLM, LLMCall
 from quotient.pipeline.prompts import system_prompt
 from quotient.pipeline.types import ExtractedLine, Extraction, IncotermMention, RFQDocument, Spanned
 
+# anyOf, not a list of types: Groq's strict mode documents anyOf as its union, and a list was not enforced
+# (one live answer came back with english_name as an object and failed validation).
+TEXT_OR_NULL = {"anyOf": [{"type": "string"}, {"type": "null"}]}
+
 
 def _spanned(desc: str) -> dict:
     return {"type": "object", "additionalProperties": False, "required": ["value", "span"], "description": desc,
-            "properties": {"value": {"type": ["string", "null"]}, "span": {"type": ["string", "null"]}}}
+            "properties": {"value": TEXT_OR_NULL, "span": TEXT_OR_NULL}}
 
 
 LINE_SCHEMA = {
     "type": "object", "additionalProperties": False,
     "required": ["mention", "english_name", "cas", "grade", "quantity", "unit", "packaging", "confidence", "note"],
     "properties": {
-        "mention": _spanned("product as written"), "english_name": {"type": ["string", "null"]},
+        "mention": _spanned("product as written"), "english_name": TEXT_OR_NULL,
         "cas": _spanned("CAS number as written"), "grade": _spanned("grade as written"),
         "quantity": _spanned("plain number"), "unit": _spanned("unit as written"),
         "packaging": _spanned("pack type as written"), "confidence": {"type": "number"},
-        "note": {"type": ["string", "null"]},
+        "note": TEXT_OR_NULL,
     },
 }
 SCHEMA = {
@@ -44,7 +47,7 @@ SCHEMA = {
         "buyer_company": _spanned("buyer company"),
         "incoterms": {"type": "array", "items": {
             "type": "object", "additionalProperties": False, "required": ["term", "place", "span"],
-            "properties": {"term": {"type": "string"}, "place": {"type": ["string", "null"]}, "span": {"type": ["string", "null"]}}}},
+            "properties": {"term": {"type": "string"}, "place": TEXT_OR_NULL, "span": TEXT_OR_NULL}}},
         "destination_country": _spanned("ISO alpha-2"), "requested_date": _spanned("yyyy-mm-dd"),
         "currency": _spanned("ISO currency"), "document_grade": _spanned("grade for all lines"),
         "lines": {"type": "array", "items": LINE_SCHEMA},
@@ -91,14 +94,13 @@ def readings(token: str) -> set[Decimal]:
 
 
 def numbers_in(text: str) -> set[Decimal]:
-    """Every number a span can mean: each token's readings, "10 000" read as one number too, and products of
-    adjacent numbers ("20 x 25L" means 500)."""
-    tokens = [r for m in NUMBER.finditer(text) if (r := readings(m.group(0)))]
-    found = set().union(*tokens) if tokens else set()
+    """Every number a span can mean: each token's readings, and "10 000" read as one number too. Nothing is
+    derived: for "20 x 25L" the reader gives 20 and the unit, and code works out the 500 L."""
+    found = set()
+    for m in NUMBER.finditer(text):
+        found |= readings(m.group(0))
     for m in _SPACED.finditer(text):
         found |= readings(m.group(0))
-    for a, b in pairwise(tokens):
-        found |= {x * y for x in a for y in b}
     return found
 
 

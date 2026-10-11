@@ -34,14 +34,14 @@ from quotient.catalog import Catalog, default_catalog  # noqa: E402
 from quotient.config import settings  # noqa: E402
 from quotient.domain import SEVERITY, FlagCode, Severity  # noqa: E402
 from quotient.grades import canonical_grade  # noqa: E402
-from quotient.llm import GroqLLM  # noqa: E402
+from quotient.llm import PRICES_CHECKED, GroqLLM  # noqa: E402
 from quotient.pipeline.extract import norm  # noqa: E402
 from quotient.pipeline.ingest import ingest  # noqa: E402
 from quotient.pipeline.match import find_cas  # noqa: E402
 from quotient.pipeline.run import Pipeline  # noqa: E402
 from quotient.pipeline.types import LineResult, QuoteDraft  # noqa: E402
 from quotient.pricing.rules import default_rules  # noqa: E402
-from quotient.pricing.units import canonical_unit, pack_for_word, pack_word_in  # noqa: E402
+from quotient.pricing.units import canonical_unit, pack_for_word, sized_pack  # noqa: E402
 
 EVALS = ROOT / "evals"
 RESULTS = EVALS / "results"
@@ -71,13 +71,21 @@ def align(gold_lines: list[dict], pred: tuple[LineResult, ...]) -> dict[int, Lin
     return out
 
 
-def _same_unit(pred: str | None, gold: str | None, form: str | None) -> bool:
+def _pack(text: str, form: str, packs: dict) -> str | None:
+    """The pack a unit names, by size ("x 25L", "25L cans") or by word ("cans")."""
+    sized = sized_pack(text, form, packs)
+    return sized[2] if sized else pack_for_word(text, form)
+
+
+def _same_unit(pred: str | None, gold: str | None, form: str | None, packs: dict) -> bool:
     if pred is None or gold is None:
         return pred is None and gold is None
     if canonical_unit(pred) == canonical_unit(gold):
         return True
-    if form and pack_word_in(pred) and pack_word_in(gold):
-        return pack_for_word(pred, form) == pack_for_word(gold, form) is not None
+    if form:
+        a, b = _pack(pred, form, packs), _pack(gold, form, packs)
+        if a or b:
+            return a == b
     return norm(pred) == norm(gold)
 
 
@@ -102,7 +110,7 @@ def score_rfq(gold: dict, draft: QuoteDraft | None, catalog: Catalog, error: str
         form = catalog.product(g["sku"]).form if g["sku"] else None
         fields: dict[str, bool | None] = {"line_found": p is not None}
         fields["quantity_written"] = x is not None and _dec(x.quantity.value) == _dec(g["quantity"])
-        fields["unit_written"] = x is not None and _same_unit(x.unit.value, g["unit"], form)
+        fields["unit_written"] = x is not None and _same_unit(x.unit.value, g["unit"], form, catalog.packs)
         stated = p.match.grade if p and p.match.grade_source in ("line", "document") else None
         fields["grade_stated"] = p is not None and (stated if p.match.sku else canonical_grade(x.grade.value if x else None)) == g["grade"]
         fields["cas"] = None if not g["cas"] else x is not None and g["cas"] in find_cas(f"{x.cas.value or ''} {x.mention.value or ''}")
@@ -372,7 +380,7 @@ def main() -> None:
 
     result = {
         "run": {"at": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"), "model": model, "reasoning_effort": effort,
-                "oracle": args.oracle, "code": _git(), "rules_version": rules.version, "data_version": catalog.version,
+                "oracle": args.oracle, "prices_checked": None if args.oracle else PRICES_CHECKED, "code": _git(), "rules_version": rules.version, "data_version": catalog.version,
                 "rfqs": len(records), "wall_s": round(time.perf_counter() - started, 1), "workers": args.workers,
                 "holdout_ids": sorted(holdout)},
         "splits": splits,

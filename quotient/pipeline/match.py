@@ -2,8 +2,9 @@
 
 Deterministic first, in this order: an exact CAS number (check digit validated), a SKU code, the synonym table
 (names, abbreviations, trade names), then a fuzzy name match that only accepts typos. Whatever is left goes to
-the model in one batched call, which may only pick one of the top five candidates or say "none"; a pick
-outside the candidates is discarded. Every match records how it was made.
+the model in one batched call, which names the substance it reads and may only pick one of the top five
+candidates or say "none". A pick outside the candidates, or one that is not the substance the model itself
+named, is discarded and the line held. Every match records how it was made.
 
 Fuzzy matching is deliberately narrow: in chemistry a small edit is often a different substance (diethylene
 vs ethylene glycol), so a fuzzy hit where one name contains the other is never accepted without the model.
@@ -213,11 +214,31 @@ def _decide(line: ExtractedLine, idx: NameIndex) -> Match | _Pending | None:
     return _Pending(0, line, cands[:TOP_K])
 
 
-MATCH_SCHEMA_ITEM = {"type": "object", "additionalProperties": False, "required": ["line", "choice", "reason"],
-                     "properties": {"line": {"type": "integer"}, "choice": {"type": "string"}, "reason": {"type": "string"}}}
+MATCH_SCHEMA_ITEM = {"type": "object", "additionalProperties": False, "required": ["line", "substance", "choice", "reason"],
+                     "properties": {"line": {"type": "integer"}, "substance": {"type": "string"}, "choice": {"type": "string"},
+                                    "reason": {"type": "string"}}}
 
 
-def _ask_model(pending: list[_Pending], idx: NameIndex, catalog: Catalog, llm: LLM) -> tuple[dict[int, tuple[str | None, str]], LLMCall]:
+@dataclass(frozen=True)
+class _Answer:
+    choice: str | None
+    substance: str
+    reason: str
+
+
+def names_agree(substance: str, code: str, idx: NameIndex) -> bool:
+    """Whether the substance the model named is the chemical it picked: one of that chemical's names, a whole-word
+    part of one ("acetic acid" in "glacial acetic acid"), or a typo of one. A catalog name inside the model's name
+    does not count, as a part or as a typo: "ethylene glycol" is inside "diethylene glycol"."""
+    k = key(substance)
+    if not k:
+        return False
+    return any(k == n or re.search(rf"(?<![a-z0-9]){re.escape(k)}(?![a-z0-9])", n)
+               or (fuzz.ratio(k, n) >= FUZZY_MIN and n not in k and k not in n)
+               for n, c in idx.names.items() if c == code)
+
+
+def _ask_model(pending: list[_Pending], idx: NameIndex, catalog: Catalog, llm: LLM) -> tuple[dict[int, _Answer], LLMCall]:
     codes = sorted({c.chemical_code for p in pending for c in p.candidates})
     item = {**MATCH_SCHEMA_ITEM, "properties": {**MATCH_SCHEMA_ITEM["properties"], "choice": {"type": "string", "enum": [*codes, "none"]}}}
     schema = {"type": "object", "additionalProperties": False, "required": ["decisions"],
@@ -230,9 +251,9 @@ def _ask_model(pending: list[_Pending], idx: NameIndex, catalog: Catalog, llm: L
                       f"CAS: {ln.cas.value or '-'} | grade: {ln.grade.value or '-'}\nCandidates:\n{cands}")
     user = "TASK: MATCH\n\n" + "\n\n".join(blocks)
     raw, call = llm.json(name="catalog_match", schema=schema, system=system_prompt(catalog), user=user)
-    out: dict[int, tuple[str | None, str]] = {}
+    out: dict[int, _Answer] = {}
     for d in raw.get("decisions", []):
-        out[int(d["line"])] = (None if d["choice"] == "none" else d["choice"], d.get("reason", ""))
+        out[int(d["line"])] = _Answer(None if d["choice"] == "none" else d["choice"], d.get("substance", ""), d.get("reason", ""))
     return out, call
 
 
@@ -247,7 +268,7 @@ def match_lines(extraction: Extraction, catalog: Catalog, llm: LLM | None) -> tu
         decided.append(d)
 
     calls: list[LLMCall] = []
-    answers: dict[int, tuple[str | None, str]] = {}
+    answers: dict[int, _Answer] = {}
     pending = [d for d in decided if isinstance(d, _Pending)]
     if pending and llm is not None:
         answers, call = _ask_model(pending, idx, catalog, llm)
@@ -258,10 +279,15 @@ def match_lines(extraction: Extraction, catalog: Catalog, llm: LLM | None) -> tu
         line_flags: list[Flag] = []
         if isinstance(d, _Pending):
             allowed = {c.chemical_code for c in d.candidates}
-            choice, reason = answers.get(i, (None, "no model available" if llm is None else "the model gave no answer"))
+            a = answers.get(i, _Answer(None, "", "no model available" if llm is None else "the model gave no answer"))
+            choice, reason = a.choice, a.reason
             if choice is not None and choice not in allowed:
                 line_flags.append(Flag.of(FlagCode.AMBIGUOUS_MATCH, f"the model chose {choice}, which was not a candidate; "
                                           "discarded", MATCH_RULE))
+                choice = None
+            elif choice is not None and not names_agree(a.substance, choice, idx):
+                line_flags.append(Flag.of(FlagCode.AMBIGUOUS_MATCH, f"the model read '{line.mention.value}' as "
+                                          f"'{a.substance}' but chose {idx.chem_name[choice]}; discarded", MATCH_RULE))
                 choice = None
             if choice is None:
                 m = Match(chemical_code=None, sku=None, method="none", candidates=tuple(d.candidates),

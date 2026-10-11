@@ -18,7 +18,7 @@ from quotient.catalog import Catalog
 from quotient.domain import FlagCode, Severity
 from quotient.llm import LLM, LLMCall, LLMError
 from quotient.pipeline.extract import NUMBER, readings
-from quotient.pipeline.prompts import system_prompt
+from quotient.pipeline.prompts import REPLY_SYSTEM
 from quotient.pipeline.types import EmailDraft, LineResult, QuoteDraft
 from quotient.pricing.rules import RuleSet
 
@@ -192,9 +192,9 @@ def draft_email(draft: QuoteDraft, catalog: Catalog, llm: LLM | None) -> tuple[E
     if llm is None:
         subject, body = template_email(facts)
         return EmailDraft(subject=subject, body=body, source="template", check="template; no model configured"), None
-    user = "TASK: REPLY\nQuote data:\n" + json.dumps(facts, ensure_ascii=False, indent=1)
+    user = "Quote data:\n" + json.dumps(facts, ensure_ascii=False, indent=1)
     try:
-        raw, call = llm.json(name="reply_email", schema=EMAIL_SCHEMA, system=system_prompt(catalog), user=user)
+        raw, call = llm.json(name="reply_email", schema=EMAIL_SCHEMA, system=REPLY_SYSTEM, user=user)
     except LLMError as exc:
         subject, body = template_email(facts)
         return EmailDraft(subject=subject, body=body, source="template", check=f"template; model failed: {exc}"), None

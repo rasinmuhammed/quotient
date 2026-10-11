@@ -265,7 +265,7 @@ class PricingEngine:
                 return self._unpriced(common, t, list_price, pct, discount, net, row.price_row_id, row.tier)
             freight_row_id, transit = rate.freight_row_id, rate.transit_days
             freight = self._c(rate.rate_usd_per_kg * kg_per_unit)
-            to = "origin handling" if incoterm == "FOB" else f"{rate.origin_port_name} to {rate.destination_port}"
+            to = "origin handling" if incoterm == "FOB" else f"{rate.origin_port_name} to {rate.destination_port_name}"
             per_kg = "" if uom == "kg" else f" x {_n(kg_per_unit)} kg/L"
             t.step(FREIGHT, f"{incoterm} {to}: {_n(rate.rate_usd_per_kg)} USD/kg{per_kg}", freight, per, freight_row_id)
             if p.un_number and incoterm in MAIN_CARRIAGE:

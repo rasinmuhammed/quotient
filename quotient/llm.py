@@ -16,12 +16,13 @@ from typing import Any, Protocol
 from quotient import tracing
 from quotient.config import settings
 
-# USD per million tokens: input, cached input, output. Groq console model pages, checked 2026-10-11.
+# USD per million tokens: input, cached input, output. From Groq's model pages (console.groq.com/docs/model/...),
+# checked on PRICES_CHECKED. Cached input is half price (Groq prompt-caching docs; the 20B page shows $0.037).
 # Reasoning tokens are reported inside completion tokens and assumed billed as output (Groq does not say).
+PRICES_CHECKED = "2026-10-11"
 PRICES: dict[str, tuple[Decimal, Decimal, Decimal]] = {
     "openai/gpt-oss-120b": (Decimal("0.15"), Decimal("0.075"), Decimal("0.60")),
     "openai/gpt-oss-20b": (Decimal("0.075"), Decimal("0.0375"), Decimal("0.30")),
-    "qwen/qwen3.8-27b": (Decimal("0.80"), Decimal("0.80"), Decimal("4.00")),
 }
 MILLION = Decimal(1_000_000)
 
@@ -119,7 +120,9 @@ class GroqLLM:
                 )
                 break
             except groq.APIError as exc:
-                if type(exc).__name__ not in self.RETRYABLE or attempt == self.max_retries:
+                # an answer that failed Groq's schema check is sampled again, once
+                retry = type(exc).__name__ in self.RETRYABLE or (attempt == 0 and "json_validate_failed" in str(exc))
+                if not retry or attempt == self.max_retries:
                     raise LLMError(f"{name}: {type(exc).__name__}: {exc}") from exc
                 pause = self._retry_after(exc, attempt)
                 time.sleep(pause)

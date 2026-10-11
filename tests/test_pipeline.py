@@ -13,6 +13,7 @@ from evals.oracle import oracle_llm
 from quotient.domain import FlagCode
 from quotient.llm import ScriptedLLM
 from quotient.pipeline.ingest import ingest, ingest_text
+from quotient.pipeline.normalise import week_end
 from quotient.pipeline.output import check_numbers, draft_email, reply_facts
 from quotient.pipeline.run import Edits, LineEdit, Pipeline
 
@@ -114,7 +115,8 @@ def test_a_clean_line_matches_by_synonym_and_prices(catalog, rules):
 def test_the_model_may_only_choose_among_the_candidates(catalog, rules):
     text = RFQ.replace("Ethyl acetate", "Ethylacetat Spezial")
     llm = scripted([line("Ethylacetat Spezial")],
-                   match=lambda _s, u: {"decisions": [{"line": 1, "choice": "MEG", "reason": "guess"}]})
+                   match=lambda _s, u: {"decisions": [{"line": 1, "substance": "ethyl acetate", "choice": "MEG",
+                                                       "reason": "guess"}]})
     draft = run(llm, catalog, rules, text)
     ln = draft.lines[0]
     assert ln.match.sku is None and ln.priced is None
@@ -125,9 +127,57 @@ def test_the_model_may_only_choose_among_the_candidates(catalog, rules):
 def test_a_model_choice_among_the_candidates_is_used_and_labelled(catalog, rules):
     text = RFQ.replace("Ethyl acetate", "Ethylacetat Spezial")
     llm = scripted([line("Ethylacetat Spezial")],
-                   match=lambda _s, u: {"decisions": [{"line": 1, "choice": "ETAC", "reason": "German name"}]})
+                   match=lambda _s, u: {"decisions": [{"line": 1, "substance": "Ethyl acetate", "choice": "ETAC",
+                                                       "reason": "German name"}]})
     ln = run(llm, catalog, rules, text).lines[0]
     assert ln.match.method == "llm" and ln.match.sku == "QX-ETAC-TG" and ln.priced.priced
+
+
+def test_a_model_choice_that_is_not_the_substance_it_named_is_discarded(catalog, rules):
+    text = RFQ.replace("Ethyl acetate", "Cellosolve acetate")
+    llm = scripted([line("Cellosolve acetate")],
+                   match=lambda _s, u: {"decisions": [{"line": 1, "substance": "2-ethoxyethyl acetate", "choice": "ETAC",
+                                                       "reason": "closest acetate"}]})
+    ln = run(llm, catalog, rules, text).lines[0]
+    assert ln.match.sku is None and ln.priced is None and ln.needs_human
+    assert FlagCode.AMBIGUOUS_MATCH in codes(ln)
+
+
+def test_a_pack_size_alone_is_not_an_amount(catalog, rules):
+    text = RFQ.replace("18 drums", "in 25 L cans")
+    ln = run(scripted([line("Ethyl acetate", qty="25", unit="L cans")]), catalog, rules, text).lines[0]
+    assert FlagCode.QUANTITY_MISSING in codes(ln) and ln.needs_human and ln.quantity.value is None
+
+
+def test_a_count_of_packs_is_copied_and_code_works_out_the_amount(catalog, rules):
+    text = RFQ.replace("18 drums", "20 x 25L cans")
+    ok = run(scripted([line("Ethyl acetate", qty="20", unit="x 25L")]), catalog, rules, text).lines[0]
+    assert ok.quantity.steps[0] == "20 x 25 L jerrycan = 500 L"
+    multiplied = run(scripted([line("Ethyl acetate", qty="500", unit="L", span_qty="20 x 25L")]), catalog, rules, text)
+    assert FlagCode.LOW_CONFIDENCE in codes(multiplied.lines[0])  # 500 is not written anywhere
+
+
+def test_the_fob_place_is_not_the_destination(catalog, rules):
+    text = RFQ.replace("CIF Houston", "FOB Nhava Sheva")
+
+    def extraction(_s, _u):
+        return {"buyer_company": {"value": None, "span": None},
+                "incoterms": [{"term": "FOB", "place": "Nhava Sheva", "span": "FOB Nhava Sheva"}],
+                "destination_country": {"value": "IN", "span": "Nhava Sheva"},
+                "requested_date": {"value": None, "span": None}, "currency": {"value": None, "span": None},
+                "document_grade": {"value": None, "span": None}, "lines": [line("Ethyl acetate")]}
+    h = run(ScriptedLLM({"rfq_extraction": extraction}), catalog, rules, text).header
+    assert h.destination_country == "US" and h.destination_source == "customer"
+
+
+@pytest.mark.parametrize(("text", "after", "end"), [
+    ("Liefertermin KW 48", date(2026, 10, 9), date(2026, 11, 29)),
+    ("week 12/2027", date(2026, 10, 9), date(2027, 3, 28)),
+    ("CW2", date(2026, 10, 9), date(2027, 1, 17)),  # week 2 of 2026 has passed
+    ("delivery weekly", date(2026, 10, 9), None),
+])
+def test_a_week_number_is_dated_by_code(text, after, end):
+    assert week_end(text, after) == end
 
 
 def test_an_english_name_from_the_reader_matches_as_a_translation(catalog, rules):

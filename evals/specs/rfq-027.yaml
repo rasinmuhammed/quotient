@@ -24,7 +24,7 @@ gold:
   currency: USD
   requested_date: null
   lines:
-    - {mention: Methanol, cas: null, grade: reagent, quantity: "500", unit: L, packaging: CAN25, sku: QX-MEOH-AR, why: 20 x 25 L}
-    - {mention: Acetone, cas: null, grade: reagent, quantity: "250", unit: L, packaging: CAN25, sku: QX-ACE-AR}
-    - {mention: Dichloromethane, cas: null, grade: reagent, quantity: "200", unit: L, packaging: CAN25, sku: QX-DCM-AR}
+    - {mention: Methanol, cas: null, grade: reagent, quantity: "20", unit: 25L cans, packaging: CAN25, sku: QX-MEOH-AR, why: 20 x 25 L}
+    - {mention: Acetone, cas: null, grade: reagent, quantity: "10", unit: 25L cans, packaging: CAN25, sku: QX-ACE-AR}
+    - {mention: Dichloromethane, cas: null, grade: reagent, quantity: "8", unit: 25L cans, packaging: CAN25, sku: QX-DCM-AR}
     - {mention: Ethyl acetate, cas: null, grade: reagent, quantity: "30", unit: L, packaging: null, sku: QX-ETAC-AR, expect: [below_moq], why: 2 cans = 50 L under the 100 L MOQ}
