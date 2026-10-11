@@ -130,7 +130,7 @@
   ],
   "computed_by": {
     "engine": "quotient.pricing.engine",
-    "rules_version": "2026.10.1",
+    "rules_version": "2026.10.2",
     "data_manifest": "data/manifest.json"
   }
 }

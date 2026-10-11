@@ -79,3 +79,24 @@ def test_tons_from_a_us_buyer_are_flagged_but_not_from_elsewhere(catalog):
 def test_unknown_unit_is_flagged(catalog):
     c = conv(catalog, "QX-IPA-TG", "3", "pallets")
     assert c.quantity is None and c.flags[0].code == FlagCode.UNIT_CONVERSION
+
+
+@pytest.mark.parametrize(
+    ("sku", "qty", "unit", "expected", "pack"),
+    [
+        ("QX-MEOH-AR", "20", "25L cans", "500", "CAN25"),
+        ("QX-MEOH-AR", "20", "x 25L", "500", "CAN25"),  # the size alone names the only 25 L pack
+        ("QX-ZNO-TG", "20", "1 MT big bags", "20000", "FIBC1000"),
+        ("QX-NAOH50-TG", "3", "IBC totes", "4560", "IBC1000"),  # 3 x 1000 L x 1.52 kg/L
+        ("QX-TIO2-TG", "10", "50 kg bags", "500", None),  # not a pack we sell: an amount, no pack
+    ],
+)
+def test_pack_phrasings(catalog, sku, qty, unit, expected, pack):
+    c = conv(catalog, sku, qty, unit)
+    assert c.quantity == D(expected) and c.pack_code == pack and not c.flags
+
+
+@pytest.mark.parametrize("unit", ["20ft FCL", "pallets", "truckloads"])
+def test_units_without_a_fixed_quantity_are_flagged(catalog, unit):
+    c = conv(catalog, "QX-MEG-TG", "2", unit)
+    assert c.quantity is None and c.flags[0].code == FlagCode.UNIT_CONVERSION

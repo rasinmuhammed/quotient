@@ -1,7 +1,7 @@
 # Pricing rules. Every priced line lists the ids of the rules it used, and every breakdown step names one.
 # A change to a rule's behaviour gets a new id (v2); old quotes keep citing the version they were priced under.
 ruleset: quotient-pricing
-version: "2026.10.1"
+version: "2026.10.2"
 effective_from: "2026-10-01"
 
 rules:
@@ -98,3 +98,53 @@ rules:
   HAZMAT-DOCS-v1:
     title: Hazmat documentation
     text: Goods with a UN number need an SDS and a dangerous goods declaration; the line is flagged for the shipping team.
+
+  # ---------------------------------------------------------------------------------------- reading the RFQ
+
+  EXTRACT-VERIFY-v1:
+    title: Extracted values must be found in the document
+    text: >-
+      The model returns every value with the exact text it read it from. A value whose text is not in the
+      document is discarded, and a quantity must be one of the numbers in its text. A line whose product or
+      quantity could not be verified, or which the model rates below min_confidence, goes to a human.
+    params: {min_confidence: "0.6"}
+
+  MATCH-v1:
+    title: Product matching
+    text: >-
+      In order: a CAS number with a valid check digit; a SKU code; the synonym table (names, abbreviations,
+      trade names), first on the customer's wording, then on the extractor's English name; a spelling-level
+      fuzzy match that clearly beats every other product and is not one name inside another. Otherwise the
+      model chooses among the five closest products or answers none; a choice outside those five is discarded.
+      An unmatched line is never priced.
+
+  GRADE-DEFAULT-v1:
+    title: Grade
+    text: >-
+      The grade written on the line, else in the product name, else one stated for the whole RFQ. A product
+      offered in one grade needs none. Otherwise the lowest grade offered is priced and the line goes to a
+      human. A stated grade the product is not offered in is not substituted: the line is unmatched.
+
+  INCOTERM-v1:
+    title: Incoterm
+    text: >-
+      The one incoterm the RFQ names (C&F is read as CFR). When it names more than one, the customer's usual
+      incoterm if it is one of them, else the first named, is priced and the quote goes to a human. When it
+      names none, the customer's usual incoterm, else EXW, which needs no freight assumption.
+
+  DESTINATION-v1:
+    title: Destination
+    text: The country the RFQ delivers to, else the customer's country. FOB and EXW prices do not depend on it.
+
+  CURRENCY-v1:
+    title: Quote currency
+    text: >-
+      The currency the RFQ asks for when the FX snapshot has it, else the customer's currency, else USD.
+
+  OFFER-VALIDITY-v1:
+    title: Offer validity
+    text: >-
+      A quote is valid for validity_days from the quote date, and never beyond the end of the validity of any
+      price row it uses.
+    params: {validity_days: 14}
+

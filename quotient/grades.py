@@ -49,7 +49,11 @@ def canonical_grade(text: str | None) -> str | None:
     t = re.sub(r"\s+", " ", text.strip().lower()).removesuffix(" grade").strip()
     if t in GRADE_ORDER:
         return t
-    return _LOOKUP.get(t)
+    if t in _LOOKUP:
+        return _LOOKUP[t]
+    # a longer text ("USP grade, stabilised", "fibre grade/technical"): every alias found must agree on one grade
+    found = {grade for alias, grade in _LOOKUP.items() if re.search(rf"(?<![\w.]){re.escape(alias)}(?![\w])", t)}
+    return found.pop() if len(found) == 1 else None
 
 
 def default_grade(offered: list[str]) -> str:

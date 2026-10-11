@@ -6,6 +6,8 @@ such as HS 2905.12 stay text instead of being guessed into floats.
 
 from __future__ import annotations
 
+import hashlib
+import json
 from collections import defaultdict
 from dataclasses import dataclass
 from datetime import date
@@ -122,6 +124,7 @@ class Catalog:
     freight: dict[tuple[str, str, str], FreightRate]  # (origin port, destination country code, incoterm)
     fx: dict[str, FxRate]  # quote currency -> rate per USD
     fx_snapshot_date: date
+    version: str = "unknown"  # a hash of the data files, from data/manifest.json
 
     @classmethod
     def load(cls, data_dir: Path) -> Catalog:
@@ -159,7 +162,12 @@ class Catalog:
             missing = [c for c in p.pack_codes if c not in packs or (p.sku, c) not in price_rows]
             if missing:
                 raise ValueError(f"{p.sku}: packs {missing} have no pack record or price rows")
-        return cls(products, packs, customers, price_rows, freight, fx, snapshot.pop())
+        manifest = data_dir / "manifest.json"
+        version = "unknown"
+        if manifest.exists():
+            files = json.loads(manifest.read_text())["files"]
+            version = hashlib.sha256("".join(f["sha256"] for _, f in sorted(files.items())).encode()).hexdigest()[:12]
+        return cls(products, packs, customers, price_rows, freight, fx, snapshot.pop(), version)
 
     def product(self, sku: str) -> Product:
         try:
