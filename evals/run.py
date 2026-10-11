@@ -3,6 +3,7 @@
     uv run python evals/run.py                                   # the model in .env, all 30 RFQs
     uv run python evals/run.py --oracle                          # a scripted perfect reader: the logic's ceiling
     uv run python evals/run.py --model openai/gpt-oss-20b --split holdout
+    uv run python evals/run.py --combine <dev run>.json <holdout run>.json   # one model's run split over two days
 
 Results go to evals/results/<timestamp>-<model>.json with the dev and holdout splits reported separately. The
 holdout ten were fixed before any prompt was written and are never used to tune one.
@@ -11,6 +12,7 @@ holdout ten were fixed before any prompt was written and are never used to tune 
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 import statistics
@@ -35,9 +37,11 @@ from quotient.config import settings  # noqa: E402
 from quotient.domain import SEVERITY, FlagCode, Severity  # noqa: E402
 from quotient.grades import canonical_grade  # noqa: E402
 from quotient.llm import PRICES_CHECKED, GroqLLM  # noqa: E402
-from quotient.pipeline.extract import norm  # noqa: E402
+from quotient.pipeline.extract import SCHEMA, norm  # noqa: E402
 from quotient.pipeline.ingest import ingest  # noqa: E402
-from quotient.pipeline.match import find_cas  # noqa: E402
+from quotient.pipeline.match import MATCH_SCHEMA_ITEM, find_cas  # noqa: E402
+from quotient.pipeline.output import EMAIL_SCHEMA  # noqa: E402
+from quotient.pipeline.prompts import REPLY_SYSTEM, system_prompt  # noqa: E402
 from quotient.pipeline.run import Pipeline  # noqa: E402
 from quotient.pipeline.types import LineResult, QuoteDraft  # noqa: E402
 from quotient.pricing.rules import default_rules  # noqa: E402
@@ -278,6 +282,38 @@ def run_one(gold: dict, pipeline_for, catalog: Catalog, reply: bool) -> tuple[di
     return rec, draft
 
 
+def prompts_hash(catalog: Catalog) -> str:
+    """Fingerprint of everything the model is sent besides the RFQ: prompts and output schemas."""
+    text = json.dumps([system_prompt(catalog), REPLY_SYSTEM, SCHEMA, MATCH_SCHEMA_ITEM, EMAIL_SCHEMA], sort_keys=True)
+    return hashlib.sha256(text.encode()).hexdigest()[:12]
+
+
+def combine(paths: list[Path]) -> Path:
+    """One result from a model's dev-only and holdout-only runs: free-tier daily token limits can make a full run
+    take two days. Refuses parts that differ in anything that could change an answer."""
+    parts = [json.loads(p.read_text()) for p in paths]
+    same = ("model", "reasoning_effort", "oracle", "rules_version", "data_version", "prompts", "holdout_ids")
+    for k in same:
+        values = {json.dumps(r["run"].get(k)) for r in parts}
+        if len(values) > 1:
+            sys.exit(f"cannot combine: {k} differs ({', '.join(sorted(values))})")
+    records = [rec for r in parts for rec in r["rfqs"]]
+    ids = [rec["id"] for rec in records]
+    if len(ids) != len(set(ids)):
+        sys.exit("cannot combine: an RFQ appears in more than one part")
+    holdout = set(parts[0]["run"]["holdout_ids"])
+    splits = {"dev": summarise([r for r in records if r["id"] not in holdout]),
+              "holdout": summarise([r for r in records if r["id"] in holdout]), "all": summarise(records)}
+    run = {**parts[0]["run"], "at": max(r["run"]["at"] for r in parts), "rfqs": len(records),
+           "code": " + ".join(dict.fromkeys(r["run"]["code"] for r in parts)),
+           "wall_s": round(sum(r["run"]["wall_s"] for r in parts), 1), "combined_from": [p.name for p in paths]}
+    out = RESULTS / f"{run['at'].replace('-', '').replace(':', '').replace('T', '-').rstrip('Z')}-combined-" \
+                    f"{run['model'].replace('/', '_')}.json"
+    out.write_text(json.dumps({"run": run, "splits": splits, "rfqs": records}, indent=1, default=str) + "\n")
+    print(report(splits))
+    return out
+
+
 def _git() -> str:
     try:
         head = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
@@ -323,14 +359,18 @@ def report(splits: dict[str, dict]) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--model", help="Groq model id (default: QUOTIENT_MODEL)")
-    ap.add_argument("--effort", help="reasoning effort for gpt-oss models (default: QUOTIENT_REASONING_EFFORT)")
+    ap.add_argument("--effort", help="reasoning effort: low|medium|high for gpt-oss; none (instruct mode) or low|medium|high for qwen")
     ap.add_argument("--oracle", action="store_true", help="scripted perfect reader instead of a model")
     ap.add_argument("--split", choices=("all", "dev", "holdout"), default="all")
     ap.add_argument("--only", nargs="*", help="RFQ ids to run")
     ap.add_argument("--workers", type=int, default=1, help="RFQs in parallel (mind the rate limits)")
     ap.add_argument("--no-reply", action="store_true", help="skip the reply email")
     ap.add_argument("--no-save", action="store_true")
+    ap.add_argument("--combine", nargs="+", type=Path, metavar="RESULT", help="merge part runs of one model")
     args = ap.parse_args()
+    if args.combine:
+        print(f"saved {combine(args.combine).relative_to(ROOT)}", file=sys.stderr)
+        return
 
     catalog, rules = default_catalog(), default_rules()
     split = json.loads((EVALS / "split.json").read_text())
@@ -380,7 +420,7 @@ def main() -> None:
 
     result = {
         "run": {"at": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"), "model": model, "reasoning_effort": effort,
-                "oracle": args.oracle, "prices_checked": None if args.oracle else PRICES_CHECKED, "code": _git(), "rules_version": rules.version, "data_version": catalog.version,
+                "oracle": args.oracle, "prices_checked": None if args.oracle else PRICES_CHECKED, "code": _git(), "prompts": prompts_hash(catalog), "rules_version": rules.version, "data_version": catalog.version,
                 "rfqs": len(records), "wall_s": round(time.perf_counter() - started, 1), "workers": args.workers,
                 "holdout_ids": sorted(holdout)},
         "splits": splits,

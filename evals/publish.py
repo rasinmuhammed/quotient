@@ -1,9 +1,10 @@
 """Publish the demo's static data into the web app, so opening a sample never waits on the API.
 
-    uv run python evals/publish.py
+    uv run python evals/publish.py [--model qwen/qwen3.8-27b]
 
 Writes, all generated (do not edit by hand):
-  web/public/demo/drafts/<rfq>.json   the drafts the default model produced in its latest complete eval run
+  web/public/demo/drafts/<rfq>.json   the drafts one model produced in its latest complete eval run (default: the
+                                      configured model if it has one, else the latest complete live run's model)
   web/public/demo/rfqs/<file>         the original RFQ files, for download
   web/data/samples.json               the sample list
   web/data/catalog.json, rules.json   what the review screen shows without the API (product picker, rule texts)
@@ -12,6 +13,7 @@ Writes, all generated (do not edit by hand):
 
 from __future__ import annotations
 
+import argparse
 import json
 import shutil
 import sys
@@ -43,12 +45,17 @@ def complete_runs() -> list[tuple[Path, dict]]:
 
 
 def main() -> None:
-    model = settings().quotient_model
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--model", help="whose drafts the demo opens")
+    args = ap.parse_args()
     runs = complete_runs()
     live = [(p, r) for p, r in runs if not r["run"]["oracle"]]
     oracle = next(((p, r) for p, r in runs if r["run"]["oracle"]), None)
+    configured = settings().quotient_model
+    model = args.model or (configured if any(r["run"]["model"] == configured for _, r in live)
+                           else live[0][1]["run"]["model"] if live else configured)
 
-    # Drafts: only from the default model's latest complete run, all 30 from that one run.
+    # Drafts: only from that model's latest complete run (or the parts it was combined from), all 30 from it.
     source = next(((p, r) for p, r in live if r["run"]["model"] == model), None)
     drafts_dir = WEB / "public" / "demo" / "drafts"
     shutil.rmtree(drafts_dir, ignore_errors=True)
@@ -57,7 +64,7 @@ def main() -> None:
         saved = RESULTS / "drafts" / model.replace("/", "_")
         for f in sorted(saved.glob("rfq-*.json")):
             d = json.loads(f.read_text())
-            if d["run"] != source[0].name:
+            if d["run"] not in (source[0].name, *source[1]["run"].get("combined_from", ())):
                 sys.exit(f"{f.name} is from {d['run']}, not the latest complete run {source[0].name}; rerun evals/run.py")
             write(drafts_dir / f.name, d["draft"])
             replay[f.stem] = {"run": d["run"], "model": d["model"], "effort": d.get("effort")}
