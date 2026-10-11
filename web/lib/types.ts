@@ -264,7 +264,7 @@ export interface Sample {
   lines: number;
   sender: string | null;
   received: string;
-  replay: boolean;
+  replay: { run: string; model: string; effort: string | null } | null; // a published live-run draft
 }
 
 export interface Health {

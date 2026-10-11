@@ -133,7 +133,7 @@ function QuoteFlags() {
         return (
           <li key={f.code} className={`flex flex-wrap items-center gap-3 px-4 py-2.5 text-[13px] ${blocking ? "bg-attn-soft/60" : ""}`}>
             <FlagChip flag={f} approved={draft.header_approved} />
-            <span className="min-w-0 flex-1 text-pretty">{f.message}</span>
+            <span className="order-first w-full text-pretty sm:order-none sm:w-auto sm:min-w-0 sm:flex-1">{f.message}</span>
             {f.rule_id && <RuleTag id={f.rule_id} title={ruleTitle(rules, f.rule_id)} />}
             {f.code === "incoterm_conflict" &&
               h.incoterms_mentioned

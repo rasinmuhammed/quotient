@@ -2,7 +2,7 @@
 
 import { Download } from "lucide-react";
 import { useMemo } from "react";
-import { sampleFileUrl } from "@/lib/api";
+import { sampleFile } from "@/lib/demo";
 import { date, FORMAT_LABEL } from "@/lib/format";
 import type { QuoteDraft, Spanned } from "@/lib/types";
 import { FormatIcon } from "../ui";
@@ -95,7 +95,7 @@ export function DocumentPane() {
   if (at < doc.text.length) pieces.push(doc.text.slice(at));
 
   return (
-    <section className="flex min-h-0 flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-card">
+    <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-card">
       <div className="flex items-center gap-3 border-b border-border px-4 py-3">
         <FormatIcon format={doc.format === "text" ? "txt" : doc.format} />
         <div className="min-w-0 flex-1">
@@ -106,7 +106,7 @@ export function DocumentPane() {
           </div>
         </div>
         {sample && (
-          <a href={sampleFileUrl(sample)} title="Download the original file" className="rounded-md p-1.5 text-muted hover:bg-surface-2 hover:text-text">
+          <a href={sampleFile(doc.source_name)} download title="Download the original file" className="rounded-md p-1.5 text-muted hover:bg-surface-2 hover:text-text">
             <Download className="size-4" />
           </a>
         )}

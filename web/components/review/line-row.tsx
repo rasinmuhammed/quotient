@@ -38,7 +38,7 @@ export function LineRow({ line }: { line: LineResult }) {
         activeLine === line.line_no && !open ? "bg-surface-2/60" : ""
       }`}
     >
-      <button onClick={() => setOpenLine(open ? null : line.line_no)} className={`${LINE_GRID} w-full px-4 py-3.5 text-left`} aria-expanded={open}>
+      <button onClick={() => setOpenLine(open ? null : line.line_no)} className={`${LINE_GRID} hidden w-full px-4 py-3.5 text-left md:grid`} aria-expanded={open}>
         <span className="pt-0.5">
           {pending ? (
             <LoaderCircle className="size-4 animate-spin text-faint" />
@@ -109,6 +109,46 @@ export function LineRow({ line }: { line: LineResult }) {
         )}
       </button>
 
+      <button onClick={() => setOpenLine(open ? null : line.line_no)} className="flex w-full gap-3 px-4 py-3.5 text-left md:hidden" aria-expanded={open}>
+        <span className="pt-0.5">
+          {pending ? (
+            <LoaderCircle className="size-4 animate-spin text-faint" />
+          ) : line.needs_human ? (
+            <TriangleAlert className="size-4 text-attn" aria-label="needs you" />
+          ) : line.approved ? (
+            <CircleCheck className="size-4 text-accent" aria-label="approved by you" />
+          ) : (
+            <Check className="size-4 text-faint" aria-label="ready" />
+          )}
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="flex items-baseline justify-between gap-3">
+            <span className="truncate text-[14px] font-medium">{p?.product_name ?? x?.mention.value ?? "Added by you"}</span>
+            <span className={`num shrink-0 text-[14px] font-medium ${p?.line_total ? "" : "text-faint"}`}>
+              {p?.line_total ? money(p.line_total, cur) : "–"}
+            </span>
+          </span>
+          <span className="mt-0.5 block truncate text-[12.5px] text-muted">
+            {x ? `“${x.mention.value ?? ""}”${x.quantity.value ? `, ${[x.quantity.value, x.unit.value].filter(Boolean).join(" ")}` : ""}` : "added on review"}
+          </span>
+          {p ? (
+            <span className="num mt-0.5 block text-[12.5px] text-muted">
+              {qty(p.quoted_qty)} {p.uom} · {p.packs} × {p.pack_description}
+              {p.unit_price ? ` · ${unitMoney(p.unit_price, cur)}/${p.uom}` : ""}
+            </span>
+          ) : (
+            !line.match.sku && <span className="mt-0.5 block text-[12.5px] text-attn">No product matched</span>
+          )}
+          {line.flags.length > 0 && (
+            <span className="mt-2 flex flex-wrap gap-1.5">
+              {line.flags.map((f) => (
+                <FlagChip key={f.code} flag={f} approved={line.approved} />
+              ))}
+            </span>
+          )}
+        </span>
+        <ChevronRight className={`mt-0.5 size-4 shrink-0 text-faint transition-transform ${open ? "rotate-90" : ""}`} />
+      </button>
       {open && <LineDetail line={line} blocking={blocking.length > 0} />}
     </li>
   );
@@ -140,7 +180,7 @@ function LineDetail({ line, blocking }: { line: LineResult; blocking: boolean })
   const key = `line-${line.line_no}`;
 
   return (
-    <div className="rise border-t border-dashed border-border bg-surface-2/40 px-4 pt-4 pb-5">
+    <div className="rise min-w-0 border-t border-dashed border-border bg-surface-2/40 px-4 pt-4 pb-5">
       <div className="grid gap-6 lg:grid-cols-2">
         <div className="space-y-5">
           {x && (

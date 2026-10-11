@@ -18,7 +18,7 @@ export function NavLinks() {
           <Link
             key={l.href}
             href={l.href}
-            className={`rounded-md px-2.5 py-1.5 text-[13px] font-medium transition-colors ${
+            className={`rounded-md px-2.5 py-1.5 text-[13px] font-medium whitespace-nowrap transition-colors ${
               active ? "bg-surface-2 text-text" : "text-muted hover:text-text"
             }`}
           >

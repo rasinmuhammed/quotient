@@ -1,13 +1,13 @@
 "use client";
 
-import { ArrowRight, ClipboardPaste, FileUp, LoaderCircle, Play, RotateCcw } from "lucide-react";
+import { ArrowRight, ClipboardPaste, FileUp, LoaderCircle, Play } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { api, ApiError } from "@/lib/api";
+import { SAMPLES } from "@/lib/demo";
 import { FORMAT_LABEL } from "@/lib/format";
 import { saveDraft } from "@/lib/store";
-import type { Sample } from "@/lib/types";
 import { FormatIcon } from "./ui";
 
 const ACCEPT = ".eml,.pdf,.xlsx,.xlsm,.txt";
@@ -135,8 +135,8 @@ function Working({ label, started }: { label: string; started: number }) {
       <div className="mt-4 text-[15px] font-medium">Reading {label}</div>
       <div className="num mt-1 text-[13px] text-muted">{s.toFixed(1)} s</div>
       <p className="mt-5 max-w-[340px] text-[12.5px] leading-relaxed text-faint">
-        The model reads the document; matching, pricing and checks run in code. Usually 5–20 s; longer when the
-        server has just woken or the model is rate-limited.
+        The model reads the document; matching, pricing and checks run in code. Usually 5–20 s, plus ~30 s if the
+        server was asleep and up to a minute more when the model’s free tier is rate-limited.
       </p>
     </div>
   );
@@ -145,28 +145,8 @@ function Working({ label, started }: { label: string; started: number }) {
 const FILTERS = ["all", "eml", "pdf", "xlsx", "txt"] as const;
 
 function Samples() {
-  const [samples, setSamples] = useState<Sample[] | null>(null);
-  const [failed, setFailed] = useState(false);
   const [filter, setFilter] = useState<(typeof FILTERS)[number]>("all");
-
-  useEffect(() => {
-    let alive = true;
-    let tries = 0;
-    const load = () =>
-      api
-        .samples()
-        .then((s) => alive && setSamples(s))
-        .catch(() => {
-          if (alive && ++tries < 8) setTimeout(load, 4000);
-          else if (alive) setFailed(true);
-        });
-    load();
-    return () => {
-      alive = false;
-    };
-  }, []);
-
-  const shown = useMemo(() => (samples ?? []).filter((s) => filter === "all" || s.format === filter), [samples, filter]);
+  const shown = useMemo(() => SAMPLES.filter((s) => filter === "all" || s.format === filter), [filter]);
 
   return (
     <section className="flex min-h-0 flex-col rounded-2xl border border-border bg-surface shadow-card">
@@ -190,14 +170,6 @@ function Samples() {
         </div>
       </div>
       <ul className="max-h-[380px] min-h-[260px] flex-1 overflow-y-auto p-1.5">
-        {samples === null &&
-          !failed &&
-          Array.from({ length: 7 }).map((_, i) => <li key={i} className="shimmer m-1 h-[52px] rounded-lg" />)}
-        {failed && (
-          <li className="flex h-full flex-col items-center justify-center gap-2 p-8 text-center text-[13px] text-muted">
-            <RotateCcw className="size-4" /> The server did not answer. Reload to try again.
-          </li>
-        )}
         {shown.map((s) => (
           <li key={s.id}>
             <Link
@@ -222,9 +194,9 @@ function Samples() {
               </div>
               <span
                 className="flex items-center gap-1 text-[11.5px] text-faint opacity-0 transition-opacity group-hover:opacity-100"
-                title={s.replay ? "Opens the stored live run instantly; you can re-run it live" : "Runs the model live"}
+                title={s.replay ? `Opens what ${s.replay.model} produced in the eval run; you can run it live from there` : "Runs the model live"}
               >
-                {s.replay ? "replay" : "live"} <Play className="size-3" />
+                {s.replay ? "saved run" : "live"} <Play className="size-3" />
               </span>
             </Link>
           </li>

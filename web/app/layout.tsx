@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import { NavLinks } from "@/components/nav-links";
-import { ServerStatus } from "@/components/server-status";
+import { WakeNotice } from "@/components/wake-notice";
 import "./globals.css";
 
 const sans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={`${sans.variable} ${mono.variable} h-full`}>
       <body className="flex min-h-full flex-col bg-bg text-text">
         <header className="sticky top-0 z-30 border-b border-border bg-bg/85 backdrop-blur-md">
-          <div className="mx-auto flex h-14 max-w-[1440px] items-center gap-6 px-5 lg:px-8">
+          <div className="mx-auto flex h-14 max-w-[1440px] items-center gap-3 px-4 sm:gap-6 sm:px-5 lg:px-8">
             <Link href="/" className="flex items-center gap-2 text-text">
               <span className="text-accent">
                 <Mark />
@@ -36,12 +36,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <span className="text-[15px] font-semibold tracking-[-0.01em]">Quotient</span>
             </Link>
             <NavLinks />
-            <div className="ml-auto">
-              <ServerStatus />
-            </div>
           </div>
         </header>
         <main className="flex flex-1 flex-col">{children}</main>
+        <WakeNotice />
       </body>
     </html>
   );

@@ -5,9 +5,10 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { api, ApiError } from "@/lib/api";
-import { seconds, usd } from "@/lib/format";
+import { date, seconds, usd } from "@/lib/format";
 import { loadDraft, saveDraft } from "@/lib/store";
-import type { CatalogData, Edits, QuoteDraft, RulesData } from "@/lib/types";
+import { CATALOG, RULES, SAMPLES, savedDraft } from "@/lib/demo";
+import type { Edits, QuoteDraft } from "@/lib/types";
 import { Button } from "../ui";
 import { ReviewContext, type ReviewState, useReview } from "./context";
 import { DocumentPane } from "./document-pane";
@@ -33,33 +34,31 @@ function ReviewLoader({ id, sample, wantLive }: { id: string | null; sample: str
   const router = useRouter();
   const [stored] = useState(() => (id ? loadDraft(id) : null));
   const [load, setLoad] = useState<Load>(() =>
-    id ? (stored ? { kind: "ready" } : { kind: "error", message: LOST }) : sample ? { kind: "loading", live: wantLive } : { kind: "error", message: "Nothing to review yet." },
+    id ? (stored ? { kind: "ready" } : { kind: "error", message: LOST }) : sample ? { kind: "loading", live: wantLive || !SAMPLES.find((s) => s.id === sample)?.replay } : { kind: "error", message: "Nothing to review yet." },
   );
   const [draft, setDraft] = useState<QuoteDraft | null>(stored?.draft ?? null);
   const [replay, setReplay] = useState<string | null>(stored?.replay ?? null);
-  const [catalog, setCatalog] = useState<CatalogData | null>(null);
-  const [rules, setRules] = useState<RulesData | null>(null);
-  const [live, setLive] = useState(false);
+  const catalog = CATALOG;
+  const rules = RULES;
+  const live = true; // whether the server has a model is only known by asking it; a failed live run says so
   const [busy, setBusy] = useState<string | null>(null);
   const [editError, setEditError] = useState<string | null>(null);
   const [activeLine, setActiveLine] = useState<number | null>(null);
   const [openLine, setOpenLine] = useState<number | null>(null);
 
   useEffect(() => {
-    let alive = true;
-    api.catalog().then((c) => alive && setCatalog(c)).catch(() => {});
-    api.rules().then((r) => alive && setRules(r)).catch(() => {});
-    api.health().then((h) => alive && setLive(h.live)).catch(() => {});
-    return () => {
-      alive = false;
-    };
-  }, []);
-
-  useEffect(() => {
     if (id || !sample) return;
     let alive = true;
-    api
-      .quote({ sample, live: wantLive })
+    // A sample opens the draft published from the eval run (a static file, no API); "Run live" reads it again.
+    const published = SAMPLES.find((s) => s.id === sample)?.replay;
+    const load = async () => {
+      if (!wantLive && published) {
+        const saved = await savedDraft(sample);
+        if (saved) return { draft: saved, replay: published.run };
+      }
+      return api.quote({ sample, live: true });
+    };
+    load()
       .then(({ draft, replay }) => {
         if (!alive) return;
         setDraft(draft);
@@ -138,15 +137,15 @@ function ReviewLoader({ id, sample, wantLive }: { id: string | null; sample: str
           {replay && (
             <span
               className="rounded-full border border-border bg-surface px-2 py-0.5 text-[11.5px] text-muted"
-              title={`Opened from the stored output of eval run ${replay}; repriced now with the current rules.`}
+              title={`What ${draft.model} produced for this RFQ in eval run ${replay}. Run live to read it again now.`}
             >
-              Replay of a live run
+              Saved run · {draft.model.replace(/^openai\//, "")} · {date(`${replay.slice(0, 4)}-${replay.slice(4, 6)}-${replay.slice(6, 8)}`, { day: "numeric", month: "short" })}
             </span>
           )}
           <div className="ml-auto flex items-center gap-2">
             {busy && <LoaderCircle className="size-4 animate-spin text-faint" />}
             {sample && live && (
-              <Button kind="ghost" onClick={() => router.push(`/review?sample=${sample}&live=1`)} title="Read this RFQ again with the live model">
+              <Button kind="ghost" onClick={() => router.push(`/review?sample=${sample}&live=1`)} title="Read this RFQ again with the live model. The server may take ~30 s to wake.">
                 <Play className="size-4" /> Run live
               </Button>
             )}
@@ -159,8 +158,9 @@ function ReviewLoader({ id, sample, wantLive }: { id: string | null; sample: str
           <Summary />
         </div>
 
-        <div className="mt-5 grid items-start gap-5 xl:grid-cols-[minmax(0,0.82fr)_minmax(0,1.5fr)]">
-          <div className="xl:sticky xl:top-[72px] xl:h-[calc(100vh-96px)]">
+        <div className="mt-5 grid grid-cols-1 items-start gap-5 xl:grid-cols-[minmax(0,0.82fr)_minmax(0,1.5fr)]">
+          {/* On a phone the quote comes first and the source document after it, in its own scroll box. */}
+          <div className="order-last flex h-[70vh] min-w-0 flex-col xl:sticky xl:top-[72px] xl:order-none xl:h-[calc(100vh-96px)]">
             <DocumentPane />
           </div>
           <div className="min-w-0 space-y-5">
@@ -179,7 +179,7 @@ function Lines() {
   const [adding, setAdding] = useState(false);
   return (
     <section className="overflow-hidden rounded-2xl border border-border bg-surface shadow-card">
-      <div className={`${LINE_GRID} border-b border-border px-4 py-2 text-[11.5px] font-medium text-faint`}>
+      <div className={`${LINE_GRID} hidden border-b border-border px-4 py-2 text-[11.5px] font-medium text-faint md:grid`}>
         <span />
         <span>Customer wrote</span>
         <span>Matched product</span>
