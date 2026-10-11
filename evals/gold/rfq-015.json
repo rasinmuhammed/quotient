@@ -1,0 +1,75 @@
+{
+  "id": "rfq-015",
+  "file": "rfq-015.eml",
+  "format": "eml",
+  "received": "2026-10-07",
+  "customer_id": "C-004",
+  "incoterms_mentioned": [
+    "CFR"
+  ],
+  "incoterm": "CFR",
+  "destination": "BR",
+  "currency": "USD",
+  "requested_date": null,
+  "quote_flags": [],
+  "total": "22622.41",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "MPG USP",
+      "cas": null,
+      "grade": "pharma_usp",
+      "quantity": "20",
+      "unit": "drums",
+      "packaging": "DRUM200",
+      "sku": "QX-MPG-USP",
+      "why": null,
+      "expected": {
+        "sku": "QX-MPG-USP",
+        "quantity_uom": "4144.0000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 20,
+        "quoted_qty": "4144.0000",
+        "unit_price": "3.881",
+        "line_total": "16082.86",
+        "currency": "USD",
+        "price_row_id": "PL-00114",
+        "freight_row_id": "FR-018"
+      },
+      "flags": [],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "Glycerine EP 99.5%",
+      "cas": null,
+      "grade": "pharma_ep",
+      "quantity": "10",
+      "unit": "drums",
+      "packaging": "DRUM200",
+      "sku": "QX-GLY-EP",
+      "why": null,
+      "expected": {
+        "sku": "QX-GLY-EP",
+        "quantity_uom": "2522.0000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 10,
+        "quoted_qty": "2522.0000",
+        "unit_price": "2.593",
+        "line_total": "6539.55",
+        "currency": "USD",
+        "price_row_id": "PL-00154",
+        "freight_row_id": "FR-042"
+      },
+      "flags": [],
+      "needs_human": false
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

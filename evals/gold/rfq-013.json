@@ -1,0 +1,77 @@
+{
+  "id": "rfq-013",
+  "file": "rfq-013.eml",
+  "format": "eml",
+  "received": "2026-10-11",
+  "customer_id": "C-019",
+  "incoterms_mentioned": [
+    "CIF"
+  ],
+  "incoterm": "CIF",
+  "destination": "JP",
+  "currency": "JPY",
+  "requested_date": null,
+  "quote_flags": [],
+  "total": "1253670",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "N-Methyl-2-pyrrolidone (NMP)",
+      "cas": null,
+      "grade": "reagent",
+      "quantity": null,
+      "unit": null,
+      "packaging": "CAN25",
+      "sku": "QX-NMP-AR",
+      "why": "no quantity given",
+      "expected": {
+        "sku": "QX-NMP-AR",
+        "quantity_uom": null,
+        "uom": "L",
+        "pack_code": null,
+        "packs": null,
+        "quoted_qty": null,
+        "unit_price": null,
+        "line_total": null,
+        "currency": "JPY",
+        "price_row_id": null,
+        "freight_row_id": null
+      },
+      "flags": [
+        "quantity_missing"
+      ],
+      "needs_human": true
+    },
+    {
+      "line_no": 2,
+      "mention": "DMSO",
+      "cas": null,
+      "grade": "pharma_usp",
+      "quantity": "1000",
+      "unit": "kg",
+      "packaging": null,
+      "sku": "QX-DMSO-USP",
+      "why": null,
+      "expected": {
+        "sku": "QX-DMSO-USP",
+        "quantity_uom": "1000.0000",
+        "uom": "kg",
+        "pack_code": "IBC1000",
+        "packs": 1,
+        "quoted_qty": "1100.0000",
+        "unit_price": "1139.7",
+        "line_total": "1253670",
+        "currency": "JPY",
+        "price_row_id": "PL-00222",
+        "freight_row_id": "FR-039"
+      },
+      "flags": [],
+      "needs_human": false
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

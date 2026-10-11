@@ -1,0 +1,79 @@
+{
+  "id": "rfq-023",
+  "file": "rfq-023.eml",
+  "format": "eml",
+  "received": "2026-10-09",
+  "customer_id": "C-016",
+  "incoterms_mentioned": [
+    "CFR"
+  ],
+  "incoterm": "CFR",
+  "destination": "US",
+  "currency": "USD",
+  "requested_date": null,
+  "quote_flags": [],
+  "total": "45096.00",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Maleic anhydride briquettes",
+      "cas": null,
+      "grade": null,
+      "quantity": "12",
+      "unit": "MT",
+      "packaging": "BAG25",
+      "sku": "QX-MAN-TG",
+      "why": "the reply revises 8 MT to 12 MT",
+      "expected": {
+        "sku": "QX-MAN-TG",
+        "quantity_uom": "12000.0000",
+        "uom": "kg",
+        "pack_code": "BAG25",
+        "packs": 480,
+        "quoted_qty": "12000.000",
+        "unit_price": "2.752",
+        "line_total": "33024.00",
+        "currency": "USD",
+        "price_row_id": "PL-00563",
+        "freight_row_id": "FR-002"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "Phthalic anhydride flakes",
+      "cas": null,
+      "grade": null,
+      "quantity": "6",
+      "unit": "MT",
+      "packaging": "BAG25",
+      "sku": "QX-PAN-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-PAN-TG",
+        "quantity_uom": "6000.0000",
+        "uom": "kg",
+        "pack_code": "BAG25",
+        "packs": 240,
+        "quoted_qty": "6000.000",
+        "unit_price": "2.012",
+        "line_total": "12072.00",
+        "currency": "USD",
+        "price_row_id": "PL-00571",
+        "freight_row_id": "FR-002"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "id": "rfq-022",
+  "file": "rfq-022.xlsx",
+  "format": "xlsx",
+  "received": "2026-10-05",
+  "customer_id": "C-025",
+  "incoterms_mentioned": [
+    "CFR"
+  ],
+  "incoterm": "CFR",
+  "destination": "BR",
+  "currency": "USD",
+  "requested_date": null,
+  "quote_flags": [],
+  "total": "54317.25",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Toluene technical",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "15000",
+      "unit": "L",
+      "packaging": "IBC1000",
+      "sku": "QX-TOL-TG",
+      "why": "litres of a per-kg SKU",
+      "expected": {
+        "sku": "QX-TOL-TG",
+        "quantity_uom": "13005.0000",
+        "uom": "kg",
+        "pack_code": "IBC1000",
+        "packs": 15,
+        "quoted_qty": "13005.0000",
+        "unit_price": "1.166",
+        "line_total": "15163.83",
+        "currency": "USD",
+        "price_row_id": "PL-00079",
+        "freight_row_id": "FR-042"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "Methanol technical",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "25",
+      "unit": "MT",
+      "packaging": "IBC1000",
+      "sku": "QX-MEOH-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-MEOH-TG",
+        "quantity_uom": "25000.0000",
+        "uom": "kg",
+        "pack_code": "IBC1000",
+        "packs": 32,
+        "quoted_qty": "25344.0000",
+        "unit_price": "0.726",
+        "line_total": "18399.74",
+        "currency": "USD",
+        "price_row_id": "PL-00048",
+        "freight_row_id": "FR-018"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 3,
+      "mention": "Acetone technical",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "50",
+      "unit": "drums",
+      "packaging": "DRUM200",
+      "sku": "QX-ACE-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-ACE-TG",
+        "quantity_uom": "7910.0000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 50,
+        "quoted_qty": "7910.0000",
+        "unit_price": "1.581",
+        "line_total": "12505.71",
+        "currency": "USD",
+        "price_row_id": "PL-00027",
+        "freight_row_id": "FR-018"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 4,
+      "mention": "Isopropanol",
+      "cas": null,
+      "grade": null,
+      "quantity": "4000",
+      "unit": "kg",
+      "packaging": "DRUM200",
+      "sku": "QX-IPA-TG",
+      "why": "IPA comes in three grades",
+      "expected": {
+        "sku": "QX-IPA-TG",
+        "quantity_uom": "4000.0000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 26,
+        "quoted_qty": "4087.2000",
+        "unit_price": "2.018",
+        "line_total": "8247.97",
+        "currency": "USD",
+        "price_row_id": "PL-00002",
+        "freight_row_id": "FR-018"
+      },
+      "flags": [
+        "grade_not_specified",
+        "hazmat_documents"
+      ],
+      "needs_human": true
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

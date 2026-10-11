@@ -1,0 +1,32 @@
+id: rfq-014
+format: pdf
+received: 2026-10-09
+from: Gary Goodwin <gary.goodwin@rheinaukunststoffe.de>
+subject: RFQ 2026-1187 Rheinau Kunststoffe
+body: |
+  Hello,
+  please see attached RFQ 2026-1187, DAP Ludwigshafen. Best regards, Gary Goodwin
+document:
+  title: Request for Quotation 2026-1187
+  fields:
+    Company: Rheinau Kunststoffe GmbH
+    Plant: Industriestraße 12, 67063 Ludwigshafen am Rhein, Germany
+    Contact: Gary Goodwin, Purchasing
+    Incoterms 2020: DAP Ludwigshafen
+    Requested delivery: 2026-12-04
+  columns: [Pos, Product, Grade, Qty, Unit, Packaging]
+  rows:
+    - ["1", "Polyethylene glycol 400", "USP", "3", "drums", "steel drums"]
+    - ["2", "Sodium bicarbonate", "technical", "4", "pallets", "25 kg bags"]
+    - ["3", "Potassium carbonate", "technical", "2,500", "kg", "big bags"]
+gold:
+  customer_id: C-026
+  incoterms_mentioned: [DAP]
+  incoterm: DAP
+  destination: DE
+  currency: EUR
+  requested_date: 2026-12-04
+  lines:
+    - {mention: Polyethylene glycol 400, cas: null, grade: pharma_usp, quantity: "3", unit: drums, packaging: DRUM200, sku: QX-PEG400-USP}
+    - {mention: Sodium bicarbonate, cas: null, grade: technical, quantity: "4", unit: pallets, packaging: BAG25, sku: QX-NAHCO3-TG, flags: [unit_conversion_impossible], why: a pallet is not a fixed quantity}
+    - {mention: Potassium carbonate, cas: null, grade: technical, quantity: "2500", unit: kg, packaging: FIBC1000, sku: QX-K2CO3-TG}

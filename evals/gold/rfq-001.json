@@ -1,0 +1,79 @@
+{
+  "id": "rfq-001",
+  "file": "rfq-001.eml",
+  "format": "eml",
+  "received": "2026-10-06",
+  "customer_id": "C-014",
+  "incoterms_mentioned": [
+    "CIF"
+  ],
+  "incoterm": "CIF",
+  "destination": "DE",
+  "currency": "EUR",
+  "requested_date": "2026-12-15",
+  "quote_flags": [],
+  "total": "17988.86",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Glycosolve PM",
+      "cas": null,
+      "grade": null,
+      "quantity": "16",
+      "unit": "drums",
+      "packaging": "DRUM200",
+      "sku": "QX-PGME-TG",
+      "why": "trade name; PGME is offered in one grade only",
+      "expected": {
+        "sku": "QX-PGME-TG",
+        "quantity_uom": "2944.0000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 16,
+        "quoted_qty": "2944.0000",
+        "unit_price": "1.955",
+        "line_total": "5755.52",
+        "currency": "EUR",
+        "price_row_id": "PL-00162",
+        "freight_row_id": "FR-007"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "n-Butylacetat",
+      "cas": null,
+      "grade": null,
+      "quantity": "8",
+      "unit": "MT",
+      "packaging": "IBC1000",
+      "sku": "QX-NBAC-TG",
+      "why": "German spelling of n-butyl acetate; one grade",
+      "expected": {
+        "sku": "QX-NBAC-TG",
+        "quantity_uom": "8000.0000",
+        "uom": "kg",
+        "pack_code": "IBC1000",
+        "packs": 10,
+        "quoted_qty": "8820.0000",
+        "unit_price": "1.387",
+        "line_total": "12233.34",
+        "currency": "EUR",
+        "price_row_id": "PL-00103",
+        "freight_row_id": "FR-007"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

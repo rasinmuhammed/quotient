@@ -1,0 +1,28 @@
+id: rfq-021
+format: eml
+received: 2026-10-08
+from: Tyler Velasquez <tyler.velasquez@lindeboomcoatings.nl>
+subject: Request for offer - cyclohexanone and PMA
+body: |
+  Hi all,
+
+  Could you quote the following for delivery DAP our site in Moerdijk:
+
+  - Cyclohexanone: 12 drums
+  - PMA (methoxypropyl acetate), industrial grade: 5 MT
+
+  We would like delivery in January 2027.
+
+  Thanks,
+  Tyler Velasquez
+  Lindeboom Coatings BV
+gold:
+  customer_id: C-011
+  incoterms_mentioned: [DAP]
+  incoterm: DAP
+  destination: NL
+  currency: USD
+  requested_date: 2027-01-31
+  lines:
+    - {mention: Cyclohexanone, cas: null, grade: null, quantity: "12", unit: drums, packaging: DRUM200, sku: QX-CYC-TG, expect: [price_expired], why: drum price lapsed 30 Sep}
+    - {mention: PMA (methoxypropyl acetate), cas: null, grade: technical, quantity: "5", unit: MT, packaging: null, sku: QX-PGMEA-TG}

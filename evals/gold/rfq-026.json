@@ -1,0 +1,75 @@
+{
+  "id": "rfq-026",
+  "file": "rfq-026.eml",
+  "format": "eml",
+  "received": "2026-10-12",
+  "customer_id": "C-003",
+  "incoterms_mentioned": [
+    "FOB"
+  ],
+  "incoterm": "FOB",
+  "destination": "NL",
+  "currency": "EUR",
+  "requested_date": null,
+  "quote_flags": [],
+  "total": "31273.22",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "DMSO",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "4",
+      "unit": "MT",
+      "packaging": "IBC1000",
+      "sku": "QX-DMSO-TG",
+      "why": "a clean line",
+      "expected": {
+        "sku": "QX-DMSO-TG",
+        "quantity_uom": "4000.0000",
+        "uom": "kg",
+        "pack_code": "IBC1000",
+        "packs": 4,
+        "quoted_qty": "4400.0000",
+        "unit_price": "5.245",
+        "line_total": "23078.00",
+        "currency": "EUR",
+        "price_row_id": "PL-00206",
+        "freight_row_id": "FR-021"
+      },
+      "flags": [],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "NMP",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "2",
+      "unit": "MT",
+      "packaging": "DRUM200",
+      "sku": "QX-NMP-TG",
+      "why": "a clean line",
+      "expected": {
+        "sku": "QX-NMP-TG",
+        "quantity_uom": "2000.0000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 10,
+        "quoted_qty": "2056.0000",
+        "unit_price": "3.986",
+        "line_total": "8195.22",
+        "currency": "EUR",
+        "price_row_id": "PL-00186",
+        "freight_row_id": "FR-045"
+      },
+      "flags": [],
+      "needs_human": false
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

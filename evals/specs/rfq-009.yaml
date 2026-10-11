@@ -1,0 +1,34 @@
+id: rfq-009
+format: pdf
+received: 2026-10-05
+from: Yu Zhu <yu.zhu@rheinaupharma.de>
+subject: Anfrage AN-77310 / enquiry AN-77310
+body: |
+  Sehr geehrte Damen und Herren,
+  anbei unsere Anfrage AN-77310. Please quote FOB Indian port.
+  Mit freundlichen Grüßen, Yu Zhu, Rheinau Pharma GmbH
+document:
+  title: ANFRAGE / ENQUIRY AN-77310
+  fields:
+    Customer: Rheinau Pharma GmbH, Mannheim
+    Contact: Yu Zhu, Strategic Purchasing
+    Date: 05.10.2026
+    Incoterm: FOB Nhava Sheva
+    Destination: Mannheim, Germany
+  columns: [Pos., Material, Quality, Quantity, Unit]
+  rows:
+    - ["10", "Benzyl alcohol", "Ph. Eur.", "400", "kg"]
+    - ["20", "Sodium benzoate", "USP", "75", "kg"]
+    - ["30", "Ascorbic acid", "USP", "250", "kg"]
+  notes: "Offer must state country of origin and retest period."
+gold:
+  customer_id: C-013
+  incoterms_mentioned: [FOB]
+  incoterm: FOB
+  destination: DE
+  currency: EUR
+  requested_date: null
+  lines:
+    - {mention: Benzyl alcohol, cas: null, grade: pharma_ep, quantity: "400", unit: kg, packaging: null, sku: QX-BNOH-EP}
+    - {mention: Sodium benzoate, cas: null, grade: pharma_usp, quantity: "75", unit: kg, packaging: null, sku: QX-NABZ-USP, expect: [below_moq], why: 75 kg under the 100 kg MOQ}
+    - {mention: Ascorbic acid, cas: null, grade: pharma_usp, quantity: "250", unit: kg, packaging: null, sku: QX-ASC-USP}

@@ -1,0 +1,18 @@
+id: rfq-025
+format: txt
+received: 2026-10-11
+body: |
+  [WhatsApp message forwarded by sales, 11 Oct 2026]
+
+  Freek Ferrer (Al Noor Industrial Chemicals): Hi, pls quote 2 x 20ft FCL MEG, CFR Jebel Ali.
+  Also 5 IBC TEA. Price in AED pls. Thx
+gold:
+  customer_id: C-027
+  incoterms_mentioned: [CFR]
+  incoterm: CFR
+  destination: AE
+  currency: AED
+  requested_date: null
+  lines:
+    - {mention: MEG, cas: null, grade: null, quantity: "2", unit: 20ft FCL, packaging: null, sku: QX-MEG-TG, flags: [unit_conversion_impossible], why: an FCL is not a fixed quantity in the price list}
+    - {mention: TEA, cas: null, grade: null, quantity: "5", unit: IBC, packaging: IBC1000, sku: QX-TEA-TG}

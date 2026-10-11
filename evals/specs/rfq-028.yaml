@@ -1,0 +1,28 @@
+id: rfq-028
+format: eml
+received: 2026-10-06
+from: Su-bin Nguyen <su-bin.nguyen@arakawatoryo.co.jp>
+subject: Quotation request for PM and butyl acetate
+body: |
+  Dear Sir,
+
+  Please quotation for below items.
+
+  1. Methoxy propanol (PM)  8,000kg
+  2. Butyl acetate  10,000kg
+
+  CIF Osaka. Delivery January 2027.
+  Thank you for your cooperation.
+
+  Su-bin Nguyen
+  Arakawa Toryo Co., Ltd
+gold:
+  customer_id: C-021
+  incoterms_mentioned: [CIF]
+  incoterm: CIF
+  destination: JP
+  currency: JPY
+  requested_date: 2027-01-31
+  lines:
+    - {mention: Methoxy propanol (PM), cas: null, grade: null, quantity: "8000", unit: kg, packaging: null, sku: QX-PGME-TG}
+    - {mention: Butyl acetate, cas: null, grade: null, quantity: "10000", unit: kg, packaging: null, sku: QX-NBAC-TG}

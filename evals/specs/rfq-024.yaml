@@ -1,0 +1,29 @@
+id: rfq-024
+format: pdf
+received: 2026-10-07
+from: Yong Li <yong.li@moselgrundpharma.de>
+subject: Bedarfsanfrage / Requirement 4471
+body: |
+  Dear supplier, please quote the attached requirement FOB. Kind regards, Yong Li
+document:
+  title: MOSELGRUND PHARMA GMBH - REQUIREMENT 4471
+  fields:
+    Site: Trier, Germany
+    Contact: Yong Li, Procurement APIs and excipients
+    Terms: FOB Indian seaport
+  columns: ["#", Substance, Pharmacopoeia, Amount, Unit, Container]
+  rows:
+    - ["1", "Paracetamol", "Ph. Eur.", "1,500", "kg", "fibre drums"]
+    - ["2", "Microcrystalline cellulose", "USP", "1,000", "kg", "bags"]
+    - ["3", "Caffeine anhydrous", "Ph. Eur.", "200", "kg", "fibre drums"]
+gold:
+  customer_id: C-018
+  incoterms_mentioned: [FOB]
+  incoterm: FOB
+  destination: DE
+  currency: EUR
+  requested_date: null
+  lines:
+    - {mention: Paracetamol, cas: null, grade: pharma_ep, quantity: "1500", unit: kg, packaging: FDRUM25, sku: QX-APAP-EP, expect: [price_expired], why: EP paracetamol fibre-drum price lapsed}
+    - {mention: Microcrystalline cellulose, cas: null, grade: pharma_usp, quantity: "1000", unit: kg, packaging: BAG25, sku: QX-MCC-USP}
+    - {mention: Caffeine anhydrous, cas: null, grade: pharma_ep, quantity: "200", unit: kg, packaging: FDRUM25, sku: null, flags: [no_match], why: not carried}

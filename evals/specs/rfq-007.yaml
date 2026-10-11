@@ -1,0 +1,48 @@
+id: rfq-007
+format: txt
+received: 2026-10-09
+body: |
+  Betreff: Anfrage Lösemittel / solvent enquiry
+
+  Sehr geehrte Damen und Herren,
+
+  please send us your offer für folgende Produkte:
+
+  1) Methylethylketon (MEK) – 6 Fässer à 200 L
+  2) Cyclohexanon, technische Qualität – 4 Fässer
+  3) Essigsäure (Eisessig) – 1.000 kg im IBC
+
+  Lieferbedingung: CIF Hamburg. Liefertermin KW 48 if possible.
+  We need the SDS for all three products with the offer.
+
+  Vielen Dank und freundliche Grüße
+  Abdoulaye Ogunleye
+  Weserland Klebstoffwerke GmbH, Bremen
+  abdoulaye.ogunleye@weserlandklebstoffwerke.de
+gold:
+  customer_id: C-012
+  incoterms_mentioned: [CIF]
+  incoterm: CIF
+  destination: DE
+  currency: EUR
+  requested_date: 2026-11-29
+  lines:
+    - {mention: Methylethylketon (MEK), cas: null, grade: null, quantity: "6", unit: Fässer, packaging: DRUM200, sku: QX-MEK-TG}
+    - mention: Cyclohexanon
+      cas: null
+      grade: technical
+      quantity: "4"
+      unit: Fässer
+      packaging: DRUM200
+      sku: QX-CYC-TG
+      expect: [price_expired, below_moq]
+      why: drum price row lapsed 30 Sep; 4 drums = 757.6 kg under the 1000 kg MOQ
+    - mention: Essigsäure (Eisessig)
+      cas: null
+      grade: null
+      quantity: "1000"
+      unit: kg
+      packaging: IBC1000
+      sku: QX-GAA-TG
+      flags: [grade_not_specified]
+      why: glacial acetic acid comes in technical and reagent grade; none stated

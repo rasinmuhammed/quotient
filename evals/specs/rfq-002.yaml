@@ -1,0 +1,41 @@
+id: rfq-002
+format: txt
+received: 2026-10-07
+body: |
+  Hi team,
+
+  Need pricing on the below for our Cleveland plant, delivered DAP (Cleveland, OH 44135):
+
+  40,000 lbs Titanium Dioxide (rutile), 25kg bags
+  12 drums MEK
+
+  Target delivery mid-November. Thanks!
+
+  Susan May
+  Purchasing Manager
+  Ridgefield Coatings Inc
+  susan.may@ridgefieldcoatings.com | +1 216 555 0142
+gold:
+  customer_id: C-005
+  incoterms_mentioned: [DAP]
+  incoterm: DAP
+  destination: US
+  currency: USD
+  requested_date: 2026-11-15
+  lines:
+    - mention: Titanium Dioxide (rutile)
+      cas: null
+      grade: null
+      quantity: "40000"
+      unit: lbs
+      packaging: BAG25
+      sku: QX-TIO2-TG
+      why: pounds to kg; one grade
+    - mention: MEK
+      cas: null
+      grade: null
+      quantity: "12"
+      unit: drums
+      packaging: DRUM200
+      sku: QX-MEK-TG
+      why: abbreviation; drums of a per-kg liquid convert through density

@@ -1,0 +1,55 @@
+id: rfq-004
+format: pdf
+received: 2026-10-08
+from: Dominik Merkel <dominik.merkel@rioclarofarmaceutica.com.br>
+subject: RFQ RC-2026-0412 excipients and API
+body: |
+  Dear colleagues,
+  please find attached our request for quotation RC-2026-0412. Kindly reply by 20 October.
+  Regards, Dominik Merkel
+document:
+  title: REQUEST FOR QUOTATION
+  fields:
+    RFQ number: RC-2026-0412
+    Date: 08/10/2026
+    Buyer: Rio Claro Farmacêutica Ltda
+    Address: Rodovia Washington Luís km 172, Rio Claro - SP, Brazil
+    Contact: Dominik Merkel, Supply Chain
+    Delivery terms: CIF Santos
+    Required delivery: before 15/12/2026
+  columns: [Item, Description, Specification, Quantity, UoM, Packing]
+  rows:
+    - ["1", "Paracetamol (Acetaminophen) powder", "USP", "500", "kg", "Fibre drums"]
+    - ["2", "Cellulose, microcrystalline", "Ph. Eur.", "2,000", "kg", "-"]
+    - ["3", "Magnesium stearate, vegetable origin", "USP-NF", "300", "kg", "-"]
+  notes: "Suppliers must provide CoA, TSE/BSE statement and GMP certificate. Prices in USD."
+gold:
+  customer_id: C-002
+  incoterms_mentioned: [CIF]
+  incoterm: CIF
+  destination: BR
+  currency: USD
+  requested_date: 2026-12-15
+  lines:
+    - mention: Paracetamol (Acetaminophen) powder
+      cas: null
+      grade: pharma_usp
+      quantity: "500"
+      unit: kg
+      packaging: FDRUM25
+      sku: QX-APAP-USP
+    - mention: Cellulose, microcrystalline
+      cas: null
+      grade: pharma_ep
+      quantity: "2000"
+      unit: kg
+      packaging: null
+      sku: QX-MCC-EP
+      why: Ph. Eur. is the EP grade
+    - mention: Magnesium stearate, vegetable origin
+      cas: null
+      grade: pharma_usp
+      quantity: "300"
+      unit: kg
+      packaging: null
+      sku: QX-MGST-USP

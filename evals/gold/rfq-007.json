@@ -1,0 +1,110 @@
+{
+  "id": "rfq-007",
+  "file": "rfq-007.txt",
+  "format": "txt",
+  "received": "2026-10-09",
+  "customer_id": "C-012",
+  "incoterms_mentioned": [
+    "CIF"
+  ],
+  "incoterm": "CIF",
+  "destination": "DE",
+  "currency": "EUR",
+  "requested_date": "2026-11-29",
+  "quote_flags": [],
+  "total": "4689.61",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Methylethylketon (MEK)",
+      "cas": null,
+      "grade": null,
+      "quantity": "6",
+      "unit": "Fässer",
+      "packaging": "DRUM200",
+      "sku": "QX-MEK-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-MEK-TG",
+        "quantity_uom": "966.0000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 6,
+        "quoted_qty": "966.0000",
+        "unit_price": "2.380",
+        "line_total": "2299.08",
+        "currency": "EUR",
+        "price_row_id": "PL-00089",
+        "freight_row_id": "FR-055"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "Cyclohexanon",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "4",
+      "unit": "Fässer",
+      "packaging": "DRUM200",
+      "sku": "QX-CYC-TG",
+      "why": "drum price row lapsed 30 Sep; 4 drums = 757.6 kg under the 1000 kg MOQ",
+      "expected": {
+        "sku": "QX-CYC-TG",
+        "quantity_uom": "757.6000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 4,
+        "quoted_qty": "757.6000",
+        "unit_price": "1.984",
+        "line_total": "1503.08",
+        "currency": "EUR",
+        "price_row_id": "PL-00305",
+        "freight_row_id": "FR-055"
+      },
+      "flags": [
+        "below_moq",
+        "hazmat_documents",
+        "price_expired"
+      ],
+      "needs_human": true
+    },
+    {
+      "line_no": 3,
+      "mention": "Essigsäure (Eisessig)",
+      "cas": null,
+      "grade": null,
+      "quantity": "1000",
+      "unit": "kg",
+      "packaging": "IBC1000",
+      "sku": "QX-GAA-TG",
+      "why": "glacial acetic acid comes in technical and reagent grade; none stated",
+      "expected": {
+        "sku": "QX-GAA-TG",
+        "quantity_uom": "1000.0000",
+        "uom": "kg",
+        "pack_code": "IBC1000",
+        "packs": 1,
+        "quoted_qty": "1049.0000",
+        "unit_price": "0.846",
+        "line_total": "887.45",
+        "currency": "EUR",
+        "price_row_id": "PL-00230",
+        "freight_row_id": "FR-007"
+      },
+      "flags": [
+        "grade_not_specified",
+        "hazmat_documents"
+      ],
+      "needs_human": true
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

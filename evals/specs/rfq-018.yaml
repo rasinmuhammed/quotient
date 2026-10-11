@@ -1,0 +1,25 @@
+id: rfq-018
+format: txt
+received: 2026-10-11
+body: |
+  RFQ from Al Rawda Chemical Trading FZE, Sharjah
+
+  Please quote CFR Jebel Ali for the following:
+
+  CAS# 141-78-6   - 6,000 kg
+  CAS 123 86 4    - 10 MT
+  CAS 1330207     - 16 MT
+
+  Packing: IBC for all.
+  Naomi Cao | naomi.cao@alrawdachemicaltrading.ae
+gold:
+  customer_id: C-009
+  incoterms_mentioned: [CFR]
+  incoterm: CFR
+  destination: AE
+  currency: USD
+  requested_date: null
+  lines:
+    - {mention: "CAS# 141-78-6", cas: 141-78-6, grade: null, quantity: "6000", unit: kg, packaging: IBC1000, sku: QX-ETAC-TG, flags: [grade_not_specified], why: ethyl acetate comes in technical and reagent grade}
+    - {mention: "CAS 123 86 4", cas: 123-86-4, grade: null, quantity: "10", unit: MT, packaging: IBC1000, sku: QX-NBAC-TG}
+    - {mention: "CAS 1330207", cas: 1330-20-7, grade: null, quantity: "16", unit: MT, packaging: IBC1000, sku: QX-XYL-TG}

@@ -1,0 +1,44 @@
+id: rfq-003
+format: eml
+received: 2026-10-07
+from: Douglas Craig <douglas.craig@hoshinokagaku.co.jp>
+subject: Inquiry - HPLC solvents for Yokohama lab
+body: |
+  Dear Sir or Madam,
+
+  We are Hoshino Kagaku, a fine chemicals producer in Kanagawa. Please quote the following solvents
+  for our analytical laboratory, CIF Yokohama:
+
+  1. Acetonitrile, HPLC grade - 600 L in 25 L cans
+  2. Tetrahydrofuran (THF), reagent grade, stabilised - 400 L
+
+  Kindly include the certificate of analysis format with your offer.
+
+  Best regards,
+  Douglas Craig
+  Purchasing Department
+  Hoshino Kagaku Co., Ltd
+gold:
+  customer_id: C-015
+  incoterms_mentioned: [CIF]
+  incoterm: CIF
+  destination: JP
+  currency: JPY
+  requested_date: null
+  lines:
+    - mention: Acetonitrile, HPLC grade
+      cas: null
+      grade: reagent
+      quantity: "600"
+      unit: L
+      packaging: CAN25
+      sku: QX-ACN-AR
+      why: HPLC grade is the reagent SKU
+    - mention: Tetrahydrofuran (THF)
+      cas: null
+      grade: reagent
+      quantity: "400"
+      unit: L
+      packaging: null
+      sku: QX-THF-AR
+      why: reagent grade stated

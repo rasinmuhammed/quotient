@@ -1,0 +1,77 @@
+{
+  "id": "rfq-025",
+  "file": "rfq-025.txt",
+  "format": "txt",
+  "received": "2026-10-11",
+  "customer_id": "C-027",
+  "incoterms_mentioned": [
+    "CFR"
+  ],
+  "incoterm": "CFR",
+  "destination": "AE",
+  "currency": "AED",
+  "requested_date": null,
+  "quote_flags": [],
+  "total": "57801.70",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "MEG",
+      "cas": null,
+      "grade": null,
+      "quantity": "2",
+      "unit": "20ft FCL",
+      "packaging": null,
+      "sku": "QX-MEG-TG",
+      "why": "an FCL is not a fixed quantity in the price list",
+      "expected": {
+        "sku": "QX-MEG-TG",
+        "quantity_uom": null,
+        "uom": "kg",
+        "pack_code": null,
+        "packs": null,
+        "quoted_qty": null,
+        "unit_price": null,
+        "line_total": null,
+        "currency": "AED",
+        "price_row_id": null,
+        "freight_row_id": null
+      },
+      "flags": [
+        "unit_conversion_impossible"
+      ],
+      "needs_human": true
+    },
+    {
+      "line_no": 2,
+      "mention": "TEA",
+      "cas": null,
+      "grade": null,
+      "quantity": "5",
+      "unit": "IBC",
+      "packaging": "IBC1000",
+      "sku": "QX-TEA-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-TEA-TG",
+        "quantity_uom": "5620.0000",
+        "uom": "kg",
+        "pack_code": "IBC1000",
+        "packs": 5,
+        "quoted_qty": "5620.0000",
+        "unit_price": "10.285",
+        "line_total": "57801.70",
+        "currency": "AED",
+        "price_row_id": "PL-00279",
+        "freight_row_id": "FR-034"
+      },
+      "flags": [],
+      "needs_human": false
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

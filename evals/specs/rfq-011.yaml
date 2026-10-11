@@ -1,0 +1,29 @@
+id: rfq-011
+format: eml
+received: 2026-10-10
+from: Procurement <procurement@vitalisnutra.co.za>
+subject: RFQ - citric acid and sodium benzoate, CIF Durban
+body: |
+  Good day,
+
+  Vitalis Nutra (Pty) Ltd is a beverage concentrate manufacturer in Durban. We would like a quotation for:
+
+  1. Citric acid anhydrous, BP/USP - 5 MT in 25 kg bags
+  2. Sodium benzoate - 2 MT
+
+  Terms: CIF Durban. Please quote in USD and advise payment terms.
+
+  Kind regards,
+  Thandeka Mokoena
+  Procurement Officer, Vitalis Nutra (Pty) Ltd
+gold:
+  customer_id: null
+  incoterms_mentioned: [CIF]
+  incoterm: CIF
+  destination: ZA
+  currency: USD
+  requested_date: null
+  quote_flags: [customer_unknown]
+  lines:
+    - {mention: "Citric acid anhydrous, BP/USP", cas: null, grade: pharma_usp, quantity: "5", unit: MT, packaging: BAG25, sku: QX-CAA-USP, expect: [no_freight_lane], why: new customer in South Africa; no lane}
+    - {mention: Sodium benzoate, cas: null, grade: null, quantity: "2", unit: MT, packaging: null, sku: QX-NABZ-TG, flags: [grade_not_specified], expect: [no_freight_lane]}

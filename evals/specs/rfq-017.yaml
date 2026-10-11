@@ -1,0 +1,28 @@
+id: rfq-017
+format: eml
+received: 2026-10-10
+from: Kwame Nwankwo <kwame.nwankwo@cornichechemicaltrading.ae>
+subject: Enquiry caustic lye and peroxide - DDP JAFZA
+body: |
+  Dear Sir,
+
+  Please offer your best price for the following, DDP our warehouse in Jebel Ali Free Zone:
+
+  1) Caustic soda lye 50%, membrane grade - 3 x 1000 L IBC
+  2) Hydrogen peroxide 50% - 10 drums
+
+  Payment by LC. Please confirm availability.
+
+  Thanks and regards,
+  Kwame Nwankwo
+  Corniche Chemical Trading FZE, JAFZA, Dubai
+gold:
+  customer_id: C-001
+  incoterms_mentioned: [DDP]
+  incoterm: DDP
+  destination: AE
+  currency: AED
+  requested_date: null
+  lines:
+    - {mention: "Caustic soda lye 50%, membrane grade", cas: null, grade: null, quantity: "3", unit: IBC, packaging: IBC1000, sku: QX-NAOH50-TG, expect: [incoterm_unsupported]}
+    - {mention: "Hydrogen peroxide 50%", cas: null, grade: null, quantity: "10", unit: drums, packaging: DRUM200, sku: QX-HP50-TG, expect: [incoterm_unsupported]}

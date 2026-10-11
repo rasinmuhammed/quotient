@@ -1,0 +1,81 @@
+{
+  "id": "rfq-017",
+  "file": "rfq-017.eml",
+  "format": "eml",
+  "received": "2026-10-10",
+  "customer_id": "C-001",
+  "incoterms_mentioned": [
+    "DDP"
+  ],
+  "incoterm": "DDP",
+  "destination": "AE",
+  "currency": "AED",
+  "requested_date": null,
+  "quote_flags": [],
+  "total": null,
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Caustic soda lye 50%, membrane grade",
+      "cas": null,
+      "grade": null,
+      "quantity": "3",
+      "unit": "IBC",
+      "packaging": "IBC1000",
+      "sku": "QX-NAOH50-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-NAOH50-TG",
+        "quantity_uom": "4560.0000",
+        "uom": "kg",
+        "pack_code": "IBC1000",
+        "packs": 3,
+        "quoted_qty": "4560.0000",
+        "unit_price": null,
+        "line_total": null,
+        "currency": "AED",
+        "price_row_id": "PL-00254",
+        "freight_row_id": null
+      },
+      "flags": [
+        "hazmat_documents",
+        "incoterm_unsupported"
+      ],
+      "needs_human": true
+    },
+    {
+      "line_no": 2,
+      "mention": "Hydrogen peroxide 50%",
+      "cas": null,
+      "grade": null,
+      "quantity": "10",
+      "unit": "drums",
+      "packaging": "DRUM200",
+      "sku": "QX-HP50-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-HP50-TG",
+        "quantity_uom": "2392.0000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 10,
+        "quoted_qty": "2392.0000",
+        "unit_price": null,
+        "line_total": null,
+        "currency": "AED",
+        "price_row_id": "PL-00242",
+        "freight_row_id": null
+      },
+      "flags": [
+        "hazmat_documents",
+        "incoterm_unsupported"
+      ],
+      "needs_human": true
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

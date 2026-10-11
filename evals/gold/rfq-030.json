@@ -1,0 +1,103 @@
+{
+  "id": "rfq-030",
+  "file": "rfq-030.eml",
+  "format": "eml",
+  "received": "2026-10-11",
+  "customer_id": "C-010",
+  "incoterms_mentioned": [
+    "FOB"
+  ],
+  "incoterm": "FOB",
+  "destination": "BR",
+  "currency": "USD",
+  "requested_date": "2026-12-31",
+  "quote_flags": [],
+  "total": "7154.40",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Sodium bicarbonate USP",
+      "cas": null,
+      "grade": "pharma_usp",
+      "quantity": "2",
+      "unit": "MT",
+      "packaging": null,
+      "sku": "QX-NAHCO3-USP",
+      "why": null,
+      "expected": {
+        "sku": "QX-NAHCO3-USP",
+        "quantity_uom": "2000.0000",
+        "uom": "kg",
+        "pack_code": "BAG25",
+        "packs": 80,
+        "quoted_qty": "2000.000",
+        "unit_price": "1.096",
+        "line_total": "2192.00",
+        "currency": "USD",
+        "price_row_id": "PL-00390",
+        "freight_row_id": "FR-065"
+      },
+      "flags": [],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "Citric acid anhydrous USP",
+      "cas": null,
+      "grade": "pharma_usp",
+      "quantity": "1",
+      "unit": "MT",
+      "packaging": null,
+      "sku": "QX-CAA-USP",
+      "why": null,
+      "expected": {
+        "sku": "QX-CAA-USP",
+        "quantity_uom": "1000.0000",
+        "uom": "kg",
+        "pack_code": "FDRUM25",
+        "packs": 40,
+        "quoted_qty": "1000.000",
+        "unit_price": "3.294",
+        "line_total": "3294.00",
+        "currency": "USD",
+        "price_row_id": "PL-00402",
+        "freight_row_id": "FR-017"
+      },
+      "flags": [],
+      "needs_human": false
+    },
+    {
+      "line_no": 3,
+      "mention": "Sodium benzoate USP",
+      "cas": null,
+      "grade": "pharma_usp",
+      "quantity": "400",
+      "unit": "kg",
+      "packaging": "BAG25",
+      "sku": "QX-NABZ-USP",
+      "why": "USP sodium benzoate bag price lapsed",
+      "expected": {
+        "sku": "QX-NABZ-USP",
+        "quantity_uom": "400.0000",
+        "uom": "kg",
+        "pack_code": "BAG25",
+        "packs": 16,
+        "quoted_qty": "400.000",
+        "unit_price": "4.171",
+        "line_total": "1668.40",
+        "currency": "USD",
+        "price_row_id": "PL-00421",
+        "freight_row_id": "FR-017"
+      },
+      "flags": [
+        "price_expired"
+      ],
+      "needs_human": true
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

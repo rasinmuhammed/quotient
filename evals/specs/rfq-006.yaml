@@ -1,0 +1,33 @@
+id: rfq-006
+format: eml
+received: 2026-10-08
+from: Jijo Rawat <jijo.rawat@westbrookadhesives.com>
+subject: RFQ - CIF Houston - ethyl acetate / toluene
+body: |
+  Good morning,
+
+  We are qualifying a second source for solvents. Please quote:
+
+    Ethyl acetate 99.5% min, technical - 18 drums
+    Toluol, technical - 10 drums
+
+  Our logistics team has asked that we compare offers on an FOB Nhava Sheva basis this time, as we will
+  arrange our own ocean freight.
+
+  Please also confirm your shelf life for ethyl acetate in drums.
+
+  Regards,
+  Jijo Rawat
+  Strategic Sourcing, Westbrook Adhesives LLC
+  Pasadena, TX
+gold:
+  customer_id: C-023
+  incoterms_mentioned: [CIF, FOB]
+  incoterm: CIF
+  destination: US
+  currency: USD
+  requested_date: null
+  quote_flags: [incoterm_conflict]
+  lines:
+    - {mention: "Ethyl acetate 99.5% min", cas: null, grade: technical, quantity: "18", unit: drums, packaging: DRUM200, sku: QX-ETAC-TG}
+    - {mention: Toluol, cas: null, grade: technical, quantity: "10", unit: drums, packaging: DRUM200, sku: QX-TOL-TG}

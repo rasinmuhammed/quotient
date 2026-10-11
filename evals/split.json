@@ -1,0 +1,37 @@
+{
+  "holdout": [
+    "rfq-004",
+    "rfq-008",
+    "rfq-012",
+    "rfq-015",
+    "rfq-017",
+    "rfq-019",
+    "rfq-022",
+    "rfq-025",
+    "rfq-028",
+    "rfq-029"
+  ],
+  "dev": [
+    "rfq-001",
+    "rfq-002",
+    "rfq-003",
+    "rfq-005",
+    "rfq-006",
+    "rfq-007",
+    "rfq-009",
+    "rfq-010",
+    "rfq-011",
+    "rfq-013",
+    "rfq-014",
+    "rfq-016",
+    "rfq-018",
+    "rfq-020",
+    "rfq-021",
+    "rfq-023",
+    "rfq-024",
+    "rfq-026",
+    "rfq-027",
+    "rfq-030"
+  ],
+  "note": "Holdout chosen before any extraction prompt was written. Run it only to report, never to tune."
+}

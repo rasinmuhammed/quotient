@@ -1,0 +1,29 @@
+id: rfq-016
+format: xlsx
+received: 2026-10-12
+from: Caitlin Cameron <caitlin.cameron@kinderdijkchemie.nl>
+subject: RFQ Kinderdijk Chemie - week 42
+body: |
+  Hi, please find our RFQ attached, CIF Rotterdam. Kind regards, Caitlin
+document:
+  title: Kinderdijk Chemie BV - RFQ week 42
+  fields:
+    Delivery: CIF Rotterdam
+  columns: [Product, Grade, Quantity, Unit, Packing]
+  rows:
+    - ["Isopropyl alchohol", "technical", "3,000", "kg", "drums"]
+    - ["Acetonitirle", "technical", "2,000", "kg", "drums"]
+    - ["Dimethylsulfoxid", "technical", "1,200", "kg", "IBC"]
+    - ["Tetrahydrofurane", "technical", "1,000", "kg", "drums"]
+gold:
+  customer_id: C-022
+  incoterms_mentioned: [CIF]
+  incoterm: CIF
+  destination: NL
+  currency: EUR
+  requested_date: null
+  lines:
+    - {mention: Isopropyl alchohol, cas: null, grade: technical, quantity: "3000", unit: kg, packaging: DRUM200, sku: QX-IPA-TG, why: typo}
+    - {mention: Acetonitirle, cas: null, grade: technical, quantity: "2000", unit: kg, packaging: DRUM200, sku: QX-ACN-TG, why: typo}
+    - {mention: Dimethylsulfoxid, cas: null, grade: technical, quantity: "1200", unit: kg, packaging: IBC1000, sku: QX-DMSO-TG, why: Dutch/German spelling}
+    - {mention: Tetrahydrofurane, cas: null, grade: technical, quantity: "1000", unit: kg, packaging: DRUM200, sku: QX-THF-TG, why: Dutch spelling}

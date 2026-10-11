@@ -1,0 +1,29 @@
+id: rfq-015
+format: eml
+received: 2026-10-07
+from: Dewi Pagano <dewi.pagano@valeverdefarmaceutica.com.br>
+subject: Cotação / quotation - MPG USP and glycerine EP
+body: |
+  Prezados,
+
+  Kindly send us your quotation for:
+
+  - MPG USP: 20 drums
+  - Glycerine EP 99.5%: 10 drums
+
+  CFR Santos. This time please quote in US dollars, not in reais.
+
+  Atenciosamente,
+  Dewi Pagano
+  Compras - Vale Verde Farmacêutica Ltda
+  Campinas, SP
+gold:
+  customer_id: C-004
+  incoterms_mentioned: [CFR]
+  incoterm: CFR
+  destination: BR
+  currency: USD
+  requested_date: null
+  lines:
+    - {mention: MPG USP, cas: null, grade: pharma_usp, quantity: "20", unit: drums, packaging: DRUM200, sku: QX-MPG-USP}
+    - {mention: "Glycerine EP 99.5%", cas: null, grade: pharma_ep, quantity: "10", unit: drums, packaging: DRUM200, sku: QX-GLY-EP}

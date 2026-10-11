@@ -1,0 +1,101 @@
+{
+  "id": "rfq-004",
+  "file": "rfq-004.pdf",
+  "format": "pdf",
+  "received": "2026-10-08",
+  "customer_id": "C-002",
+  "incoterms_mentioned": [
+    "CIF"
+  ],
+  "incoterm": "CIF",
+  "destination": "BR",
+  "currency": "USD",
+  "requested_date": "2026-12-15",
+  "quote_flags": [],
+  "total": "40775.40",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Paracetamol (Acetaminophen) powder",
+      "cas": null,
+      "grade": "pharma_usp",
+      "quantity": "500",
+      "unit": "kg",
+      "packaging": "FDRUM25",
+      "sku": "QX-APAP-USP",
+      "why": null,
+      "expected": {
+        "sku": "QX-APAP-USP",
+        "quantity_uom": "500.0000",
+        "uom": "kg",
+        "pack_code": "FDRUM25",
+        "packs": 20,
+        "quoted_qty": "500.000",
+        "unit_price": "16.904",
+        "line_total": "8452.00",
+        "currency": "USD",
+        "price_row_id": "PL-00513",
+        "freight_row_id": "FR-043"
+      },
+      "flags": [],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "Cellulose, microcrystalline",
+      "cas": null,
+      "grade": "pharma_ep",
+      "quantity": "2000",
+      "unit": "kg",
+      "packaging": null,
+      "sku": "QX-MCC-EP",
+      "why": "Ph. Eur. is the EP grade",
+      "expected": {
+        "sku": "QX-MCC-EP",
+        "quantity_uom": "2000.0000",
+        "uom": "kg",
+        "pack_code": "FDRUM25",
+        "packs": 80,
+        "quoted_qty": "2000.000",
+        "unit_price": "14.548",
+        "line_total": "29096.00",
+        "currency": "USD",
+        "price_row_id": "PL-00506",
+        "freight_row_id": "FR-019"
+      },
+      "flags": [],
+      "needs_human": false
+    },
+    {
+      "line_no": 3,
+      "mention": "Magnesium stearate, vegetable origin",
+      "cas": null,
+      "grade": "pharma_usp",
+      "quantity": "300",
+      "unit": "kg",
+      "packaging": null,
+      "sku": "QX-MGST-USP",
+      "why": null,
+      "expected": {
+        "sku": "QX-MGST-USP",
+        "quantity_uom": "300.0000",
+        "uom": "kg",
+        "pack_code": "FDRUM25",
+        "packs": 12,
+        "quoted_qty": "300.000",
+        "unit_price": "10.758",
+        "line_total": "3227.40",
+        "currency": "USD",
+        "price_row_id": "PL-00481",
+        "freight_row_id": "FR-019"
+      },
+      "flags": [],
+      "needs_human": false
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

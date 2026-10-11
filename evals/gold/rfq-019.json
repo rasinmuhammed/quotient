@@ -1,0 +1,103 @@
+{
+  "id": "rfq-019",
+  "file": "rfq-019.pdf",
+  "format": "pdf",
+  "received": "2026-10-06",
+  "customer_id": "C-028",
+  "incoterms_mentioned": [
+    "CIF"
+  ],
+  "incoterm": "CIF",
+  "destination": "US",
+  "currency": "USD",
+  "requested_date": null,
+  "quote_flags": [],
+  "total": "46676.82",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Lumira RT-92",
+      "cas": null,
+      "grade": null,
+      "quantity": "10000",
+      "unit": "kg",
+      "packaging": "BAG25",
+      "sku": "QX-TIO2-TG",
+      "why": "trade name",
+      "expected": {
+        "sku": "QX-TIO2-TG",
+        "quantity_uom": "10000.0000",
+        "uom": "kg",
+        "pack_code": "BAG25",
+        "packs": 400,
+        "quoted_qty": "10000.000",
+        "unit_price": "4.012",
+        "line_total": "40120.00",
+        "currency": "USD",
+        "price_row_id": "PL-00427",
+        "freight_row_id": "FR-003"
+      },
+      "flags": [],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "Aminex T99",
+      "cas": null,
+      "grade": null,
+      "quantity": "4",
+      "unit": "drums",
+      "packaging": "DRUM200",
+      "sku": "QX-TEA-TG",
+      "why": "trade name; 4 drums = 899.2 kg under the 2000 kg MOQ",
+      "expected": {
+        "sku": "QX-TEA-TG",
+        "quantity_uom": "899.2000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 4,
+        "quoted_qty": "899.2000",
+        "unit_price": "3.097",
+        "line_total": "2784.82",
+        "currency": "USD",
+        "price_row_id": "PL-00273",
+        "freight_row_id": "FR-027"
+      },
+      "flags": [
+        "below_moq"
+      ],
+      "needs_human": true
+    },
+    {
+      "line_no": 3,
+      "mention": "Stearona TP",
+      "cas": null,
+      "grade": null,
+      "quantity": "2000",
+      "unit": "kg",
+      "packaging": null,
+      "sku": "QX-STEA-TG",
+      "why": "trade name",
+      "expected": {
+        "sku": "QX-STEA-TG",
+        "quantity_uom": "2000.0000",
+        "uom": "kg",
+        "pack_code": "FIBC1000",
+        "packs": 2,
+        "quoted_qty": "2000.000",
+        "unit_price": "1.886",
+        "line_total": "3772.00",
+        "currency": "USD",
+        "price_row_id": "PL-00454",
+        "freight_row_id": "FR-027"
+      },
+      "flags": [],
+      "needs_human": false
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

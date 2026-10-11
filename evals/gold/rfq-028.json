@@ -1,0 +1,79 @@
+{
+  "id": "rfq-028",
+  "file": "rfq-028.eml",
+  "format": "eml",
+  "received": "2026-10-06",
+  "customer_id": "C-021",
+  "incoterms_mentioned": [
+    "CIF"
+  ],
+  "incoterm": "CIF",
+  "destination": "JP",
+  "currency": "JPY",
+  "requested_date": "2027-01-31",
+  "quote_flags": [],
+  "total": "5030992",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Methoxy propanol (PM)",
+      "cas": null,
+      "grade": null,
+      "quantity": "8000",
+      "unit": "kg",
+      "packaging": null,
+      "sku": "QX-PGME-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-PGME-TG",
+        "quantity_uom": "8000.0000",
+        "uom": "kg",
+        "pack_code": "IBC1000",
+        "packs": 9,
+        "quoted_qty": "8280.0000",
+        "unit_price": "315.8",
+        "line_total": "2614824",
+        "currency": "JPY",
+        "price_row_id": "PL-00167",
+        "freight_row_id": "FR-015"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "Butyl acetate",
+      "cas": null,
+      "grade": null,
+      "quantity": "10000",
+      "unit": "kg",
+      "packaging": null,
+      "sku": "QX-NBAC-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-NBAC-TG",
+        "quantity_uom": "10000.0000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 57,
+        "quoted_qty": "10054.8000",
+        "unit_price": "240.3",
+        "line_total": "2416168",
+        "currency": "JPY",
+        "price_row_id": "PL-00099",
+        "freight_row_id": "FR-015"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

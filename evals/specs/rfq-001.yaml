@@ -1,0 +1,46 @@
+id: rfq-001
+format: eml
+received: 2026-10-06
+from: Kuldeep Chauhan <kuldeep.chauhan@elbtallackfabrik.de>
+subject: "Anfrage / RFQ: Glycosolve PM and n-butyl acetate, CIF Hamburg"
+body: |
+  Dear Sales Team,
+
+  For our Q4 production at the Dresden plant we would like to receive your best offer for:
+
+  - Glycosolve PM, 16 drums (200 L)
+  - n-Butylacetat, 8 MT, packed in IBC
+
+  Delivery terms CIF Hamburg. Requested arrival in the first half of December 2026.
+  Please state lead time and validity of your offer.
+
+  Mit freundlichen Grüßen / Best regards
+
+  Kuldeep Chauhan
+  Einkauf / Procurement
+  Elbtal Lackfabrik GmbH
+  Pirnaer Landstraße 41, 01237 Dresden, Germany
+gold:
+  customer_id: C-014
+  incoterms_mentioned: [CIF]
+  incoterm: CIF
+  destination: DE
+  currency: EUR
+  requested_date: 2026-12-15
+  lines:
+    - mention: Glycosolve PM
+      cas: null
+      grade: null
+      quantity: "16"
+      unit: drums
+      packaging: DRUM200
+      sku: QX-PGME-TG
+      why: trade name; PGME is offered in one grade only
+    - mention: n-Butylacetat
+      cas: null
+      grade: null
+      quantity: "8"
+      unit: MT
+      packaging: IBC1000
+      sku: QX-NBAC-TG
+      why: German spelling of n-butyl acetate; one grade

@@ -1,0 +1,78 @@
+{
+  "id": "rfq-012",
+  "file": "rfq-012.txt",
+  "format": "txt",
+  "received": "2026-10-08",
+  "customer_id": "C-008",
+  "incoterms_mentioned": [
+    "CFR"
+  ],
+  "incoterm": "CFR",
+  "destination": "US",
+  "currency": "USD",
+  "requested_date": "2026-12-01",
+  "quote_flags": [],
+  "total": "79448.00",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "zinc oxide",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "20",
+      "unit": "tons",
+      "packaging": "FIBC1000",
+      "sku": "QX-ZNO-TG",
+      "why": "a US buyer writing tons may mean short tons",
+      "expected": {
+        "sku": "QX-ZNO-TG",
+        "quantity_uom": "20000.0000",
+        "uom": "kg",
+        "pack_code": "FIBC1000",
+        "packs": 20,
+        "quoted_qty": "20000.000",
+        "unit_price": "3.220",
+        "line_total": "64400.00",
+        "currency": "USD",
+        "price_row_id": "PL-00440",
+        "freight_row_id": "FR-002"
+      },
+      "flags": [
+        "ambiguous_unit",
+        "hazmat_documents"
+      ],
+      "needs_human": true
+    },
+    {
+      "line_no": 2,
+      "mention": "triple pressed stearic acid",
+      "cas": null,
+      "grade": null,
+      "quantity": "8000",
+      "unit": "kg",
+      "packaging": "BAG25",
+      "sku": "QX-STEA-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-STEA-TG",
+        "quantity_uom": "8000.0000",
+        "uom": "kg",
+        "pack_code": "BAG25",
+        "packs": 320,
+        "quoted_qty": "8000.000",
+        "unit_price": "1.881",
+        "line_total": "15048.00",
+        "currency": "USD",
+        "price_row_id": "PL-00451",
+        "freight_row_id": "FR-026"
+      },
+      "flags": [],
+      "needs_human": false
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

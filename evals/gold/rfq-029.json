@@ -1,0 +1,82 @@
+{
+  "id": "rfq-029",
+  "file": "rfq-029.txt",
+  "format": "txt",
+  "received": "2026-10-12",
+  "customer_id": "C-006",
+  "incoterms_mentioned": [
+    "FOB",
+    "CFR"
+  ],
+  "incoterm": "FOB",
+  "destination": "AE",
+  "currency": "USD",
+  "requested_date": null,
+  "quote_flags": [
+    "incoterm_conflict"
+  ],
+  "total": "45170.10",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Xylol",
+      "cas": null,
+      "grade": null,
+      "quantity": "160",
+      "unit": "drums",
+      "packaging": "DRUM200",
+      "sku": "QX-XYL-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-XYL-TG",
+        "quantity_uom": "27648.0000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 160,
+        "quoted_qty": "27648.0000",
+        "unit_price": "1.048",
+        "line_total": "28975.10",
+        "currency": "USD",
+        "price_row_id": "PL-00300",
+        "freight_row_id": "FR-009"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": true
+    },
+    {
+      "line_no": 2,
+      "mention": "Zinc oxide",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "5",
+      "unit": "MT",
+      "packaging": "BAG25",
+      "sku": "QX-ZNO-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-ZNO-TG",
+        "quantity_uom": "5000.0000",
+        "uom": "kg",
+        "pack_code": "BAG25",
+        "packs": 200,
+        "quoted_qty": "5000.000",
+        "unit_price": "3.239",
+        "line_total": "16195.00",
+        "currency": "USD",
+        "price_row_id": "PL-00435",
+        "freight_row_id": "FR-009"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": true
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

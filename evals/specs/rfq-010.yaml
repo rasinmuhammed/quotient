@@ -1,0 +1,32 @@
+id: rfq-010
+format: xlsx
+received: 2026-10-10
+from: Viola Lefevre <viola.lefevre@kawabetoryo.co.jp>
+subject: Kawabe Toryo - solvent requirement 2027 H1
+body: |
+  Dear Sales,
+  Please see our requirement for 2027 H1 in the attached sheet. CIF Kobe. All technical grade.
+  Viola Lefevre, Purchasing, Kawabe Toryo Co., Ltd
+document:
+  title: KAWABE TORYO CO., LTD. - SOLVENT REQUIREMENT 2027 H1
+  fields:
+    Delivery: CIF Kobe, Japan
+    Payment: per contract
+  columns: ["No", Item, Grade, Volume, Unit, Remark]
+  rows:
+    - ["1", "Xylene (mixed)", "Tech", "30", "MT", "IBC preferred"]
+    - ["2", "Butyl acetate", "Tech", "12", "MT", "IBC"]
+    - ["3", "PGMEA", "Tech", "6", "MT", "drums"]
+    - ["4", "Cellosolve acetate (EGEEA)", "Tech", "2", "MT", "drums"]
+gold:
+  customer_id: C-017
+  incoterms_mentioned: [CIF]
+  incoterm: CIF
+  destination: JP
+  currency: JPY
+  requested_date: null
+  lines:
+    - {mention: Xylene (mixed), cas: null, grade: technical, quantity: "30", unit: MT, packaging: IBC1000, sku: QX-XYL-TG}
+    - {mention: Butyl acetate, cas: null, grade: technical, quantity: "12", unit: MT, packaging: IBC1000, sku: QX-NBAC-TG}
+    - {mention: PGMEA, cas: null, grade: technical, quantity: "6", unit: MT, packaging: DRUM200, sku: QX-PGMEA-TG}
+    - {mention: Cellosolve acetate (EGEEA), cas: null, grade: technical, quantity: "2", unit: MT, packaging: DRUM200, sku: null, flags: [no_match], why: ethylene glycol ethyl ether acetate is not carried}

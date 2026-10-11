@@ -1,0 +1,38 @@
+id: rfq-008
+format: eml
+received: 2026-10-09
+from: Cody Powers <cody.powers@granitebayspecialtyproducts.com>
+subject: Quote request - PG USP, glycerin, hypo
+body: |
+  Hello,
+
+  Please provide FOB pricing on:
+
+  * Sodium hypochlorite 12.5% - 6 IBC totes
+  * Propylene glycol USP - 8 drums
+  * Glycerin 99.7% USP - 4 drums
+
+  We would need material by end of November. Please include your current lead time.
+
+  Thanks,
+  Cody Powers
+  Granite Bay Specialty Products LLC
+gold:
+  customer_id: C-020
+  incoterms_mentioned: [FOB]
+  incoterm: FOB
+  destination: US
+  currency: USD
+  requested_date: 2026-11-30
+  lines:
+    - {mention: "Sodium hypochlorite 12.5%", cas: null, grade: null, quantity: "6", unit: IBC totes, packaging: IBC1000, sku: null, flags: [no_match], why: not in the catalog}
+    - {mention: Propylene glycol USP, cas: null, grade: pharma_usp, quantity: "8", unit: drums, packaging: DRUM200, sku: QX-MPG-USP}
+    - mention: "Glycerin 99.7% USP"
+      cas: null
+      grade: pharma_usp
+      quantity: "4"
+      unit: drums
+      packaging: DRUM200
+      sku: QX-GLY-USP
+      expect: [price_expired]
+      why: the USP glycerine drum price lapsed 30 Sep

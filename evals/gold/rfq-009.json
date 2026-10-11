@@ -1,0 +1,103 @@
+{
+  "id": "rfq-009",
+  "file": "rfq-009.pdf",
+  "format": "pdf",
+  "received": "2026-10-05",
+  "customer_id": "C-013",
+  "incoterms_mentioned": [
+    "FOB"
+  ],
+  "incoterm": "FOB",
+  "destination": "DE",
+  "currency": "EUR",
+  "requested_date": null,
+  "quote_flags": [],
+  "total": "6053.55",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Benzyl alcohol",
+      "cas": null,
+      "grade": "pharma_ep",
+      "quantity": "400",
+      "unit": "kg",
+      "packaging": null,
+      "sku": "QX-BNOH-EP",
+      "why": null,
+      "expected": {
+        "sku": "QX-BNOH-EP",
+        "quantity_uom": "400.0000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 2,
+        "quoted_qty": "417.6000",
+        "unit_price": "6.486",
+        "line_total": "2708.55",
+        "currency": "EUR",
+        "price_row_id": "PL-00289",
+        "freight_row_id": "FR-005"
+      },
+      "flags": [],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "Sodium benzoate",
+      "cas": null,
+      "grade": "pharma_usp",
+      "quantity": "75",
+      "unit": "kg",
+      "packaging": null,
+      "sku": "QX-NABZ-USP",
+      "why": "75 kg under the 100 kg MOQ",
+      "expected": {
+        "sku": "QX-NABZ-USP",
+        "quantity_uom": "75.0000",
+        "uom": "kg",
+        "pack_code": "FDRUM25",
+        "packs": 3,
+        "quoted_qty": "75.000",
+        "unit_price": "3.770",
+        "line_total": "282.75",
+        "currency": "EUR",
+        "price_row_id": "PL-00417",
+        "freight_row_id": "FR-005"
+      },
+      "flags": [
+        "below_moq"
+      ],
+      "needs_human": true
+    },
+    {
+      "line_no": 3,
+      "mention": "Ascorbic acid",
+      "cas": null,
+      "grade": "pharma_usp",
+      "quantity": "250",
+      "unit": "kg",
+      "packaging": null,
+      "sku": "QX-ASC-USP",
+      "why": null,
+      "expected": {
+        "sku": "QX-ASC-USP",
+        "quantity_uom": "250.0000",
+        "uom": "kg",
+        "pack_code": "FDRUM25",
+        "packs": 10,
+        "quoted_qty": "250.000",
+        "unit_price": "12.249",
+        "line_total": "3062.25",
+        "currency": "EUR",
+        "price_row_id": "PL-00537",
+        "freight_row_id": "FR-005"
+      },
+      "flags": [],
+      "needs_human": false
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

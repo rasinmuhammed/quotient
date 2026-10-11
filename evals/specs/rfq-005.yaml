@@ -1,0 +1,36 @@
+id: rfq-005
+format: xlsx
+received: 2026-10-06
+from: Shankar Saxena <shankar.saxena@botlekchemie.nl>
+subject: Tender Q1 2027 solvents - Botlek Chemie
+body: |
+  Hello,
+  Attached our tender sheet for Q1 2027 volumes. CFR Rotterdam, technical grade throughout.
+  Please fill in your prices and return.
+  Shankar Saxena, Botlek Chemie BV
+document:
+  title: Botlek Chemie BV - Solvent tender Q1 2027
+  fields:
+    Incoterm: CFR Rotterdam
+    Grade: technical
+    Currency: EUR
+  columns: [Line, CAS no., Product, Qty (MT), Packaging, Your price EUR/kg]
+  rows:
+    - ["1", "67630", "", "24", "IBC", ""]
+    - ["2", "64197", "Acetic acid glacial", "6", "IBC", ""]
+    - ["3", "108883", "", "12", "IBC", ""]
+    - ["4", "75092", "Methylene chloride", "4", "drums", ""]
+    - ["5", "7664382", "Phosphoric acid 85%", "3", "IBC", ""]
+gold:
+  customer_id: C-007
+  incoterms_mentioned: [CFR]
+  incoterm: CFR
+  destination: NL
+  currency: EUR
+  requested_date: null
+  lines:
+    - {mention: "67630", cas: 67-63-0, grade: technical, quantity: "24", unit: MT, packaging: IBC1000, sku: QX-IPA-TG, why: CAS without dashes only}
+    - {mention: Acetic acid glacial, cas: 64-19-7, grade: technical, quantity: "6", unit: MT, packaging: IBC1000, sku: QX-GAA-TG}
+    - {mention: "108883", cas: 108-88-3, grade: technical, quantity: "12", unit: MT, packaging: IBC1000, sku: QX-TOL-TG}
+    - {mention: Methylene chloride, cas: 75-09-2, grade: technical, quantity: "4", unit: MT, packaging: DRUM200, sku: QX-DCM-TG}
+    - {mention: Phosphoric acid 85%, cas: 7664-38-2, grade: technical, quantity: "3", unit: MT, packaging: IBC1000, sku: QX-H3PO4-TG}

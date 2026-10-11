@@ -1,0 +1,26 @@
+id: rfq-026
+format: eml
+received: 2026-10-12
+from: Shankar Pandey <shankar.pandey@merwedespecialties.nl>
+subject: Offer request DMSO / NMP
+body: |
+  Dear team,
+
+  Please send your offer FOB Nhava Sheva for:
+
+  DMSO, technical grade - 4 MT in IBC
+  NMP, technical grade - 2 MT in drums
+
+  Best regards,
+  Shankar Pandey
+  Merwede Specialties BV, Dordrecht
+gold:
+  customer_id: C-003
+  incoterms_mentioned: [FOB]
+  incoterm: FOB
+  destination: NL
+  currency: EUR
+  requested_date: null
+  lines:
+    - {mention: DMSO, cas: null, grade: technical, quantity: "4", unit: MT, packaging: IBC1000, sku: QX-DMSO-TG, why: a clean line}
+    - {mention: NMP, cas: null, grade: technical, quantity: "2", unit: MT, packaging: DRUM200, sku: QX-NMP-TG, why: a clean line}

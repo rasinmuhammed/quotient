@@ -1,0 +1,108 @@
+{
+  "id": "rfq-018",
+  "file": "rfq-018.txt",
+  "format": "txt",
+  "received": "2026-10-11",
+  "customer_id": "C-009",
+  "incoterms_mentioned": [
+    "CFR"
+  ],
+  "incoterm": "CFR",
+  "destination": "AE",
+  "currency": "USD",
+  "requested_date": null,
+  "quote_flags": [],
+  "total": "49784.47",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "CAS# 141-78-6",
+      "cas": "141-78-6",
+      "grade": null,
+      "quantity": "6000",
+      "unit": "kg",
+      "packaging": "IBC1000",
+      "sku": "QX-ETAC-TG",
+      "why": "ethyl acetate comes in technical and reagent grade",
+      "expected": {
+        "sku": "QX-ETAC-TG",
+        "quantity_uom": "6000.0000",
+        "uom": "kg",
+        "pack_code": "IBC1000",
+        "packs": 7,
+        "quoted_qty": "6314.0000",
+        "unit_price": "2.206",
+        "line_total": "13928.68",
+        "currency": "USD",
+        "price_row_id": "PL-00063",
+        "freight_row_id": "FR-010"
+      },
+      "flags": [
+        "grade_not_specified",
+        "hazmat_documents"
+      ],
+      "needs_human": true
+    },
+    {
+      "line_no": 2,
+      "mention": "CAS 123 86 4",
+      "cas": "123-86-4",
+      "grade": null,
+      "quantity": "10",
+      "unit": "MT",
+      "packaging": "IBC1000",
+      "sku": "QX-NBAC-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-NBAC-TG",
+        "quantity_uom": "10000.0000",
+        "uom": "kg",
+        "pack_code": "IBC1000",
+        "packs": 12,
+        "quoted_qty": "10584.0000",
+        "unit_price": "1.587",
+        "line_total": "16796.81",
+        "currency": "USD",
+        "price_row_id": "PL-00103",
+        "freight_row_id": "FR-010"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 3,
+      "mention": "CAS 1330207",
+      "cas": "1330-20-7",
+      "grade": null,
+      "quantity": "16",
+      "unit": "MT",
+      "packaging": "IBC1000",
+      "sku": "QX-XYL-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-XYL-TG",
+        "quantity_uom": "16000.0000",
+        "uom": "kg",
+        "pack_code": "IBC1000",
+        "packs": 19,
+        "quoted_qty": "16416.0000",
+        "unit_price": "1.161",
+        "line_total": "19058.98",
+        "currency": "USD",
+        "price_row_id": "PL-00303",
+        "freight_row_id": "FR-010"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

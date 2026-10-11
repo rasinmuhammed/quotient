@@ -1,0 +1,29 @@
+id: rfq-019
+format: pdf
+received: 2026-10-06
+from: Callum Knox <callum.knox@copperlinecoatings.com>
+subject: Copperline Coatings PO request - pigments and additives
+body: |
+  Team, RFQ attached for our Charlotte plant. CIF New York. - Callum
+document:
+  title: COPPERLINE COATINGS INC - REQUEST FOR QUOTE
+  fields:
+    Ship to: Copperline Coatings Inc, 4100 Westinghouse Blvd, Charlotte NC 28273, USA
+    Terms: CIF New York
+    Buyer: Callum Knox
+  columns: [Item, Description, Qty, UOM, Notes]
+  rows:
+    - ["A", "Lumira RT-92", "10,000", "kg", "25 kg bags"]
+    - ["B", "Aminex T99", "4", "drums", ""]
+    - ["C", "Stearona TP", "2,000", "kg", ""]
+gold:
+  customer_id: C-028
+  incoterms_mentioned: [CIF]
+  incoterm: CIF
+  destination: US
+  currency: USD
+  requested_date: null
+  lines:
+    - {mention: Lumira RT-92, cas: null, grade: null, quantity: "10000", unit: kg, packaging: BAG25, sku: QX-TIO2-TG, why: trade name}
+    - {mention: Aminex T99, cas: null, grade: null, quantity: "4", unit: drums, packaging: DRUM200, sku: QX-TEA-TG, expect: [below_moq], why: trade name; 4 drums = 899.2 kg under the 2000 kg MOQ}
+    - {mention: Stearona TP, cas: null, grade: null, quantity: "2000", unit: kg, packaging: null, sku: QX-STEA-TG, why: trade name}

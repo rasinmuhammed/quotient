@@ -1,0 +1,103 @@
+{
+  "id": "rfq-014",
+  "file": "rfq-014.pdf",
+  "format": "pdf",
+  "received": "2026-10-09",
+  "customer_id": "C-026",
+  "incoterms_mentioned": [
+    "DAP"
+  ],
+  "incoterm": "DAP",
+  "destination": "DE",
+  "currency": "EUR",
+  "requested_date": "2026-12-04",
+  "quote_flags": [],
+  "total": "6714.40",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Polyethylene glycol 400",
+      "cas": null,
+      "grade": "pharma_usp",
+      "quantity": "3",
+      "unit": "drums",
+      "packaging": "DRUM200",
+      "sku": "QX-PEG400-USP",
+      "why": null,
+      "expected": {
+        "sku": "QX-PEG400-USP",
+        "quantity_uom": "676.8000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 3,
+        "quoted_qty": "676.8000",
+        "unit_price": "3.724",
+        "line_total": "2520.40",
+        "currency": "EUR",
+        "price_row_id": "PL-00369",
+        "freight_row_id": "FR-008"
+      },
+      "flags": [],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "Sodium bicarbonate",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "4",
+      "unit": "pallets",
+      "packaging": "BAG25",
+      "sku": "QX-NAHCO3-TG",
+      "why": "a pallet is not a fixed quantity",
+      "expected": {
+        "sku": "QX-NAHCO3-TG",
+        "quantity_uom": null,
+        "uom": "kg",
+        "pack_code": null,
+        "packs": null,
+        "quoted_qty": null,
+        "unit_price": null,
+        "line_total": null,
+        "currency": "EUR",
+        "price_row_id": null,
+        "freight_row_id": null
+      },
+      "flags": [
+        "unit_conversion_impossible"
+      ],
+      "needs_human": true
+    },
+    {
+      "line_no": 3,
+      "mention": "Potassium carbonate",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "2500",
+      "unit": "kg",
+      "packaging": "FIBC1000",
+      "sku": "QX-K2CO3-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-K2CO3-TG",
+        "quantity_uom": "2500.0000",
+        "uom": "kg",
+        "pack_code": "FIBC1000",
+        "packs": 3,
+        "quoted_qty": "3000.000",
+        "unit_price": "1.398",
+        "line_total": "4194.00",
+        "currency": "EUR",
+        "price_row_id": "PL-00462",
+        "freight_row_id": "FR-008"
+      },
+      "flags": [],
+      "needs_human": false
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

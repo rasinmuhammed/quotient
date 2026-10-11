@@ -1,0 +1,21 @@
+id: rfq-012
+format: txt
+received: 2026-10-08
+body: |
+  From: Hazel Martinez
+  Harbor Point Coatings Inc, Baltimore MD
+
+  Hi - looking for a quote on 20 tons of zinc oxide (technical) in 1 MT big bags, CFR Houston,
+  plus 8,000 kg triple pressed stearic acid in bags. Need it on the water by Dec 1.
+
+  Hazel
+gold:
+  customer_id: C-008
+  incoterms_mentioned: [CFR]
+  incoterm: CFR
+  destination: US
+  currency: USD
+  requested_date: 2026-12-01
+  lines:
+    - {mention: zinc oxide, cas: null, grade: technical, quantity: "20", unit: tons, packaging: FIBC1000, sku: QX-ZNO-TG, flags: [ambiguous_unit], why: a US buyer writing tons may mean short tons}
+    - {mention: triple pressed stearic acid, cas: null, grade: null, quantity: "8000", unit: kg, packaging: BAG25, sku: QX-STEA-TG}

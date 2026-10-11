@@ -1,0 +1,136 @@
+{
+  "id": "rfq-027",
+  "file": "rfq-027.xlsx",
+  "format": "xlsx",
+  "received": "2026-10-10",
+  "customer_id": "C-029",
+  "incoterms_mentioned": [
+    "CFR"
+  ],
+  "incoterm": "CFR",
+  "destination": "US",
+  "currency": "USD",
+  "requested_date": null,
+  "quote_flags": [],
+  "total": "1516.90",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Methanol",
+      "cas": null,
+      "grade": "reagent",
+      "quantity": "500",
+      "unit": "L",
+      "packaging": "CAN25",
+      "sku": "QX-MEOH-AR",
+      "why": "20 x 25 L",
+      "expected": {
+        "sku": "QX-MEOH-AR",
+        "quantity_uom": "500.0000",
+        "uom": "L",
+        "pack_code": "CAN25",
+        "packs": 20,
+        "quoted_qty": "500.000",
+        "unit_price": "0.735",
+        "line_total": "367.50",
+        "currency": "USD",
+        "price_row_id": "PL-00049",
+        "freight_row_id": "FR-026"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "Acetone",
+      "cas": null,
+      "grade": "reagent",
+      "quantity": "250",
+      "unit": "L",
+      "packaging": "CAN25",
+      "sku": "QX-ACE-AR",
+      "why": null,
+      "expected": {
+        "sku": "QX-ACE-AR",
+        "quantity_uom": "250.0000",
+        "uom": "L",
+        "pack_code": "CAN25",
+        "packs": 10,
+        "quoted_qty": "250.000",
+        "unit_price": "1.850",
+        "line_total": "462.50",
+        "currency": "USD",
+        "price_row_id": "PL-00033",
+        "freight_row_id": "FR-026"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 3,
+      "mention": "Dichloromethane",
+      "cas": null,
+      "grade": "reagent",
+      "quantity": "200",
+      "unit": "L",
+      "packaging": "CAN25",
+      "sku": "QX-DCM-AR",
+      "why": null,
+      "expected": {
+        "sku": "QX-DCM-AR",
+        "quantity_uom": "200.0000",
+        "uom": "L",
+        "pack_code": "CAN25",
+        "packs": 8,
+        "quoted_qty": "200.000",
+        "unit_price": "2.676",
+        "line_total": "535.20",
+        "currency": "USD",
+        "price_row_id": "PL-00321",
+        "freight_row_id": "FR-026"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 4,
+      "mention": "Ethyl acetate",
+      "cas": null,
+      "grade": "reagent",
+      "quantity": "30",
+      "unit": "L",
+      "packaging": null,
+      "sku": "QX-ETAC-AR",
+      "why": "2 cans = 50 L under the 100 L MOQ",
+      "expected": {
+        "sku": "QX-ETAC-AR",
+        "quantity_uom": "30.0000",
+        "uom": "L",
+        "pack_code": "CAN25",
+        "packs": 2,
+        "quoted_qty": "50.000",
+        "unit_price": "3.034",
+        "line_total": "151.70",
+        "currency": "USD",
+        "price_row_id": "PL-00065",
+        "freight_row_id": "FR-002"
+      },
+      "flags": [
+        "below_moq",
+        "hazmat_documents"
+      ],
+      "needs_human": true
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

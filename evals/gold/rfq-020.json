@@ -1,0 +1,79 @@
+{
+  "id": "rfq-020",
+  "file": "rfq-020.eml",
+  "format": "eml",
+  "received": "2026-10-12",
+  "customer_id": "C-030",
+  "incoterms_mentioned": [
+    "DAP"
+  ],
+  "incoterm": "DAP",
+  "destination": "DE",
+  "currency": "USD",
+  "requested_date": null,
+  "quote_flags": [],
+  "total": "46599.08",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "MEG (monoethylene glycol)",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "40",
+      "unit": "MT",
+      "packaging": "IBC1000",
+      "sku": "QX-MEG-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-MEG-TG",
+        "quantity_uom": "40000.0000",
+        "uom": "kg",
+        "pack_code": "IBC1000",
+        "packs": 36,
+        "quoted_qty": "40068.0000",
+        "unit_price": "1.163",
+        "line_total": "46599.08",
+        "currency": "USD",
+        "price_row_id": "PL-00136",
+        "freight_row_id": "FR-008"
+      },
+      "flags": [
+        "margin_floor_applied"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "DEG (diethylene glycol)",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "20",
+      "unit": "MT",
+      "packaging": "IBC1000",
+      "sku": null,
+      "why": "diethylene glycol is not carried",
+      "expected": {
+        "sku": null,
+        "quantity_uom": null,
+        "uom": null,
+        "pack_code": null,
+        "packs": null,
+        "quoted_qty": null,
+        "unit_price": null,
+        "line_total": null,
+        "currency": "USD",
+        "price_row_id": null,
+        "freight_row_id": null
+      },
+      "flags": [
+        "no_match"
+      ],
+      "needs_human": true
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "rfq-003",
+  "file": "rfq-003.eml",
+  "format": "eml",
+  "received": "2026-10-07",
+  "customer_id": "C-015",
+  "incoterms_mentioned": [
+    "CIF"
+  ],
+  "incoterm": "CIF",
+  "destination": "JP",
+  "currency": "JPY",
+  "requested_date": null,
+  "quote_flags": [],
+  "total": "797480",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Acetonitrile, HPLC grade",
+      "cas": null,
+      "grade": "reagent",
+      "quantity": "600",
+      "unit": "L",
+      "packaging": "CAN25",
+      "sku": "QX-ACN-AR",
+      "why": "HPLC grade is the reagent SKU",
+      "expected": {
+        "sku": "QX-ACN-AR",
+        "quantity_uom": "600.0000",
+        "uom": "L",
+        "pack_code": "CAN25",
+        "packs": 24,
+        "quoted_qty": "600.000",
+        "unit_price": "519.6",
+        "line_total": "311760",
+        "currency": "JPY",
+        "price_row_id": "PL-00353",
+        "freight_row_id": "FR-015"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "Tetrahydrofuran (THF)",
+      "cas": null,
+      "grade": "reagent",
+      "quantity": "400",
+      "unit": "L",
+      "packaging": null,
+      "sku": "QX-THF-AR",
+      "why": "reagent grade stated",
+      "expected": {
+        "sku": "QX-THF-AR",
+        "quantity_uom": "400.0000",
+        "uom": "L",
+        "pack_code": "DRUM200",
+        "packs": 2,
+        "quoted_qty": "400.000",
+        "unit_price": "1214.3",
+        "line_total": "485720",
+        "currency": "JPY",
+        "price_row_id": "PL-00341",
+        "freight_row_id": "FR-063"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

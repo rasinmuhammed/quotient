@@ -1,0 +1,29 @@
+id: rfq-013
+format: eml
+received: 2026-10-11
+from: Harm Schmid <harm.schmid@kawabekasei.co.jp>
+subject: Price inquiry NMP / DMSO
+body: |
+  Dear Sales Team,
+
+  Could you please send your best price and lead time for:
+
+  - N-Methyl-2-pyrrolidone (NMP), reagent grade, in 25 L cans
+  - DMSO, USP grade, 1,000 kg
+
+  For the NMP we are still finalising our forecast, so an indicative price is fine for now.
+  Delivery CIF Yokohama.
+
+  Best regards,
+  Harm Schmid
+  Kawabe Kasei Co., Ltd
+gold:
+  customer_id: C-019
+  incoterms_mentioned: [CIF]
+  incoterm: CIF
+  destination: JP
+  currency: JPY
+  requested_date: null
+  lines:
+    - {mention: N-Methyl-2-pyrrolidone (NMP), cas: null, grade: reagent, quantity: null, unit: null, packaging: CAN25, sku: QX-NMP-AR, flags: [quantity_missing], why: no quantity given}
+    - {mention: DMSO, cas: null, grade: pharma_usp, quantity: "1000", unit: kg, packaging: null, sku: QX-DMSO-USP}

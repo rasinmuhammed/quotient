@@ -1,0 +1,30 @@
+id: rfq-027
+format: xlsx
+received: 2026-10-10
+from: Leo Rios <leo.rios@bluestemlaboratories.com>
+subject: Lab solvent order request - Bluestem Laboratories
+body: |
+  Hi, see attached lab solvent list. CFR Houston please. Leo
+document:
+  title: Bluestem Laboratories LLC - lab solvents
+  fields:
+    Ship to: Bluestem Laboratories LLC, Austin TX
+    Terms: CFR Houston
+  columns: [Material, Grade, Qty, Container]
+  rows:
+    - ["Methanol", "AR", "20 x 25L", "cans"]
+    - ["Acetone", "ACS reagent", "10 x 25L", "cans"]
+    - ["Dichloromethane", "HPLC", "8 x 25L", "cans"]
+    - ["Ethyl acetate", "AR", "30 L", ""]
+gold:
+  customer_id: C-029
+  incoterms_mentioned: [CFR]
+  incoterm: CFR
+  destination: US
+  currency: USD
+  requested_date: null
+  lines:
+    - {mention: Methanol, cas: null, grade: reagent, quantity: "500", unit: L, packaging: CAN25, sku: QX-MEOH-AR, why: 20 x 25 L}
+    - {mention: Acetone, cas: null, grade: reagent, quantity: "250", unit: L, packaging: CAN25, sku: QX-ACE-AR}
+    - {mention: Dichloromethane, cas: null, grade: reagent, quantity: "200", unit: L, packaging: CAN25, sku: QX-DCM-AR}
+    - {mention: Ethyl acetate, cas: null, grade: reagent, quantity: "30", unit: L, packaging: null, sku: QX-ETAC-AR, expect: [below_moq], why: 2 cans = 50 L under the 100 L MOQ}

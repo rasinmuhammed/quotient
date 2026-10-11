@@ -1,0 +1,105 @@
+{
+  "id": "rfq-008",
+  "file": "rfq-008.eml",
+  "format": "eml",
+  "received": "2026-10-09",
+  "customer_id": "C-020",
+  "incoterms_mentioned": [
+    "FOB"
+  ],
+  "incoterm": "FOB",
+  "destination": "US",
+  "currency": "USD",
+  "requested_date": "2026-11-30",
+  "quote_flags": [],
+  "total": "9110.99",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Sodium hypochlorite 12.5%",
+      "cas": null,
+      "grade": null,
+      "quantity": "6",
+      "unit": "IBC totes",
+      "packaging": "IBC1000",
+      "sku": null,
+      "why": "not in the catalog",
+      "expected": {
+        "sku": null,
+        "quantity_uom": null,
+        "uom": null,
+        "pack_code": null,
+        "packs": null,
+        "quoted_qty": null,
+        "unit_price": null,
+        "line_total": null,
+        "currency": "USD",
+        "price_row_id": null,
+        "freight_row_id": null
+      },
+      "flags": [
+        "no_match"
+      ],
+      "needs_human": true
+    },
+    {
+      "line_no": 2,
+      "mention": "Propylene glycol USP",
+      "cas": null,
+      "grade": "pharma_usp",
+      "quantity": "8",
+      "unit": "drums",
+      "packaging": "DRUM200",
+      "sku": "QX-MPG-USP",
+      "why": null,
+      "expected": {
+        "sku": "QX-MPG-USP",
+        "quantity_uom": "1657.6000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 8,
+        "quoted_qty": "1657.6000",
+        "unit_price": "3.832",
+        "line_total": "6351.92",
+        "currency": "USD",
+        "price_row_id": "PL-00114",
+        "freight_row_id": "FR-001"
+      },
+      "flags": [],
+      "needs_human": false
+    },
+    {
+      "line_no": 3,
+      "mention": "Glycerin 99.7% USP",
+      "cas": null,
+      "grade": "pharma_usp",
+      "quantity": "4",
+      "unit": "drums",
+      "packaging": "DRUM200",
+      "sku": "QX-GLY-USP",
+      "why": "the USP glycerine drum price lapsed 30 Sep",
+      "expected": {
+        "sku": "QX-GLY-USP",
+        "quantity_uom": "1008.8000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 4,
+        "quoted_qty": "1008.8000",
+        "unit_price": "2.735",
+        "line_total": "2759.07",
+        "currency": "USD",
+        "price_row_id": "PL-00146",
+        "freight_row_id": "FR-001"
+      },
+      "flags": [
+        "price_expired"
+      ],
+      "needs_human": true
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

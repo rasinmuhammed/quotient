@@ -1,0 +1,30 @@
+id: rfq-022
+format: xlsx
+received: 2026-10-05
+from: Imogen Jefferson <imogen.jefferson@serraazulquimica.com.br>
+subject: Pedido de cotação / RFQ - Serra Azul Química
+body: |
+  Hello, our RFQ attached. CFR Santos. Regards, Imogen Jefferson - Serra Azul Química Ltda
+document:
+  title: SERRA AZUL QUÍMICA LTDA - PEDIDO DE COTAÇÃO / RFQ
+  fields:
+    Incoterm: CFR Santos
+    Moeda / currency: USD
+  columns: [Item, Produto / Product, Quantidade / Qty, Unidade / Unit, Embalagem / Packing]
+  rows:
+    - ["1", "Toluene technical", "15,000", "L", "IBC"]
+    - ["2", "Methanol technical", "25", "MT", "IBC"]
+    - ["3", "Acetone technical", "50", "drums", ""]
+    - ["4", "Isopropanol", "4,000", "kg", "drums"]
+gold:
+  customer_id: C-025
+  incoterms_mentioned: [CFR]
+  incoterm: CFR
+  destination: BR
+  currency: USD
+  requested_date: null
+  lines:
+    - {mention: Toluene technical, cas: null, grade: technical, quantity: "15000", unit: L, packaging: IBC1000, sku: QX-TOL-TG, why: litres of a per-kg SKU}
+    - {mention: Methanol technical, cas: null, grade: technical, quantity: "25", unit: MT, packaging: IBC1000, sku: QX-MEOH-TG}
+    - {mention: Acetone technical, cas: null, grade: technical, quantity: "50", unit: drums, packaging: DRUM200, sku: QX-ACE-TG}
+    - {mention: Isopropanol, cas: null, grade: null, quantity: "4000", unit: kg, packaging: DRUM200, sku: QX-IPA-TG, flags: [grade_not_specified], why: IPA comes in three grades}

@@ -1,0 +1,30 @@
+id: rfq-030
+format: eml
+received: 2026-10-11
+from: Kenta Wang <kenta.wang@paranapanemafarmaceutica.com.br>
+subject: RFQ excipients - Paranapanema Farmacêutica
+body: |
+  Dear Sales,
+
+  Please quote FOB the following pharma excipients:
+
+  1. Sodium bicarbonate USP - 2 MT
+  2. Citric acid anhydrous USP - 1 MT
+  3. Sodium benzoate USP - 400 kg, 25 kg bags
+
+  Required for production in December.
+
+  Best regards,
+  Kenta Wang
+  Paranapanema Farmacêutica Ltda
+gold:
+  customer_id: C-010
+  incoterms_mentioned: [FOB]
+  incoterm: FOB
+  destination: BR
+  currency: USD
+  requested_date: 2026-12-31
+  lines:
+    - {mention: Sodium bicarbonate USP, cas: null, grade: pharma_usp, quantity: "2", unit: MT, packaging: null, sku: QX-NAHCO3-USP}
+    - {mention: Citric acid anhydrous USP, cas: null, grade: pharma_usp, quantity: "1", unit: MT, packaging: null, sku: QX-CAA-USP}
+    - {mention: Sodium benzoate USP, cas: null, grade: pharma_usp, quantity: "400", unit: kg, packaging: BAG25, sku: QX-NABZ-USP, expect: [price_expired], why: USP sodium benzoate bag price lapsed}

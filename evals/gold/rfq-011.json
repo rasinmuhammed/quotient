@@ -1,0 +1,82 @@
+{
+  "id": "rfq-011",
+  "file": "rfq-011.eml",
+  "format": "eml",
+  "received": "2026-10-10",
+  "customer_id": null,
+  "incoterms_mentioned": [
+    "CIF"
+  ],
+  "incoterm": "CIF",
+  "destination": "ZA",
+  "currency": "USD",
+  "requested_date": null,
+  "quote_flags": [
+    "customer_unknown"
+  ],
+  "total": null,
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Citric acid anhydrous, BP/USP",
+      "cas": null,
+      "grade": "pharma_usp",
+      "quantity": "5",
+      "unit": "MT",
+      "packaging": "BAG25",
+      "sku": "QX-CAA-USP",
+      "why": "new customer in South Africa; no lane",
+      "expected": {
+        "sku": "QX-CAA-USP",
+        "quantity_uom": "5000.0000",
+        "uom": "kg",
+        "pack_code": "BAG25",
+        "packs": 200,
+        "quoted_qty": "5000.000",
+        "unit_price": null,
+        "line_total": null,
+        "currency": "USD",
+        "price_row_id": "PL-00407",
+        "freight_row_id": null
+      },
+      "flags": [
+        "no_freight_lane"
+      ],
+      "needs_human": true
+    },
+    {
+      "line_no": 2,
+      "mention": "Sodium benzoate",
+      "cas": null,
+      "grade": null,
+      "quantity": "2",
+      "unit": "MT",
+      "packaging": null,
+      "sku": "QX-NABZ-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-NABZ-TG",
+        "quantity_uom": "2000.0000",
+        "uom": "kg",
+        "pack_code": "FIBC1000",
+        "packs": 2,
+        "quoted_qty": "2000.000",
+        "unit_price": null,
+        "line_total": null,
+        "currency": "USD",
+        "price_row_id": "PL-00414",
+        "freight_row_id": null
+      },
+      "flags": [
+        "grade_not_specified",
+        "no_freight_lane"
+      ],
+      "needs_human": true
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

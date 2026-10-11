@@ -1,0 +1,77 @@
+{
+  "id": "rfq-002",
+  "file": "rfq-002.txt",
+  "format": "txt",
+  "received": "2026-10-07",
+  "customer_id": "C-005",
+  "incoterms_mentioned": [
+    "DAP"
+  ],
+  "incoterm": "DAP",
+  "destination": "US",
+  "currency": "USD",
+  "requested_date": "2026-11-15",
+  "quote_flags": [],
+  "total": "80757.27",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Titanium Dioxide (rutile)",
+      "cas": null,
+      "grade": null,
+      "quantity": "40000",
+      "unit": "lbs",
+      "packaging": "BAG25",
+      "sku": "QX-TIO2-TG",
+      "why": "pounds to kg; one grade",
+      "expected": {
+        "sku": "QX-TIO2-TG",
+        "quantity_uom": "18143.6948",
+        "uom": "kg",
+        "pack_code": "BAG25",
+        "packs": 726,
+        "quoted_qty": "18150.000",
+        "unit_price": "4.145",
+        "line_total": "75231.75",
+        "currency": "USD",
+        "price_row_id": "PL-00427",
+        "freight_row_id": "FR-004"
+      },
+      "flags": [],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "MEK",
+      "cas": null,
+      "grade": null,
+      "quantity": "12",
+      "unit": "drums",
+      "packaging": "DRUM200",
+      "sku": "QX-MEK-TG",
+      "why": "abbreviation; drums of a per-kg liquid convert through density",
+      "expected": {
+        "sku": "QX-MEK-TG",
+        "quantity_uom": "1932.0000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 12,
+        "quoted_qty": "1932.0000",
+        "unit_price": "2.860",
+        "line_total": "5525.52",
+        "currency": "USD",
+        "price_row_id": "PL-00090",
+        "freight_row_id": "FR-052"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

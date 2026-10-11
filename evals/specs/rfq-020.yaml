@@ -1,0 +1,28 @@
+id: rfq-020
+format: eml
+received: 2026-10-12
+from: Alexander Lambert <alexander.lambert@moselgrundkunststoffe.de>
+subject: Annual volume enquiry glycols 2027
+body: |
+  Dear Sales Team,
+
+  For our 2027 annual contract we are requesting prices for:
+
+    MEG (monoethylene glycol), fibre grade/technical: 40 MT in IBCs
+    DEG (diethylene glycol), technical: 20 MT in IBCs
+
+  Delivery DAP Duisburg. Please quote in USD as per our framework agreement.
+
+  Kind regards
+  Alexander Lambert
+  Moselgrund Kunststoffe GmbH
+gold:
+  customer_id: C-030
+  incoterms_mentioned: [DAP]
+  incoterm: DAP
+  destination: DE
+  currency: USD
+  requested_date: null
+  lines:
+    - {mention: MEG (monoethylene glycol), cas: null, grade: technical, quantity: "40", unit: MT, packaging: IBC1000, sku: QX-MEG-TG}
+    - {mention: DEG (diethylene glycol), cas: null, grade: technical, quantity: "20", unit: MT, packaging: IBC1000, sku: null, flags: [no_match], why: diethylene glycol is not carried}

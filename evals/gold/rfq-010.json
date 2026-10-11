@@ -1,0 +1,136 @@
+{
+  "id": "rfq-010",
+  "file": "rfq-010.xlsx",
+  "format": "xlsx",
+  "received": "2026-10-10",
+  "customer_id": "C-017",
+  "incoterms_mentioned": [
+    "CIF"
+  ],
+  "incoterm": "CIF",
+  "destination": "JP",
+  "currency": "JPY",
+  "requested_date": null,
+  "quote_flags": [],
+  "total": "10442842",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Xylene (mixed)",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "30",
+      "unit": "MT",
+      "packaging": "IBC1000",
+      "sku": "QX-XYL-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-XYL-TG",
+        "quantity_uom": "30000.0000",
+        "uom": "kg",
+        "pack_code": "IBC1000",
+        "packs": 35,
+        "quoted_qty": "30240.0000",
+        "unit_price": "174.4",
+        "line_total": "5273856",
+        "currency": "JPY",
+        "price_row_id": "PL-00304",
+        "freight_row_id": "FR-015"
+      },
+      "flags": [
+        "hazmat_documents",
+        "margin_floor_applied"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "Butyl acetate",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "12",
+      "unit": "MT",
+      "packaging": "IBC1000",
+      "sku": "QX-NBAC-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-NBAC-TG",
+        "quantity_uom": "12000.0000",
+        "uom": "kg",
+        "pack_code": "IBC1000",
+        "packs": 14,
+        "quoted_qty": "12348.0000",
+        "unit_price": "236.0",
+        "line_total": "2914128",
+        "currency": "JPY",
+        "price_row_id": "PL-00103",
+        "freight_row_id": "FR-015"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 3,
+      "mention": "PGMEA",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "6",
+      "unit": "MT",
+      "packaging": "DRUM200",
+      "sku": "QX-PGMEA-TG",
+      "why": null,
+      "expected": {
+        "sku": "QX-PGMEA-TG",
+        "quantity_uom": "6000.0000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 32,
+        "quoted_qty": "6176.0000",
+        "unit_price": "365.1",
+        "line_total": "2254858",
+        "currency": "JPY",
+        "price_row_id": "PL-00171",
+        "freight_row_id": "FR-039"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 4,
+      "mention": "Cellosolve acetate (EGEEA)",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "2",
+      "unit": "MT",
+      "packaging": "DRUM200",
+      "sku": null,
+      "why": "ethylene glycol ethyl ether acetate is not carried",
+      "expected": {
+        "sku": null,
+        "quantity_uom": null,
+        "uom": null,
+        "pack_code": null,
+        "packs": null,
+        "quoted_qty": null,
+        "unit_price": null,
+        "line_total": null,
+        "currency": "JPY",
+        "price_row_id": null,
+        "freight_row_id": null
+      },
+      "flags": [
+        "no_match"
+      ],
+      "needs_human": true
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "id": "rfq-016",
+  "file": "rfq-016.xlsx",
+  "format": "xlsx",
+  "received": "2026-10-12",
+  "customer_id": "C-022",
+  "incoterms_mentioned": [
+    "CIF"
+  ],
+  "incoterm": "CIF",
+  "destination": "NL",
+  "currency": "EUR",
+  "requested_date": null,
+  "quote_flags": [],
+  "total": "26560.06",
+  "lines": [
+    {
+      "line_no": 1,
+      "mention": "Isopropyl alchohol",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "3000",
+      "unit": "kg",
+      "packaging": "DRUM200",
+      "sku": "QX-IPA-TG",
+      "why": "typo",
+      "expected": {
+        "sku": "QX-IPA-TG",
+        "quantity_uom": "3000.0000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 20,
+        "quoted_qty": "3144.0000",
+        "unit_price": "1.653",
+        "line_total": "5197.03",
+        "currency": "EUR",
+        "price_row_id": "PL-00002",
+        "freight_row_id": "FR-023"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 2,
+      "mention": "Acetonitirle",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "2000",
+      "unit": "kg",
+      "packaging": "DRUM200",
+      "sku": "QX-ACN-TG",
+      "why": "typo",
+      "expected": {
+        "sku": "QX-ACN-TG",
+        "quantity_uom": "2000.0000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 13,
+        "quoted_qty": "2043.6000",
+        "unit_price": "2.560",
+        "line_total": "5231.62",
+        "currency": "EUR",
+        "price_row_id": "PL-00346",
+        "freight_row_id": "FR-071"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    },
+    {
+      "line_no": 3,
+      "mention": "Dimethylsulfoxid",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "1200",
+      "unit": "kg",
+      "packaging": "IBC1000",
+      "sku": "QX-DMSO-TG",
+      "why": "Dutch/German spelling",
+      "expected": {
+        "sku": "QX-DMSO-TG",
+        "quantity_uom": "1200.0000",
+        "uom": "kg",
+        "pack_code": "IBC1000",
+        "packs": 2,
+        "quoted_qty": "2200.0000",
+        "unit_price": "5.339",
+        "line_total": "11745.80",
+        "currency": "EUR",
+        "price_row_id": "PL-00206",
+        "freight_row_id": "FR-023"
+      },
+      "flags": [],
+      "needs_human": false
+    },
+    {
+      "line_no": 4,
+      "mention": "Tetrahydrofurane",
+      "cas": null,
+      "grade": "technical",
+      "quantity": "1000",
+      "unit": "kg",
+      "packaging": "DRUM200",
+      "sku": "QX-THF-TG",
+      "why": "Dutch spelling",
+      "expected": {
+        "sku": "QX-THF-TG",
+        "quantity_uom": "1000.0000",
+        "uom": "kg",
+        "pack_code": "DRUM200",
+        "packs": 6,
+        "quoted_qty": "1066.8000",
+        "unit_price": "4.111",
+        "line_total": "4385.61",
+        "currency": "EUR",
+        "price_row_id": "PL-00330",
+        "freight_row_id": "FR-071"
+      },
+      "flags": [
+        "hazmat_documents"
+      ],
+      "needs_human": false
+    }
+  ],
+  "computed_by": {
+    "engine": "quotient.pricing.engine",
+    "rules_version": "2026.10.1",
+    "data_manifest": "data/manifest.json"
+  }
+}
