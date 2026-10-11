@@ -23,6 +23,7 @@ PRICES_CHECKED = "2026-10-11"
 PRICES: dict[str, tuple[Decimal, Decimal, Decimal]] = {
     "openai/gpt-oss-120b": (Decimal("0.15"), Decimal("0.075"), Decimal("0.60")),
     "openai/gpt-oss-20b": (Decimal("0.075"), Decimal("0.0375"), Decimal("0.30")),
+    "qwen/qwen3.8-27b": (Decimal("0.80"), Decimal("0.80"), Decimal("4.00")),  # no prompt caching on this model
 }
 MILLION = Decimal(1_000_000)
 
@@ -76,7 +77,7 @@ class GroqLLM:
         self.model = model
         self.reasoning_effort = reasoning_effort
         self.max_retries = max_retries
-        self.strict = model.startswith("openai/gpt-oss")
+        self.strict = model.startswith(("openai/gpt-oss", "qwen/qwen3.8"))  # Groq's strict (constrained) models
 
     @staticmethod
     def _retry_after(exc: Exception, attempt: int) -> float:
@@ -106,6 +107,10 @@ class GroqLLM:
         kwargs: dict[str, Any] = {}
         if self.model.startswith("openai/gpt-oss"):
             kwargs.update(reasoning_effort=self.reasoning_effort, include_reasoning=False)
+        elif self.model.startswith("qwen/"):  # "none" is instruct mode; other efforts think, with the thinking hidden
+            kwargs.update(reasoning_effort=self.reasoning_effort)
+            if self.reasoning_effort != "none":
+                kwargs.update(reasoning_format="hidden")
         started, waited = time.perf_counter(), 0.0
         for attempt in range(self.max_retries + 1):
             try:

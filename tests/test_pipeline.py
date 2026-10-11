@@ -143,6 +143,17 @@ def test_a_model_choice_that_is_not_the_substance_it_named_is_discarded(catalog,
     assert FlagCode.AMBIGUOUS_MATCH in codes(ln)
 
 
+def test_a_cas_number_not_in_the_document_is_not_used_to_match(catalog, rules):
+    read = line("Ethyl acetate") | {"cas": {"value": "108-65-6", "span": "108-65-6"}}  # PGMEA's CAS, not in the RFQ
+    ln = run(scripted([read]), catalog, rules).lines[0]
+    assert ln.match.method == "synonym" and ln.match.sku == "QX-ETAC-TG"
+
+
+def test_a_quantity_may_come_as_a_json_number(catalog, rules):
+    ln = run(scripted([line("Ethyl acetate") | {"quantity": {"value": 18, "span": "18"}}]), catalog, rules).lines[0]
+    assert ln.extracted.quantity.verified and ln.priced.packs == 18
+
+
 def test_a_pack_size_alone_is_not_an_amount(catalog, rules):
     text = RFQ.replace("18 drums", "in 25 L cans")
     ln = run(scripted([line("Ethyl acetate", qty="25", unit="L cans")]), catalog, rules, text).lines[0]

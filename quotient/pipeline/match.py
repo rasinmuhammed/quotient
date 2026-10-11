@@ -183,7 +183,8 @@ def _decide(line: ExtractedLine, idx: NameIndex) -> Match | _Pending | None:
     if line.english_name:
         texts.append(("english_name", line.english_name))
 
-    for via, text in (("cas", line.cas.value), ("mention", line.mention.value)):
+    # a CAS number counts only when it is in the document: a model can recall one for the wrong chemical
+    for via, text in (("cas", line.cas.value if line.cas.verified else None), ("mention", line.mention.value)):
         for cas in find_cas(text):
             if cas in idx.by_cas:
                 return Match(chemical_code=idx.by_cas[cas], sku=None, method="cas", matched_on=cas, score=100.0,

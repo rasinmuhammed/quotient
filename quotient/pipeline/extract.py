@@ -24,9 +24,9 @@ from quotient.pipeline.types import ExtractedLine, Extraction, IncotermMention, 
 TEXT_OR_NULL = {"anyOf": [{"type": "string"}, {"type": "null"}]}
 
 
-def _spanned(desc: str) -> dict:
+def _spanned(desc: str, value: dict = TEXT_OR_NULL) -> dict:
     return {"type": "object", "additionalProperties": False, "required": ["value", "span"], "description": desc,
-            "properties": {"value": TEXT_OR_NULL, "span": TEXT_OR_NULL}}
+            "properties": {"value": value, "span": TEXT_OR_NULL}}
 
 
 LINE_SCHEMA = {
@@ -35,7 +35,7 @@ LINE_SCHEMA = {
     "properties": {
         "mention": _spanned("product as written"), "english_name": TEXT_OR_NULL,
         "cas": _spanned("CAS number as written"), "grade": _spanned("grade as written"),
-        "quantity": _spanned("plain number"), "unit": _spanned("unit as written"),
+        "quantity": _spanned("plain number", {"anyOf": [{"type": "string"}, {"type": "number"}, {"type": "null"}]}), "unit": _spanned("unit as written"),
         "packaging": _spanned("pack type as written"), "confidence": {"type": "number"},
         "note": TEXT_OR_NULL,
     },
@@ -116,6 +116,8 @@ def _quantity_ok(value: str | None, span: str | None) -> bool:
 
 def _check(sp: dict, doc_norm: str) -> Spanned:
     value, span = sp.get("value"), sp.get("span")
+    if isinstance(value, int | float) and not isinstance(value, bool):  # a quantity may come as a JSON number
+        value = format(Decimal(repr(value)).normalize(), "f")
     return Spanned(value=value, span=span, verified=value is not None and span_found(span, doc_norm))
 
 
