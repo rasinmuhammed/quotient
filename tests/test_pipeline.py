@@ -198,6 +198,15 @@ def test_an_english_name_from_the_reader_matches_as_a_translation(catalog, rules
     assert ln.match.method == "translation" and ln.match.sku == "QX-ETAC-TG"
 
 
+def test_an_english_name_containing_a_catalog_name_is_not_that_product(catalog, rules):
+    text = RFQ.replace("Ethyl acetate", "Cellosolve acetate (EGEEA)")
+    llm = scripted([line("Cellosolve acetate (EGEEA)", english="ethylene glycol ethyl ether acetate")],
+                   match=lambda _s, u: {"decisions": [{"line": 1, "substance": "2-ethoxyethyl acetate", "choice": "none",
+                                                       "reason": "not carried"}]})
+    ln = run(llm, catalog, rules, text).lines[0]
+    assert ln.match.method == "none" and ln.match.sku is None and ln.needs_human  # not MEG
+
+
 def test_two_incoterms_price_the_customers_usual_one_and_block(catalog, rules):
     text = RFQ.replace("CIF Houston", "CIF Houston, or FOB Houston")
     draft = run(scripted([line("Ethyl acetate")], incoterms=("CIF", "FOB")), catalog, rules, text)

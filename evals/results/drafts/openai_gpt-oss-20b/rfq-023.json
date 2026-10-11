@@ -1,0 +1,578 @@
+{
+ "run": "20261011-083759-openai_gpt-oss-20b.json",
+ "model": "openai/gpt-oss-20b",
+ "effort": "medium",
+ "draft": {
+  "id": "Q-261009-A1B397",
+  "document": {
+   "source_name": "rfq-023.eml",
+   "format": "eml",
+   "text": "From: Theresa Logan <theresa.logan@bluestempolymers.com>\nSubject: RE: RFQ maleic / phthalic anhydride\nDate: Fri, 09 Oct 2026 09:30:00 +0530\n\nHi,\n\nQuick update on the request below: please revise the maleic anhydride to 12 MT instead of the 8 MT\nI mentioned. Phthalic stays the same. Still CFR Houston.\n\nThanks,\nTheresa\n\n-----Original Message-----\nFrom: Theresa Logan\nSent: Monday, October 5, 2026 9:12 AM\nSubject: RFQ maleic / phthalic anhydride\n\nHello,\nPlease quote CFR Houston:\n- Maleic anhydride briquettes, 8 MT, 25 kg bags\n- Phthalic anhydride flakes, 6 MT, 25 kg bags\nRegards,\nTheresa Logan, Bluestem Polymers Inc",
+   "sender_email": "theresa.logan@bluestempolymers.com",
+   "sender_name": "Theresa Logan",
+   "subject": "RE: RFQ maleic / phthalic anhydride",
+   "received": "2026-10-09"
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Bluestem Polymers Inc",
+    "span": "Bluestem Polymers Inc",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "CFR",
+     "place": "Houston",
+     "span": "CFR Houston",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "US",
+    "span": "Houston",
+    "verified": true
+   },
+   "requested_date": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "Maleic anhydride briquettes",
+      "span": "Maleic anhydride briquettes",
+      "verified": true
+     },
+     "english_name": "MAN",
+     "cas": {
+      "value": "108-31-6",
+      "span": "108-31-6",
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "12",
+      "span": "12",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "25 kg bags",
+      "span": "25 kg bags",
+      "verified": true
+     },
+     "confidence": 1.0,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Phthalic anhydride flakes",
+      "span": "Phthalic anhydride flakes",
+      "verified": true
+     },
+     "english_name": "PAN",
+     "cas": {
+      "value": "85-44-9",
+      "span": "85-44-9",
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "6",
+      "span": "6",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "25 kg bags",
+      "span": "25 kg bags",
+      "verified": true
+     },
+     "confidence": 1.0,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-016",
+    "name": "Bluestem Polymers Inc",
+    "method": "email_domain",
+    "matched_on": "theresa.logan@bluestempolymers.com",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "CFR"
+   ],
+   "incoterm": "CFR",
+   "incoterm_source": "document",
+   "destination_country": "US",
+   "destination_source": "document",
+   "currency": "USD",
+   "currency_source": "customer",
+   "requested_date": null,
+   "quote_date": "2026-10-09"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "Maleic anhydride briquettes",
+      "span": "Maleic anhydride briquettes",
+      "verified": true
+     },
+     "english_name": "MAN",
+     "cas": {
+      "value": "108-31-6",
+      "span": "108-31-6",
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "12",
+      "span": "12",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "25 kg bags",
+      "span": "25 kg bags",
+      "verified": true
+     },
+     "confidence": 1.0,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "MAN",
+     "sku": "QX-MAN-TG",
+     "method": "synonym",
+     "matched_on": "maleic anhydride",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "only_grade",
+     "candidates": [],
+     "explanation": "'maleic anhydride' is in the synonym table"
+    },
+    "quantity": {
+     "value": "12000.0000",
+     "uom": "kg",
+     "pack_code": "BAG25",
+     "steps": [
+      "12 mt = 12,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-MAN-TG",
+     "product_name": "Maleic Anhydride, Technical Grade",
+     "uom": "kg",
+     "pack_code": "BAG25",
+     "pack_description": "25 kg bag",
+     "pack_size": "25.000",
+     "packs": 480,
+     "requested_qty": "12000.0000",
+     "quoted_qty": "12000.000",
+     "incoterm": "CFR",
+     "currency": "USD",
+     "list_unit_usd": "2.6520",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.1061",
+     "net_unit_usd": "2.5459",
+     "freight_unit_usd": "0.1709",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "2.7518",
+     "unit_price": "2.752",
+     "line_total": "33024.00",
+     "price_row_id": "PL-00563",
+     "price_tier": 3,
+     "freight_row_id": "FR-002",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 10,
+     "transit_days": 36,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "25 kg bag, as requested",
+       "value": null,
+       "unit": "",
+       "source": "BAG25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "480 x 25 kg bag (25 kg each); requested 12,000 kg",
+       "value": "12000.000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 3 (5,000 to <20,000 kg)",
+       "value": "2.6520",
+       "unit": "USD/kg",
+       "source": "PL-00563"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Bluestem Polymers Inc",
+       "value": "-0.1061",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "2.5459",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CFR Nhava Sheva to Houston: 0.1709 USD/kg",
+       "value": "0.1709",
+       "unit": "USD/kg",
+       "source": "FR-002"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN2215)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CFR",
+       "value": "2.7518",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "2.752",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 2.752 x 12,000 kg, 2 decimals",
+       "value": "33024.00",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN2215, class 8: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN2215, class 8: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "Phthalic anhydride flakes",
+      "span": "Phthalic anhydride flakes",
+      "verified": true
+     },
+     "english_name": "PAN",
+     "cas": {
+      "value": "85-44-9",
+      "span": "85-44-9",
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "6",
+      "span": "6",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "25 kg bags",
+      "span": "25 kg bags",
+      "verified": true
+     },
+     "confidence": 1.0,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "PAN",
+     "sku": "QX-PAN-TG",
+     "method": "synonym",
+     "matched_on": "phthalic anhydride",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "only_grade",
+     "candidates": [],
+     "explanation": "'phthalic anhydride' is in the synonym table"
+    },
+    "quantity": {
+     "value": "6000.0000",
+     "uom": "kg",
+     "pack_code": "BAG25",
+     "steps": [
+      "6 mt = 6,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-PAN-TG",
+     "product_name": "Phthalic Anhydride, Technical Grade",
+     "uom": "kg",
+     "pack_code": "BAG25",
+     "pack_description": "25 kg bag",
+     "pack_size": "25.000",
+     "packs": 240,
+     "requested_qty": "6000.0000",
+     "quoted_qty": "6000.000",
+     "incoterm": "CFR",
+     "currency": "USD",
+     "list_unit_usd": "1.8810",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.0752",
+     "net_unit_usd": "1.8058",
+     "freight_unit_usd": "0.1709",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "2.0117",
+     "unit_price": "2.012",
+     "line_total": "12072.00",
+     "price_row_id": "PL-00571",
+     "price_tier": 3,
+     "freight_row_id": "FR-002",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 14,
+     "transit_days": 36,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "25 kg bag, as requested",
+       "value": null,
+       "unit": "",
+       "source": "BAG25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "240 x 25 kg bag (25 kg each); requested 6,000 kg",
+       "value": "6000.000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 3 (5,000 to <20,000 kg)",
+       "value": "1.8810",
+       "unit": "USD/kg",
+       "source": "PL-00571"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Bluestem Polymers Inc",
+       "value": "-0.0752",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "1.8058",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CFR Nhava Sheva to Houston: 0.1709 USD/kg",
+       "value": "0.1709",
+       "unit": "USD/kg",
+       "source": "FR-002"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN2214)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CFR",
+       "value": "2.0117",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "2.012",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 2.012 x 6,000 kg, 2 decimals",
+       "value": "12072.00",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN2214, class 8: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN2214, class 8: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "USD",
+  "total": "45096.00",
+  "valid_until": "2026-10-23",
+  "email": {
+   "subject": "RE: RFQ maleic / phthalic anhydride",
+   "body": "Dear Theresa Logan,\n\nThank you for your request. Please find below the quotation details:\n\n- Maleic anhydride briquettes \u2013 Maleic Anhydride, Technical Grade (SKU QX-MAN-TG), 12,000 kg, packing 480 x 25 kg bag, unit price 2.752 USD/kg, line total 33,024.00 USD, lead time 10 days from order.\n\n- Phthalic anhydride flakes \u2013 Phthalic Anhydride, Technical Grade (SKU QX-PAN-TG), 6,000 kg, packing 240 x 25 kg bag, unit price 2.012 USD/kg, line total 12,072.00 USD, lead time 14 days from order.\n\nTotal of priced lines: 45,096.00 USD.\n\nDelivery terms: CFR Houston. Offer valid until 23 October 2026. Payment terms: Net 45.\n\nIf you have any questions, please let us know.\n\nBest regards,\n\nSales desk",
+   "source": "llm",
+   "check": "all 16 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 33.6895
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0035
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0006
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0007
+   },
+   {
+    "stage": "reply",
+    "seconds": 1.088
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 4542,
+   "cached_tokens": 3840,
+   "completion_tokens": 1755,
+   "reasoning_tokens": 1183,
+   "cost_usd": "0.000723150",
+   "seconds": 2.776,
+   "waited_seconds": 32.0,
+   "models": [
+    "openai/gpt-oss-20b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "openai/gpt-oss-20b",
+  "needs_human": false
+ }
+}

@@ -1,0 +1,1041 @@
+{
+ "run": "20261011-084624-qwen_qwen3.8-27b.json",
+ "model": "qwen/qwen3.8-27b",
+ "effort": "none",
+ "draft": {
+  "id": "Q-261010-266378",
+  "document": {
+   "source_name": "rfq-027.xlsx",
+   "format": "xlsx",
+   "text": "Bluestem Laboratories LLC - lab solvents\nShip to | Bluestem Laboratories LLC, Austin TX\nTerms | CFR Houston\nMaterial | Grade | Qty | Container\nMethanol | AR | 20 x 25L | cans\nAcetone | ACS reagent | 10 x 25L | cans\nDichloromethane | HPLC | 8 x 25L | cans\nEthyl acetate | AR | 30 L",
+   "sender_email": null,
+   "sender_name": null,
+   "subject": null,
+   "received": null
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Bluestem Laboratories LLC",
+    "span": "Bluestem Laboratories LLC",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "CFR",
+     "place": "Houston",
+     "span": "CFR Houston",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "US",
+    "span": "Austin TX",
+    "verified": true
+   },
+   "requested_date": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "Methanol",
+      "span": "Methanol",
+      "verified": true
+     },
+     "english_name": "Methanol",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "AR",
+      "span": "AR",
+      "verified": true
+     },
+     "quantity": {
+      "value": "20",
+      "span": "20",
+      "verified": true
+     },
+     "unit": {
+      "value": "25L",
+      "span": "25L",
+      "verified": true
+     },
+     "packaging": {
+      "value": "cans",
+      "span": "cans",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Acetone",
+      "span": "Acetone",
+      "verified": true
+     },
+     "english_name": "Acetone",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "ACS reagent",
+      "span": "ACS reagent",
+      "verified": true
+     },
+     "quantity": {
+      "value": "10",
+      "span": "10",
+      "verified": true
+     },
+     "unit": {
+      "value": "25L",
+      "span": "25L",
+      "verified": true
+     },
+     "packaging": {
+      "value": "cans",
+      "span": "cans",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Dichloromethane",
+      "span": "Dichloromethane",
+      "verified": true
+     },
+     "english_name": "Dichloromethane",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "HPLC",
+      "span": "HPLC",
+      "verified": true
+     },
+     "quantity": {
+      "value": "8",
+      "span": "8",
+      "verified": true
+     },
+     "unit": {
+      "value": "25L",
+      "span": "25L",
+      "verified": true
+     },
+     "packaging": {
+      "value": "cans",
+      "span": "cans",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Ethyl acetate",
+      "span": "Ethyl acetate",
+      "verified": true
+     },
+     "english_name": "Ethyl Acetate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "AR",
+      "span": "AR",
+      "verified": true
+     },
+     "quantity": {
+      "value": "30",
+      "span": "30",
+      "verified": true
+     },
+     "unit": {
+      "value": "L",
+      "span": "L",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-029",
+    "name": "Bluestem Laboratories LLC",
+    "method": "company_name",
+    "matched_on": "Bluestem Laboratories LLC",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "CFR"
+   ],
+   "incoterm": "CFR",
+   "incoterm_source": "document",
+   "destination_country": "US",
+   "destination_source": "document",
+   "currency": "USD",
+   "currency_source": "customer",
+   "requested_date": null,
+   "quote_date": "2026-10-10"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "Methanol",
+      "span": "Methanol",
+      "verified": true
+     },
+     "english_name": "Methanol",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "AR",
+      "span": "AR",
+      "verified": true
+     },
+     "quantity": {
+      "value": "20",
+      "span": "20",
+      "verified": true
+     },
+     "unit": {
+      "value": "25L",
+      "span": "25L",
+      "verified": true
+     },
+     "packaging": {
+      "value": "cans",
+      "span": "cans",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "MEOH",
+     "sku": "QX-MEOH-AR",
+     "method": "synonym",
+     "matched_on": "Methanol",
+     "score": 100.0,
+     "grade": "reagent",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'Methanol' is in the synonym table"
+    },
+    "quantity": {
+     "value": "500.0000",
+     "uom": "L",
+     "pack_code": "CAN25",
+     "steps": [
+      "20 x 25 L jerrycan = 500 L"
+     ]
+    },
+    "priced": {
+     "sku": "QX-MEOH-AR",
+     "product_name": "Methanol, Reagent Grade (AR)",
+     "uom": "L",
+     "pack_code": "CAN25",
+     "pack_description": "25 L jerrycan",
+     "pack_size": "25.000",
+     "packs": 20,
+     "requested_qty": "500.0000",
+     "quoted_qty": "500.000",
+     "incoterm": "CFR",
+     "currency": "USD",
+     "list_unit_usd": "0.5810",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.0232",
+     "net_unit_usd": "0.5578",
+     "freight_unit_usd": "0.1497",
+     "dg_unit_usd": "0.0277",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "0.7352",
+     "unit_price": "0.735",
+     "line_total": "367.50",
+     "price_row_id": "PL-00049",
+     "price_tier": 1,
+     "freight_row_id": "FR-026",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 13,
+     "transit_days": 37,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "25 L jerrycan, as requested",
+       "value": null,
+       "unit": "",
+       "source": "CAN25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "20 x 25 L jerrycan (25 L each); requested 500 L",
+       "value": "500.000",
+       "unit": "L",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 1 (0 to <1,000 L)",
+       "value": "0.5810",
+       "unit": "USD/L",
+       "source": "PL-00049"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Bluestem Laboratories LLC",
+       "value": "-0.0232",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "0.5578",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CFR Mundra to Houston: 0.189 USD/kg x 0.792 kg/L",
+       "value": "0.1497",
+       "unit": "USD/L",
+       "source": "FR-026"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1230)",
+       "value": "0.0277",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CFR",
+       "value": "0.7352",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "0.735",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 0.735 x 500 L, 2 decimals",
+       "value": "367.50",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1230, class 3 (6.1): SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1230, class 3 (6.1): SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "Acetone",
+      "span": "Acetone",
+      "verified": true
+     },
+     "english_name": "Acetone",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "ACS reagent",
+      "span": "ACS reagent",
+      "verified": true
+     },
+     "quantity": {
+      "value": "10",
+      "span": "10",
+      "verified": true
+     },
+     "unit": {
+      "value": "25L",
+      "span": "25L",
+      "verified": true
+     },
+     "packaging": {
+      "value": "cans",
+      "span": "cans",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "ACE",
+     "sku": "QX-ACE-AR",
+     "method": "synonym",
+     "matched_on": "Acetone",
+     "score": 100.0,
+     "grade": "reagent",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'Acetone' is in the synonym table"
+    },
+    "quantity": {
+     "value": "250.0000",
+     "uom": "L",
+     "pack_code": "CAN25",
+     "steps": [
+      "10 x 25 L jerrycan = 250 L"
+     ]
+    },
+    "priced": {
+     "sku": "QX-ACE-AR",
+     "product_name": "Acetone, Reagent Grade (AR)",
+     "uom": "L",
+     "pack_code": "CAN25",
+     "pack_description": "25 L jerrycan",
+     "pack_size": "25.000",
+     "packs": 10,
+     "requested_qty": "250.0000",
+     "quoted_qty": "250.000",
+     "incoterm": "CFR",
+     "currency": "USD",
+     "list_unit_usd": "1.7420",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.0697",
+     "net_unit_usd": "1.6723",
+     "freight_unit_usd": "0.1495",
+     "dg_unit_usd": "0.0277",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "1.8495",
+     "unit_price": "1.850",
+     "line_total": "462.50",
+     "price_row_id": "PL-00033",
+     "price_tier": 1,
+     "freight_row_id": "FR-026",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 14,
+     "transit_days": 37,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "25 L jerrycan, as requested",
+       "value": null,
+       "unit": "",
+       "source": "CAN25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "10 x 25 L jerrycan (25 L each); requested 250 L",
+       "value": "250.000",
+       "unit": "L",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 1 (0 to <1,000 L)",
+       "value": "1.7420",
+       "unit": "USD/L",
+       "source": "PL-00033"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Bluestem Laboratories LLC",
+       "value": "-0.0697",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "1.6723",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CFR Mundra to Houston: 0.189 USD/kg x 0.791 kg/L",
+       "value": "0.1495",
+       "unit": "USD/L",
+       "source": "FR-026"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1090)",
+       "value": "0.0277",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CFR",
+       "value": "1.8495",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "1.850",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 1.85 x 250 L, 2 decimals",
+       "value": "462.50",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1090, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1090, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   },
+   {
+    "line_no": 3,
+    "extracted": {
+     "mention": {
+      "value": "Dichloromethane",
+      "span": "Dichloromethane",
+      "verified": true
+     },
+     "english_name": "Dichloromethane",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "HPLC",
+      "span": "HPLC",
+      "verified": true
+     },
+     "quantity": {
+      "value": "8",
+      "span": "8",
+      "verified": true
+     },
+     "unit": {
+      "value": "25L",
+      "span": "25L",
+      "verified": true
+     },
+     "packaging": {
+      "value": "cans",
+      "span": "cans",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "DCM",
+     "sku": "QX-DCM-AR",
+     "method": "synonym",
+     "matched_on": "Dichloromethane",
+     "score": 100.0,
+     "grade": "reagent",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'Dichloromethane' is in the synonym table"
+    },
+    "quantity": {
+     "value": "200.0000",
+     "uom": "L",
+     "pack_code": "CAN25",
+     "steps": [
+      "8 x 25 L jerrycan = 200 L"
+     ]
+    },
+    "priced": {
+     "sku": "QX-DCM-AR",
+     "product_name": "Dichloromethane, Reagent Grade (AR)",
+     "uom": "L",
+     "pack_code": "CAN25",
+     "pack_description": "25 L jerrycan",
+     "pack_size": "25.000",
+     "packs": 8,
+     "requested_qty": "200.0000",
+     "quoted_qty": "200.000",
+     "incoterm": "CFR",
+     "currency": "USD",
+     "list_unit_usd": "2.4780",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.0991",
+     "net_unit_usd": "2.3789",
+     "freight_unit_usd": "0.2506",
+     "dg_unit_usd": "0.0464",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "2.6759",
+     "unit_price": "2.676",
+     "line_total": "535.20",
+     "price_row_id": "PL-00321",
+     "price_tier": 1,
+     "freight_row_id": "FR-026",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 18,
+     "transit_days": 37,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "25 L jerrycan, as requested",
+       "value": null,
+       "unit": "",
+       "source": "CAN25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "8 x 25 L jerrycan (25 L each); requested 200 L",
+       "value": "200.000",
+       "unit": "L",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 1 (0 to <1,000 L)",
+       "value": "2.4780",
+       "unit": "USD/L",
+       "source": "PL-00321"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Bluestem Laboratories LLC",
+       "value": "-0.0991",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "2.3789",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CFR Mundra to Houston: 0.189 USD/kg x 1.326 kg/L",
+       "value": "0.2506",
+       "unit": "USD/L",
+       "source": "FR-026"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1593)",
+       "value": "0.0464",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CFR",
+       "value": "2.6759",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "2.676",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 2.676 x 200 L, 2 decimals",
+       "value": "535.20",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1593, class 6.1: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1593, class 6.1: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   },
+   {
+    "line_no": 4,
+    "extracted": {
+     "mention": {
+      "value": "Ethyl acetate",
+      "span": "Ethyl acetate",
+      "verified": true
+     },
+     "english_name": "Ethyl Acetate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "AR",
+      "span": "AR",
+      "verified": true
+     },
+     "quantity": {
+      "value": "30",
+      "span": "30",
+      "verified": true
+     },
+     "unit": {
+      "value": "L",
+      "span": "L",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "ETAC",
+     "sku": "QX-ETAC-AR",
+     "method": "synonym",
+     "matched_on": "Ethyl acetate",
+     "score": 100.0,
+     "grade": "reagent",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'Ethyl acetate' is in the synonym table"
+    },
+    "quantity": {
+     "value": "30.0000",
+     "uom": "L",
+     "pack_code": null,
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-ETAC-AR",
+     "product_name": "Ethyl Acetate, Reagent Grade (AR)",
+     "uom": "L",
+     "pack_code": "CAN25",
+     "pack_description": "25 L jerrycan",
+     "pack_size": "25.000",
+     "packs": 2,
+     "requested_qty": "30.0000",
+     "quoted_qty": "50.000",
+     "incoterm": "CFR",
+     "currency": "USD",
+     "list_unit_usd": "2.9670",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.1187",
+     "net_unit_usd": "2.8483",
+     "freight_unit_usd": "0.1542",
+     "dg_unit_usd": "0.0316",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "3.0341",
+     "unit_price": "3.034",
+     "line_total": "151.70",
+     "price_row_id": "PL-00065",
+     "price_tier": 1,
+     "freight_row_id": "FR-002",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 10,
+     "transit_days": 36,
+     "rules_applied": [
+      "PACK-DEFAULT-v1",
+      "PACK-ROUNDUP-v1",
+      "MOQ-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-DEFAULT-v1",
+       "label": "25 L jerrycan (default pack for this quantity)",
+       "value": null,
+       "unit": "",
+       "source": "CAN25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "2 x 25 L jerrycan (25 L each); requested 30 L",
+       "value": "50.000",
+       "unit": "L",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 1 (0 to <1,000 L)",
+       "value": "2.9670",
+       "unit": "USD/L",
+       "source": "PL-00065"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Bluestem Laboratories LLC",
+       "value": "-0.1187",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "2.8483",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CFR Nhava Sheva to Houston: 0.1709 USD/kg x 0.902 kg/L",
+       "value": "0.1542",
+       "unit": "USD/L",
+       "source": "FR-002"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1173)",
+       "value": "0.0316",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CFR",
+       "value": "3.0341",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "3.034",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 3.034 x 50 L, 2 decimals",
+       "value": "151.70",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "below_moq",
+       "severity": "block",
+       "message": "quoted 50 L is below the MOQ of 100 L; priced as asked",
+       "rule_id": "MOQ-v1"
+      },
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1173, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "below_moq",
+      "severity": "block",
+      "message": "quoted 50 L is below the MOQ of 100 L; priced as asked",
+      "rule_id": "MOQ-v1"
+     },
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1173, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": true
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "USD",
+  "total": "1516.90",
+  "valid_until": "2026-10-24",
+  "email": {
+   "subject": "Quotation Q-261010-266378",
+   "body": "Dear Leo Rios,\n\nThank you for your request. Please find our quotation below, reference Q-261010-266378.\n\n1. Methanol, Reagent Grade (AR) (QX-MEOH-AR): 500 L, 20 x 25 L jerrycan, 0.735 USD/L, 367.50 USD. Lead time: 13 days from order.\n2. Acetone, Reagent Grade (AR) (QX-ACE-AR): 250 L, 10 x 25 L jerrycan, 1.850 USD/L, 462.50 USD. Lead time: 14 days from order.\n3. Dichloromethane, Reagent Grade (AR) (QX-DCM-AR): 200 L, 8 x 25 L jerrycan, 2.676 USD/L, 535.20 USD. Lead time: 18 days from order.\n4. Ethyl Acetate, Reagent Grade (AR): This line will be confirmed separately because the quantity is below our minimum order; we will come back with options.\n\nTotal of priced lines: 1,365.20 USD.\n\nDelivery terms: CFR Houston.\nPayment terms: LC at sight.\nOffer valid until: 24 October 2026.\n\nSales desk",
+   "source": "llm",
+   "check": "all 25 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 19.7046
+   },
+   {
+    "stage": "match",
+    "seconds": 0.001
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0002
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0004
+   },
+   {
+    "stage": "reply",
+    "seconds": 36.1264
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 3838,
+   "cached_tokens": 0,
+   "completion_tokens": 987,
+   "reasoning_tokens": 0,
+   "cost_usd": "0.0070184",
+   "seconds": 2.83,
+   "waited_seconds": 53.0,
+   "models": [
+    "qwen/qwen3.8-27b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "qwen/qwen3.8-27b",
+  "needs_human": true
+ }
+}

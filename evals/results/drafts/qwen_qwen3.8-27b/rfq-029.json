@@ -1,0 +1,577 @@
+{
+ "run": "20261011-084624-qwen_qwen3.8-27b.json",
+ "model": "qwen/qwen3.8-27b",
+ "effort": "none",
+ "draft": {
+  "id": "Q-261012-143EA1",
+  "document": {
+   "source_name": "rfq-029.txt",
+   "format": "text",
+   "text": "Subject: Need offer - xylol / zinc oxide FOB Mumbai\n\nDear Sir,\nNeed your offer for our Sharjah paint plant, CFR Jebel Ali:\n  Xylol - 160 drums\n  Zinc oxide, technical - 5 MT, 25 kg bags\nKindly send by tomorrow.\n\nLian Kato\nAl Noor Paints FZE",
+   "sender_email": null,
+   "sender_name": null,
+   "subject": null,
+   "received": null
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Al Noor Paints FZE",
+    "span": "Al Noor Paints FZE",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "FOB",
+     "place": "Mumbai",
+     "span": "FOB Mumbai",
+     "verified": true
+    },
+    {
+     "term": "CFR",
+     "place": "Jebel Ali",
+     "span": "CFR Jebel Ali",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "AE",
+    "span": "Jebel Ali",
+    "verified": true
+   },
+   "requested_date": {
+    "value": "2026-10-13",
+    "span": "tomorrow",
+    "verified": true
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "Xylol",
+      "span": "Xylol",
+      "verified": true
+     },
+     "english_name": "Xylene (Mixed Isomers)",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "160",
+      "span": "160",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Zinc oxide",
+      "span": "Zinc oxide",
+      "verified": true
+     },
+     "english_name": "Zinc Oxide",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "5",
+      "span": "5",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "25 kg bags",
+      "span": "25 kg bags",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-006",
+    "name": "Al Noor Paints FZE",
+    "method": "company_name",
+    "matched_on": "Al Noor Paints FZE",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "FOB",
+    "CFR"
+   ],
+   "incoterm": "FOB",
+   "incoterm_source": "conflict_customer_default",
+   "destination_country": "AE",
+   "destination_source": "document",
+   "currency": "USD",
+   "currency_source": "customer",
+   "requested_date": "2026-10-13",
+   "quote_date": "2026-10-12"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "Xylol",
+      "span": "Xylol",
+      "verified": true
+     },
+     "english_name": "Xylene (Mixed Isomers)",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "160",
+      "span": "160",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "XYL",
+     "sku": "QX-XYL-TG",
+     "method": "synonym",
+     "matched_on": "Xylol",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "only_grade",
+     "candidates": [],
+     "explanation": "'Xylol' is in the synonym table"
+    },
+    "quantity": {
+     "value": "27648.0000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": [
+      "160 x 200 L drum = 32,000 L",
+      "32,000 L x 0.864 kg/L = 27,648 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-XYL-TG",
+     "product_name": "Xylene (Mixed Isomers), Technical Grade",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "172.8000",
+     "packs": 160,
+     "requested_qty": "27648.0000",
+     "quoted_qty": "27648.0000",
+     "incoterm": "FOB",
+     "currency": "USD",
+     "list_unit_usd": "1.0630",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.0425",
+     "net_unit_usd": "1.0205",
+     "freight_unit_usd": "0.0279",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "1.0484",
+     "unit_price": "1.048",
+     "line_total": "28975.10",
+     "price_row_id": "PL-00300",
+     "price_tier": 4,
+     "freight_row_id": "FR-009",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 13,
+     "transit_days": 0,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "160 x 200 L drum (172.8 kg each); requested 27,648 kg",
+       "value": "27648.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 4 (20,000+ kg)",
+       "value": "1.0630",
+       "unit": "USD/kg",
+       "source": "PL-00300"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Al Noor Paints FZE",
+       "value": "-0.0425",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "1.0205",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "FOB origin handling: 0.0279 USD/kg",
+       "value": "0.0279",
+       "unit": "USD/kg",
+       "source": "FR-009"
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered FOB",
+       "value": "1.0484",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "1.048",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 1.048 x 27,648 kg, 2 decimals",
+       "value": "28975.10",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1307, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1307, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "Zinc oxide",
+      "span": "Zinc oxide",
+      "verified": true
+     },
+     "english_name": "Zinc Oxide",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "5",
+      "span": "5",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "25 kg bags",
+      "span": "25 kg bags",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "ZNO",
+     "sku": "QX-ZNO-TG",
+     "method": "synonym",
+     "matched_on": "Zinc oxide",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'Zinc oxide' is in the synonym table"
+    },
+    "quantity": {
+     "value": "5000.0000",
+     "uom": "kg",
+     "pack_code": "BAG25",
+     "steps": [
+      "5 mt = 5,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-ZNO-TG",
+     "product_name": "Zinc Oxide, Technical Grade",
+     "uom": "kg",
+     "pack_code": "BAG25",
+     "pack_description": "25 kg bag",
+     "pack_size": "25.000",
+     "packs": 200,
+     "requested_qty": "5000.0000",
+     "quoted_qty": "5000.000",
+     "incoterm": "FOB",
+     "currency": "USD",
+     "list_unit_usd": "3.3450",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.1338",
+     "net_unit_usd": "3.2112",
+     "freight_unit_usd": "0.0279",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "3.2391",
+     "unit_price": "3.239",
+     "line_total": "16195.00",
+     "price_row_id": "PL-00435",
+     "price_tier": 3,
+     "freight_row_id": "FR-009",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 12,
+     "transit_days": 0,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "25 kg bag, as requested",
+       "value": null,
+       "unit": "",
+       "source": "BAG25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "200 x 25 kg bag (25 kg each); requested 5,000 kg",
+       "value": "5000.000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 3 (5,000 to <20,000 kg)",
+       "value": "3.3450",
+       "unit": "USD/kg",
+       "source": "PL-00435"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Al Noor Paints FZE",
+       "value": "-0.1338",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "3.2112",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "FOB origin handling: 0.0279 USD/kg",
+       "value": "0.0279",
+       "unit": "USD/kg",
+       "source": "FR-009"
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered FOB",
+       "value": "3.2391",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "3.239",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 3.239 x 5,000 kg, 2 decimals",
+       "value": "16195.00",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN3077, class 9: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN3077, class 9: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   }
+  ],
+  "quote_flags": [
+   {
+    "code": "incoterm_conflict",
+    "severity": "block",
+    "message": "the RFQ names FOB and CFR; priced FOB (the customer\u2019s usual term)",
+    "rule_id": "INCOTERM-v1"
+   }
+  ],
+  "header_approved": false,
+  "currency": "USD",
+  "total": "45170.10",
+  "valid_until": "2026-10-26",
+  "email": {
+   "subject": "Quotation Q-261012-143EA1",
+   "body": "Dear Lian Kato,\n\nThank you for your request. Please find our quotation below, reference Q-261012-143EA1.\n\n1. Xylene (Mixed Isomers), Technical Grade (SKU QX-XYL-TG): 27,648 kg in 160 x 200 L drum. Price: 1.048 USD/kg. Total: 28,975.10 USD. Lead time: 13 days from order.\n2. Zinc Oxide, Technical Grade (SKU QX-ZNO-TG): 5,000 kg in 200 x 25 kg bag. Price: 3.239 USD/kg. Total: 16,195.00 USD. Lead time: 12 days from order.\n\nTotal: 45,170.10 USD.\n\nDelivery terms: FOB Mumbai.\nPayment terms: Net 60.\nOffer valid until: 26 October 2026.\n\nYour message mentions FOB and CFR; this offer is FOB. Tell us if you prefer CFR.\n\nSales desk",
+   "source": "llm",
+   "check": "all 18 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 19.3005
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0007
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0002
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0002
+   },
+   {
+    "stage": "reply",
+    "seconds": 23.8695
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 3638,
+   "cached_tokens": 0,
+   "completion_tokens": 689,
+   "reasoning_tokens": 0,
+   "cost_usd": "0.0056664",
+   "seconds": 2.169,
+   "waited_seconds": 41.0,
+   "models": [
+    "qwen/qwen3.8-27b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "qwen/qwen3.8-27b",
+  "needs_human": true
+ }
+}

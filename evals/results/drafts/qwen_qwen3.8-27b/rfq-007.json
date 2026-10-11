@@ -1,0 +1,888 @@
+{
+ "run": "20261011-084624-qwen_qwen3.8-27b.json",
+ "model": "qwen/qwen3.8-27b",
+ "effort": "none",
+ "draft": {
+  "id": "Q-261009-46BACC",
+  "document": {
+   "source_name": "rfq-007.txt",
+   "format": "text",
+   "text": "Betreff: Anfrage L\u00f6semittel / solvent enquiry\n\nSehr geehrte Damen und Herren,\n\nplease send us your offer f\u00fcr folgende Produkte:\n\n1) Methylethylketon (MEK) \u2013 6 F\u00e4sser \u00e0 200 L\n2) Cyclohexanon, technische Qualit\u00e4t \u2013 4 F\u00e4sser\n3) Essigs\u00e4ure (Eisessig) \u2013 1.000 kg im IBC\n\nLieferbedingung: CIF Hamburg. Liefertermin KW 48 if possible.\nWe need the SDS for all three products with the offer.\n\nVielen Dank und freundliche Gr\u00fc\u00dfe\nAbdoulaye Ogunleye\nWeserland Klebstoffwerke GmbH, Bremen\nabdoulaye.ogunleye@weserlandklebstoffwerke.de",
+   "sender_email": "abdoulaye.ogunleye@weserlandklebstoffwerke.de",
+   "sender_name": null,
+   "subject": null,
+   "received": null
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Weserland Klebstoffwerke GmbH",
+    "span": "Weserland Klebstoffwerke GmbH",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "CIF",
+     "place": "Hamburg",
+     "span": "CIF Hamburg",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "DE",
+    "span": "Hamburg",
+    "verified": true
+   },
+   "requested_date": {
+    "value": "2026-11-29",
+    "span": "KW 48",
+    "verified": true
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "Methylethylketon (MEK)",
+      "span": "Methylethylketon (MEK)",
+      "verified": true
+     },
+     "english_name": "Methyl Ethyl Ketone",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "6",
+      "span": "6",
+      "verified": true
+     },
+     "unit": {
+      "value": "F\u00e4sser",
+      "span": "F\u00e4sser",
+      "verified": true
+     },
+     "packaging": {
+      "value": "F\u00e4sser \u00e0 200 L",
+      "span": "F\u00e4sser \u00e0 200 L",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Cyclohexanon",
+      "span": "Cyclohexanon",
+      "verified": true
+     },
+     "english_name": "Cyclohexanone",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "technische Qualit\u00e4t",
+      "span": "technische Qualit\u00e4t",
+      "verified": true
+     },
+     "quantity": {
+      "value": "4",
+      "span": "4",
+      "verified": true
+     },
+     "unit": {
+      "value": "F\u00e4sser",
+      "span": "F\u00e4sser",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Essigs\u00e4ure (Eisessig)",
+      "span": "Essigs\u00e4ure (Eisessig)",
+      "verified": true
+     },
+     "english_name": "Glacial Acetic Acid",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "1000",
+      "span": "1.000",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "im IBC",
+      "span": "im IBC",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-012",
+    "name": "Weserland Klebstoffwerke GmbH",
+    "method": "email_domain",
+    "matched_on": "abdoulaye.ogunleye@weserlandklebstoffwerke.de",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "CIF"
+   ],
+   "incoterm": "CIF",
+   "incoterm_source": "document",
+   "destination_country": "DE",
+   "destination_source": "document",
+   "currency": "EUR",
+   "currency_source": "customer",
+   "requested_date": "2026-11-29",
+   "quote_date": "2026-10-09"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "Methylethylketon (MEK)",
+      "span": "Methylethylketon (MEK)",
+      "verified": true
+     },
+     "english_name": "Methyl Ethyl Ketone",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "6",
+      "span": "6",
+      "verified": true
+     },
+     "unit": {
+      "value": "F\u00e4sser",
+      "span": "F\u00e4sser",
+      "verified": true
+     },
+     "packaging": {
+      "value": "F\u00e4sser \u00e0 200 L",
+      "span": "F\u00e4sser \u00e0 200 L",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "MEK",
+     "sku": "QX-MEK-TG",
+     "method": "synonym",
+     "matched_on": "mek",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "only_grade",
+     "candidates": [],
+     "explanation": "'mek' is in the synonym table"
+    },
+    "quantity": {
+     "value": "966.0000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": [
+      "6 x 200 L drum = 1,200 L",
+      "1,200 L x 0.805 kg/L = 966 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-MEK-TG",
+     "product_name": "Methyl Ethyl Ketone, Technical Grade",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "161.0000",
+     "packs": 6,
+     "requested_qty": "966.0000",
+     "quoted_qty": "966.0000",
+     "incoterm": "CIF",
+     "currency": "EUR",
+     "list_unit_usd": "2.7150",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.1086",
+     "net_unit_usd": "2.6064",
+     "freight_unit_usd": "0.1185",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0.0046",
+     "delivered_unit_usd": "2.7645",
+     "unit_price": "2.380",
+     "line_total": "2299.08",
+     "price_row_id": "PL-00089",
+     "price_tier": 1,
+     "freight_row_id": "FR-055",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 13,
+     "transit_days": 30,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "6 x 200 L drum (161 kg each); requested 966 kg",
+       "value": "966.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 1 (0 to <1,000 kg)",
+       "value": "2.7150",
+       "unit": "USD/kg",
+       "source": "PL-00089"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Weserland Klebstoffwerke GmbH",
+       "value": "-0.1086",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "2.6064",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Chennai to Hamburg: 0.1185 USD/kg",
+       "value": "0.1185",
+       "unit": "USD/kg",
+       "source": "FR-055"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1193)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0046",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "2.7645",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "2.380",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 2.38 x 966 kg, 2 decimals",
+       "value": "2299.08",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1193, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1193, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "Cyclohexanon",
+      "span": "Cyclohexanon",
+      "verified": true
+     },
+     "english_name": "Cyclohexanone",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "technische Qualit\u00e4t",
+      "span": "technische Qualit\u00e4t",
+      "verified": true
+     },
+     "quantity": {
+      "value": "4",
+      "span": "4",
+      "verified": true
+     },
+     "unit": {
+      "value": "F\u00e4sser",
+      "span": "F\u00e4sser",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "CYC",
+     "sku": "QX-CYC-TG",
+     "method": "translation",
+     "matched_on": "Cyclohexanone",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "read as 'Cyclohexanone'; 'Cyclohexanone' is in the synonym table"
+    },
+    "quantity": {
+     "value": "757.6000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": [
+      "4 x 200 L drum = 800 L",
+      "800 L x 0.947 kg/L = 757.6 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-CYC-TG",
+     "product_name": "Cyclohexanone, Technical Grade",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "189.4000",
+     "packs": 4,
+     "requested_qty": "757.6000",
+     "quoted_qty": "757.6000",
+     "incoterm": "CIF",
+     "currency": "EUR",
+     "list_unit_usd": "2.2370",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.0895",
+     "net_unit_usd": "2.1475",
+     "freight_unit_usd": "0.1185",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0.0038",
+     "delivered_unit_usd": "2.3048",
+     "unit_price": "1.984",
+     "line_total": "1503.08",
+     "price_row_id": "PL-00305",
+     "price_tier": 1,
+     "freight_row_id": "FR-055",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 17,
+     "transit_days": 30,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "MOQ-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "PRICE-VALIDITY-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "4 x 200 L drum (189.4 kg each); requested 757.6 kg",
+       "value": "757.6000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 1 (0 to <1,000 kg)",
+       "value": "2.2370",
+       "unit": "USD/kg",
+       "source": "PL-00305"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Weserland Klebstoffwerke GmbH",
+       "value": "-0.0895",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "2.1475",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Chennai to Hamburg: 0.1185 USD/kg",
+       "value": "0.1185",
+       "unit": "USD/kg",
+       "source": "FR-055"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1915)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0038",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "2.3048",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "1.984",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 1.984 x 757.6 kg, 2 decimals",
+       "value": "1503.08",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "below_moq",
+       "severity": "block",
+       "message": "quoted 757.6 kg is below the MOQ of 1,000 kg; priced as asked",
+       "rule_id": "MOQ-v1"
+      },
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1915, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      },
+      {
+       "code": "price_expired",
+       "severity": "block",
+       "message": "PL-00305 is valid 2026-04-01 to 2026-09-30, not on 2026-10-09; shown as the last known price",
+       "rule_id": "PRICE-VALIDITY-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "below_moq",
+      "severity": "block",
+      "message": "quoted 757.6 kg is below the MOQ of 1,000 kg; priced as asked",
+      "rule_id": "MOQ-v1"
+     },
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1915, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     },
+     {
+      "code": "price_expired",
+      "severity": "block",
+      "message": "PL-00305 is valid 2026-04-01 to 2026-09-30, not on 2026-10-09; shown as the last known price",
+      "rule_id": "PRICE-VALIDITY-v1"
+     }
+    ],
+    "needs_human": true
+   },
+   {
+    "line_no": 3,
+    "extracted": {
+     "mention": {
+      "value": "Essigs\u00e4ure (Eisessig)",
+      "span": "Essigs\u00e4ure (Eisessig)",
+      "verified": true
+     },
+     "english_name": "Glacial Acetic Acid",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "1000",
+      "span": "1.000",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "im IBC",
+      "span": "im IBC",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "GAA",
+     "sku": "QX-GAA-TG",
+     "method": "translation",
+     "matched_on": "Glacial Acetic Acid",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "default",
+     "candidates": [],
+     "explanation": "read as 'Glacial Acetic Acid'; 'Glacial Acetic Acid' is in the synonym table"
+    },
+    "quantity": {
+     "value": "1000.0000",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-GAA-TG",
+     "product_name": "Glacial Acetic Acid, Technical Grade",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "pack_description": "1000 L IBC",
+     "pack_size": "1049.0000",
+     "packs": 1,
+     "requested_qty": "1000.0000",
+     "quoted_qty": "1049.0000",
+     "incoterm": "CIF",
+     "currency": "EUR",
+     "list_unit_usd": "0.8570",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.0343",
+     "net_unit_usd": "0.8227",
+     "freight_unit_usd": "0.1227",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0.0016",
+     "delivered_unit_usd": "0.9820",
+     "unit_price": "0.846",
+     "line_total": "887.45",
+     "price_row_id": "PL-00230",
+     "price_tier": 2,
+     "freight_row_id": "FR-007",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 11,
+     "transit_days": 25,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "1000 L IBC, as requested",
+       "value": null,
+       "unit": "",
+       "source": "IBC1000"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "1 x 1000 L IBC (1,049 kg each); requested 1,000 kg",
+       "value": "1049.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "0.8570",
+       "unit": "USD/kg",
+       "source": "PL-00230"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Weserland Klebstoffwerke GmbH",
+       "value": "-0.0343",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "0.8227",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Nhava Sheva to Hamburg: 0.1227 USD/kg",
+       "value": "0.1227",
+       "unit": "USD/kg",
+       "source": "FR-007"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN2789)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0016",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "0.9820",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "0.846",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 0.846 x 1,049 kg, 2 decimals",
+       "value": "887.45",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN2789, class 8 (3): SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [
+     {
+      "code": "grade_not_specified",
+      "severity": "block",
+      "message": "no grade stated; Glacial Acetic Acid comes in technical, reagent; priced as technical",
+      "rule_id": "GRADE-DEFAULT-v1"
+     }
+    ],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "grade_not_specified",
+      "severity": "block",
+      "message": "no grade stated; Glacial Acetic Acid comes in technical, reagent; priced as technical",
+      "rule_id": "GRADE-DEFAULT-v1"
+     },
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN2789, class 8 (3): SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": true
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "EUR",
+  "total": "4689.61",
+  "valid_until": "2026-10-23",
+  "email": {
+   "subject": "Quotation Q-261009-46BACC",
+   "body": "Dear Abdoulaye Ogunleye,\n\nThank you for your request. Please find our quotation Q-261009-46BACC below.\n\n1. Methyl Ethyl Ketone, Technical Grade (QX-MEK-TG)\nQuantity: 966 kg\nPacking: 6 x 200 L drum\nUnit price: 2.380 EUR/kg\nLine total: 2,299.08 EUR\nLead time: 13 days from order\n\n2. Cyclohexanone, Technical Grade\nThis line will be confirmed separately. The quantity is below our minimum order; we will come back with options.\n\n3. Glacial Acetic Acid, Technical Grade\nThis line will be confirmed separately. Please confirm the grade you need.\n\nTotal of priced lines: 2,299.08 EUR\nCurrency: EUR\nDelivery terms: CIF Hamburg\nPayment terms: Net 30\nOffer valid until: 23 October 2026\n\nSales desk\nWeserland Klebstoffwerke GmbH",
+   "source": "llm",
+   "check": "all 13 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 37.6333
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0014
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0003
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0006
+   },
+   {
+    "stage": "reply",
+    "seconds": 14.826
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 3725,
+   "cached_tokens": 0,
+   "completion_tokens": 817,
+   "reasoning_tokens": 0,
+   "cost_usd": "0.0062480",
+   "seconds": 2.459,
+   "waited_seconds": 50.0,
+   "models": [
+    "qwen/qwen3.8-27b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "qwen/qwen3.8-27b",
+  "needs_human": true
+ }
+}

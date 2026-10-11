@@ -1,0 +1,556 @@
+{
+ "run": "20261011-084624-qwen_qwen3.8-27b.json",
+ "model": "qwen/qwen3.8-27b",
+ "effort": "none",
+ "draft": {
+  "id": "Q-261007-4774EB",
+  "document": {
+   "source_name": "rfq-002.txt",
+   "format": "text",
+   "text": "Hi team,\n\nNeed pricing on the below for our Cleveland plant, delivered DAP (Cleveland, OH 44135):\n\n40,000 lbs Titanium Dioxide (rutile), 25kg bags\n12 drums MEK\n\nTarget delivery mid-November. Thanks!\n\nSusan May\nPurchasing Manager\nRidgefield Coatings Inc\nsusan.may@ridgefieldcoatings.com | +1 216 555 0142",
+   "sender_email": "susan.may@ridgefieldcoatings.com",
+   "sender_name": null,
+   "subject": null,
+   "received": null
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Ridgefield Coatings Inc",
+    "span": "Ridgefield Coatings Inc",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "DAP",
+     "place": "Cleveland, OH 44135",
+     "span": "DAP (Cleveland, OH 44135)",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "US",
+    "span": "Cleveland, OH 44135",
+    "verified": true
+   },
+   "requested_date": {
+    "value": "2026-11-15",
+    "span": "mid-November",
+    "verified": true
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "Titanium Dioxide (rutile)",
+      "span": "Titanium Dioxide (rutile)",
+      "verified": true
+     },
+     "english_name": "Titanium Dioxide (Rutile)",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "40000",
+      "span": "40,000",
+      "verified": true
+     },
+     "unit": {
+      "value": "lbs",
+      "span": "lbs",
+      "verified": true
+     },
+     "packaging": {
+      "value": "25kg bags",
+      "span": "25kg bags",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "MEK",
+      "span": "MEK",
+      "verified": true
+     },
+     "english_name": "Methyl Ethyl Ketone",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "12",
+      "span": "12",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-005",
+    "name": "Ridgefield Coatings Inc",
+    "method": "email_domain",
+    "matched_on": "susan.may@ridgefieldcoatings.com",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "DAP"
+   ],
+   "incoterm": "DAP",
+   "incoterm_source": "document",
+   "destination_country": "US",
+   "destination_source": "document",
+   "currency": "USD",
+   "currency_source": "customer",
+   "requested_date": "2026-11-15",
+   "quote_date": "2026-10-07"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "Titanium Dioxide (rutile)",
+      "span": "Titanium Dioxide (rutile)",
+      "verified": true
+     },
+     "english_name": "Titanium Dioxide (Rutile)",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "40000",
+      "span": "40,000",
+      "verified": true
+     },
+     "unit": {
+      "value": "lbs",
+      "span": "lbs",
+      "verified": true
+     },
+     "packaging": {
+      "value": "25kg bags",
+      "span": "25kg bags",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "TIO2",
+     "sku": "QX-TIO2-TG",
+     "method": "synonym",
+     "matched_on": "Titanium Dioxide (rutile)",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "only_grade",
+     "candidates": [],
+     "explanation": "'Titanium Dioxide (rutile)' is in the synonym table"
+    },
+    "quantity": {
+     "value": "18143.6948",
+     "uom": "kg",
+     "pack_code": "BAG25",
+     "steps": [
+      "40,000 lb = 18,143.6948 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-TIO2-TG",
+     "product_name": "Titanium Dioxide (Rutile), Technical Grade",
+     "uom": "kg",
+     "pack_code": "BAG25",
+     "pack_description": "25 kg bag",
+     "pack_size": "25.000",
+     "packs": 726,
+     "requested_qty": "18143.6948",
+     "quoted_qty": "18150.000",
+     "incoterm": "DAP",
+     "currency": "USD",
+     "list_unit_usd": "3.9940",
+     "discount_pct": "2.0",
+     "discount_unit_usd": "0.0799",
+     "net_unit_usd": "3.9141",
+     "freight_unit_usd": "0.2310",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "4.1451",
+     "unit_price": "4.145",
+     "line_total": "75231.75",
+     "price_row_id": "PL-00427",
+     "price_tier": 3,
+     "freight_row_id": "FR-004",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 8,
+     "transit_days": 39,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "25 kg bag, as requested",
+       "value": null,
+       "unit": "",
+       "source": "BAG25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "726 x 25 kg bag (25 kg each); requested 18,143.6948 kg",
+       "value": "18150.000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 3 (5,000 to <20,000 kg)",
+       "value": "3.9940",
+       "unit": "USD/kg",
+       "source": "PL-00427"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier C (2%), Ridgefield Coatings Inc",
+       "value": "-0.0799",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "3.9141",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "DAP Nhava Sheva to Houston: 0.231 USD/kg",
+       "value": "0.2310",
+       "unit": "USD/kg",
+       "source": "FR-004"
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered DAP",
+       "value": "4.1451",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "4.145",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 4.145 x 18,150 kg, 2 decimals",
+       "value": "75231.75",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "MEK",
+      "span": "MEK",
+      "verified": true
+     },
+     "english_name": "Methyl Ethyl Ketone",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "12",
+      "span": "12",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "MEK",
+     "sku": "QX-MEK-TG",
+     "method": "synonym",
+     "matched_on": "MEK",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "only_grade",
+     "candidates": [],
+     "explanation": "'MEK' is in the synonym table"
+    },
+    "quantity": {
+     "value": "1932.0000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": [
+      "12 x 200 L drum = 2,400 L",
+      "2,400 L x 0.805 kg/L = 1,932 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-MEK-TG",
+     "product_name": "Methyl Ethyl Ketone, Technical Grade",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "161.0000",
+     "packs": 12,
+     "requested_qty": "1932.0000",
+     "quoted_qty": "1932.0000",
+     "incoterm": "DAP",
+     "currency": "USD",
+     "list_unit_usd": "2.6340",
+     "discount_pct": "2.0",
+     "discount_unit_usd": "0.0527",
+     "net_unit_usd": "2.5813",
+     "freight_unit_usd": "0.2441",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "2.8604",
+     "unit_price": "2.860",
+     "line_total": "5525.52",
+     "price_row_id": "PL-00090",
+     "price_tier": 2,
+     "freight_row_id": "FR-052",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 13,
+     "transit_days": 40,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "12 x 200 L drum (161 kg each); requested 1,932 kg",
+       "value": "1932.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "2.6340",
+       "unit": "USD/kg",
+       "source": "PL-00090"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier C (2%), Ridgefield Coatings Inc",
+       "value": "-0.0527",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "2.5813",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "DAP Chennai to Houston: 0.2441 USD/kg",
+       "value": "0.2441",
+       "unit": "USD/kg",
+       "source": "FR-052"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1193)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered DAP",
+       "value": "2.8604",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "2.860",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 2.86 x 1,932 kg, 2 decimals",
+       "value": "5525.52",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1193, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1193, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "USD",
+  "total": "80757.27",
+  "valid_until": "2026-10-21",
+  "email": {
+   "subject": "Quotation Q-261007-4774EB",
+   "body": "Dear Susan May,\n\nThank you for your request for quotation. Please find our offer below, reference Q-261007-4774EB.\n\n1. Titanium Dioxide (Rutile), Technical Grade (QX-TIO2-TG)\nQuantity: 18,150 kg\nPacking: 726 x 25 kg bag\nUnit Price: 4.145 USD/kg\nLine Total: 75,231.75 USD\nLead Time: 8 days from order\n\n2. Methyl Ethyl Ketone, Technical Grade (QX-MEK-TG)\nQuantity: 1,932 kg\nPacking: 12 x 200 L drum\nUnit Price: 2.860 USD/kg\nLine Total: 5,525.52 USD\nLead Time: 13 days from order\n\nTotal: 80,757.27 USD\n\nDelivery Terms: DAP Cleveland, OH 44135\nPayment Terms: Net 30\nOffer Valid Until: 21 October 2026\n\nSales desk",
+   "source": "llm",
+   "check": "all 19 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 18.4489
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0005
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0001
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0001
+   },
+   {
+    "stage": "reply",
+    "seconds": 26.0626
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 3648,
+   "cached_tokens": 0,
+   "completion_tokens": 702,
+   "reasoning_tokens": 0,
+   "cost_usd": "0.0057264",
+   "seconds": 2.511,
+   "waited_seconds": 42.0,
+   "models": [
+    "qwen/qwen3.8-27b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "qwen/qwen3.8-27b",
+  "needs_human": false
+ }
+}

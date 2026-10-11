@@ -1,0 +1,685 @@
+{
+ "run": "20261011-084624-qwen_qwen3.8-27b.json",
+ "model": "qwen/qwen3.8-27b",
+ "effort": "none",
+ "draft": {
+  "id": "Q-261009-2A7B59",
+  "document": {
+   "source_name": "rfq-008.eml",
+   "format": "eml",
+   "text": "From: Cody Powers <cody.powers@granitebayspecialtyproducts.com>\nSubject: Quote request - PG USP, glycerin, hypo\nDate: Fri, 09 Oct 2026 09:30:00 +0530\n\nHello,\n\nPlease provide FOB pricing on:\n\n* Sodium hypochlorite 12.5% - 6 IBC totes\n* Propylene glycol USP - 8 drums\n* Glycerin 99.7% USP - 4 drums\n\nWe would need material by end of November. Please include your current lead time.\n\nThanks,\nCody Powers\nGranite Bay Specialty Products LLC",
+   "sender_email": "cody.powers@granitebayspecialtyproducts.com",
+   "sender_name": "Cody Powers",
+   "subject": "Quote request - PG USP, glycerin, hypo",
+   "received": "2026-10-09"
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Granite Bay Specialty Products LLC",
+    "span": "Granite Bay Specialty Products LLC",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "FOB",
+     "place": null,
+     "span": "FOB",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "requested_date": {
+    "value": "2026-11-30",
+    "span": "end of November",
+    "verified": true
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "Sodium hypochlorite 12.5%",
+      "span": "Sodium hypochlorite 12.5%",
+      "verified": true
+     },
+     "english_name": "sodium hypochlorite solution",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "6",
+      "span": "6",
+      "verified": true
+     },
+     "unit": {
+      "value": "IBC totes",
+      "span": "IBC totes",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC totes",
+      "span": "IBC totes",
+      "verified": true
+     },
+     "confidence": 0.9,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Propylene glycol USP",
+      "span": "Propylene glycol USP",
+      "verified": true
+     },
+     "english_name": "propylene glycol",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "8",
+      "span": "8",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Glycerin 99.7% USP",
+      "span": "Glycerin 99.7% USP",
+      "verified": true
+     },
+     "english_name": "glycerine",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "4",
+      "span": "4",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-020",
+    "name": "Granite Bay Specialty Products LLC",
+    "method": "email_domain",
+    "matched_on": "cody.powers@granitebayspecialtyproducts.com",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "FOB"
+   ],
+   "incoterm": "FOB",
+   "incoterm_source": "document",
+   "destination_country": "US",
+   "destination_source": "customer",
+   "currency": "USD",
+   "currency_source": "customer",
+   "requested_date": "2026-11-30",
+   "quote_date": "2026-10-09"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "Sodium hypochlorite 12.5%",
+      "span": "Sodium hypochlorite 12.5%",
+      "verified": true
+     },
+     "english_name": "sodium hypochlorite solution",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "6",
+      "span": "6",
+      "verified": true
+     },
+     "unit": {
+      "value": "IBC totes",
+      "span": "IBC totes",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC totes",
+      "span": "IBC totes",
+      "verified": true
+     },
+     "confidence": 0.9,
+     "note": null
+    },
+    "match": {
+     "chemical_code": null,
+     "sku": null,
+     "method": "none",
+     "matched_on": null,
+     "score": null,
+     "grade": null,
+     "grade_source": "none",
+     "candidates": [
+      {
+       "chemical_code": "MAN",
+       "name": "Maleic Anhydride",
+       "score": 85.5
+      },
+      {
+       "chemical_code": "NA2SO4",
+       "name": "Sodium Sulfate Anhydrous",
+       "score": 85.5
+      },
+      {
+       "chemical_code": "NABZ",
+       "name": "Sodium Benzoate",
+       "score": 85.5
+      },
+      {
+       "chemical_code": "NAHCO3",
+       "name": "Sodium Bicarbonate",
+       "score": 85.5
+      },
+      {
+       "chemical_code": "SMBS",
+       "name": "Sodium Metabisulfite",
+       "score": 85.5
+      }
+     ],
+     "explanation": "Sodium hypochlorite is a different chemical substance from all the provided candidates, which are various sodium salts or anhydrides."
+    },
+    "quantity": {
+     "value": null,
+     "uom": null,
+     "pack_code": null,
+     "steps": []
+    },
+    "priced": null,
+    "reading_flags": [
+     {
+      "code": "no_match",
+      "severity": "block",
+      "message": "'Sodium hypochlorite 12.5%': Sodium hypochlorite is a different chemical substance from all the provided candidates, which are various sodium salts or anhydrides.",
+      "rule_id": "MATCH-v1"
+     }
+    ],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "no_match",
+      "severity": "block",
+      "message": "'Sodium hypochlorite 12.5%': Sodium hypochlorite is a different chemical substance from all the provided candidates, which are various sodium salts or anhydrides.",
+      "rule_id": "MATCH-v1"
+     }
+    ],
+    "needs_human": true
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "Propylene glycol USP",
+      "span": "Propylene glycol USP",
+      "verified": true
+     },
+     "english_name": "propylene glycol",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "8",
+      "span": "8",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "MPG",
+     "sku": "QX-MPG-USP",
+     "method": "synonym",
+     "matched_on": "propylene glycol",
+     "score": 100.0,
+     "grade": "pharma_usp",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'propylene glycol' is in the synonym table"
+    },
+    "quantity": {
+     "value": "1657.6000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": [
+      "8 x 200 L drum = 1,600 L",
+      "1,600 L x 1.036 kg/L = 1,657.6 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-MPG-USP",
+     "product_name": "Propylene Glycol, Pharma Grade USP",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "207.2000",
+     "packs": 8,
+     "requested_qty": "1657.6000",
+     "quoted_qty": "1657.6000",
+     "incoterm": "FOB",
+     "currency": "USD",
+     "list_unit_usd": "3.8820",
+     "discount_pct": "2.0",
+     "discount_unit_usd": "0.0776",
+     "net_unit_usd": "3.8044",
+     "freight_unit_usd": "0.0279",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "3.8323",
+     "unit_price": "3.832",
+     "line_total": "6351.92",
+     "price_row_id": "PL-00114",
+     "price_tier": 2,
+     "freight_row_id": "FR-001",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 16,
+     "transit_days": 0,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "8 x 200 L drum (207.2 kg each); requested 1,657.6 kg",
+       "value": "1657.6000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "3.8820",
+       "unit": "USD/kg",
+       "source": "PL-00114"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier C (2%), Granite Bay Specialty Products LLC",
+       "value": "-0.0776",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "3.8044",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "FOB origin handling: 0.0279 USD/kg",
+       "value": "0.0279",
+       "unit": "USD/kg",
+       "source": "FR-001"
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered FOB",
+       "value": "3.8323",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "3.832",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 3.832 x 1,657.6 kg, 2 decimals",
+       "value": "6351.92",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   },
+   {
+    "line_no": 3,
+    "extracted": {
+     "mention": {
+      "value": "Glycerin 99.7% USP",
+      "span": "Glycerin 99.7% USP",
+      "verified": true
+     },
+     "english_name": "glycerine",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "4",
+      "span": "4",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "GLY",
+     "sku": "QX-GLY-USP",
+     "method": "synonym",
+     "matched_on": "glycerin",
+     "score": 100.0,
+     "grade": "pharma_usp",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'glycerin' is in the synonym table"
+    },
+    "quantity": {
+     "value": "1008.8000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": [
+      "4 x 200 L drum = 800 L",
+      "800 L x 1.261 kg/L = 1,008.8 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-GLY-USP",
+     "product_name": "Glycerine, Pharma Grade USP",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "252.2000",
+     "packs": 4,
+     "requested_qty": "1008.8000",
+     "quoted_qty": "1008.8000",
+     "incoterm": "FOB",
+     "currency": "USD",
+     "list_unit_usd": "2.7620",
+     "discount_pct": "2.0",
+     "discount_unit_usd": "0.0552",
+     "net_unit_usd": "2.7068",
+     "freight_unit_usd": "0.0279",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "2.7347",
+     "unit_price": "2.735",
+     "line_total": "2759.07",
+     "price_row_id": "PL-00146",
+     "price_tier": 2,
+     "freight_row_id": "FR-001",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 16,
+     "transit_days": 0,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "PRICE-VALIDITY-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "4 x 200 L drum (252.2 kg each); requested 1,008.8 kg",
+       "value": "1008.8000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "2.7620",
+       "unit": "USD/kg",
+       "source": "PL-00146"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier C (2%), Granite Bay Specialty Products LLC",
+       "value": "-0.0552",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "2.7068",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "FOB origin handling: 0.0279 USD/kg",
+       "value": "0.0279",
+       "unit": "USD/kg",
+       "source": "FR-001"
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered FOB",
+       "value": "2.7347",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "2.735",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 2.735 x 1,008.8 kg, 2 decimals",
+       "value": "2759.07",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "price_expired",
+       "severity": "block",
+       "message": "PL-00146 is valid 2026-04-01 to 2026-09-30, not on 2026-10-09; shown as the last known price",
+       "rule_id": "PRICE-VALIDITY-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "price_expired",
+      "severity": "block",
+      "message": "PL-00146 is valid 2026-04-01 to 2026-09-30, not on 2026-10-09; shown as the last known price",
+      "rule_id": "PRICE-VALIDITY-v1"
+     }
+    ],
+    "needs_human": true
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "USD",
+  "total": "9110.99",
+  "valid_until": "2026-10-23",
+  "email": {
+   "subject": "Quote request - PG USP, glycerin, hypo",
+   "body": "Dear Cody Powers,\n\nThank you for your request for quotation. Please find our response below.\n\n1. Sodium hypochlorite 12.5%: We could not identify this product in our range; could you send a CAS number or specification?\n2. Propylene glycol USP: Propylene Glycol, Pharma Grade USP (SKU: QX-MPG-USP). Quantity: 1,657.6 kg. Packing: 8 x 200 L drum. Unit price: 3.832 USD/kg. Line total: 6,351.92 USD. Lead time: 16 days from order.\n3. Glycerin 99.7% USP: We are confirming the current price.\n\nTotal of priced lines: 6,351.92 USD.\n\nDelivery terms: FOB Nhava Sheva.\nCurrency: USD.\nOffer valid until: 23 October 2026.\nPayment terms: Net 45.\n\nOur reference: Q-261009-2A7B59.\n\nSales desk",
+   "source": "llm",
+   "check": "all 15 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 33.7547
+   },
+   {
+    "stage": "match",
+    "seconds": 30.7715
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0003
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0003
+   },
+   {
+    "stage": "reply",
+    "seconds": 4.825
+   }
+  ],
+  "llm": {
+   "calls": 3,
+   "prompt_tokens": 6822,
+   "cached_tokens": 0,
+   "completion_tokens": 862,
+   "reasoning_tokens": 0,
+   "cost_usd": "0.0089056",
+   "seconds": 3.347,
+   "waited_seconds": 66.0,
+   "models": [
+    "qwen/qwen3.8-27b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "qwen/qwen3.8-27b",
+  "needs_human": true
+ }
+}

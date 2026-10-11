@@ -1,0 +1,748 @@
+{
+ "run": "20261011-084624-qwen_qwen3.8-27b.json",
+ "model": "qwen/qwen3.8-27b",
+ "effort": "none",
+ "draft": {
+  "id": "Q-261011-9318F1",
+  "document": {
+   "source_name": "rfq-030.eml",
+   "format": "eml",
+   "text": "From: Kenta Wang <kenta.wang@paranapanemafarmaceutica.com.br>\nSubject: RFQ excipients - Paranapanema Farmac\u00eautica\nDate: Sun, 11 Oct 2026 09:30:00 +0530\n\nDear Sales,\n\nPlease quote FOB the following pharma excipients:\n\n1. Sodium bicarbonate USP - 2 MT\n2. Citric acid anhydrous USP - 1 MT\n3. Sodium benzoate USP - 400 kg, 25 kg bags\n\nRequired for production in December.\n\nBest regards,\nKenta Wang\nParanapanema Farmac\u00eautica Ltda",
+   "sender_email": "kenta.wang@paranapanemafarmaceutica.com.br",
+   "sender_name": "Kenta Wang",
+   "subject": "RFQ excipients - Paranapanema Farmac\u00eautica",
+   "received": "2026-10-11"
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Paranapanema Farmac\u0000eutica Ltda",
+    "span": "Paranapanema Farmac\u0000eutica Ltda",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "FOB",
+     "place": null,
+     "span": "FOB",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "requested_date": {
+    "value": "2026-12-31",
+    "span": "December",
+    "verified": true
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "Sodium bicarbonate",
+      "span": "Sodium bicarbonate",
+      "verified": true
+     },
+     "english_name": "sodium bicarbonate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "2",
+      "span": "2",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Citric acid anhydrous",
+      "span": "Citric acid anhydrous",
+      "verified": true
+     },
+     "english_name": "citric acid anhydrous",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "1",
+      "span": "1",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Sodium benzoate",
+      "span": "Sodium benzoate",
+      "verified": true
+     },
+     "english_name": "sodium benzoate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "400",
+      "span": "400",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "25 kg bags",
+      "span": "25 kg bags",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-010",
+    "name": "Paranapanema Farmac\u00eautica Ltda",
+    "method": "email_domain",
+    "matched_on": "kenta.wang@paranapanemafarmaceutica.com.br",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "FOB"
+   ],
+   "incoterm": "FOB",
+   "incoterm_source": "document",
+   "destination_country": "BR",
+   "destination_source": "customer",
+   "currency": "USD",
+   "currency_source": "customer",
+   "requested_date": "2026-12-31",
+   "quote_date": "2026-10-11"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "Sodium bicarbonate",
+      "span": "Sodium bicarbonate",
+      "verified": true
+     },
+     "english_name": "sodium bicarbonate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "2",
+      "span": "2",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "NAHCO3",
+     "sku": "QX-NAHCO3-USP",
+     "method": "synonym",
+     "matched_on": "Sodium bicarbonate",
+     "score": 100.0,
+     "grade": "pharma_usp",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'Sodium bicarbonate' is in the synonym table"
+    },
+    "quantity": {
+     "value": "2000.0000",
+     "uom": "kg",
+     "pack_code": null,
+     "steps": [
+      "2 mt = 2,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-NAHCO3-USP",
+     "product_name": "Sodium Bicarbonate, Pharma Grade USP",
+     "uom": "kg",
+     "pack_code": "BAG25",
+     "pack_description": "25 kg bag",
+     "pack_size": "25.000",
+     "packs": 80,
+     "requested_qty": "2000.0000",
+     "quoted_qty": "2000.000",
+     "incoterm": "FOB",
+     "currency": "USD",
+     "list_unit_usd": "1.1220",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.0449",
+     "net_unit_usd": "1.0771",
+     "freight_unit_usd": "0.0185",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "1.0956",
+     "unit_price": "1.096",
+     "line_total": "2192.00",
+     "price_row_id": "PL-00390",
+     "price_tier": 2,
+     "freight_row_id": "FR-065",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 18,
+     "transit_days": 0,
+     "rules_applied": [
+      "PACK-DEFAULT-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-DEFAULT-v1",
+       "label": "25 kg bag (default pack for this quantity)",
+       "value": null,
+       "unit": "",
+       "source": "BAG25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "80 x 25 kg bag (25 kg each); requested 2,000 kg",
+       "value": "2000.000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "1.1220",
+       "unit": "USD/kg",
+       "source": "PL-00390"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Paranapanema Farmac\u00eautica Ltda",
+       "value": "-0.0449",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "1.0771",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "FOB origin handling: 0.0185 USD/kg",
+       "value": "0.0185",
+       "unit": "USD/kg",
+       "source": "FR-065"
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered FOB",
+       "value": "1.0956",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "1.096",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 1.096 x 2,000 kg, 2 decimals",
+       "value": "2192.00",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "Citric acid anhydrous",
+      "span": "Citric acid anhydrous",
+      "verified": true
+     },
+     "english_name": "citric acid anhydrous",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "1",
+      "span": "1",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "CAA",
+     "sku": "QX-CAA-USP",
+     "method": "synonym",
+     "matched_on": "Citric acid anhydrous",
+     "score": 100.0,
+     "grade": "pharma_usp",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'Citric acid anhydrous' is in the synonym table"
+    },
+    "quantity": {
+     "value": "1000.0000",
+     "uom": "kg",
+     "pack_code": null,
+     "steps": [
+      "1 mt = 1,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-CAA-USP",
+     "product_name": "Citric Acid Anhydrous, Pharma Grade USP",
+     "uom": "kg",
+     "pack_code": "FDRUM25",
+     "pack_description": "25 kg fibre drum",
+     "pack_size": "25.000",
+     "packs": 40,
+     "requested_qty": "1000.0000",
+     "quoted_qty": "1000.000",
+     "incoterm": "FOB",
+     "currency": "USD",
+     "list_unit_usd": "3.4020",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.1361",
+     "net_unit_usd": "3.2659",
+     "freight_unit_usd": "0.0279",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "3.2938",
+     "unit_price": "3.294",
+     "line_total": "3294.00",
+     "price_row_id": "PL-00402",
+     "price_tier": 2,
+     "freight_row_id": "FR-017",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 14,
+     "transit_days": 0,
+     "rules_applied": [
+      "PACK-DEFAULT-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-DEFAULT-v1",
+       "label": "25 kg fibre drum (default pack for this quantity)",
+       "value": null,
+       "unit": "",
+       "source": "FDRUM25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "40 x 25 kg fibre drum (25 kg each); requested 1,000 kg",
+       "value": "1000.000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "3.4020",
+       "unit": "USD/kg",
+       "source": "PL-00402"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Paranapanema Farmac\u00eautica Ltda",
+       "value": "-0.1361",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "3.2659",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "FOB origin handling: 0.0279 USD/kg",
+       "value": "0.0279",
+       "unit": "USD/kg",
+       "source": "FR-017"
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered FOB",
+       "value": "3.2938",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "3.294",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 3.294 x 1,000 kg, 2 decimals",
+       "value": "3294.00",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   },
+   {
+    "line_no": 3,
+    "extracted": {
+     "mention": {
+      "value": "Sodium benzoate",
+      "span": "Sodium benzoate",
+      "verified": true
+     },
+     "english_name": "sodium benzoate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "400",
+      "span": "400",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "25 kg bags",
+      "span": "25 kg bags",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "NABZ",
+     "sku": "QX-NABZ-USP",
+     "method": "synonym",
+     "matched_on": "Sodium benzoate",
+     "score": 100.0,
+     "grade": "pharma_usp",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'Sodium benzoate' is in the synonym table"
+    },
+    "quantity": {
+     "value": "400.0000",
+     "uom": "kg",
+     "pack_code": "BAG25",
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-NABZ-USP",
+     "product_name": "Sodium Benzoate, Pharma Grade USP",
+     "uom": "kg",
+     "pack_code": "BAG25",
+     "pack_description": "25 kg bag",
+     "pack_size": "25.000",
+     "packs": 16,
+     "requested_qty": "400.0000",
+     "quoted_qty": "400.000",
+     "incoterm": "FOB",
+     "currency": "USD",
+     "list_unit_usd": "4.3160",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.1726",
+     "net_unit_usd": "4.1434",
+     "freight_unit_usd": "0.0279",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "4.1713",
+     "unit_price": "4.171",
+     "line_total": "1668.40",
+     "price_row_id": "PL-00421",
+     "price_tier": 1,
+     "freight_row_id": "FR-017",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 19,
+     "transit_days": 0,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "PRICE-VALIDITY-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "25 kg bag, as requested",
+       "value": null,
+       "unit": "",
+       "source": "BAG25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "16 x 25 kg bag (25 kg each); requested 400 kg",
+       "value": "400.000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 1 (0 to <1,000 kg)",
+       "value": "4.3160",
+       "unit": "USD/kg",
+       "source": "PL-00421"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Paranapanema Farmac\u00eautica Ltda",
+       "value": "-0.1726",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "4.1434",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "FOB origin handling: 0.0279 USD/kg",
+       "value": "0.0279",
+       "unit": "USD/kg",
+       "source": "FR-017"
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered FOB",
+       "value": "4.1713",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "4.171",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 4.171 x 400 kg, 2 decimals",
+       "value": "1668.40",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "price_expired",
+       "severity": "block",
+       "message": "PL-00421 is valid 2026-04-01 to 2026-09-30, not on 2026-10-11; shown as the last known price",
+       "rule_id": "PRICE-VALIDITY-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "price_expired",
+      "severity": "block",
+      "message": "PL-00421 is valid 2026-04-01 to 2026-09-30, not on 2026-10-11; shown as the last known price",
+      "rule_id": "PRICE-VALIDITY-v1"
+     }
+    ],
+    "needs_human": true
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "USD",
+  "total": "7154.40",
+  "valid_until": "2026-10-25",
+  "email": {
+   "subject": "Quotation Q-261011-9318F1 - RFQ excipients - Paranapanema Farmac\u00eautica",
+   "body": "Dear Kenta Wang,\n\nThank you for your request for quotation regarding excipients.\n\nPlease find our offer below, reference Q-261011-9318F1:\n\n1. Sodium Bicarbonate, Pharma Grade USP (QX-NAHCO3-USP)\nQuantity: 2,000 kg\nPacking: 80 x 25 kg bag\nPrice: 1.096 USD/kg\nTotal: 2,192.00 USD\nLead time: 18 days from order\n\n2. Citric Acid Anhydrous, Pharma Grade USP (QX-CAA-USP)\nQuantity: 1,000 kg\nPacking: 40 x 25 kg fibre drum\nPrice: 3.294 USD/kg\nTotal: 3,294.00 USD\nLead time: 14 days from order\n\n3. Sodium Benzoate, Pharma Grade USP\nThis line will be confirmed separately as we are confirming the current price.\n\nTotal of priced lines: 5,486.00 USD\nDelivery terms: FOB Chennai\nPayment terms: 30% advance, 70% against BL copy\nOffer valid until: 25 October 2026\n\nSales desk\n\nBest regards,\nSales desk",
+   "source": "llm",
+   "check": "all 20 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 19.652
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0005
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0002
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0003
+   },
+   {
+    "stage": "reply",
+    "seconds": 29.2872
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 3775,
+   "cached_tokens": 0,
+   "completion_tokens": 854,
+   "reasoning_tokens": 0,
+   "cost_usd": "0.0064360",
+   "seconds": 3.938,
+   "waited_seconds": 45.0,
+   "models": [
+    "qwen/qwen3.8-27b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "qwen/qwen3.8-27b",
+  "needs_human": true
+ }
+}

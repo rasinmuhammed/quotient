@@ -140,8 +140,9 @@ def score_rfq(gold: dict, draft: QuoteDraft | None, catalog: Catalog, error: str
             "flags": {"gold": g["flags"], "pred": pred_flags},
             # line level: the line's own blocking flags (a quote-level flag is scored on the quote)
             "needs_human": {"gold": any(SEVERITY[FlagCode(c)] == Severity.BLOCK for c in g["flags"]), "pred": pred_human},
-            # wrong and not sent to a person: the error a reviewer would not be prompted to catch
-            "silent_error": bool(p is None or (wrong and not p.needs_human)),
+            # wrong and not sent to a person: the error a reviewer would not be prompted to catch. A run that
+            # failed is not silent: the desk gets an error and nothing reaches the customer.
+            "silent_error": bool(draft is not None and (p is None or (wrong and not p.needs_human))),
         })
     paired = {p.line_no for p in pairs.values()}
     extra = [{"line_no": p.line_no, "mention": p.extracted.mention.value if p.extracted else None,
@@ -190,6 +191,17 @@ def _median(xs: list[float]) -> float | None:
     return statistics.median(xs) if xs else None
 
 
+def by_split(records: list[dict], holdout: set[str]) -> dict:
+    splits = {"dev": summarise([r for r in records if r["id"] not in holdout]),
+              "holdout": summarise([r for r in records if r["id"] in holdout]), "all": summarise(records)}
+    return {k: v for k, v in splits.items() if v["rfqs"]}
+
+
+def rescore(result: dict) -> dict:
+    """A saved run's summaries recomputed from its per-RFQ records with the current definitions."""
+    return {**result, "splits": by_split(result["rfqs"], set(result["run"]["holdout_ids"]))}
+
+
 def summarise(records: list[dict]) -> dict:
     lines = [ln for r in records for ln in r["lines"]]
     extraction = {}
@@ -228,10 +240,12 @@ def summarise(records: list[dict]) -> dict:
     flags = {**_pr(tot["tp"], tot["fp"], tot["fn"]),
              "by_code": {c: _pr(v["tp"], v["fp"], v["fn"]) for c, v in sorted(per_code.items())}}
 
-    gold_h = [ln["needs_human"]["gold"] for ln in lines]
-    pred_h = [bool(ln["needs_human"]["pred"]) for ln in lines]
+    drafted = [ln for r in records if not r["error"] for ln in r["lines"]]  # routing: RFQs that returned a draft
+    gold_h = [ln["needs_human"]["gold"] for ln in drafted]
+    pred_h = [bool(ln["needs_human"]["pred"]) for ln in drafted]
     tp = sum(g and p for g, p in zip(gold_h, pred_h, strict=True))
-    silent = [f"{r['id']} line {ln['line_no']} ({ln['mention']})" for r in records for ln in r["lines"] if ln["silent_error"]]
+    silent = [f"{r['id']} line {ln['line_no']} ({ln['mention']})" for r in records if not r["error"]
+              for ln in r["lines"] if ln["silent_error"]]
     silent += [f"{r['id']} extra line {x['line_no']} ({x['mention']})" for r in records for x in r["extra_lines"] if x["silent_error"]]
     auto = [ln for r in records for ln in r["lines"] if ln["needs_human"]["pred"] is False]
     routing = {"lines_needing_a_person": _pr(tp, sum(p and not g for g, p in zip(gold_h, pred_h, strict=True)),
@@ -301,9 +315,7 @@ def combine(paths: list[Path]) -> Path:
     ids = [rec["id"] for rec in records]
     if len(ids) != len(set(ids)):
         sys.exit("cannot combine: an RFQ appears in more than one part")
-    holdout = set(parts[0]["run"]["holdout_ids"])
-    splits = {"dev": summarise([r for r in records if r["id"] not in holdout]),
-              "holdout": summarise([r for r in records if r["id"] in holdout]), "all": summarise(records)}
+    splits = by_split(records, set(parts[0]["run"]["holdout_ids"]))
     run = {**parts[0]["run"], "at": max(r["run"]["at"] for r in parts), "rfqs": len(records),
            "code": " + ".join(dict.fromkeys(r["run"]["code"] for r in parts)),
            "wall_s": round(sum(r["run"]["wall_s"] for r in parts), 1), "combined_from": [p.name for p in paths]}
@@ -412,10 +424,7 @@ def main() -> None:
     tracing.flush()
 
     holdout = set(split["holdout"])
-    splits = {"dev": summarise([r for r in records if r["id"] not in holdout]),
-              "holdout": summarise([r for r in records if r["id"] in holdout]),
-              "all": summarise(records)}
-    splits = {k: v for k, v in splits.items() if v["rfqs"]}
+    splits = by_split(records, holdout)
     print(report(splits))
 
     result = {

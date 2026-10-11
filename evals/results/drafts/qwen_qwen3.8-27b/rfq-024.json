@@ -1,0 +1,693 @@
+{
+ "run": "20261011-084624-qwen_qwen3.8-27b.json",
+ "model": "qwen/qwen3.8-27b",
+ "effort": "none",
+ "draft": {
+  "id": "Q-261007-12F1B2",
+  "document": {
+   "source_name": "rfq-024.pdf",
+   "format": "pdf",
+   "text": "MOSELGRUND PHARMA GMBH - REQUIREMENT 4471\nSite Trier, Germany\nContact Yong Li, Procurement APIs and excipients\nTerms FOB Indian seaport\n# Substance Pharmacopoeia Amount Unit Container\n1 Paracetamol Ph. Eur. 1,500 kg fibre drums\n2 Microcrystalline cellulose USP 1,000 kg bags\n3 Caffeine anhydrous Ph. Eur. 200 kg fibre drums",
+   "sender_email": null,
+   "sender_name": null,
+   "subject": null,
+   "received": null
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "MOSELGRUND PHARMA GMBH",
+    "span": "MOSELGRUND PHARMA GMBH",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "FOB",
+     "place": "Indian seaport",
+     "span": "FOB Indian seaport",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "requested_date": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "Paracetamol",
+      "span": "Paracetamol",
+      "verified": true
+     },
+     "english_name": "Paracetamol",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "Ph. Eur.",
+      "span": "Ph. Eur.",
+      "verified": true
+     },
+     "quantity": {
+      "value": "1500",
+      "span": "1,500",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "fibre drums",
+      "span": "fibre drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Microcrystalline cellulose",
+      "span": "Microcrystalline cellulose",
+      "verified": true
+     },
+     "english_name": "Microcrystalline Cellulose",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "1000",
+      "span": "1,000",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "bags",
+      "span": "bags",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Caffeine anhydrous",
+      "span": "Caffeine anhydrous",
+      "verified": true
+     },
+     "english_name": "Caffeine",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "Ph. Eur.",
+      "span": "Ph. Eur.",
+      "verified": true
+     },
+     "quantity": {
+      "value": "200",
+      "span": "200",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "fibre drums",
+      "span": "fibre drums",
+      "verified": true
+     },
+     "confidence": 0.9,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-018",
+    "name": "Moselgrund Pharma GmbH",
+    "method": "company_name",
+    "matched_on": "MOSELGRUND PHARMA GMBH",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "FOB"
+   ],
+   "incoterm": "FOB",
+   "incoterm_source": "document",
+   "destination_country": "DE",
+   "destination_source": "customer",
+   "currency": "EUR",
+   "currency_source": "customer",
+   "requested_date": null,
+   "quote_date": "2026-10-07"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "Paracetamol",
+      "span": "Paracetamol",
+      "verified": true
+     },
+     "english_name": "Paracetamol",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "Ph. Eur.",
+      "span": "Ph. Eur.",
+      "verified": true
+     },
+     "quantity": {
+      "value": "1500",
+      "span": "1,500",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "fibre drums",
+      "span": "fibre drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "APAP",
+     "sku": "QX-APAP-EP",
+     "method": "synonym",
+     "matched_on": "Paracetamol",
+     "score": 100.0,
+     "grade": "pharma_ep",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'Paracetamol' is in the synonym table"
+    },
+    "quantity": {
+     "value": "1500.0000",
+     "uom": "kg",
+     "pack_code": "FDRUM25",
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-APAP-EP",
+     "product_name": "Paracetamol, Pharma Grade EP",
+     "uom": "kg",
+     "pack_code": "FDRUM25",
+     "pack_description": "25 kg fibre drum",
+     "pack_size": "25.000",
+     "packs": 60,
+     "requested_qty": "1500.0000",
+     "quoted_qty": "1500.000",
+     "incoterm": "FOB",
+     "currency": "EUR",
+     "list_unit_usd": "18.0540",
+     "discount_pct": "0.0",
+     "discount_unit_usd": "0.0000",
+     "net_unit_usd": "18.0540",
+     "freight_unit_usd": "0.0287",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "18.0827",
+     "unit_price": "15.569",
+     "line_total": "23353.50",
+     "price_row_id": "PL-00522",
+     "price_tier": 2,
+     "freight_row_id": "FR-029",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 22,
+     "transit_days": 0,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "PRICE-VALIDITY-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "25 kg fibre drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "FDRUM25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "60 x 25 kg fibre drum (25 kg each); requested 1,500 kg",
+       "value": "1500.000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "18.0540",
+       "unit": "USD/kg",
+       "source": "PL-00522"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier D (0%), Moselgrund Pharma GmbH",
+       "value": "0.0000",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "18.0540",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "FOB origin handling: 0.0287 USD/kg",
+       "value": "0.0287",
+       "unit": "USD/kg",
+       "source": "FR-029"
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered FOB",
+       "value": "18.0827",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "15.569",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 15.569 x 1,500 kg, 2 decimals",
+       "value": "23353.50",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "price_expired",
+       "severity": "block",
+       "message": "PL-00522 is valid 2026-04-01 to 2026-09-30, not on 2026-10-07; shown as the last known price",
+       "rule_id": "PRICE-VALIDITY-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "price_expired",
+      "severity": "block",
+      "message": "PL-00522 is valid 2026-04-01 to 2026-09-30, not on 2026-10-07; shown as the last known price",
+      "rule_id": "PRICE-VALIDITY-v1"
+     }
+    ],
+    "needs_human": true
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "Microcrystalline cellulose",
+      "span": "Microcrystalline cellulose",
+      "verified": true
+     },
+     "english_name": "Microcrystalline Cellulose",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "1000",
+      "span": "1,000",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "bags",
+      "span": "bags",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "MCC",
+     "sku": "QX-MCC-USP",
+     "method": "synonym",
+     "matched_on": "Microcrystalline cellulose",
+     "score": 100.0,
+     "grade": "pharma_usp",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'Microcrystalline cellulose' is in the synonym table"
+    },
+    "quantity": {
+     "value": "1000.0000",
+     "uom": "kg",
+     "pack_code": "BAG25",
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-MCC-USP",
+     "product_name": "Microcrystalline Cellulose, Pharma Grade USP",
+     "uom": "kg",
+     "pack_code": "BAG25",
+     "pack_description": "25 kg bag",
+     "pack_size": "25.000",
+     "packs": 40,
+     "requested_qty": "1000.0000",
+     "quoted_qty": "1000.000",
+     "incoterm": "FOB",
+     "currency": "EUR",
+     "list_unit_usd": "11.5860",
+     "discount_pct": "0.0",
+     "discount_unit_usd": "0.0000",
+     "net_unit_usd": "11.5860",
+     "freight_unit_usd": "0.0279",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "11.6139",
+     "unit_price": "10.000",
+     "line_total": "10000.00",
+     "price_row_id": "PL-00502",
+     "price_tier": 2,
+     "freight_row_id": "FR-005",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 22,
+     "transit_days": 0,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "25 kg bag, as requested",
+       "value": null,
+       "unit": "",
+       "source": "BAG25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "40 x 25 kg bag (25 kg each); requested 1,000 kg",
+       "value": "1000.000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "11.5860",
+       "unit": "USD/kg",
+       "source": "PL-00502"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier D (0%), Moselgrund Pharma GmbH",
+       "value": "0.0000",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "11.5860",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "FOB origin handling: 0.0279 USD/kg",
+       "value": "0.0279",
+       "unit": "USD/kg",
+       "source": "FR-005"
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered FOB",
+       "value": "11.6139",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "10.000",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 10 x 1,000 kg, 2 decimals",
+       "value": "10000.00",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   },
+   {
+    "line_no": 3,
+    "extracted": {
+     "mention": {
+      "value": "Caffeine anhydrous",
+      "span": "Caffeine anhydrous",
+      "verified": true
+     },
+     "english_name": "Caffeine",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "Ph. Eur.",
+      "span": "Ph. Eur.",
+      "verified": true
+     },
+     "quantity": {
+      "value": "200",
+      "span": "200",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "fibre drums",
+      "span": "fibre drums",
+      "verified": true
+     },
+     "confidence": 0.9,
+     "note": null
+    },
+    "match": {
+     "chemical_code": null,
+     "sku": null,
+     "method": "none",
+     "matched_on": null,
+     "score": null,
+     "grade": null,
+     "grade_source": "none",
+     "candidates": [
+      {
+       "chemical_code": "CAA",
+       "name": "Citric Acid Anhydrous",
+       "score": 72.0
+      },
+      {
+       "chemical_code": "ACN",
+       "name": "Acetonitrile",
+       "score": 68.4
+      },
+      {
+       "chemical_code": "MAN",
+       "name": "Maleic Anhydride",
+       "score": 68.4
+      },
+      {
+       "chemical_code": "PAN",
+       "name": "Phthalic Anhydride",
+       "score": 68.4
+      },
+      {
+       "chemical_code": "GLY",
+       "name": "Glycerine",
+       "score": 64.3
+      }
+     ],
+     "explanation": "Caffeine is a distinct chemical substance (a methylxanthine) and is not the same as any of the provided candidates, which are citric acid, acetonitrile, maleic anhydride, phthalic anhydride, or glycerine."
+    },
+    "quantity": {
+     "value": null,
+     "uom": null,
+     "pack_code": null,
+     "steps": []
+    },
+    "priced": null,
+    "reading_flags": [
+     {
+      "code": "no_match",
+      "severity": "block",
+      "message": "'Caffeine anhydrous': Caffeine is a distinct chemical substance (a methylxanthine) and is not the same as any of the provided candidates, which are citric acid, acetonitrile, maleic anhydride, phthalic anhydride, or glycerine.",
+      "rule_id": "MATCH-v1"
+     }
+    ],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "no_match",
+      "severity": "block",
+      "message": "'Caffeine anhydrous': Caffeine is a distinct chemical substance (a methylxanthine) and is not the same as any of the provided candidates, which are citric acid, acetonitrile, maleic anhydride, phthalic anhydride, or glycerine.",
+      "rule_id": "MATCH-v1"
+     }
+    ],
+    "needs_human": true
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "EUR",
+  "total": "33353.50",
+  "valid_until": "2026-10-21",
+  "email": {
+   "subject": "Quotation Q-261007-12F1B2",
+   "body": "Dear Yong Li,\n\nThank you for your request. Please find our quotation below, reference Q-261007-12F1B2.\n\n1. Paracetamol, Pharma Grade EP: To be confirmed separately. We are confirming the current price.\n2. Microcrystalline Cellulose, Pharma Grade USP (SKU: QX-MCC-USP): 1,000 kg in 40 x 25 kg bag. Unit price: 10.000 EUR/kg. Line total: 10,000.00 EUR. Lead time: 22 days from order.\n3. Caffeine anhydrous: To be confirmed separately. We could not identify this product in our range; could you send a CAS number or specification?\n\nTotal of priced lines: 10,000.00 EUR.\n\nDelivery terms: FOB Indian seaport.\nPayment terms: Net 30.\nOffer valid until: 21 October 2026.\n\nSales desk",
+   "source": "llm",
+   "check": "all 13 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 1.4818
+   },
+   {
+    "stage": "match",
+    "seconds": 46.9071
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0002
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0002
+   },
+   {
+    "stage": "reply",
+    "seconds": 0.683
+   }
+  ],
+  "llm": {
+   "calls": 3,
+   "prompt_tokens": 6748,
+   "cached_tokens": 0,
+   "completion_tokens": 882,
+   "reasoning_tokens": 0,
+   "cost_usd": "0.0089264",
+   "seconds": 3.069,
+   "waited_seconds": 46.0,
+   "models": [
+    "qwen/qwen3.8-27b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "qwen/qwen3.8-27b",
+  "needs_human": true
+ }
+}

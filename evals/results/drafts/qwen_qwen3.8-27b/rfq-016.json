@@ -1,0 +1,1059 @@
+{
+ "run": "20261011-084624-qwen_qwen3.8-27b.json",
+ "model": "qwen/qwen3.8-27b",
+ "effort": "none",
+ "draft": {
+  "id": "Q-261012-6AEFF2",
+  "document": {
+   "source_name": "rfq-016.xlsx",
+   "format": "xlsx",
+   "text": "Kinderdijk Chemie BV - RFQ week 42\nDelivery | CIF Rotterdam\nProduct | Grade | Quantity | Unit | Packing\nIsopropyl alchohol | technical | 3000 | kg | drums\nAcetonitirle | technical | 2000 | kg | drums\nDimethylsulfoxid | technical | 1200 | kg | IBC\nTetrahydrofurane | technical | 1000 | kg | drums",
+   "sender_email": null,
+   "sender_name": null,
+   "subject": null,
+   "received": null
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Kinderdijk Chemie BV",
+    "span": "Kinderdijk Chemie BV",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "CIF",
+     "place": "Rotterdam",
+     "span": "CIF Rotterdam",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "NL",
+    "span": "Rotterdam",
+    "verified": true
+   },
+   "requested_date": {
+    "value": "2026-10-18",
+    "span": "week 42",
+    "verified": true
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "Isopropyl alchohol",
+      "span": "Isopropyl alchohol",
+      "verified": true
+     },
+     "english_name": "isopropyl alcohol",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "3000",
+      "span": "3000",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Acetonitirle",
+      "span": "Acetonitirle",
+      "verified": true
+     },
+     "english_name": "acetonitrile",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "2000",
+      "span": "2000",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Dimethylsulfoxid",
+      "span": "Dimethylsulfoxid",
+      "verified": true
+     },
+     "english_name": "dimethyl sulfoxide",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "1200",
+      "span": "1200",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC",
+      "span": "IBC",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Tetrahydrofurane",
+      "span": "Tetrahydrofurane",
+      "verified": true
+     },
+     "english_name": "tetrahydrofuran",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "1000",
+      "span": "1000",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-022",
+    "name": "Kinderdijk Chemie BV",
+    "method": "company_name",
+    "matched_on": "Kinderdijk Chemie BV",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "CIF"
+   ],
+   "incoterm": "CIF",
+   "incoterm_source": "document",
+   "destination_country": "NL",
+   "destination_source": "document",
+   "currency": "EUR",
+   "currency_source": "customer",
+   "requested_date": "2026-10-18",
+   "quote_date": "2026-10-12"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "Isopropyl alchohol",
+      "span": "Isopropyl alchohol",
+      "verified": true
+     },
+     "english_name": "isopropyl alcohol",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "3000",
+      "span": "3000",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "IPA",
+     "sku": "QX-IPA-TG",
+     "method": "translation",
+     "matched_on": "isopropyl alcohol",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "read as 'isopropyl alcohol'; 'isopropyl alcohol' is in the synonym table"
+    },
+    "quantity": {
+     "value": "3000.0000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-IPA-TG",
+     "product_name": "Isopropyl Alcohol, Technical Grade",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "157.2000",
+     "packs": 20,
+     "requested_qty": "3000.0000",
+     "quoted_qty": "3144.0000",
+     "incoterm": "CIF",
+     "currency": "EUR",
+     "list_unit_usd": "1.8290",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.0732",
+     "net_unit_usd": "1.7558",
+     "freight_unit_usd": "0.1264",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0.0032",
+     "delivered_unit_usd": "1.9204",
+     "unit_price": "1.653",
+     "line_total": "5197.03",
+     "price_row_id": "PL-00002",
+     "price_tier": 2,
+     "freight_row_id": "FR-023",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 11,
+     "transit_days": 27,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "20 x 200 L drum (157.2 kg each); requested 3,000 kg",
+       "value": "3144.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "1.8290",
+       "unit": "USD/kg",
+       "source": "PL-00002"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Kinderdijk Chemie BV",
+       "value": "-0.0732",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "1.7558",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Nhava Sheva to Rotterdam: 0.1264 USD/kg",
+       "value": "0.1264",
+       "unit": "USD/kg",
+       "source": "FR-023"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1219)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0032",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "1.9204",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "1.653",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 1.653 x 3,144 kg, 2 decimals",
+       "value": "5197.03",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1219, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1219, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "Acetonitirle",
+      "span": "Acetonitirle",
+      "verified": true
+     },
+     "english_name": "acetonitrile",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "2000",
+      "span": "2000",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "ACN",
+     "sku": "QX-ACN-TG",
+     "method": "translation",
+     "matched_on": "acetonitrile",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "read as 'acetonitrile'; 'acetonitrile' is in the synonym table"
+    },
+    "quantity": {
+     "value": "2000.0000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-ACN-TG",
+     "product_name": "Acetonitrile, Technical Grade",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "157.2000",
+     "packs": 13,
+     "requested_qty": "2000.0000",
+     "quoted_qty": "2043.6000",
+     "incoterm": "CIF",
+     "currency": "EUR",
+     "list_unit_usd": "2.9220",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.1169",
+     "net_unit_usd": "2.8051",
+     "freight_unit_usd": "0.1278",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0.0049",
+     "delivered_unit_usd": "2.9728",
+     "unit_price": "2.560",
+     "line_total": "5231.62",
+     "price_row_id": "PL-00346",
+     "price_tier": 2,
+     "freight_row_id": "FR-071",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 7,
+     "transit_days": 29,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "13 x 200 L drum (157.2 kg each); requested 2,000 kg",
+       "value": "2043.6000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "2.9220",
+       "unit": "USD/kg",
+       "source": "PL-00346"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Kinderdijk Chemie BV",
+       "value": "-0.1169",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "2.8051",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Chennai to Rotterdam: 0.1278 USD/kg",
+       "value": "0.1278",
+       "unit": "USD/kg",
+       "source": "FR-071"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1648)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0049",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "2.9728",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "2.560",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 2.56 x 2,043.6 kg, 2 decimals",
+       "value": "5231.62",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1648, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1648, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   },
+   {
+    "line_no": 3,
+    "extracted": {
+     "mention": {
+      "value": "Dimethylsulfoxid",
+      "span": "Dimethylsulfoxid",
+      "verified": true
+     },
+     "english_name": "dimethyl sulfoxide",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "1200",
+      "span": "1200",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC",
+      "span": "IBC",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "DMSO",
+     "sku": "QX-DMSO-TG",
+     "method": "translation",
+     "matched_on": "dimethyl sulfoxide",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "read as 'dimethyl sulfoxide'; 'dimethyl sulfoxide' is in the synonym table"
+    },
+    "quantity": {
+     "value": "1200.0000",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-DMSO-TG",
+     "product_name": "Dimethyl Sulfoxide, Technical Grade",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "pack_description": "1000 L IBC",
+     "pack_size": "1100.0000",
+     "packs": 2,
+     "requested_qty": "1200.0000",
+     "quoted_qty": "2200.0000",
+     "incoterm": "CIF",
+     "currency": "EUR",
+     "list_unit_usd": "6.3170",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.2527",
+     "net_unit_usd": "6.0643",
+     "freight_unit_usd": "0.1264",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0.0102",
+     "delivered_unit_usd": "6.2009",
+     "unit_price": "5.339",
+     "line_total": "11745.80",
+     "price_row_id": "PL-00206",
+     "price_tier": 2,
+     "freight_row_id": "FR-023",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 10,
+     "transit_days": 27,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "1000 L IBC, as requested",
+       "value": null,
+       "unit": "",
+       "source": "IBC1000"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "2 x 1000 L IBC (1,100 kg each); requested 1,200 kg",
+       "value": "2200.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "6.3170",
+       "unit": "USD/kg",
+       "source": "PL-00206"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Kinderdijk Chemie BV",
+       "value": "-0.2527",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "6.0643",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Nhava Sheva to Rotterdam: 0.1264 USD/kg",
+       "value": "0.1264",
+       "unit": "USD/kg",
+       "source": "FR-023"
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0102",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "6.2009",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "5.339",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 5.339 x 2,200 kg, 2 decimals",
+       "value": "11745.80",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   },
+   {
+    "line_no": 4,
+    "extracted": {
+     "mention": {
+      "value": "Tetrahydrofurane",
+      "span": "Tetrahydrofurane",
+      "verified": true
+     },
+     "english_name": "tetrahydrofuran",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "1000",
+      "span": "1000",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "THF",
+     "sku": "QX-THF-TG",
+     "method": "translation",
+     "matched_on": "tetrahydrofuran",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "read as 'tetrahydrofuran'; 'tetrahydrofuran' is in the synonym table"
+    },
+    "quantity": {
+     "value": "1000.0000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-THF-TG",
+     "product_name": "Tetrahydrofuran, Technical Grade",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "177.8000",
+     "packs": 6,
+     "requested_qty": "1000.0000",
+     "quoted_qty": "1066.8000",
+     "incoterm": "CIF",
+     "currency": "EUR",
+     "list_unit_usd": "4.7960",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.1918",
+     "net_unit_usd": "4.6042",
+     "freight_unit_usd": "0.1278",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0.0079",
+     "delivered_unit_usd": "4.7749",
+     "unit_price": "4.111",
+     "line_total": "4385.61",
+     "price_row_id": "PL-00330",
+     "price_tier": 2,
+     "freight_row_id": "FR-071",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 13,
+     "transit_days": 29,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "6 x 200 L drum (177.8 kg each); requested 1,000 kg",
+       "value": "1066.8000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "4.7960",
+       "unit": "USD/kg",
+       "source": "PL-00330"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Kinderdijk Chemie BV",
+       "value": "-0.1918",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "4.6042",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Chennai to Rotterdam: 0.1278 USD/kg",
+       "value": "0.1278",
+       "unit": "USD/kg",
+       "source": "FR-071"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN2056)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0079",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "4.7749",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "4.111",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 4.111 x 1,066.8 kg, 2 decimals",
+       "value": "4385.61",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN2056, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN2056, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "EUR",
+  "total": "26560.06",
+  "valid_until": "2026-10-26",
+  "email": {
+   "subject": "Quotation Q-261012-6AEFF2",
+   "body": "Dear Caitlin Cameron,\n\nThank you for your request. Please find our quotation below, reference Q-261012-6AEFF2.\n\n1. Isopropyl Alcohol, Technical Grade (QX-IPA-TG): 3,144 kg in 20 x 200 L drum. Price: 1.653 EUR/kg. Total: 5,197.03 EUR. Lead time: 11 days from order.\n2. Acetonitrile, Technical Grade (QX-ACN-TG): 2,043.6 kg in 13 x 200 L drum. Price: 2.560 EUR/kg. Total: 5,231.62 EUR. Lead time: 7 days from order.\n3. Dimethyl Sulfoxide, Technical Grade (QX-DMSO-TG): 2,200 kg in 2 x 1000 L IBC. Price: 5.339 EUR/kg. Total: 11,745.80 EUR. Lead time: 10 days from order.\n4. Tetrahydrofuran, Technical Grade (QX-THF-TG): 1,066.8 kg in 6 x 200 L drum. Price: 4.111 EUR/kg. Total: 4,385.61 EUR. Lead time: 13 days from order.\n\nTotal: 26,560.06 EUR.\n\nDelivery terms: CIF Rotterdam.\nPayment terms: Net 45.\nOffer valid until: 26 October 2026.\n\nSales desk",
+   "source": "llm",
+   "check": "all 32 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 33.1025
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0044
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0006
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0015
+   },
+   {
+    "stage": "reply",
+    "seconds": 38.3156
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 3900,
+   "cached_tokens": 0,
+   "completion_tokens": 1060,
+   "reasoning_tokens": 0,
+   "cost_usd": "0.007360",
+   "seconds": 3.415,
+   "waited_seconds": 68.0,
+   "models": [
+    "qwen/qwen3.8-27b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "qwen/qwen3.8-27b",
+  "needs_human": false
+ }
+}

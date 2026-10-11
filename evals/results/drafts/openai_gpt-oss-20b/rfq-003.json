@@ -1,0 +1,604 @@
+{
+ "run": "20261011-083759-openai_gpt-oss-20b.json",
+ "model": "openai/gpt-oss-20b",
+ "effort": "medium",
+ "draft": {
+  "id": "Q-261007-666E85",
+  "document": {
+   "source_name": "rfq-003.eml",
+   "format": "eml",
+   "text": "From: Douglas Craig <douglas.craig@hoshinokagaku.co.jp>\nSubject: Inquiry - HPLC solvents for Yokohama lab\nDate: Wed, 07 Oct 2026 09:30:00 +0530\n\nDear Sir or Madam,\n\nWe are Hoshino Kagaku, a fine chemicals producer in Kanagawa. Please quote the following solvents\nfor our analytical laboratory, CIF Yokohama:\n\n1. Acetonitrile, HPLC grade - 600 L in 25 L cans\n2. Tetrahydrofuran (THF), reagent grade, stabilised - 400 L\n\nKindly include the certificate of analysis format with your offer.\n\nBest regards,\nDouglas Craig\nPurchasing Department\nHoshino Kagaku Co., Ltd",
+   "sender_email": "douglas.craig@hoshinokagaku.co.jp",
+   "sender_name": "Douglas Craig",
+   "subject": "Inquiry - HPLC solvents for Yokohama lab",
+   "received": "2026-10-07"
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Hoshino Kagaku Co., Ltd",
+    "span": "Hoshino Kagaku Co., Ltd",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "CIF",
+     "place": "Yokohama",
+     "span": "CIF Yokohama",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "JP",
+    "span": "Yokohama",
+    "verified": true
+   },
+   "requested_date": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "Acetonitrile",
+      "span": "Acetonitrile",
+      "verified": true
+     },
+     "english_name": "Acetonitrile",
+     "cas": {
+      "value": "75-05-8",
+      "span": "75-05-8",
+      "verified": false
+     },
+     "grade": {
+      "value": "HPLC grade",
+      "span": "HPLC grade",
+      "verified": true
+     },
+     "quantity": {
+      "value": "600",
+      "span": "600",
+      "verified": true
+     },
+     "unit": {
+      "value": "L",
+      "span": "L",
+      "verified": true
+     },
+     "packaging": {
+      "value": "25 L cans",
+      "span": "25 L cans",
+      "verified": true
+     },
+     "confidence": 1.0,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Tetrahydrofuran (THF)",
+      "span": "Tetrahydrofuran (THF)",
+      "verified": true
+     },
+     "english_name": "Tetrahydrofuran",
+     "cas": {
+      "value": "109-99-9",
+      "span": "109-99-9",
+      "verified": false
+     },
+     "grade": {
+      "value": "reagent grade",
+      "span": "reagent grade",
+      "verified": true
+     },
+     "quantity": {
+      "value": "400",
+      "span": "400",
+      "verified": true
+     },
+     "unit": {
+      "value": "L",
+      "span": "L",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 1.0,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-015",
+    "name": "Hoshino Kagaku Co., Ltd",
+    "method": "email_domain",
+    "matched_on": "douglas.craig@hoshinokagaku.co.jp",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "CIF"
+   ],
+   "incoterm": "CIF",
+   "incoterm_source": "document",
+   "destination_country": "JP",
+   "destination_source": "document",
+   "currency": "JPY",
+   "currency_source": "customer",
+   "requested_date": null,
+   "quote_date": "2026-10-07"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "Acetonitrile",
+      "span": "Acetonitrile",
+      "verified": true
+     },
+     "english_name": "Acetonitrile",
+     "cas": {
+      "value": "75-05-8",
+      "span": "75-05-8",
+      "verified": false
+     },
+     "grade": {
+      "value": "HPLC grade",
+      "span": "HPLC grade",
+      "verified": true
+     },
+     "quantity": {
+      "value": "600",
+      "span": "600",
+      "verified": true
+     },
+     "unit": {
+      "value": "L",
+      "span": "L",
+      "verified": true
+     },
+     "packaging": {
+      "value": "25 L cans",
+      "span": "25 L cans",
+      "verified": true
+     },
+     "confidence": 1.0,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "ACN",
+     "sku": "QX-ACN-AR",
+     "method": "synonym",
+     "matched_on": "Acetonitrile",
+     "score": 100.0,
+     "grade": "reagent",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'Acetonitrile' is in the synonym table"
+    },
+    "quantity": {
+     "value": "600.0000",
+     "uom": "L",
+     "pack_code": "CAN25",
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-ACN-AR",
+     "product_name": "Acetonitrile, Reagent Grade (AR)",
+     "uom": "L",
+     "pack_code": "CAN25",
+     "pack_description": "25 L jerrycan",
+     "pack_size": "25.000",
+     "packs": 24,
+     "requested_qty": "600.0000",
+     "quoted_qty": "600.000",
+     "incoterm": "CIF",
+     "currency": "JPY",
+     "list_unit_usd": "3.5230",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.1409",
+     "net_unit_usd": "3.3821",
+     "freight_unit_usd": "0.1143",
+     "dg_unit_usd": "0.0275",
+     "insurance_unit_usd": "0.0058",
+     "delivered_unit_usd": "3.5297",
+     "unit_price": "519.6",
+     "line_total": "311760",
+     "price_row_id": "PL-00353",
+     "price_tier": 1,
+     "freight_row_id": "FR-015",
+     "fx_row_id": "FX-04",
+     "fx_rate": "147.200000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 10,
+     "transit_days": 22,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "25 L jerrycan, as requested",
+       "value": null,
+       "unit": "",
+       "source": "CAN25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "24 x 25 L jerrycan (25 L each); requested 600 L",
+       "value": "600.000",
+       "unit": "L",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 1 (0 to <1,000 L)",
+       "value": "3.5230",
+       "unit": "USD/L",
+       "source": "PL-00353"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Hoshino Kagaku Co., Ltd",
+       "value": "-0.1409",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "3.3821",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Nhava Sheva to Yokohama: 0.1454 USD/kg x 0.786 kg/L",
+       "value": "0.1143",
+       "unit": "USD/L",
+       "source": "FR-015"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1648)",
+       "value": "0.0275",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0058",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "3.5297",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 147.2 JPY/USD (snapshot 2026-10-01)",
+       "value": "147.200000",
+       "unit": "JPY/USD",
+       "source": "FX-04"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 1 decimals",
+       "value": "519.6",
+       "unit": "JPY/L",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 519.6 x 600 L, 0 decimals",
+       "value": "311760",
+       "unit": "JPY",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1648, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1648, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "Tetrahydrofuran (THF)",
+      "span": "Tetrahydrofuran (THF)",
+      "verified": true
+     },
+     "english_name": "Tetrahydrofuran",
+     "cas": {
+      "value": "109-99-9",
+      "span": "109-99-9",
+      "verified": false
+     },
+     "grade": {
+      "value": "reagent grade",
+      "span": "reagent grade",
+      "verified": true
+     },
+     "quantity": {
+      "value": "400",
+      "span": "400",
+      "verified": true
+     },
+     "unit": {
+      "value": "L",
+      "span": "L",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 1.0,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "THF",
+     "sku": "QX-THF-AR",
+     "method": "synonym",
+     "matched_on": "tetrahydrofuran",
+     "score": 100.0,
+     "grade": "reagent",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'tetrahydrofuran' is in the synonym table"
+    },
+    "quantity": {
+     "value": "400.0000",
+     "uom": "L",
+     "pack_code": null,
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-THF-AR",
+     "product_name": "Tetrahydrofuran, Reagent Grade (AR)",
+     "uom": "L",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "200.000",
+     "packs": 2,
+     "requested_qty": "400.0000",
+     "quoted_qty": "400.000",
+     "incoterm": "CIF",
+     "currency": "JPY",
+     "list_unit_usd": "8.4360",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.3374",
+     "net_unit_usd": "8.0986",
+     "freight_unit_usd": "0.1062",
+     "dg_unit_usd": "0.0311",
+     "insurance_unit_usd": "0.0136",
+     "delivered_unit_usd": "8.2495",
+     "unit_price": "1214.3",
+     "line_total": "485720",
+     "price_row_id": "PL-00341",
+     "price_tier": 1,
+     "freight_row_id": "FR-063",
+     "fx_row_id": "FX-04",
+     "fx_rate": "147.200000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 16,
+     "transit_days": 15,
+     "rules_applied": [
+      "PACK-DEFAULT-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-DEFAULT-v1",
+       "label": "200 L drum (default pack for this quantity)",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "2 x 200 L drum (200 L each); requested 400 L",
+       "value": "400.000",
+       "unit": "L",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 1 (0 to <1,000 L)",
+       "value": "8.4360",
+       "unit": "USD/L",
+       "source": "PL-00341"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Hoshino Kagaku Co., Ltd",
+       "value": "-0.3374",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "8.0986",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Chennai to Yokohama: 0.1195 USD/kg x 0.889 kg/L",
+       "value": "0.1062",
+       "unit": "USD/L",
+       "source": "FR-063"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN2056)",
+       "value": "0.0311",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0136",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "8.2495",
+       "unit": "USD/L",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 147.2 JPY/USD (snapshot 2026-10-01)",
+       "value": "147.200000",
+       "unit": "JPY/USD",
+       "source": "FX-04"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 1 decimals",
+       "value": "1214.3",
+       "unit": "JPY/L",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 1,214.3 x 400 L, 0 decimals",
+       "value": "485720",
+       "unit": "JPY",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN2056, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN2056, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "JPY",
+  "total": "797480",
+  "valid_until": "2026-10-21",
+  "email": {
+   "subject": "Inquiry - HPLC solvents for Yokohama lab",
+   "body": "Dear Douglas Craig,\n\nThank you for your inquiry. Please find below the quotation details for your requested HPLC solvents:\n\n1. Acetonitrile, Reagent Grade (AR)\n   SKU: QX-ACN-AR\n   Quantity: 600 L\n   Packing: 24 x 25 L jerrycan\n   Unit price: 520 JPY/L\n   Line total: 311,760 JPY\n   Lead time: 10 days from order\n\n2. Tetrahydrofuran, Reagent Grade (AR)\n   SKU: QX-THF-AR\n   Quantity: 400 L\n   Packing: 2 x 200 L drum\n   Unit price: 1,214 JPY/L\n   Line total: 485,720 JPY\n   Lead time: 16 days from order\n\nTotal of priced lines: 797,480 JPY\nDelivery terms: CIF Yokohama\nCurrency: JPY\nOffer valid until: 21 October 2026\nPayment terms: Net 30\n\nPlease let us know if you have any questions.\n\nBest regards,\nSales desk",
+   "source": "llm",
+   "check": "all 18 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 36.2412
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0006
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0001
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0002
+   },
+   {
+    "stage": "reply",
+    "seconds": 14.5338
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 4503,
+   "cached_tokens": 0,
+   "completion_tokens": 2360,
+   "reasoning_tokens": 1749,
+   "cost_usd": "0.001045725",
+   "seconds": 3.774,
+   "waited_seconds": 47.0,
+   "models": [
+    "openai/gpt-oss-20b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "openai/gpt-oss-20b",
+  "needs_human": false
+ }
+}

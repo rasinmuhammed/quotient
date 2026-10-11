@@ -22,6 +22,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from evals.run import rescore  # noqa: E402
 from quotient.api import _sample_index, catalog, rules  # noqa: E402
 from quotient.config import settings  # noqa: E402
 
@@ -40,7 +41,7 @@ def complete_runs() -> list[tuple[Path, dict]]:
     for p in sorted(RESULTS.glob("*.json"), reverse=True):
         r = json.loads(p.read_text())
         if r["run"]["rfqs"] == 30:
-            out.append((p, r))
+            out.append((p, rescore(r)))
     return out
 
 

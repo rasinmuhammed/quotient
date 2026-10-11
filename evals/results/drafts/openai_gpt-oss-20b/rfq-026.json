@@ -1,0 +1,546 @@
+{
+ "run": "20261011-083759-openai_gpt-oss-20b.json",
+ "model": "openai/gpt-oss-20b",
+ "effort": "medium",
+ "draft": {
+  "id": "Q-261012-6BED36",
+  "document": {
+   "source_name": "rfq-026.eml",
+   "format": "eml",
+   "text": "From: Shankar Pandey <shankar.pandey@merwedespecialties.nl>\nSubject: Offer request DMSO / NMP\nDate: Mon, 12 Oct 2026 09:30:00 +0530\n\nDear team,\n\nPlease send your offer FOB Nhava Sheva for:\n\nDMSO, technical grade - 4 MT in IBC\nNMP, technical grade - 2 MT in drums\n\nBest regards,\nShankar Pandey\nMerwede Specialties BV, Dordrecht",
+   "sender_email": "shankar.pandey@merwedespecialties.nl",
+   "sender_name": "Shankar Pandey",
+   "subject": "Offer request DMSO / NMP",
+   "received": "2026-10-12"
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Merwede Specialties BV, Dordrecht",
+    "span": "Merwede Specialties BV, Dordrecht",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "FOB",
+     "place": "Nhava Sheva",
+     "span": "FOB Nhava Sheva",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "IN",
+    "span": "Nhava Sheva",
+    "verified": true
+   },
+   "requested_date": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "DMSO",
+      "span": "DMSO",
+      "verified": true
+     },
+     "english_name": "DMSO",
+     "cas": {
+      "value": "67-68-5",
+      "span": "67-68-5",
+      "verified": false
+     },
+     "grade": {
+      "value": "technical grade",
+      "span": "technical grade",
+      "verified": true
+     },
+     "quantity": {
+      "value": "4",
+      "span": "4",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC",
+      "span": "IBC",
+      "verified": true
+     },
+     "confidence": 1.0,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "NMP",
+      "span": "NMP",
+      "verified": true
+     },
+     "english_name": "N-Methyl-2-Pyrrolidone",
+     "cas": {
+      "value": "872-50-4",
+      "span": "872-50-4",
+      "verified": false
+     },
+     "grade": {
+      "value": "technical grade",
+      "span": "technical grade",
+      "verified": true
+     },
+     "quantity": {
+      "value": "2",
+      "span": "2",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 1.0,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-003",
+    "name": "Merwede Specialties BV",
+    "method": "email_domain",
+    "matched_on": "shankar.pandey@merwedespecialties.nl",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "FOB"
+   ],
+   "incoterm": "FOB",
+   "incoterm_source": "document",
+   "destination_country": "NL",
+   "destination_source": "customer",
+   "currency": "EUR",
+   "currency_source": "customer",
+   "requested_date": null,
+   "quote_date": "2026-10-12"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "DMSO",
+      "span": "DMSO",
+      "verified": true
+     },
+     "english_name": "DMSO",
+     "cas": {
+      "value": "67-68-5",
+      "span": "67-68-5",
+      "verified": false
+     },
+     "grade": {
+      "value": "technical grade",
+      "span": "technical grade",
+      "verified": true
+     },
+     "quantity": {
+      "value": "4",
+      "span": "4",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC",
+      "span": "IBC",
+      "verified": true
+     },
+     "confidence": 1.0,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "DMSO",
+     "sku": "QX-DMSO-TG",
+     "method": "synonym",
+     "matched_on": "DMSO",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'DMSO' is in the synonym table"
+    },
+    "quantity": {
+     "value": "4000.0000",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "steps": [
+      "4 mt = 4,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-DMSO-TG",
+     "product_name": "Dimethyl Sulfoxide, Technical Grade",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "pack_description": "1000 L IBC",
+     "pack_size": "1100.0000",
+     "packs": 4,
+     "requested_qty": "4000.0000",
+     "quoted_qty": "4400.0000",
+     "incoterm": "FOB",
+     "currency": "EUR",
+     "list_unit_usd": "6.3170",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.2527",
+     "net_unit_usd": "6.0643",
+     "freight_unit_usd": "0.0279",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "6.0922",
+     "unit_price": "5.245",
+     "line_total": "23078.00",
+     "price_row_id": "PL-00206",
+     "price_tier": 2,
+     "freight_row_id": "FR-021",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 10,
+     "transit_days": 0,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "1000 L IBC, as requested",
+       "value": null,
+       "unit": "",
+       "source": "IBC1000"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "4 x 1000 L IBC (1,100 kg each); requested 4,000 kg",
+       "value": "4400.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "6.3170",
+       "unit": "USD/kg",
+       "source": "PL-00206"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Merwede Specialties BV",
+       "value": "-0.2527",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "6.0643",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "FOB origin handling: 0.0279 USD/kg",
+       "value": "0.0279",
+       "unit": "USD/kg",
+       "source": "FR-021"
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered FOB",
+       "value": "6.0922",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "5.245",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 5.245 x 4,400 kg, 2 decimals",
+       "value": "23078.00",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "NMP",
+      "span": "NMP",
+      "verified": true
+     },
+     "english_name": "N-Methyl-2-Pyrrolidone",
+     "cas": {
+      "value": "872-50-4",
+      "span": "872-50-4",
+      "verified": false
+     },
+     "grade": {
+      "value": "technical grade",
+      "span": "technical grade",
+      "verified": true
+     },
+     "quantity": {
+      "value": "2",
+      "span": "2",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 1.0,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "NMP",
+     "sku": "QX-NMP-TG",
+     "method": "synonym",
+     "matched_on": "NMP",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'NMP' is in the synonym table"
+    },
+    "quantity": {
+     "value": "2000.0000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": [
+      "2 mt = 2,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-NMP-TG",
+     "product_name": "N-Methyl-2-Pyrrolidone, Technical Grade",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "205.6000",
+     "packs": 10,
+     "requested_qty": "2000.0000",
+     "quoted_qty": "2056.0000",
+     "incoterm": "FOB",
+     "currency": "EUR",
+     "list_unit_usd": "4.7920",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.1917",
+     "net_unit_usd": "4.6003",
+     "freight_unit_usd": "0.0287",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "4.6290",
+     "unit_price": "3.986",
+     "line_total": "8195.22",
+     "price_row_id": "PL-00186",
+     "price_tier": 2,
+     "freight_row_id": "FR-045",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 11,
+     "transit_days": 0,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "10 x 200 L drum (205.6 kg each); requested 2,000 kg",
+       "value": "2056.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "4.7920",
+       "unit": "USD/kg",
+       "source": "PL-00186"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Merwede Specialties BV",
+       "value": "-0.1917",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "4.6003",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "FOB origin handling: 0.0287 USD/kg",
+       "value": "0.0287",
+       "unit": "USD/kg",
+       "source": "FR-045"
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered FOB",
+       "value": "4.6290",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "3.986",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 3.986 x 2,056 kg, 2 decimals",
+       "value": "8195.22",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "EUR",
+  "total": "31273.22",
+  "valid_until": "2026-10-26",
+  "email": {
+   "subject": "Offer request DMSO / NMP",
+   "body": "Dear Shankar Pandey,\n\nThank you for your request. Please find below the quotation details:\n\nLine 1: DMSO \u2013 Dimethyl Sulfoxide, Technical Grade \u2013 SKU QX-DMSO-TG \u2013 Quantity 4,400 kg \u2013 Packing 4 x 1000 L IBC \u2013 Unit price 5.245 EUR/kg \u2013 Line total 23,078.00 EUR \u2013 Lead time 10 days from order.\n\nLine 2: NMP \u2013 N-Methyl-2-Pyrrolidone, Technical Grade \u2013 SKU QX-NMP-TG \u2013 Quantity 2,056 kg \u2013 Packing 10 x 200 L drum \u2013 Unit price 3.986 EUR/kg \u2013 Line total 8,195.22 EUR \u2013 Lead time 11 days from order.\n\nTotal of priced lines: 31,273.22 EUR.\n\nDelivery terms: FOB Nhava Sheva.\n\nOffer valid until: 26 October 2026.\n\nPayment terms: Net 30.\n\nWe look forward to your confirmation.\n\nBest regards,\nSales desk",
+   "source": "llm",
+   "check": "all 18 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 22.2281
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0016
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0004
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0007
+   },
+   {
+    "stage": "reply",
+    "seconds": 13.6965
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 4448,
+   "cached_tokens": 256,
+   "completion_tokens": 2249,
+   "reasoning_tokens": 1665,
+   "cost_usd": "0.000998700",
+   "seconds": 3.915,
+   "waited_seconds": 32.0,
+   "models": [
+    "openai/gpt-oss-20b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "openai/gpt-oss-20b",
+  "needs_human": false
+ }
+}

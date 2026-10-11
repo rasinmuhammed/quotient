@@ -1,0 +1,534 @@
+{
+ "run": "20261011-084624-qwen_qwen3.8-27b.json",
+ "model": "qwen/qwen3.8-27b",
+ "effort": "none",
+ "draft": {
+  "id": "Q-261010-2C81BE",
+  "document": {
+   "source_name": "rfq-017.eml",
+   "format": "eml",
+   "text": "From: Kwame Nwankwo <kwame.nwankwo@cornichechemicaltrading.ae>\nSubject: Enquiry caustic lye and peroxide - DDP JAFZA\nDate: Sat, 10 Oct 2026 09:30:00 +0530\n\nDear Sir,\n\nPlease offer your best price for the following, DDP our warehouse in Jebel Ali Free Zone:\n\n1) Caustic soda lye 50%, membrane grade - 3 x 1000 L IBC\n2) Hydrogen peroxide 50% - 10 drums\n\nPayment by LC. Please confirm availability.\n\nThanks and regards,\nKwame Nwankwo\nCorniche Chemical Trading FZE, JAFZA, Dubai",
+   "sender_email": "kwame.nwankwo@cornichechemicaltrading.ae",
+   "sender_name": "Kwame Nwankwo",
+   "subject": "Enquiry caustic lye and peroxide - DDP JAFZA",
+   "received": "2026-10-10"
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Corniche Chemical Trading FZE, JAFZA, Dubai",
+    "span": "Corniche Chemical Trading FZE, JAFZA, Dubai",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "DDP",
+     "place": "JAFZA",
+     "span": "DDP JAFZA",
+     "verified": true
+    },
+    {
+     "term": "DDP",
+     "place": "Jebel Ali Free Zone",
+     "span": "DDP our warehouse in Jebel Ali Free Zone",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "AE",
+    "span": "Jebel Ali Free Zone",
+    "verified": true
+   },
+   "requested_date": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "Caustic soda lye 50%",
+      "span": "Caustic soda lye 50%",
+      "verified": true
+     },
+     "english_name": "sodium hydroxide solution 50%",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "membrane grade",
+      "span": "membrane grade",
+      "verified": true
+     },
+     "quantity": {
+      "value": "3",
+      "span": "3",
+      "verified": true
+     },
+     "unit": {
+      "value": "IBC",
+      "span": "IBC",
+      "verified": true
+     },
+     "packaging": {
+      "value": "1000 L IBC",
+      "span": "1000 L IBC",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Hydrogen peroxide 50%",
+      "span": "Hydrogen peroxide 50%",
+      "verified": true
+     },
+     "english_name": "hydrogen peroxide solution 50%",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "10",
+      "span": "10",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-001",
+    "name": "Corniche Chemical Trading FZE",
+    "method": "email_domain",
+    "matched_on": "kwame.nwankwo@cornichechemicaltrading.ae",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "DDP"
+   ],
+   "incoterm": "DDP",
+   "incoterm_source": "document",
+   "destination_country": "AE",
+   "destination_source": "document",
+   "currency": "AED",
+   "currency_source": "customer",
+   "requested_date": null,
+   "quote_date": "2026-10-10"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "Caustic soda lye 50%",
+      "span": "Caustic soda lye 50%",
+      "verified": true
+     },
+     "english_name": "sodium hydroxide solution 50%",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "membrane grade",
+      "span": "membrane grade",
+      "verified": true
+     },
+     "quantity": {
+      "value": "3",
+      "span": "3",
+      "verified": true
+     },
+     "unit": {
+      "value": "IBC",
+      "span": "IBC",
+      "verified": true
+     },
+     "packaging": {
+      "value": "1000 L IBC",
+      "span": "1000 L IBC",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "NAOH50",
+     "sku": "QX-NAOH50-TG",
+     "method": "synonym",
+     "matched_on": "Caustic soda lye 50%",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "only_grade",
+     "candidates": [],
+     "explanation": "'Caustic soda lye 50%' is in the synonym table"
+    },
+    "quantity": {
+     "value": "4560.0000",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "steps": [
+      "3 x 1000 L IBC = 3,000 L",
+      "3,000 L x 1.52 kg/L = 4,560 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-NAOH50-TG",
+     "product_name": "Caustic Soda Lye 50%, Technical Grade",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "pack_description": "1000 L IBC",
+     "pack_size": "1520.0000",
+     "packs": 3,
+     "requested_qty": "4560.0000",
+     "quoted_qty": "4560.0000",
+     "incoterm": "DDP",
+     "currency": "AED",
+     "list_unit_usd": "0.5660",
+     "discount_pct": "0.0",
+     "discount_unit_usd": "0.0000",
+     "net_unit_usd": "0.5660",
+     "freight_unit_usd": null,
+     "dg_unit_usd": null,
+     "insurance_unit_usd": null,
+     "delivered_unit_usd": null,
+     "unit_price": null,
+     "line_total": null,
+     "price_row_id": "PL-00254",
+     "price_tier": 2,
+     "freight_row_id": null,
+     "fx_row_id": "FX-03",
+     "fx_rate": "3.672500",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 12,
+     "transit_days": null,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "1000 L IBC, as requested",
+       "value": null,
+       "unit": "",
+       "source": "IBC1000"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "3 x 1000 L IBC (1,520 kg each); requested 4,560 kg",
+       "value": "4560.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "0.5660",
+       "unit": "USD/kg",
+       "source": "PL-00254"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier D (0%), Corniche Chemical Trading FZE",
+       "value": "0.0000",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "0.5660",
+       "unit": "USD/kg",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1824, class 8: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      },
+      {
+       "code": "incoterm_unsupported",
+       "severity": "block",
+       "message": "DDP is not modelled (supported: EXW, FOB, CFR, CIF, DAP); no delivered price",
+       "rule_id": "FREIGHT-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1824, class 8: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     },
+     {
+      "code": "incoterm_unsupported",
+      "severity": "block",
+      "message": "DDP is not modelled (supported: EXW, FOB, CFR, CIF, DAP); no delivered price",
+      "rule_id": "FREIGHT-v1"
+     }
+    ],
+    "needs_human": true
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "Hydrogen peroxide 50%",
+      "span": "Hydrogen peroxide 50%",
+      "verified": true
+     },
+     "english_name": "hydrogen peroxide solution 50%",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "10",
+      "span": "10",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "HP50",
+     "sku": "QX-HP50-TG",
+     "method": "synonym",
+     "matched_on": "Hydrogen peroxide 50%",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "only_grade",
+     "candidates": [],
+     "explanation": "'Hydrogen peroxide 50%' is in the synonym table"
+    },
+    "quantity": {
+     "value": "2392.0000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": [
+      "10 x 200 L drum = 2,000 L",
+      "2,000 L x 1.196 kg/L = 2,392 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-HP50-TG",
+     "product_name": "Hydrogen Peroxide 50%, Technical Grade",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "239.2000",
+     "packs": 10,
+     "requested_qty": "2392.0000",
+     "quoted_qty": "2392.0000",
+     "incoterm": "DDP",
+     "currency": "AED",
+     "list_unit_usd": "1.0400",
+     "discount_pct": "0.0",
+     "discount_unit_usd": "0.0000",
+     "net_unit_usd": "1.0400",
+     "freight_unit_usd": null,
+     "dg_unit_usd": null,
+     "insurance_unit_usd": null,
+     "delivered_unit_usd": null,
+     "unit_price": null,
+     "line_total": null,
+     "price_row_id": "PL-00242",
+     "price_tier": 2,
+     "freight_row_id": null,
+     "fx_row_id": "FX-03",
+     "fx_rate": "3.672500",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 9,
+     "transit_days": null,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "10 x 200 L drum (239.2 kg each); requested 2,392 kg",
+       "value": "2392.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "1.0400",
+       "unit": "USD/kg",
+       "source": "PL-00242"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier D (0%), Corniche Chemical Trading FZE",
+       "value": "0.0000",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "1.0400",
+       "unit": "USD/kg",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN2014, class 5.1 (8): SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      },
+      {
+       "code": "incoterm_unsupported",
+       "severity": "block",
+       "message": "DDP is not modelled (supported: EXW, FOB, CFR, CIF, DAP); no delivered price",
+       "rule_id": "FREIGHT-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN2014, class 5.1 (8): SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     },
+     {
+      "code": "incoterm_unsupported",
+      "severity": "block",
+      "message": "DDP is not modelled (supported: EXW, FOB, CFR, CIF, DAP); no delivered price",
+      "rule_id": "FREIGHT-v1"
+     }
+    ],
+    "needs_human": true
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "AED",
+  "total": null,
+  "valid_until": "2026-10-24",
+  "email": {
+   "subject": "Re: Enquiry caustic lye and peroxide - DDP JAFZA",
+   "body": "Dear Kwame Nwankwo,\n\nThank you for your enquiry regarding caustic lye and peroxide.\n\nWe are currently checking whether we can offer DDP JAFZA delivery terms for the following items:\n\n1. Caustic Soda Lye 50%, Technical Grade\n2. Hydrogen Peroxide 50%, Technical Grade\n\nWe will confirm the pricing and availability separately once this is resolved.\n\nOur offer is valid until 24 October 2026. Payment terms are Net 60.\n\nReference: Q-261010-2C81BE\n\nSales desk",
+   "source": "llm",
+   "check": "all 7 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 24.5668
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0024
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0006
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0011
+   },
+   {
+    "stage": "reply",
+    "seconds": 11.9231
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 3615,
+   "cached_tokens": 0,
+   "completion_tokens": 621,
+   "reasoning_tokens": 0,
+   "cost_usd": "0.0053760",
+   "seconds": 2.487,
+   "waited_seconds": 34.0,
+   "models": [
+    "qwen/qwen3.8-27b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "qwen/qwen3.8-27b",
+  "needs_human": true
+ }
+}

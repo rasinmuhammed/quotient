@@ -1,0 +1,592 @@
+{
+ "run": "20261011-084624-qwen_qwen3.8-27b.json",
+ "model": "qwen/qwen3.8-27b",
+ "effort": "none",
+ "draft": {
+  "id": "Q-261008-794BC4",
+  "document": {
+   "source_name": "rfq-021.eml",
+   "format": "eml",
+   "text": "From: Tyler Velasquez <tyler.velasquez@lindeboomcoatings.nl>\nSubject: Request for offer - cyclohexanone and PMA\nDate: Thu, 08 Oct 2026 09:30:00 +0530\n\nHi all,\n\nCould you quote the following for delivery DAP our site in Moerdijk:\n\n- Cyclohexanone: 12 drums\n- PMA (methoxypropyl acetate), industrial grade: 5 MT\n\nWe would like delivery in January 2027.\n\nThanks,\nTyler Velasquez\nLindeboom Coatings BV",
+   "sender_email": "tyler.velasquez@lindeboomcoatings.nl",
+   "sender_name": "Tyler Velasquez",
+   "subject": "Request for offer - cyclohexanone and PMA",
+   "received": "2026-10-08"
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Lindeboom Coatings BV",
+    "span": "Lindeboom Coatings BV",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "DAP",
+     "place": "our site in Moerdijk",
+     "span": "DAP our site in Moerdijk",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "NL",
+    "span": "Moerdijk",
+    "verified": true
+   },
+   "requested_date": {
+    "value": "2027-01-31",
+    "span": "January 2027",
+    "verified": true
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "Cyclohexanone",
+      "span": "Cyclohexanone",
+      "verified": true
+     },
+     "english_name": "cyclohexanone",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "12",
+      "span": "12",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "PMA (methoxypropyl acetate)",
+      "span": "PMA (methoxypropyl acetate)",
+      "verified": true
+     },
+     "english_name": "propylene glycol methyl ether acetate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "industrial grade",
+      "span": "industrial grade",
+      "verified": true
+     },
+     "quantity": {
+      "value": "5",
+      "span": "5",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-011",
+    "name": "Lindeboom Coatings BV",
+    "method": "email_domain",
+    "matched_on": "tyler.velasquez@lindeboomcoatings.nl",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "DAP"
+   ],
+   "incoterm": "DAP",
+   "incoterm_source": "document",
+   "destination_country": "NL",
+   "destination_source": "document",
+   "currency": "USD",
+   "currency_source": "customer",
+   "requested_date": "2027-01-31",
+   "quote_date": "2026-10-08"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "Cyclohexanone",
+      "span": "Cyclohexanone",
+      "verified": true
+     },
+     "english_name": "cyclohexanone",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "12",
+      "span": "12",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "CYC",
+     "sku": "QX-CYC-TG",
+     "method": "synonym",
+     "matched_on": "Cyclohexanone",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "only_grade",
+     "candidates": [],
+     "explanation": "'Cyclohexanone' is in the synonym table"
+    },
+    "quantity": {
+     "value": "2272.8000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": [
+      "12 x 200 L drum = 2,400 L",
+      "2,400 L x 0.947 kg/L = 2,272.8 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-CYC-TG",
+     "product_name": "Cyclohexanone, Technical Grade",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "189.4000",
+     "packs": 12,
+     "requested_qty": "2272.8000",
+     "quoted_qty": "2272.8000",
+     "incoterm": "DAP",
+     "currency": "USD",
+     "list_unit_usd": "2.1700",
+     "discount_pct": "6.0",
+     "discount_unit_usd": "0.1302",
+     "net_unit_usd": "2.0398",
+     "freight_unit_usd": "0.1725",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "2.2473",
+     "unit_price": "2.247",
+     "line_total": "5106.98",
+     "price_row_id": "PL-00306",
+     "price_tier": 2,
+     "freight_row_id": "FR-072",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 17,
+     "transit_days": 32,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "PRICE-VALIDITY-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "12 x 200 L drum (189.4 kg each); requested 2,272.8 kg",
+       "value": "2272.8000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "2.1700",
+       "unit": "USD/kg",
+       "source": "PL-00306"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier A (6%), Lindeboom Coatings BV",
+       "value": "-0.1302",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "2.0398",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "DAP Chennai to Rotterdam: 0.1725 USD/kg",
+       "value": "0.1725",
+       "unit": "USD/kg",
+       "source": "FR-072"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1915)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered DAP",
+       "value": "2.2473",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "2.247",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 2.247 x 2,272.8 kg, 2 decimals",
+       "value": "5106.98",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1915, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      },
+      {
+       "code": "price_expired",
+       "severity": "block",
+       "message": "PL-00306 is valid 2026-04-01 to 2026-09-30, not on 2026-10-08; shown as the last known price",
+       "rule_id": "PRICE-VALIDITY-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1915, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     },
+     {
+      "code": "price_expired",
+      "severity": "block",
+      "message": "PL-00306 is valid 2026-04-01 to 2026-09-30, not on 2026-10-08; shown as the last known price",
+      "rule_id": "PRICE-VALIDITY-v1"
+     }
+    ],
+    "needs_human": true
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "PMA (methoxypropyl acetate)",
+      "span": "PMA (methoxypropyl acetate)",
+      "verified": true
+     },
+     "english_name": "propylene glycol methyl ether acetate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "industrial grade",
+      "span": "industrial grade",
+      "verified": true
+     },
+     "quantity": {
+      "value": "5",
+      "span": "5",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "PGMEA",
+     "sku": "QX-PGMEA-TG",
+     "method": "synonym",
+     "matched_on": "methoxypropyl acetate",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'methoxypropyl acetate' is in the synonym table"
+    },
+    "quantity": {
+     "value": "5000.0000",
+     "uom": "kg",
+     "pack_code": null,
+     "steps": [
+      "5 mt = 5,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-PGMEA-TG",
+     "product_name": "Propylene Glycol Methyl Ether Acetate, Technical Grade",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "193.0000",
+     "packs": 26,
+     "requested_qty": "5000.0000",
+     "quoted_qty": "5018.0000",
+     "incoterm": "DAP",
+     "currency": "USD",
+     "list_unit_usd": "2.4410",
+     "discount_pct": "6.0",
+     "discount_unit_usd": "0.1465",
+     "net_unit_usd": "2.2945",
+     "freight_unit_usd": "0.1704",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "2.4999",
+     "unit_price": "2.500",
+     "line_total": "12545.00",
+     "price_row_id": "PL-00171",
+     "price_tier": 3,
+     "freight_row_id": "FR-048",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 10,
+     "transit_days": 30,
+     "rules_applied": [
+      "PACK-DEFAULT-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-DEFAULT-v1",
+       "label": "200 L drum (default pack for this quantity)",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "26 x 200 L drum (193 kg each); requested 5,000 kg",
+       "value": "5018.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 3 (5,000 to <20,000 kg)",
+       "value": "2.4410",
+       "unit": "USD/kg",
+       "source": "PL-00171"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier A (6%), Lindeboom Coatings BV",
+       "value": "-0.1465",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "2.2945",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "DAP Mundra to Rotterdam: 0.1704 USD/kg",
+       "value": "0.1704",
+       "unit": "USD/kg",
+       "source": "FR-048"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN3272)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered DAP",
+       "value": "2.4999",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "2.500",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 2.5 x 5,018 kg, 2 decimals",
+       "value": "12545.00",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN3272, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN3272, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "USD",
+  "total": "17651.98",
+  "valid_until": "2026-10-22",
+  "email": {
+   "subject": "Offer Q-261008-794BC4 - Request for offer - cyclohexanone and PMA",
+   "body": "Dear Tyler Velasquez,\n\nThank you for your request for offer regarding cyclohexanone and PMA.\n\nPlease find our offer below, reference Q-261008-794BC4.\n\n1. Cyclohexanone, Technical Grade: This line is to be confirmed separately as we are confirming the current price.\n2. Propylene Glycol Methyl Ether Acetate, Technical Grade (SKU QX-PGMEA-TG): 5,018 kg in 26 x 200 L drum. Unit price 2.500 USD/kg. Line total 12,545.00 USD. Lead time 10 days from order.\n\nTotal of priced lines: 12,545.00 USD.\n\nDelivery terms: DAP our site in Moerdijk.\nPayment terms: Net 45.\nOffer valid until: 22 October 2026.\n\nSales desk\n\nLindeboom Coatings BV\nTyler Velasquez\nQ-261008-794BC4\nDAP our site in Moerdijk\nUSD\nCyclohexanone, Technical Grade\nPropylene Glycol Methyl Ether Acetate, Technical Grade\nQX-PGMEA-TG\n5,018 kg\n26 x 200 L drum\n2.500 USD/kg\n12,545.00 USD\n10 days from order\n12,545.00 USD\n22 October 2026\nNet 45\nwe are confirming the current price\nCyclohexanone\nPMA (methoxypropyl acetate)\nRequest for offer - cyclohexanone",
+   "source": "llm",
+   "check": "all 22 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 14.4159
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0028
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0005
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0007
+   },
+   {
+    "stage": "reply",
+    "seconds": 39.3247
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 3641,
+   "cached_tokens": 0,
+   "completion_tokens": 841,
+   "reasoning_tokens": 0,
+   "cost_usd": "0.0062768",
+   "seconds": 2.738,
+   "waited_seconds": 51.0,
+   "models": [
+    "qwen/qwen3.8-27b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "qwen/qwen3.8-27b",
+  "needs_human": true
+ }
+}

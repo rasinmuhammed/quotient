@@ -1,0 +1,1087 @@
+{
+ "run": "20261011-084624-qwen_qwen3.8-27b.json",
+ "model": "qwen/qwen3.8-27b",
+ "effort": "none",
+ "draft": {
+  "id": "Q-261010-86A730",
+  "document": {
+   "source_name": "rfq-010.xlsx",
+   "format": "xlsx",
+   "text": "KAWABE TORYO CO., LTD. - SOLVENT REQUIREMENT 2027 H1\nDelivery | CIF Kobe, Japan\nPayment | per contract\nNo | Item | Grade | Volume | Unit | Remark\n1 | Xylene (mixed) | Tech | 30 | MT | IBC preferred\n2 | Butyl acetate | Tech | 12 | MT | IBC\n3 | PGMEA | Tech | 6 | MT | drums\n4 | Cellosolve acetate (EGEEA) | Tech | 2 | MT | drums",
+   "sender_email": null,
+   "sender_name": null,
+   "subject": null,
+   "received": null
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "KAWABE TORYO CO., LTD.",
+    "span": "KAWABE TORYO CO., LTD.",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "CIF",
+     "place": "Kobe",
+     "span": "CIF Kobe, Japan",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "JP",
+    "span": "Japan",
+    "verified": true
+   },
+   "requested_date": {
+    "value": "2027-06-30",
+    "span": "2027 H1",
+    "verified": true
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "Xylene (mixed)",
+      "span": "Xylene (mixed)",
+      "verified": true
+     },
+     "english_name": "xylene (mixed isomers)",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "Tech",
+      "span": "Tech",
+      "verified": true
+     },
+     "quantity": {
+      "value": "30",
+      "span": "30",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC preferred",
+      "span": "IBC preferred",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Butyl acetate",
+      "span": "Butyl acetate",
+      "verified": true
+     },
+     "english_name": "n-butyl acetate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "Tech",
+      "span": "Tech",
+      "verified": true
+     },
+     "quantity": {
+      "value": "12",
+      "span": "12",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC",
+      "span": "IBC",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "PGMEA",
+      "span": "PGMEA",
+      "verified": true
+     },
+     "english_name": "propylene glycol methyl ether acetate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "Tech",
+      "span": "Tech",
+      "verified": true
+     },
+     "quantity": {
+      "value": "6",
+      "span": "6",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Cellosolve acetate (EGEEA)",
+      "span": "Cellosolve acetate (EGEEA)",
+      "verified": true
+     },
+     "english_name": "ethylene glycol ethyl ether acetate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "Tech",
+      "span": "Tech",
+      "verified": true
+     },
+     "quantity": {
+      "value": "2",
+      "span": "2",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.9,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-017",
+    "name": "Kawabe Toryo Co., Ltd",
+    "method": "company_name",
+    "matched_on": "KAWABE TORYO CO., LTD.",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "CIF"
+   ],
+   "incoterm": "CIF",
+   "incoterm_source": "document",
+   "destination_country": "JP",
+   "destination_source": "document",
+   "currency": "JPY",
+   "currency_source": "customer",
+   "requested_date": "2027-06-30",
+   "quote_date": "2026-10-10"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "Xylene (mixed)",
+      "span": "Xylene (mixed)",
+      "verified": true
+     },
+     "english_name": "xylene (mixed isomers)",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "Tech",
+      "span": "Tech",
+      "verified": true
+     },
+     "quantity": {
+      "value": "30",
+      "span": "30",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC preferred",
+      "span": "IBC preferred",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "XYL",
+     "sku": "QX-XYL-TG",
+     "method": "synonym",
+     "matched_on": "xylene",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'xylene' is in the synonym table"
+    },
+    "quantity": {
+     "value": "30000.0000",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "steps": [
+      "30 mt = 30,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-XYL-TG",
+     "product_name": "Xylene (Mixed Isomers), Technical Grade",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "pack_description": "1000 L IBC",
+     "pack_size": "864.0000",
+     "packs": 35,
+     "requested_qty": "30000.0000",
+     "quoted_qty": "30240.0000",
+     "incoterm": "CIF",
+     "currency": "JPY",
+     "list_unit_usd": "1.0420",
+     "discount_pct": "6.0",
+     "discount_unit_usd": "0.0625",
+     "net_unit_usd": "1.0023",
+     "freight_unit_usd": "0.1454",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0.0020",
+     "delivered_unit_usd": "1.1847",
+     "unit_price": "174.4",
+     "line_total": "5273856",
+     "price_row_id": "PL-00304",
+     "price_tier": 4,
+     "freight_row_id": "FR-015",
+     "fx_row_id": "FX-04",
+     "fx_rate": "147.200000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 13,
+     "transit_days": 22,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "MARGIN-FLOOR-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "1000 L IBC, as requested",
+       "value": null,
+       "unit": "",
+       "source": "IBC1000"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "35 x 1000 L IBC (864 kg each); requested 30,000 kg",
+       "value": "30240.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 4 (20,000+ kg)",
+       "value": "1.0420",
+       "unit": "USD/kg",
+       "source": "PL-00304"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier A (6%), Kawabe Toryo Co., Ltd",
+       "value": "-0.0625",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "MARGIN-FLOOR-v1",
+       "label": "Raised to the 12% margin floor",
+       "value": "0.0228",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "1.0023",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Nhava Sheva to Yokohama: 0.1454 USD/kg",
+       "value": "0.1454",
+       "unit": "USD/kg",
+       "source": "FR-015"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1307)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0020",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "1.1847",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 147.2 JPY/USD (snapshot 2026-10-01)",
+       "value": "147.200000",
+       "unit": "JPY/USD",
+       "source": "FX-04"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 1 decimals",
+       "value": "174.4",
+       "unit": "JPY/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 174.4 x 30,240 kg, 0 decimals",
+       "value": "5273856",
+       "unit": "JPY",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1307, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      },
+      {
+       "code": "margin_floor_applied",
+       "severity": "warn",
+       "message": "net 0.9795 USD/kg gives 10.0% margin, under the 12% floor; raised to 1.0023 USD/kg",
+       "rule_id": "MARGIN-FLOOR-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1307, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     },
+     {
+      "code": "margin_floor_applied",
+      "severity": "warn",
+      "message": "net 0.9795 USD/kg gives 10.0% margin, under the 12% floor; raised to 1.0023 USD/kg",
+      "rule_id": "MARGIN-FLOOR-v1"
+     }
+    ],
+    "needs_human": false
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "Butyl acetate",
+      "span": "Butyl acetate",
+      "verified": true
+     },
+     "english_name": "n-butyl acetate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "Tech",
+      "span": "Tech",
+      "verified": true
+     },
+     "quantity": {
+      "value": "12",
+      "span": "12",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC",
+      "span": "IBC",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "NBAC",
+     "sku": "QX-NBAC-TG",
+     "method": "synonym",
+     "matched_on": "Butyl acetate",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'Butyl acetate' is in the synonym table"
+    },
+    "quantity": {
+     "value": "12000.0000",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "steps": [
+      "12 mt = 12,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-NBAC-TG",
+     "product_name": "n-Butyl Acetate, Technical Grade",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "pack_description": "1000 L IBC",
+     "pack_size": "882.0000",
+     "packs": 14,
+     "requested_qty": "12000.0000",
+     "quoted_qty": "12348.0000",
+     "incoterm": "CIF",
+     "currency": "JPY",
+     "list_unit_usd": "1.5110",
+     "discount_pct": "6.0",
+     "discount_unit_usd": "0.0907",
+     "net_unit_usd": "1.4203",
+     "freight_unit_usd": "0.1454",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0.0026",
+     "delivered_unit_usd": "1.6033",
+     "unit_price": "236.0",
+     "line_total": "2914128",
+     "price_row_id": "PL-00103",
+     "price_tier": 3,
+     "freight_row_id": "FR-015",
+     "fx_row_id": "FX-04",
+     "fx_rate": "147.200000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 11,
+     "transit_days": 22,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "1000 L IBC, as requested",
+       "value": null,
+       "unit": "",
+       "source": "IBC1000"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "14 x 1000 L IBC (882 kg each); requested 12,000 kg",
+       "value": "12348.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 3 (5,000 to <20,000 kg)",
+       "value": "1.5110",
+       "unit": "USD/kg",
+       "source": "PL-00103"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier A (6%), Kawabe Toryo Co., Ltd",
+       "value": "-0.0907",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "1.4203",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Nhava Sheva to Yokohama: 0.1454 USD/kg",
+       "value": "0.1454",
+       "unit": "USD/kg",
+       "source": "FR-015"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1123)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0026",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "1.6033",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 147.2 JPY/USD (snapshot 2026-10-01)",
+       "value": "147.200000",
+       "unit": "JPY/USD",
+       "source": "FX-04"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 1 decimals",
+       "value": "236.0",
+       "unit": "JPY/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 236 x 12,348 kg, 0 decimals",
+       "value": "2914128",
+       "unit": "JPY",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1123, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1123, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   },
+   {
+    "line_no": 3,
+    "extracted": {
+     "mention": {
+      "value": "PGMEA",
+      "span": "PGMEA",
+      "verified": true
+     },
+     "english_name": "propylene glycol methyl ether acetate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "Tech",
+      "span": "Tech",
+      "verified": true
+     },
+     "quantity": {
+      "value": "6",
+      "span": "6",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "PGMEA",
+     "sku": "QX-PGMEA-TG",
+     "method": "synonym",
+     "matched_on": "PGMEA",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'PGMEA' is in the synonym table"
+    },
+    "quantity": {
+     "value": "6000.0000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": [
+      "6 mt = 6,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-PGMEA-TG",
+     "product_name": "Propylene Glycol Methyl Ether Acetate, Technical Grade",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "193.0000",
+     "packs": 32,
+     "requested_qty": "6000.0000",
+     "quoted_qty": "6176.0000",
+     "incoterm": "CIF",
+     "currency": "JPY",
+     "list_unit_usd": "2.4410",
+     "discount_pct": "6.0",
+     "discount_unit_usd": "0.1465",
+     "net_unit_usd": "2.2945",
+     "freight_unit_usd": "0.1468",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0.0041",
+     "delivered_unit_usd": "2.4804",
+     "unit_price": "365.1",
+     "line_total": "2254858",
+     "price_row_id": "PL-00171",
+     "price_tier": 3,
+     "freight_row_id": "FR-039",
+     "fx_row_id": "FX-04",
+     "fx_rate": "147.200000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 10,
+     "transit_days": 21,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "32 x 200 L drum (193 kg each); requested 6,000 kg",
+       "value": "6176.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 3 (5,000 to <20,000 kg)",
+       "value": "2.4410",
+       "unit": "USD/kg",
+       "source": "PL-00171"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier A (6%), Kawabe Toryo Co., Ltd",
+       "value": "-0.1465",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "2.2945",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Mundra to Yokohama: 0.1468 USD/kg",
+       "value": "0.1468",
+       "unit": "USD/kg",
+       "source": "FR-039"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN3272)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0041",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "2.4804",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 147.2 JPY/USD (snapshot 2026-10-01)",
+       "value": "147.200000",
+       "unit": "JPY/USD",
+       "source": "FX-04"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 1 decimals",
+       "value": "365.1",
+       "unit": "JPY/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 365.1 x 6,176 kg, 0 decimals",
+       "value": "2254858",
+       "unit": "JPY",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN3272, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN3272, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   },
+   {
+    "line_no": 4,
+    "extracted": {
+     "mention": {
+      "value": "Cellosolve acetate (EGEEA)",
+      "span": "Cellosolve acetate (EGEEA)",
+      "verified": true
+     },
+     "english_name": "ethylene glycol ethyl ether acetate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "Tech",
+      "span": "Tech",
+      "verified": true
+     },
+     "quantity": {
+      "value": "2",
+      "span": "2",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "MT",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.9,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "MEG",
+     "sku": "QX-MEG-TG",
+     "method": "translation",
+     "matched_on": "ethylene glycol",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "read as 'ethylene glycol ethyl ether acetate'; 'ethylene glycol' is in the synonym table"
+    },
+    "quantity": {
+     "value": "2000.0000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": [
+      "2 mt = 2,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-MEG-TG",
+     "product_name": "Monoethylene Glycol, Technical Grade",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "222.6000",
+     "packs": 9,
+     "requested_qty": "2000.0000",
+     "quoted_qty": "2003.4000",
+     "incoterm": "CIF",
+     "currency": "JPY",
+     "list_unit_usd": "1.1340",
+     "discount_pct": "6.0",
+     "discount_unit_usd": "0.0680",
+     "net_unit_usd": "1.0660",
+     "freight_unit_usd": "0.1454",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0.0020",
+     "delivered_unit_usd": "1.2134",
+     "unit_price": "178.6",
+     "line_total": "357807",
+     "price_row_id": "PL-00130",
+     "price_tier": 2,
+     "freight_row_id": "FR-015",
+     "fx_row_id": "FX-04",
+     "fx_rate": "147.200000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 15,
+     "transit_days": 22,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "9 x 200 L drum (222.6 kg each); requested 2,000 kg",
+       "value": "2003.4000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "1.1340",
+       "unit": "USD/kg",
+       "source": "PL-00130"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier A (6%), Kawabe Toryo Co., Ltd",
+       "value": "-0.0680",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "1.0660",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Nhava Sheva to Yokohama: 0.1454 USD/kg",
+       "value": "0.1454",
+       "unit": "USD/kg",
+       "source": "FR-015"
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0020",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "1.2134",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 147.2 JPY/USD (snapshot 2026-10-01)",
+       "value": "147.200000",
+       "unit": "JPY/USD",
+       "source": "FX-04"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 1 decimals",
+       "value": "178.6",
+       "unit": "JPY/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 178.6 x 2,003.4 kg, 0 decimals",
+       "value": "357807",
+       "unit": "JPY",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "JPY",
+  "total": "10800649",
+  "valid_until": "2026-10-24",
+  "email": {
+   "subject": "Quotation Q-261010-86A730",
+   "body": "Dear Ms. Lefevre,\n\nThank you for your request for quotation. Please find our offer below, reference Q-261010-86A730.\n\n1. Xylene (Mixed Isomers), Technical Grade (QX-XYL-TG): 30,240 kg in 35 x 1000 L IBC at 174 JPY/kg. Line total: 5,273,856 JPY. Lead time: 13 days from order.\n2. n-Butyl Acetate, Technical Grade (QX-NBAC-TG): 12,348 kg in 14 x 1000 L IBC at 236 JPY/kg. Line total: 2,914,128 JPY. Lead time: 11 days from order.\n3. Propylene Glycol Methyl Ether Acetate, Technical Grade (QX-PGMEA-TG): 6,176 kg in 32 x 200 L drum at 365 JPY/kg. Line total: 2,254,858 JPY. Lead time: 10 days from order.\n4. Monoethylene Glycol, Technical Grade (QX-MEG-TG): 2,003.4 kg in 9 x 200 L drum at 179 JPY/kg. Line total: 357,807 JPY. Lead time: 15 days from order.\n\nTotal: 10,800,649 JPY.\n\nDelivery terms: CIF Kobe.\nPayment terms: LC at sight.\nThis offer is valid until 24 October 2026.\n\nSales desk",
+   "source": "llm",
+   "check": "all 31 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 1.6428
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0012
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0001
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0003
+   },
+   {
+    "stage": "reply",
+    "seconds": 53.2627
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 3938,
+   "cached_tokens": 0,
+   "completion_tokens": 1078,
+   "reasoning_tokens": 0,
+   "cost_usd": "0.0074624",
+   "seconds": 2.905,
+   "waited_seconds": 52.0,
+   "models": [
+    "qwen/qwen3.8-27b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "qwen/qwen3.8-27b",
+  "needs_human": false
+ }
+}

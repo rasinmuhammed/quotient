@@ -57,12 +57,12 @@ def test_an_unverifiable_quantity_goes_to_a_person_and_is_not_silent(catalog, ru
     assert first["price"]["exact"] is False and first["needs_human"]["pred"] and not first["silent_error"]
 
 
-def test_a_failed_rfq_scores_as_all_wrong(catalog):
+def test_a_failed_rfq_scores_as_all_wrong_but_not_as_silent(catalog):
     g = gold("rfq-005")
     rec = score_rfq(g, None, catalog, error="LLMError: boom")
     s = summarise([rec])
-    assert s["failed"] == 1 and s["match"]["overall"]["correct"] == 0
-    assert s["routing"]["silent_errors"] == len(g["lines"]) and s["flags"]["recall"] == 0
+    assert s["failed"] == 1 and s["match"]["overall"]["correct"] == 0 and s["flags"]["recall"] == 0
+    assert s["routing"]["silent_errors"] == 0  # the desk sees an error; nothing reaches the customer
 
 
 def test_every_gold_quantity_is_written_in_its_document():

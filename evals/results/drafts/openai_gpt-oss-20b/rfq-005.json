@@ -1,0 +1,1291 @@
+{
+ "run": "20261011-083759-openai_gpt-oss-20b.json",
+ "model": "openai/gpt-oss-20b",
+ "effort": "medium",
+ "draft": {
+  "id": "Q-261006-515AE9",
+  "document": {
+   "source_name": "rfq-005.xlsx",
+   "format": "xlsx",
+   "text": "Botlek Chemie BV - Solvent tender Q1 2027\nIncoterm | CFR Rotterdam\nGrade | technical\nCurrency | EUR\nLine | CAS no. | Product | Qty (MT) | Packaging | Your price EUR/kg\n1 | 67630 |  | 24 | IBC\n2 | 64197 | Acetic acid glacial | 6 | IBC\n3 | 108883 |  | 12 | IBC\n4 | 75092 | Methylene chloride | 4 | drums\n5 | 7664382 | Phosphoric acid 85% | 3 | IBC",
+   "sender_email": null,
+   "sender_name": null,
+   "subject": null,
+   "received": null
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Botlek Chemie BV",
+    "span": "Botlek Chemie BV",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "CFR",
+     "place": "Rotterdam",
+     "span": "CFR Rotterdam",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "NL",
+    "span": "Rotterdam",
+    "verified": true
+   },
+   "requested_date": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "currency": {
+    "value": "EUR",
+    "span": "EUR",
+    "verified": true
+   },
+   "document_grade": {
+    "value": "technical",
+    "span": "technical",
+    "verified": true
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "english_name": null,
+     "cas": {
+      "value": "67630",
+      "span": "67630",
+      "verified": true
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "24",
+      "span": "24",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "Qty (MT)",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC",
+      "span": "IBC",
+      "verified": true
+     },
+     "confidence": 0.9,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Acetic acid glacial",
+      "span": "Acetic acid glacial",
+      "verified": true
+     },
+     "english_name": "Glacial Acetic Acid",
+     "cas": {
+      "value": "64197",
+      "span": "64197",
+      "verified": true
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "6",
+      "span": "6",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "Qty (MT)",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC",
+      "span": "IBC",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "english_name": null,
+     "cas": {
+      "value": "108883",
+      "span": "108883",
+      "verified": true
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "12",
+      "span": "12",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "Qty (MT)",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC",
+      "span": "IBC",
+      "verified": true
+     },
+     "confidence": 0.9,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Methylene chloride",
+      "span": "Methylene chloride",
+      "verified": true
+     },
+     "english_name": "Dichloromethane",
+     "cas": {
+      "value": "75092",
+      "span": "75092",
+      "verified": true
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "4",
+      "span": "4",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "Qty (MT)",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Phosphoric acid 85%",
+      "span": "Phosphoric acid 85%",
+      "verified": true
+     },
+     "english_name": "Phosphoric Acid 85%",
+     "cas": {
+      "value": "7664382",
+      "span": "7664382",
+      "verified": true
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "3",
+      "span": "3",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "Qty (MT)",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC",
+      "span": "IBC",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-007",
+    "name": "Botlek Chemie BV",
+    "method": "company_name",
+    "matched_on": "Botlek Chemie BV",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "CFR"
+   ],
+   "incoterm": "CFR",
+   "incoterm_source": "document",
+   "destination_country": "NL",
+   "destination_source": "document",
+   "currency": "EUR",
+   "currency_source": "document",
+   "requested_date": null,
+   "quote_date": "2026-10-06"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "english_name": null,
+     "cas": {
+      "value": "67630",
+      "span": "67630",
+      "verified": true
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "24",
+      "span": "24",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "Qty (MT)",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC",
+      "span": "IBC",
+      "verified": true
+     },
+     "confidence": 0.9,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "IPA",
+     "sku": "QX-IPA-TG",
+     "method": "cas",
+     "matched_on": "67-63-0",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "CAS 67-63-0 (cas)"
+    },
+    "quantity": {
+     "value": "24000.0000",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "steps": [
+      "24 mt = 24,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-IPA-TG",
+     "product_name": "Isopropyl Alcohol, Technical Grade",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "pack_description": "1000 L IBC",
+     "pack_size": "786.0000",
+     "packs": 31,
+     "requested_qty": "24000.0000",
+     "quoted_qty": "24366.0000",
+     "incoterm": "CFR",
+     "currency": "EUR",
+     "list_unit_usd": "1.6820",
+     "discount_pct": "6.0",
+     "discount_unit_usd": "0.1009",
+     "net_unit_usd": "1.5811",
+     "freight_unit_usd": "0.1264",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "1.7425",
+     "unit_price": "1.500",
+     "line_total": "36549.00",
+     "price_row_id": "PL-00008",
+     "price_tier": 4,
+     "freight_row_id": "FR-022",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 11,
+     "transit_days": 27,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "1000 L IBC, as requested",
+       "value": null,
+       "unit": "",
+       "source": "IBC1000"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "31 x 1000 L IBC (786 kg each); requested 24,000 kg",
+       "value": "24366.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 4 (20,000+ kg)",
+       "value": "1.6820",
+       "unit": "USD/kg",
+       "source": "PL-00008"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier A (6%), Botlek Chemie BV",
+       "value": "-0.1009",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "1.5811",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CFR Nhava Sheva to Rotterdam: 0.1264 USD/kg",
+       "value": "0.1264",
+       "unit": "USD/kg",
+       "source": "FR-022"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1219)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CFR",
+       "value": "1.7425",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "1.500",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 1.5 x 24,366 kg, 2 decimals",
+       "value": "36549.00",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1219, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1219, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "Acetic acid glacial",
+      "span": "Acetic acid glacial",
+      "verified": true
+     },
+     "english_name": "Glacial Acetic Acid",
+     "cas": {
+      "value": "64197",
+      "span": "64197",
+      "verified": true
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "6",
+      "span": "6",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "Qty (MT)",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC",
+      "span": "IBC",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "GAA",
+     "sku": "QX-GAA-TG",
+     "method": "cas",
+     "matched_on": "64-19-7",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "CAS 64-19-7 (cas)"
+    },
+    "quantity": {
+     "value": "6000.0000",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "steps": [
+      "6 mt = 6,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-GAA-TG",
+     "product_name": "Glacial Acetic Acid, Technical Grade",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "pack_description": "1000 L IBC",
+     "pack_size": "1049.0000",
+     "packs": 6,
+     "requested_qty": "6000.0000",
+     "quoted_qty": "6294.0000",
+     "incoterm": "CFR",
+     "currency": "EUR",
+     "list_unit_usd": "0.8300",
+     "discount_pct": "6.0",
+     "discount_unit_usd": "0.0498",
+     "net_unit_usd": "0.7802",
+     "freight_unit_usd": "0.1264",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "0.9416",
+     "unit_price": "0.811",
+     "line_total": "5104.43",
+     "price_row_id": "PL-00231",
+     "price_tier": 3,
+     "freight_row_id": "FR-022",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 11,
+     "transit_days": 27,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "1000 L IBC, as requested",
+       "value": null,
+       "unit": "",
+       "source": "IBC1000"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "6 x 1000 L IBC (1,049 kg each); requested 6,000 kg",
+       "value": "6294.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 3 (5,000 to <20,000 kg)",
+       "value": "0.8300",
+       "unit": "USD/kg",
+       "source": "PL-00231"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier A (6%), Botlek Chemie BV",
+       "value": "-0.0498",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "0.7802",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CFR Nhava Sheva to Rotterdam: 0.1264 USD/kg",
+       "value": "0.1264",
+       "unit": "USD/kg",
+       "source": "FR-022"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN2789)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CFR",
+       "value": "0.9416",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "0.811",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 0.811 x 6,294 kg, 2 decimals",
+       "value": "5104.43",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN2789, class 8 (3): SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN2789, class 8 (3): SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   },
+   {
+    "line_no": 3,
+    "extracted": {
+     "mention": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "english_name": null,
+     "cas": {
+      "value": "108883",
+      "span": "108883",
+      "verified": true
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "12",
+      "span": "12",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "Qty (MT)",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC",
+      "span": "IBC",
+      "verified": true
+     },
+     "confidence": 0.9,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "TOL",
+     "sku": "QX-TOL-TG",
+     "method": "cas",
+     "matched_on": "108-88-3",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "CAS 108-88-3 (cas)"
+    },
+    "quantity": {
+     "value": "12000.0000",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "steps": [
+      "12 mt = 12,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-TOL-TG",
+     "product_name": "Toluene, Technical Grade",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "pack_description": "1000 L IBC",
+     "pack_size": "867.0000",
+     "packs": 14,
+     "requested_qty": "12000.0000",
+     "quoted_qty": "12138.0000",
+     "incoterm": "CFR",
+     "currency": "EUR",
+     "list_unit_usd": "0.9550",
+     "discount_pct": "6.0",
+     "discount_unit_usd": "0.0573",
+     "net_unit_usd": "0.8977",
+     "freight_unit_usd": "0.1292",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "1.0619",
+     "unit_price": "0.914",
+     "line_total": "11094.13",
+     "price_row_id": "PL-00079",
+     "price_tier": 3,
+     "freight_row_id": "FR-046",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 9,
+     "transit_days": 27,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "1000 L IBC, as requested",
+       "value": null,
+       "unit": "",
+       "source": "IBC1000"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "14 x 1000 L IBC (867 kg each); requested 12,000 kg",
+       "value": "12138.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 3 (5,000 to <20,000 kg)",
+       "value": "0.9550",
+       "unit": "USD/kg",
+       "source": "PL-00079"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier A (6%), Botlek Chemie BV",
+       "value": "-0.0573",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "0.8977",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CFR Mundra to Rotterdam: 0.1292 USD/kg",
+       "value": "0.1292",
+       "unit": "USD/kg",
+       "source": "FR-046"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1294)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CFR",
+       "value": "1.0619",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "0.914",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 0.914 x 12,138 kg, 2 decimals",
+       "value": "11094.13",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1294, class 3: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1294, class 3: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   },
+   {
+    "line_no": 4,
+    "extracted": {
+     "mention": {
+      "value": "Methylene chloride",
+      "span": "Methylene chloride",
+      "verified": true
+     },
+     "english_name": "Dichloromethane",
+     "cas": {
+      "value": "75092",
+      "span": "75092",
+      "verified": true
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "4",
+      "span": "4",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "Qty (MT)",
+      "verified": true
+     },
+     "packaging": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "DCM",
+     "sku": "QX-DCM-TG",
+     "method": "cas",
+     "matched_on": "75-09-2",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "CAS 75-09-2 (cas)"
+    },
+    "quantity": {
+     "value": "4000.0000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": [
+      "4 mt = 4,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-DCM-TG",
+     "product_name": "Dichloromethane, Technical Grade",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "265.2000",
+     "packs": 16,
+     "requested_qty": "4000.0000",
+     "quoted_qty": "4243.2000",
+     "incoterm": "CFR",
+     "currency": "EUR",
+     "list_unit_usd": "1.4690",
+     "discount_pct": "6.0",
+     "discount_unit_usd": "0.0881",
+     "net_unit_usd": "1.3809",
+     "freight_unit_usd": "0.1264",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "1.5423",
+     "unit_price": "1.328",
+     "line_total": "5634.97",
+     "price_row_id": "PL-00314",
+     "price_tier": 2,
+     "freight_row_id": "FR-022",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 13,
+     "transit_days": 27,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "16 x 200 L drum (265.2 kg each); requested 4,000 kg",
+       "value": "4243.2000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "1.4690",
+       "unit": "USD/kg",
+       "source": "PL-00314"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier A (6%), Botlek Chemie BV",
+       "value": "-0.0881",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "1.3809",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CFR Nhava Sheva to Rotterdam: 0.1264 USD/kg",
+       "value": "0.1264",
+       "unit": "USD/kg",
+       "source": "FR-022"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1593)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CFR",
+       "value": "1.5423",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "1.328",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 1.328 x 4,243.2 kg, 2 decimals",
+       "value": "5634.97",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1593, class 6.1: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1593, class 6.1: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   },
+   {
+    "line_no": 5,
+    "extracted": {
+     "mention": {
+      "value": "Phosphoric acid 85%",
+      "span": "Phosphoric acid 85%",
+      "verified": true
+     },
+     "english_name": "Phosphoric Acid 85%",
+     "cas": {
+      "value": "7664382",
+      "span": "7664382",
+      "verified": true
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "3",
+      "span": "3",
+      "verified": true
+     },
+     "unit": {
+      "value": "MT",
+      "span": "Qty (MT)",
+      "verified": true
+     },
+     "packaging": {
+      "value": "IBC",
+      "span": "IBC",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "H3PO4",
+     "sku": "QX-H3PO4-TG",
+     "method": "cas",
+     "matched_on": "7664-38-2",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "CAS 7664-38-2 (cas)"
+    },
+    "quantity": {
+     "value": "3000.0000",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "steps": [
+      "3 mt = 3,000 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-H3PO4-TG",
+     "product_name": "Phosphoric Acid 85%, Technical Grade",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "pack_description": "1000 L IBC",
+     "pack_size": "1685.0000",
+     "packs": 2,
+     "requested_qty": "3000.0000",
+     "quoted_qty": "3370.0000",
+     "incoterm": "CFR",
+     "currency": "EUR",
+     "list_unit_usd": "1.7070",
+     "discount_pct": "6.0",
+     "discount_unit_usd": "0.1024",
+     "net_unit_usd": "1.6046",
+     "freight_unit_usd": "0.1264",
+     "dg_unit_usd": "0.0350",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "1.7660",
+     "unit_price": "1.521",
+     "line_total": "5125.77",
+     "price_row_id": "PL-00262",
+     "price_tier": 2,
+     "freight_row_id": "FR-022",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 7,
+     "transit_days": 27,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "HAZMAT-DOCS-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "DG-SURCHARGE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "1000 L IBC, as requested",
+       "value": null,
+       "unit": "",
+       "source": "IBC1000"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "2 x 1000 L IBC (1,685 kg each); requested 3,000 kg",
+       "value": "3370.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "1.7070",
+       "unit": "USD/kg",
+       "source": "PL-00262"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier A (6%), Botlek Chemie BV",
+       "value": "-0.1024",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "1.6046",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CFR Nhava Sheva to Rotterdam: 0.1264 USD/kg",
+       "value": "0.1264",
+       "unit": "USD/kg",
+       "source": "FR-022"
+      },
+      {
+       "rule_id": "DG-SURCHARGE-v1",
+       "label": "Dangerous goods surcharge (UN1805)",
+       "value": "0.0350",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CFR",
+       "value": "1.7660",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "1.521",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 1.521 x 3,370 kg, 2 decimals",
+       "value": "5125.77",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "hazmat_documents",
+       "severity": "warn",
+       "message": "UN1805, class 8: SDS and dangerous goods declaration needed",
+       "rule_id": "HAZMAT-DOCS-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "hazmat_documents",
+      "severity": "warn",
+      "message": "UN1805, class 8: SDS and dangerous goods declaration needed",
+      "rule_id": "HAZMAT-DOCS-v1"
+     }
+    ],
+    "needs_human": false
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "EUR",
+  "total": "63508.30",
+  "valid_until": "2026-10-20",
+  "email": {
+   "subject": "Quotation \u2013 Q-261006-515AE9",
+   "body": "Dear Shankar Saxena,\n\nThank you for your request. Please find below the quotation details for your order:\n\n1. Isopropyl Alcohol, Technical Grade (SKU: QX-IPA-TG)\n   Quantity: 24,366 kg\n   Packing: 31 x 1000 L IBC\n   Unit price: 1.500 EUR/kg\n   Line total: 36,549.00 EUR\n   Lead time: 11 days from order\n\n2. Glacial Acetic Acid, Technical Grade (SKU: QX-GAA-TG)\n   Quantity: 6,294 kg\n   Packing: 6 x 1000 L IBC\n   Unit price: 0.811 EUR/kg\n   Line total: 5,104.43 EUR\n   Lead time: 11 days from order\n\n3. Toluene, Technical Grade (SKU: QX-TOL-TG)\n   Quantity: 12,138 kg\n   Packing: 14 x 1000 L IBC\n   Unit price: 0.914 EUR/kg\n   Line total: 11,094.13 EUR\n   Lead time: 9 days from order\n\n4. Dichloromethane, Technical Grade (SKU: QX-DCM-TG)\n   Quantity: 4,243.2 kg\n   Packing: 16 x 200 L drum\n   Unit price: 1.328 EUR/kg\n   Line total: 5,634.97 EUR\n   Lead time: 13 days from order\n\n5. Phosphoric Acid 85%, Technical Grade (SKU: QX-H3PO4-TG)\n   Quantity: 3,370 kg\n   Packing: 2 x 1000 L IBC\n   Unit price: 1.521 EUR/kg\n   Line total: 5,125.77 EUR\n   Lead time: 7 days from order\n\nTotal of priced lines: 63,508.30 EUR\n\nDelivery terms: CFR Rotterdam\nOffer valid until: 20 October 2026\nPayment terms: Net 30\n\nPlease let us know if you would like to proceed.\n\nKind regards,\nSales desk",
+   "source": "llm",
+   "check": "all 40 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 39.4197
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0006
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0002
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0004
+   },
+   {
+    "stage": "reply",
+    "seconds": 18.9722
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 4783,
+   "cached_tokens": 0,
+   "completion_tokens": 2771,
+   "reasoning_tokens": 1685,
+   "cost_usd": "0.001190025",
+   "seconds": 4.39,
+   "waited_seconds": 54.0,
+   "models": [
+    "openai/gpt-oss-20b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "openai/gpt-oss-20b",
+  "needs_human": false
+ }
+}

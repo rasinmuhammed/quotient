@@ -1,0 +1,753 @@
+{
+ "run": "20261011-084624-qwen_qwen3.8-27b.json",
+ "model": "qwen/qwen3.8-27b",
+ "effort": "none",
+ "draft": {
+  "id": "Q-261008-FE9CCB",
+  "document": {
+   "source_name": "rfq-004.pdf",
+   "format": "pdf",
+   "text": "REQUEST FOR QUOTATION\nRFQ number RC-2026-0412\nDate 08/10/2026\nBuyer Rio Claro Farmac\u00eautica Ltda\nAddress Rodovia Washington Lu\u00eds km 172, Rio Claro - SP, Brazil\nContact Dominik Merkel, Supply Chain\nDelivery terms CIF Santos\nRequired delivery before 15/12/2026\nItem Description Specification Quantity UoM Packing\n1 Paracetamol (Acetaminophen) powder USP 500 kg Fibre drums\n2 Cellulose, microcrystalline Ph. Eur. 2,000 kg -\n3 Magnesium stearate, vegetable origin USP-NF 300 kg -\nSuppliers must provide CoA, TSE/BSE statement and GMP certificate. Prices in USD.",
+   "sender_email": null,
+   "sender_name": null,
+   "subject": null,
+   "received": null
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Rio Claro Farmac\u00eautica Ltda",
+    "span": "Rio Claro Farmac\u00eautica Ltda",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "CIF",
+     "place": "Santos",
+     "span": "CIF Santos",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "BR",
+    "span": "Brazil",
+    "verified": true
+   },
+   "requested_date": {
+    "value": "2026-12-15",
+    "span": "15/12/2026",
+    "verified": true
+   },
+   "currency": {
+    "value": "USD",
+    "span": "USD",
+    "verified": true
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "Paracetamol (Acetaminophen) powder",
+      "span": "Paracetamol (Acetaminophen) powder",
+      "verified": true
+     },
+     "english_name": "Paracetamol",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "500",
+      "span": "500",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "Fibre drums",
+      "span": "Fibre drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Cellulose, microcrystalline",
+      "span": "Cellulose, microcrystalline",
+      "verified": true
+     },
+     "english_name": "Microcrystalline Cellulose",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "Ph. Eur.",
+      "span": "Ph. Eur.",
+      "verified": true
+     },
+     "quantity": {
+      "value": "2000",
+      "span": "2,000",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Magnesium stearate, vegetable origin",
+      "span": "Magnesium stearate, vegetable origin",
+      "verified": true
+     },
+     "english_name": "Magnesium Stearate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP-NF",
+      "span": "USP-NF",
+      "verified": true
+     },
+     "quantity": {
+      "value": "300",
+      "span": "300",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-002",
+    "name": "Rio Claro Farmac\u00eautica Ltda",
+    "method": "company_name",
+    "matched_on": "Rio Claro Farmac\u00eautica Ltda",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "CIF"
+   ],
+   "incoterm": "CIF",
+   "incoterm_source": "document",
+   "destination_country": "BR",
+   "destination_source": "document",
+   "currency": "USD",
+   "currency_source": "document",
+   "requested_date": "2026-12-15",
+   "quote_date": "2026-10-08"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "Paracetamol (Acetaminophen) powder",
+      "span": "Paracetamol (Acetaminophen) powder",
+      "verified": true
+     },
+     "english_name": "Paracetamol",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "500",
+      "span": "500",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "Fibre drums",
+      "span": "Fibre drums",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "APAP",
+     "sku": "QX-APAP-USP",
+     "method": "synonym",
+     "matched_on": "acetaminophen",
+     "score": 100.0,
+     "grade": "pharma_usp",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'acetaminophen' is in the synonym table"
+    },
+    "quantity": {
+     "value": "500.0000",
+     "uom": "kg",
+     "pack_code": "FDRUM25",
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-APAP-USP",
+     "product_name": "Paracetamol, Pharma Grade USP",
+     "uom": "kg",
+     "pack_code": "FDRUM25",
+     "pack_description": "25 kg fibre drum",
+     "pack_size": "25.000",
+     "packs": 20,
+     "requested_qty": "500.0000",
+     "quoted_qty": "500.000",
+     "incoterm": "CIF",
+     "currency": "USD",
+     "list_unit_usd": "17.7670",
+     "discount_pct": "6.0",
+     "discount_unit_usd": "1.0660",
+     "net_unit_usd": "16.7010",
+     "freight_unit_usd": "0.1755",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0.0278",
+     "delivered_unit_usd": "16.9043",
+     "unit_price": "16.904",
+     "line_total": "8452.00",
+     "price_row_id": "PL-00513",
+     "price_tier": 1,
+     "freight_row_id": "FR-043",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 23,
+     "transit_days": 33,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "25 kg fibre drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "FDRUM25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "20 x 25 kg fibre drum (25 kg each); requested 500 kg",
+       "value": "500.000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 1 (0 to <1,000 kg)",
+       "value": "17.7670",
+       "unit": "USD/kg",
+       "source": "PL-00513"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier A (6%), Rio Claro Farmac\u00eautica Ltda",
+       "value": "-1.0660",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "16.7010",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Mundra to Santos: 0.1755 USD/kg",
+       "value": "0.1755",
+       "unit": "USD/kg",
+       "source": "FR-043"
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0278",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "16.9043",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "16.904",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 16.904 x 500 kg, 2 decimals",
+       "value": "8452.00",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "Cellulose, microcrystalline",
+      "span": "Cellulose, microcrystalline",
+      "verified": true
+     },
+     "english_name": "Microcrystalline Cellulose",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "Ph. Eur.",
+      "span": "Ph. Eur.",
+      "verified": true
+     },
+     "quantity": {
+      "value": "2000",
+      "span": "2,000",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "MCC",
+     "sku": "QX-MCC-EP",
+     "method": "synonym",
+     "matched_on": "Cellulose, microcrystalline",
+     "score": 100.0,
+     "grade": "pharma_ep",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'Cellulose, microcrystalline' is in the synonym table"
+    },
+    "quantity": {
+     "value": "2000.0000",
+     "uom": "kg",
+     "pack_code": null,
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-MCC-EP",
+     "product_name": "Microcrystalline Cellulose, Pharma Grade EP",
+     "uom": "kg",
+     "pack_code": "FDRUM25",
+     "pack_description": "25 kg fibre drum",
+     "pack_size": "25.000",
+     "packs": 80,
+     "requested_qty": "2000.0000",
+     "quoted_qty": "2000.000",
+     "incoterm": "CIF",
+     "currency": "USD",
+     "list_unit_usd": "15.2870",
+     "discount_pct": "6.0",
+     "discount_unit_usd": "0.9172",
+     "net_unit_usd": "14.3698",
+     "freight_unit_usd": "0.1542",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0.0240",
+     "delivered_unit_usd": "14.5480",
+     "unit_price": "14.548",
+     "line_total": "29096.00",
+     "price_row_id": "PL-00506",
+     "price_tier": 2,
+     "freight_row_id": "FR-019",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 22,
+     "transit_days": 32,
+     "rules_applied": [
+      "PACK-DEFAULT-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-DEFAULT-v1",
+       "label": "25 kg fibre drum (default pack for this quantity)",
+       "value": null,
+       "unit": "",
+       "source": "FDRUM25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "80 x 25 kg fibre drum (25 kg each); requested 2,000 kg",
+       "value": "2000.000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "15.2870",
+       "unit": "USD/kg",
+       "source": "PL-00506"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier A (6%), Rio Claro Farmac\u00eautica Ltda",
+       "value": "-0.9172",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "14.3698",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Nhava Sheva to Santos: 0.1542 USD/kg",
+       "value": "0.1542",
+       "unit": "USD/kg",
+       "source": "FR-019"
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0240",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "14.5480",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "14.548",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 14.548 x 2,000 kg, 2 decimals",
+       "value": "29096.00",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   },
+   {
+    "line_no": 3,
+    "extracted": {
+     "mention": {
+      "value": "Magnesium stearate, vegetable origin",
+      "span": "Magnesium stearate, vegetable origin",
+      "verified": true
+     },
+     "english_name": "Magnesium Stearate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP-NF",
+      "span": "USP-NF",
+      "verified": true
+     },
+     "quantity": {
+      "value": "300",
+      "span": "300",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "MGST",
+     "sku": "QX-MGST-USP",
+     "method": "synonym",
+     "matched_on": "magnesium stearate",
+     "score": 100.0,
+     "grade": "pharma_usp",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'magnesium stearate' is in the synonym table"
+    },
+    "quantity": {
+     "value": "300.0000",
+     "uom": "kg",
+     "pack_code": null,
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-MGST-USP",
+     "product_name": "Magnesium Stearate, Pharma Grade USP",
+     "uom": "kg",
+     "pack_code": "FDRUM25",
+     "pack_description": "25 kg fibre drum",
+     "pack_size": "25.000",
+     "packs": 12,
+     "requested_qty": "300.0000",
+     "quoted_qty": "300.000",
+     "incoterm": "CIF",
+     "currency": "USD",
+     "list_unit_usd": "11.2620",
+     "discount_pct": "6.0",
+     "discount_unit_usd": "0.6757",
+     "net_unit_usd": "10.5863",
+     "freight_unit_usd": "0.1542",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0.0177",
+     "delivered_unit_usd": "10.7582",
+     "unit_price": "10.758",
+     "line_total": "3227.40",
+     "price_row_id": "PL-00481",
+     "price_tier": 1,
+     "freight_row_id": "FR-019",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 24,
+     "transit_days": 32,
+     "rules_applied": [
+      "PACK-DEFAULT-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-DEFAULT-v1",
+       "label": "25 kg fibre drum (default pack for this quantity)",
+       "value": null,
+       "unit": "",
+       "source": "FDRUM25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "12 x 25 kg fibre drum (25 kg each); requested 300 kg",
+       "value": "300.000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 1 (0 to <1,000 kg)",
+       "value": "11.2620",
+       "unit": "USD/kg",
+       "source": "PL-00481"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier A (6%), Rio Claro Farmac\u00eautica Ltda",
+       "value": "-0.6757",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "10.5863",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Nhava Sheva to Santos: 0.1542 USD/kg",
+       "value": "0.1542",
+       "unit": "USD/kg",
+       "source": "FR-019"
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0177",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "10.7582",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "10.758",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 10.758 x 300 kg, 2 decimals",
+       "value": "3227.40",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "USD",
+  "total": "40775.40",
+  "valid_until": "2026-10-22",
+  "email": {
+   "subject": "Quotation Q-261008-FE9CCB",
+   "body": "Dear Dominik Merkel,\n\nThank you for your request. Please find our quotation Q-261008-FE9CCB for Rio Claro Farmac\u00eautica Ltda below.\n\n1. Paracetamol, Pharma Grade USP (QX-APAP-USP): 500 kg, 20 x 25 kg fibre drum, 16.904 USD/kg, 8,452.00 USD. Lead time: 23 days from order.\n2. Microcrystalline Cellulose, Pharma Grade EP (QX-MCC-EP): 2,000 kg, 80 x 25 kg fibre drum, 14.548 USD/kg, 29,096.00 USD. Lead time: 22 days from order.\n3. Magnesium Stearate, Pharma Grade USP (QX-MGST-USP): 300 kg, 12 x 25 kg fibre drum, 10.758 USD/kg, 3,227.40 USD. Lead time: 24 days from order.\n\nTotal: 40,775.40 USD.\n\nDelivery terms: CIF Santos.\nPayment terms: Net 30.\nThis offer is valid until 22 October 2026.\n\nSales desk\n\nBest regards,\nSales desk",
+   "source": "llm",
+   "check": "all 25 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 32.5902
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0015
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0003
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0004
+   },
+   {
+    "stage": "reply",
+    "seconds": 35.2508
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 3861,
+   "cached_tokens": 0,
+   "completion_tokens": 898,
+   "reasoning_tokens": 0,
+   "cost_usd": "0.0066808",
+   "seconds": 2.84,
+   "waited_seconds": 65.0,
+   "models": [
+    "qwen/qwen3.8-27b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "qwen/qwen3.8-27b",
+  "needs_human": false
+ }
+}

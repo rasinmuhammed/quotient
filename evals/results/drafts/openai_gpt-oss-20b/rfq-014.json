@@ -1,0 +1,655 @@
+{
+ "run": "20261011-083759-openai_gpt-oss-20b.json",
+ "model": "openai/gpt-oss-20b",
+ "effort": "medium",
+ "draft": {
+  "id": "Q-261009-1C64B8",
+  "document": {
+   "source_name": "rfq-014.pdf",
+   "format": "pdf",
+   "text": "Request for Quotation 2026-1187\nCompany Rheinau Kunststoffe GmbH\nPlant Industriestra\u00dfe 12, 67063 Ludwigshafen am Rhein, Germany\nContact Gary Goodwin, Purchasing\nIncoterms 2020 DAP Ludwigshafen\nRequested delivery 2026-12-04\nPos Product Grade Qty Unit Packaging\n1 Polyethylene glycol 400 USP 3 drums steel drums\n2 Sodium bicarbonate technical 4 pallets 25 kg bags\n3 Potassium carbonate technical 2,500 kg big bags",
+   "sender_email": null,
+   "sender_name": null,
+   "subject": null,
+   "received": null
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Company Rheinau Kunststoffe GmbH",
+    "span": "Company Rheinau Kunststoffe GmbH",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "DAP",
+     "place": "Ludwigshafen",
+     "span": "DAP Ludwigshafen",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "DE",
+    "span": "Ludwigshafen",
+    "verified": true
+   },
+   "requested_date": {
+    "value": "2026-12-04",
+    "span": "2026-12-04",
+    "verified": true
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "Polyethylene glycol 400",
+      "span": "Polyethylene glycol 400",
+      "verified": true
+     },
+     "english_name": "Polyethylene Glycol 400",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "3",
+      "span": "3",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": "steel drums",
+      "span": "steel drums",
+      "verified": true
+     },
+     "confidence": 0.9,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Sodium bicarbonate",
+      "span": "Sodium bicarbonate",
+      "verified": true
+     },
+     "english_name": "Sodium Bicarbonate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "4",
+      "span": "4",
+      "verified": true
+     },
+     "unit": {
+      "value": "pallets",
+      "span": "pallets",
+      "verified": true
+     },
+     "packaging": {
+      "value": "25 kg bags",
+      "span": "25 kg bags",
+      "verified": true
+     },
+     "confidence": 0.9,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Potassium carbonate",
+      "span": "Potassium carbonate",
+      "verified": true
+     },
+     "english_name": "Potassium Carbonate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "2500",
+      "span": "2,500",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "big bags",
+      "span": "big bags",
+      "verified": true
+     },
+     "confidence": 0.9,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-026",
+    "name": "Rheinau Kunststoffe GmbH",
+    "method": "company_name",
+    "matched_on": "Company Rheinau Kunststoffe GmbH",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "DAP"
+   ],
+   "incoterm": "DAP",
+   "incoterm_source": "document",
+   "destination_country": "DE",
+   "destination_source": "document",
+   "currency": "EUR",
+   "currency_source": "customer",
+   "requested_date": "2026-12-04",
+   "quote_date": "2026-10-09"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "Polyethylene glycol 400",
+      "span": "Polyethylene glycol 400",
+      "verified": true
+     },
+     "english_name": "Polyethylene Glycol 400",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "3",
+      "span": "3",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": "steel drums",
+      "span": "steel drums",
+      "verified": true
+     },
+     "confidence": 0.9,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "PEG400",
+     "sku": "QX-PEG400-USP",
+     "method": "synonym",
+     "matched_on": "Polyethylene glycol 400",
+     "score": 100.0,
+     "grade": "pharma_usp",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'Polyethylene glycol 400' is in the synonym table"
+    },
+    "quantity": {
+     "value": "676.8000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": [
+      "3 x 200 L drum = 600 L",
+      "600 L x 1.128 kg/L = 676.8 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-PEG400-USP",
+     "product_name": "Polyethylene Glycol 400, Pharma Grade USP",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "225.6000",
+     "packs": 3,
+     "requested_qty": "676.8000",
+     "quoted_qty": "676.8000",
+     "incoterm": "DAP",
+     "currency": "EUR",
+     "list_unit_usd": "4.3230",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.1729",
+     "net_unit_usd": "4.1501",
+     "freight_unit_usd": "0.1756",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "4.3257",
+     "unit_price": "3.724",
+     "line_total": "2520.40",
+     "price_row_id": "PL-00369",
+     "price_tier": 1,
+     "freight_row_id": "FR-008",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 17,
+     "transit_days": 28,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "3 x 200 L drum (225.6 kg each); requested 676.8 kg",
+       "value": "676.8000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 1 (0 to <1,000 kg)",
+       "value": "4.3230",
+       "unit": "USD/kg",
+       "source": "PL-00369"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Rheinau Kunststoffe GmbH",
+       "value": "-0.1729",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "4.1501",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "DAP Nhava Sheva to Hamburg: 0.1756 USD/kg",
+       "value": "0.1756",
+       "unit": "USD/kg",
+       "source": "FR-008"
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered DAP",
+       "value": "4.3257",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "3.724",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 3.724 x 676.8 kg, 2 decimals",
+       "value": "2520.40",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "Sodium bicarbonate",
+      "span": "Sodium bicarbonate",
+      "verified": true
+     },
+     "english_name": "Sodium Bicarbonate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "4",
+      "span": "4",
+      "verified": true
+     },
+     "unit": {
+      "value": "pallets",
+      "span": "pallets",
+      "verified": true
+     },
+     "packaging": {
+      "value": "25 kg bags",
+      "span": "25 kg bags",
+      "verified": true
+     },
+     "confidence": 0.9,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "NAHCO3",
+     "sku": "QX-NAHCO3-TG",
+     "method": "synonym",
+     "matched_on": "Sodium bicarbonate",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'Sodium bicarbonate' is in the synonym table"
+    },
+    "quantity": {
+     "value": null,
+     "uom": "kg",
+     "pack_code": "BAG25",
+     "steps": []
+    },
+    "priced": null,
+    "reading_flags": [
+     {
+      "code": "unit_conversion_impossible",
+      "severity": "block",
+      "message": "unknown unit 'pallets'",
+      "rule_id": "UNIT-CONV-v1"
+     }
+    ],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "unit_conversion_impossible",
+      "severity": "block",
+      "message": "unknown unit 'pallets'",
+      "rule_id": "UNIT-CONV-v1"
+     }
+    ],
+    "needs_human": true
+   },
+   {
+    "line_no": 3,
+    "extracted": {
+     "mention": {
+      "value": "Potassium carbonate",
+      "span": "Potassium carbonate",
+      "verified": true
+     },
+     "english_name": "Potassium Carbonate",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "technical",
+      "span": "technical",
+      "verified": true
+     },
+     "quantity": {
+      "value": "2500",
+      "span": "2,500",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "big bags",
+      "span": "big bags",
+      "verified": true
+     },
+     "confidence": 0.9,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "K2CO3",
+     "sku": "QX-K2CO3-TG",
+     "method": "synonym",
+     "matched_on": "Potassium carbonate",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'Potassium carbonate' is in the synonym table"
+    },
+    "quantity": {
+     "value": "2500.0000",
+     "uom": "kg",
+     "pack_code": "FIBC1000",
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-K2CO3-TG",
+     "product_name": "Potassium Carbonate, Technical Grade",
+     "uom": "kg",
+     "pack_code": "FIBC1000",
+     "pack_description": "1000 kg big bag (FIBC)",
+     "pack_size": "1000.000",
+     "packs": 3,
+     "requested_qty": "2500.0000",
+     "quoted_qty": "3000.000",
+     "incoterm": "DAP",
+     "currency": "EUR",
+     "list_unit_usd": "1.5080",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.0603",
+     "net_unit_usd": "1.4477",
+     "freight_unit_usd": "0.1756",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "1.6233",
+     "unit_price": "1.398",
+     "line_total": "4194.00",
+     "price_row_id": "PL-00462",
+     "price_tier": 2,
+     "freight_row_id": "FR-008",
+     "fx_row_id": "FX-02",
+     "fx_rate": "0.861000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 14,
+     "transit_days": 28,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "1000 kg big bag (FIBC), as requested",
+       "value": null,
+       "unit": "",
+       "source": "FIBC1000"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "3 x 1000 kg big bag (FIBC) (1,000 kg each); requested 2,500 kg",
+       "value": "3000.000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "1.5080",
+       "unit": "USD/kg",
+       "source": "PL-00462"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Rheinau Kunststoffe GmbH",
+       "value": "-0.0603",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "1.4477",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "DAP Nhava Sheva to Hamburg: 0.1756 USD/kg",
+       "value": "0.1756",
+       "unit": "USD/kg",
+       "source": "FR-008"
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered DAP",
+       "value": "1.6233",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 0.861 EUR/USD (snapshot 2026-10-01)",
+       "value": "0.861000",
+       "unit": "EUR/USD",
+       "source": "FX-02"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "1.398",
+       "unit": "EUR/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 1.398 x 3,000 kg, 2 decimals",
+       "value": "4194.00",
+       "unit": "EUR",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "EUR",
+  "total": "6714.40",
+  "valid_until": "2026-10-23",
+  "email": {
+   "subject": "Quotation \u2013 Q-261009-1C64B8 \u2013 Rheinau Kunststoffe GmbH",
+   "body": "Dear Gary Goodwin,\n\nPlease find below the quotation for your requested items:\n\n1. Polyethylene glycol 400 \u2013 Product: Polyethylene Glycol 400, Pharma Grade USP \u2013 SKU: QX-PEG400-USP \u2013 Quantity: 676.8 kg \u2013 Packing: 3 x 200 L drum \u2013 Unit price: 3.724 EUR/kg \u2013 Line total: 2,520.40 EUR \u2013 Lead time: 17 days from order\n\n2. Sodium bicarbonate \u2013 Status: to be confirmed separately \u2013 Reason: please confirm the quantity in kg, litres or tonnes\n\n3. Potassium carbonate \u2013 Product: Potassium Carbonate, Technical Grade \u2013 SKU: QX-K2CO3-TG \u2013 Quantity: 3,000 kg \u2013 Packing: 3 x 1000 kg big bag (FIBC) \u2013 Unit price: 1.398 EUR/kg \u2013 Line total: 4,194.00 EUR \u2013 Lead time: 14 days from order\n\nTotal of priced lines: 6,714.40 EUR\n\nDelivery terms: DAP Ludwigshafen\nOffer valid until: 23 October 2026\nPayment terms: Net 30\n\nIf you have any questions, please let us know.\n\nBest regards,\nSales desk",
+   "source": "llm",
+   "check": "all 21 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 36.8339
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0006
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0002
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0002
+   },
+   {
+    "stage": "reply",
+    "seconds": 1.6141
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 4502,
+   "cached_tokens": 3584,
+   "completion_tokens": 2457,
+   "reasoning_tokens": 1734,
+   "cost_usd": "0.00094035",
+   "seconds": 3.448,
+   "waited_seconds": 35.0,
+   "models": [
+    "openai/gpt-oss-20b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "openai/gpt-oss-20b",
+  "needs_human": true
+ }
+}

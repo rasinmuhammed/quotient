@@ -1,0 +1,771 @@
+{
+ "run": "20261011-084624-qwen_qwen3.8-27b.json",
+ "model": "qwen/qwen3.8-27b",
+ "effort": "none",
+ "draft": {
+  "id": "Q-261006-45B4E3",
+  "document": {
+   "source_name": "rfq-019.pdf",
+   "format": "pdf",
+   "text": "COPPERLINE COATINGS INC - REQUEST FOR QUOTE\nCopperline Coatings Inc, 4100 Westinghouse Blvd, Charlotte NC 28273,\nShip to USA\nTerms CIF New York\nBuyer Callum Knox\nItem Description Qty UOM Notes\nA Lumira RT-92 10,000 kg 25 kg bags\nB Aminex T99 4 drums\nC Stearona TP 2,000 kg",
+   "sender_email": null,
+   "sender_name": null,
+   "subject": null,
+   "received": null
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Copperline Coatings Inc",
+    "span": "Copperline Coatings Inc",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "CIF",
+     "place": "New York",
+     "span": "CIF New York",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "US",
+    "span": "USA",
+    "verified": true
+   },
+   "requested_date": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "Lumira RT-92",
+      "span": "Lumira RT-92",
+      "verified": true
+     },
+     "english_name": "Titanium Dioxide (Rutile)",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "10000",
+      "span": "10,000",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "25 kg bags",
+      "span": "25 kg bags",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Aminex T99",
+      "span": "Aminex T99",
+      "verified": true
+     },
+     "english_name": "Triethanolamine",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "4",
+      "span": "4",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Stearona TP",
+      "span": "Stearona TP",
+      "verified": true
+     },
+     "english_name": "Stearic Acid",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "2000",
+      "span": "2,000",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-028",
+    "name": "Copperline Coatings Inc",
+    "method": "company_name",
+    "matched_on": "Copperline Coatings Inc",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "CIF"
+   ],
+   "incoterm": "CIF",
+   "incoterm_source": "document",
+   "destination_country": "US",
+   "destination_source": "document",
+   "currency": "USD",
+   "currency_source": "customer",
+   "requested_date": null,
+   "quote_date": "2026-10-06"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "Lumira RT-92",
+      "span": "Lumira RT-92",
+      "verified": true
+     },
+     "english_name": "Titanium Dioxide (Rutile)",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "10000",
+      "span": "10,000",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": "25 kg bags",
+      "span": "25 kg bags",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "TIO2",
+     "sku": "QX-TIO2-TG",
+     "method": "synonym",
+     "matched_on": "Lumira RT-92",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "only_grade",
+     "candidates": [],
+     "explanation": "'Lumira RT-92' is in the synonym table"
+    },
+    "quantity": {
+     "value": "10000.0000",
+     "uom": "kg",
+     "pack_code": "BAG25",
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-TIO2-TG",
+     "product_name": "Titanium Dioxide (Rutile), Technical Grade",
+     "uom": "kg",
+     "pack_code": "BAG25",
+     "pack_description": "25 kg bag",
+     "pack_size": "25.000",
+     "packs": 400,
+     "requested_qty": "10000.0000",
+     "quoted_qty": "10000.000",
+     "incoterm": "CIF",
+     "currency": "USD",
+     "list_unit_usd": "3.9940",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.1598",
+     "net_unit_usd": "3.8342",
+     "freight_unit_usd": "0.1709",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0.0066",
+     "delivered_unit_usd": "4.0117",
+     "unit_price": "4.012",
+     "line_total": "40120.00",
+     "price_row_id": "PL-00427",
+     "price_tier": 3,
+     "freight_row_id": "FR-003",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 8,
+     "transit_days": 36,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "25 kg bag, as requested",
+       "value": null,
+       "unit": "",
+       "source": "BAG25"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "400 x 25 kg bag (25 kg each); requested 10,000 kg",
+       "value": "10000.000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 3 (5,000 to <20,000 kg)",
+       "value": "3.9940",
+       "unit": "USD/kg",
+       "source": "PL-00427"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Copperline Coatings Inc",
+       "value": "-0.1598",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "3.8342",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Nhava Sheva to Houston: 0.1709 USD/kg",
+       "value": "0.1709",
+       "unit": "USD/kg",
+       "source": "FR-003"
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0066",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "4.0117",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "4.012",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 4.012 x 10,000 kg, 2 decimals",
+       "value": "40120.00",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "Aminex T99",
+      "span": "Aminex T99",
+      "verified": true
+     },
+     "english_name": "Triethanolamine",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "4",
+      "span": "4",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "TEA",
+     "sku": "QX-TEA-TG",
+     "method": "synonym",
+     "matched_on": "Aminex T99",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "only_grade",
+     "candidates": [],
+     "explanation": "'Aminex T99' is in the synonym table"
+    },
+    "quantity": {
+     "value": "899.2000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": [
+      "4 x 200 L drum = 800 L",
+      "800 L x 1.124 kg/L = 899.2 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-TEA-TG",
+     "product_name": "Triethanolamine, Technical Grade",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "224.8000",
+     "packs": 4,
+     "requested_qty": "899.2000",
+     "quoted_qty": "899.2000",
+     "incoterm": "CIF",
+     "currency": "USD",
+     "list_unit_usd": "3.0240",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.1210",
+     "net_unit_usd": "2.9030",
+     "freight_unit_usd": "0.1890",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0.0051",
+     "delivered_unit_usd": "3.0971",
+     "unit_price": "3.097",
+     "line_total": "2784.82",
+     "price_row_id": "PL-00273",
+     "price_tier": 1,
+     "freight_row_id": "FR-027",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 14,
+     "transit_days": 37,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "MOQ-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "4 x 200 L drum (224.8 kg each); requested 899.2 kg",
+       "value": "899.2000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 1 (0 to <1,000 kg)",
+       "value": "3.0240",
+       "unit": "USD/kg",
+       "source": "PL-00273"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Copperline Coatings Inc",
+       "value": "-0.1210",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "2.9030",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Mundra to Houston: 0.189 USD/kg",
+       "value": "0.1890",
+       "unit": "USD/kg",
+       "source": "FR-027"
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0051",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "3.0971",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "3.097",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 3.097 x 899.2 kg, 2 decimals",
+       "value": "2784.82",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": [
+      {
+       "code": "below_moq",
+       "severity": "block",
+       "message": "quoted 899.2 kg is below the MOQ of 2,000 kg; priced as asked",
+       "rule_id": "MOQ-v1"
+      }
+     ]
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "below_moq",
+      "severity": "block",
+      "message": "quoted 899.2 kg is below the MOQ of 2,000 kg; priced as asked",
+      "rule_id": "MOQ-v1"
+     }
+    ],
+    "needs_human": true
+   },
+   {
+    "line_no": 3,
+    "extracted": {
+     "mention": {
+      "value": "Stearona TP",
+      "span": "Stearona TP",
+      "verified": true
+     },
+     "english_name": "Stearic Acid",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "quantity": {
+      "value": "2000",
+      "span": "2,000",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "STEA",
+     "sku": "QX-STEA-TG",
+     "method": "synonym",
+     "matched_on": "Stearona TP",
+     "score": 100.0,
+     "grade": "technical",
+     "grade_source": "only_grade",
+     "candidates": [],
+     "explanation": "'Stearona TP' is in the synonym table"
+    },
+    "quantity": {
+     "value": "2000.0000",
+     "uom": "kg",
+     "pack_code": null,
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-STEA-TG",
+     "product_name": "Stearic Acid, Technical Grade",
+     "uom": "kg",
+     "pack_code": "FIBC1000",
+     "pack_description": "1000 kg big bag (FIBC)",
+     "pack_size": "1000.000",
+     "packs": 2,
+     "requested_qty": "2000.0000",
+     "quoted_qty": "2000.000",
+     "incoterm": "CIF",
+     "currency": "USD",
+     "list_unit_usd": "1.7640",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.0706",
+     "net_unit_usd": "1.6934",
+     "freight_unit_usd": "0.1890",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0.0031",
+     "delivered_unit_usd": "1.8855",
+     "unit_price": "1.886",
+     "line_total": "3772.00",
+     "price_row_id": "PL-00454",
+     "price_tier": 2,
+     "freight_row_id": "FR-027",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 12,
+     "transit_days": 37,
+     "rules_applied": [
+      "PACK-DEFAULT-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-DEFAULT-v1",
+       "label": "1000 kg big bag (FIBC) (default pack for this quantity)",
+       "value": null,
+       "unit": "",
+       "source": "FIBC1000"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "2 x 1000 kg big bag (FIBC) (1,000 kg each); requested 2,000 kg",
+       "value": "2000.000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "1.7640",
+       "unit": "USD/kg",
+       "source": "PL-00454"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Copperline Coatings Inc",
+       "value": "-0.0706",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "1.6934",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Mundra to Houston: 0.189 USD/kg",
+       "value": "0.1890",
+       "unit": "USD/kg",
+       "source": "FR-027"
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0031",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "1.8855",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "1.886",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 1.886 x 2,000 kg, 2 decimals",
+       "value": "3772.00",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "USD",
+  "total": "46676.82",
+  "valid_until": "2026-10-20",
+  "email": {
+   "subject": "Quotation Q-261006-45B4E3",
+   "body": "Dear Callum Knox,\n\nThank you for your request for quotation. Please find our offer below, reference Q-261006-45B4E3.\n\n1. Lumira RT-92 (Titanium Dioxide (Rutile), Technical Grade), SKU QX-TIO2-TG: 10,000 kg in 400 x 25 kg bag. Price: 4.012 USD/kg. Line total: 40,120.00 USD. Lead time: 8 days from order.\n\n2. Aminex T99 (Triethanolamine, Technical Grade): This line will be confirmed separately. The quantity is below our minimum order; we will come back with options.\n\n3. Stearona TP (Stearic Acid, Technical Grade), SKU QX-STEA-TG: 2,000 kg in 2 x 1000 kg big bag (FIBC). Price: 1.886 USD/kg. Line total: 3,772.00 USD. Lead time: 12 days from order.\n\nTotal of priced lines: 43,892.00 USD.\n\nDelivery terms: CIF New York.\nPayment terms: Net 30.\nOffer valid until: 20 October 2026.\n\nSales desk\nCopperline Coatings Inc",
+   "source": "llm",
+   "check": "all 19 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 33.6145
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0025
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0007
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0008
+   },
+   {
+    "stage": "reply",
+    "seconds": 29.1515
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 3721,
+   "cached_tokens": 0,
+   "completion_tokens": 841,
+   "reasoning_tokens": 0,
+   "cost_usd": "0.0063408",
+   "seconds": 2.764,
+   "waited_seconds": 60.0,
+   "models": [
+    "qwen/qwen3.8-27b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "qwen/qwen3.8-27b",
+  "needs_human": true
+ }
+}

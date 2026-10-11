@@ -16,6 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from evals.run import rescore  # noqa: E402
 from quotient.llm import PRICES  # noqa: E402
 
 RESULTS = ROOT / "evals" / "results"
@@ -36,7 +37,7 @@ def latest(model: str | None, oracle: bool = False) -> dict | None:
     for path in sorted(RESULTS.glob("*.json"), reverse=True):
         r = json.loads(path.read_text())
         if r["run"]["oracle"] == oracle and (oracle or r["run"]["model"] == model) and r["run"]["rfqs"] == 30:
-            return {**r, "file": path.name}
+            return {**rescore(r), "file": path.name}
     return None
 
 

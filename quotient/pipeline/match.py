@@ -87,11 +87,14 @@ class NameIndex:
 
 def _by_name(texts: list[tuple[str, str]], idx: NameIndex) -> tuple[str, str, str] | list[str] | None:
     """(code, via, matched name) for an exact or whole-word synonym hit; a list of codes when the longest hits
-    disagree; None when nothing is found."""
+    disagree; None when nothing is found. The reader's English name is a bare chemical name, so it must equal a
+    catalog name: one inside it names a different substance ("ethylene glycol ethyl ether acetate")."""
     for via, text in texts:
         k = key(text)
         if k in idx.names:
             return idx.names[k], via, text
+        if via == "english_name":
+            continue
         hits = idx.contained(k)
         if hits:
             longest = len(hits[0][0])

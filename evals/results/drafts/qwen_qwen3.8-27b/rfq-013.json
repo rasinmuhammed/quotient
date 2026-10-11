@@ -1,0 +1,452 @@
+{
+ "run": "20261011-084624-qwen_qwen3.8-27b.json",
+ "model": "qwen/qwen3.8-27b",
+ "effort": "none",
+ "draft": {
+  "id": "Q-261011-9291DF",
+  "document": {
+   "source_name": "rfq-013.eml",
+   "format": "eml",
+   "text": "From: Harm Schmid <harm.schmid@kawabekasei.co.jp>\nSubject: Price inquiry NMP / DMSO\nDate: Sun, 11 Oct 2026 09:30:00 +0530\n\nDear Sales Team,\n\nCould you please send your best price and lead time for:\n\n- N-Methyl-2-pyrrolidone (NMP), reagent grade, in 25 L cans\n- DMSO, USP grade, 1,000 kg\n\nFor the NMP we are still finalising our forecast, so an indicative price is fine for now.\nDelivery CIF Yokohama.\n\nBest regards,\nHarm Schmid\nKawabe Kasei Co., Ltd",
+   "sender_email": "harm.schmid@kawabekasei.co.jp",
+   "sender_name": "Harm Schmid",
+   "subject": "Price inquiry NMP / DMSO",
+   "received": "2026-10-11"
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Kawabe Kasei Co., Ltd",
+    "span": "Kawabe Kasei Co., Ltd",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "CIF",
+     "place": "Yokohama",
+     "span": "CIF Yokohama",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "JP",
+    "span": "Yokohama",
+    "verified": true
+   },
+   "requested_date": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "currency": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "N-Methyl-2-pyrrolidone (NMP)",
+      "span": "N-Methyl-2-pyrrolidone (NMP)",
+      "verified": true
+     },
+     "english_name": "N-Methyl-2-Pyrrolidone",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "reagent",
+      "span": "reagent grade",
+      "verified": true
+     },
+     "quantity": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "unit": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "packaging": {
+      "value": "25 L cans",
+      "span": "25 L cans",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "DMSO",
+      "span": "DMSO",
+      "verified": true
+     },
+     "english_name": "Dimethyl Sulfoxide",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP grade",
+      "verified": true
+     },
+     "quantity": {
+      "value": "1000",
+      "span": "1,000 kg",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-019",
+    "name": "Kawabe Kasei Co., Ltd",
+    "method": "email_domain",
+    "matched_on": "harm.schmid@kawabekasei.co.jp",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "CIF"
+   ],
+   "incoterm": "CIF",
+   "incoterm_source": "document",
+   "destination_country": "JP",
+   "destination_source": "document",
+   "currency": "JPY",
+   "currency_source": "customer",
+   "requested_date": null,
+   "quote_date": "2026-10-11"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "N-Methyl-2-pyrrolidone (NMP)",
+      "span": "N-Methyl-2-pyrrolidone (NMP)",
+      "verified": true
+     },
+     "english_name": "N-Methyl-2-Pyrrolidone",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "reagent",
+      "span": "reagent grade",
+      "verified": true
+     },
+     "quantity": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "unit": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "packaging": {
+      "value": "25 L cans",
+      "span": "25 L cans",
+      "verified": true
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "NMP",
+     "sku": "QX-NMP-AR",
+     "method": "synonym",
+     "matched_on": "n methyl 2 pyrrolidone",
+     "score": 100.0,
+     "grade": "reagent",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'n methyl 2 pyrrolidone' is in the synonym table"
+    },
+    "quantity": {
+     "value": null,
+     "uom": "L",
+     "pack_code": null,
+     "steps": []
+    },
+    "priced": null,
+    "reading_flags": [
+     {
+      "code": "quantity_missing",
+      "severity": "block",
+      "message": "the RFQ gives no quantity for this line",
+      "rule_id": "UNIT-CONV-v1"
+     }
+    ],
+    "edited": false,
+    "approved": false,
+    "flags": [
+     {
+      "code": "quantity_missing",
+      "severity": "block",
+      "message": "the RFQ gives no quantity for this line",
+      "rule_id": "UNIT-CONV-v1"
+     }
+    ],
+    "needs_human": true
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "DMSO",
+      "span": "DMSO",
+      "verified": true
+     },
+     "english_name": "Dimethyl Sulfoxide",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP grade",
+      "verified": true
+     },
+     "quantity": {
+      "value": "1000",
+      "span": "1,000 kg",
+      "verified": true
+     },
+     "unit": {
+      "value": "kg",
+      "span": "kg",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "DMSO",
+     "sku": "QX-DMSO-USP",
+     "method": "synonym",
+     "matched_on": "DMSO",
+     "score": 100.0,
+     "grade": "pharma_usp",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'DMSO' is in the synonym table"
+    },
+    "quantity": {
+     "value": "1000.0000",
+     "uom": "kg",
+     "pack_code": null,
+     "steps": []
+    },
+    "priced": {
+     "sku": "QX-DMSO-USP",
+     "product_name": "Dimethyl Sulfoxide, Pharma Grade USP",
+     "uom": "kg",
+     "pack_code": "IBC1000",
+     "pack_description": "1000 L IBC",
+     "pack_size": "1100.0000",
+     "packs": 1,
+     "requested_qty": "1000.0000",
+     "quoted_qty": "1100.0000",
+     "incoterm": "CIF",
+     "currency": "JPY",
+     "list_unit_usd": "7.8990",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.3160",
+     "net_unit_usd": "7.5830",
+     "freight_unit_usd": "0.1468",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0.0128",
+     "delivered_unit_usd": "7.7426",
+     "unit_price": "1139.7",
+     "line_total": "1253670",
+     "price_row_id": "PL-00222",
+     "price_tier": 2,
+     "freight_row_id": "FR-039",
+     "fx_row_id": "FX-04",
+     "fx_rate": "147.200000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 22,
+     "transit_days": 21,
+     "rules_applied": [
+      "PACK-DEFAULT-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "CIF-INSURANCE-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-DEFAULT-v1",
+       "label": "1000 L IBC (default pack for this quantity)",
+       "value": null,
+       "unit": "",
+       "source": "IBC1000"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "1 x 1000 L IBC (1,100 kg each); requested 1,000 kg",
+       "value": "1100.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "7.8990",
+       "unit": "USD/kg",
+       "source": "PL-00222"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Kawabe Kasei Co., Ltd",
+       "value": "-0.3160",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "7.5830",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CIF Mundra to Yokohama: 0.1468 USD/kg",
+       "value": "0.1468",
+       "unit": "USD/kg",
+       "source": "FR-039"
+      },
+      {
+       "rule_id": "CIF-INSURANCE-v1",
+       "label": "Insurance on 110% of CFR value at 0.15%",
+       "value": "0.0128",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CIF",
+       "value": "7.7426",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FX-v1",
+       "label": "x 147.2 JPY/USD (snapshot 2026-10-01)",
+       "value": "147.200000",
+       "unit": "JPY/USD",
+       "source": "FX-04"
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 1 decimals",
+       "value": "1139.7",
+       "unit": "JPY/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 1,139.7 x 1,100 kg, 0 decimals",
+       "value": "1253670",
+       "unit": "JPY",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "JPY",
+  "total": "1253670",
+  "valid_until": "2026-10-25",
+  "email": {
+   "subject": "Quotation Q-261011-9291DF: Price inquiry NMP / DMSO",
+   "body": "Dear Harm Schmid,\n\nThank you for your inquiry regarding NMP and DMSO.\n\nPlease find our quotation below:\n\n1. N-Methyl-2-pyrrolidone (NMP)\nThis line is to be confirmed separately. Please confirm the quantity.\n\n2. Dimethyl Sulfoxide, Pharma Grade USP\nQuantity: 1,100 kg\nPacking: 1 x 1000 L IBC\nUnit price: 1,140 JPY/kg\nLine total: 1,253,670 JPY\nLead time: 22 days from order\n\nTotal of priced lines: 1,253,670 JPY\n\nDelivery terms: CIF Yokohama\nCurrency: JPY\nOffer valid until: 25 October 2026\nPayment terms: Net 60\n\nOur reference: Q-261011-9291DF\n\nSales desk\n\nKawabe Kasei Co., Ltd\nHarm Schmid\nPrice inquiry NMP / DMSO\nQ-261011-9291DF\nCIF Yokohama\nJPY\nN-Methyl-2-pyrrolidone (NMP)\nDimethyl Sulfoxide, Pharma Grade USP\nQX-DMSO-USP\n1,100 kg\n1 x 1000 L IBC\n1,140 JPY/kg\n1,253,670 JPY\n22 days from order\n1,253,670 JPY\n25 October 2026\nNet 60\nSales desk\nKawabe Kasei Co., Ltd\nHarm Schmid\nPrice inquiry NMP / DMSO\nQ-261011-9291DF\nCIF Yokohama\nJPY\nN-Methyl-2-pyrrolidone (NMP)\nDimethyl Sulfoxide, Pharma Grade USP\nQX-DMS",
+   "source": "llm",
+   "check": "all 22 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 35.7007
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0007
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0001
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0001
+   },
+   {
+    "stage": "reply",
+    "seconds": 24.3982
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 3649,
+   "cached_tokens": 0,
+   "completion_tokens": 885,
+   "reasoning_tokens": 0,
+   "cost_usd": "0.0064592",
+   "seconds": 3.098,
+   "waited_seconds": 57.0,
+   "models": [
+    "qwen/qwen3.8-27b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "qwen/qwen3.8-27b",
+  "needs_human": true
+ }
+}

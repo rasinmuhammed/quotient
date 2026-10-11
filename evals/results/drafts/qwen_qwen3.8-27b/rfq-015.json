@@ -1,0 +1,534 @@
+{
+ "run": "20261011-084624-qwen_qwen3.8-27b.json",
+ "model": "qwen/qwen3.8-27b",
+ "effort": "none",
+ "draft": {
+  "id": "Q-261007-AA0427",
+  "document": {
+   "source_name": "rfq-015.eml",
+   "format": "eml",
+   "text": "From: Dewi Pagano <dewi.pagano@valeverdefarmaceutica.com.br>\nSubject: Cota\u00e7\u00e3o / quotation - MPG USP and glycerine EP\nDate: Wed, 07 Oct 2026 09:30:00 +0530\n\nPrezados,\n\nKindly send us your quotation for:\n\n- MPG USP: 20 drums\n- Glycerine EP 99.5%: 10 drums\n\nCFR Santos. This time please quote in US dollars, not in reais.\n\nAtenciosamente,\nDewi Pagano\nCompras - Vale Verde Farmac\u00eautica Ltda\nCampinas, SP",
+   "sender_email": "dewi.pagano@valeverdefarmaceutica.com.br",
+   "sender_name": "Dewi Pagano",
+   "subject": "Cota\u00e7\u00e3o / quotation - MPG USP and glycerine EP",
+   "received": "2026-10-07"
+  },
+  "extraction": {
+   "buyer_company": {
+    "value": "Vale Verde Farmac\u00eautica Ltda",
+    "span": "Vale Verde Farmac\u00eautica Ltda",
+    "verified": true
+   },
+   "incoterms": [
+    {
+     "term": "CFR",
+     "place": "Santos",
+     "span": "CFR Santos",
+     "verified": true
+    }
+   ],
+   "destination_country": {
+    "value": "BR",
+    "span": "Santos",
+    "verified": true
+   },
+   "requested_date": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "currency": {
+    "value": "USD",
+    "span": "US dollars",
+    "verified": true
+   },
+   "document_grade": {
+    "value": null,
+    "span": null,
+    "verified": false
+   },
+   "lines": [
+    {
+     "mention": {
+      "value": "MPG USP",
+      "span": "MPG USP",
+      "verified": true
+     },
+     "english_name": "Propylene Glycol",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "20",
+      "span": "20",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    {
+     "mention": {
+      "value": "Glycerine EP 99.5%",
+      "span": "Glycerine EP 99.5%",
+      "verified": true
+     },
+     "english_name": "Glycerine",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "EP",
+      "span": "EP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "10",
+      "span": "10",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    }
+   ]
+  },
+  "header": {
+   "customer": {
+    "customer_id": "C-004",
+    "name": "Vale Verde Farmac\u00eautica Ltda",
+    "method": "email_domain",
+    "matched_on": "dewi.pagano@valeverdefarmaceutica.com.br",
+    "score": 100.0
+   },
+   "incoterms_mentioned": [
+    "CFR"
+   ],
+   "incoterm": "CFR",
+   "incoterm_source": "document",
+   "destination_country": "BR",
+   "destination_source": "document",
+   "currency": "USD",
+   "currency_source": "document",
+   "requested_date": null,
+   "quote_date": "2026-10-07"
+  },
+  "lines": [
+   {
+    "line_no": 1,
+    "extracted": {
+     "mention": {
+      "value": "MPG USP",
+      "span": "MPG USP",
+      "verified": true
+     },
+     "english_name": "Propylene Glycol",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "USP",
+      "span": "USP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "20",
+      "span": "20",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "MPG",
+     "sku": "QX-MPG-USP",
+     "method": "synonym",
+     "matched_on": "mpg",
+     "score": 100.0,
+     "grade": "pharma_usp",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'mpg' is in the synonym table"
+    },
+    "quantity": {
+     "value": "4144.0000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": [
+      "20 x 200 L drum = 4,000 L",
+      "4,000 L x 1.036 kg/L = 4,144 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-MPG-USP",
+     "product_name": "Propylene Glycol, Pharma Grade USP",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "207.2000",
+     "packs": 20,
+     "requested_qty": "4144.0000",
+     "quoted_qty": "4144.0000",
+     "incoterm": "CFR",
+     "currency": "USD",
+     "list_unit_usd": "3.8820",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.1553",
+     "net_unit_usd": "3.7267",
+     "freight_unit_usd": "0.1542",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "3.8809",
+     "unit_price": "3.881",
+     "line_total": "16082.86",
+     "price_row_id": "PL-00114",
+     "price_tier": 2,
+     "freight_row_id": "FR-018",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 16,
+     "transit_days": 32,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "20 x 200 L drum (207.2 kg each); requested 4,144 kg",
+       "value": "4144.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "3.8820",
+       "unit": "USD/kg",
+       "source": "PL-00114"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Vale Verde Farmac\u00eautica Ltda",
+       "value": "-0.1553",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "3.7267",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CFR Nhava Sheva to Santos: 0.1542 USD/kg",
+       "value": "0.1542",
+       "unit": "USD/kg",
+       "source": "FR-018"
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CFR",
+       "value": "3.8809",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "3.881",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 3.881 x 4,144 kg, 2 decimals",
+       "value": "16082.86",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   },
+   {
+    "line_no": 2,
+    "extracted": {
+     "mention": {
+      "value": "Glycerine EP 99.5%",
+      "span": "Glycerine EP 99.5%",
+      "verified": true
+     },
+     "english_name": "Glycerine",
+     "cas": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "grade": {
+      "value": "EP",
+      "span": "EP",
+      "verified": true
+     },
+     "quantity": {
+      "value": "10",
+      "span": "10",
+      "verified": true
+     },
+     "unit": {
+      "value": "drums",
+      "span": "drums",
+      "verified": true
+     },
+     "packaging": {
+      "value": null,
+      "span": null,
+      "verified": false
+     },
+     "confidence": 0.95,
+     "note": null
+    },
+    "match": {
+     "chemical_code": "GLY",
+     "sku": "QX-GLY-EP",
+     "method": "synonym",
+     "matched_on": "glycerine",
+     "score": 100.0,
+     "grade": "pharma_ep",
+     "grade_source": "line",
+     "candidates": [],
+     "explanation": "'glycerine' is in the synonym table"
+    },
+    "quantity": {
+     "value": "2522.0000",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "steps": [
+      "10 x 200 L drum = 2,000 L",
+      "2,000 L x 1.261 kg/L = 2,522 kg"
+     ]
+    },
+    "priced": {
+     "sku": "QX-GLY-EP",
+     "product_name": "Glycerine, Pharma Grade EP",
+     "uom": "kg",
+     "pack_code": "DRUM200",
+     "pack_description": "200 L drum",
+     "pack_size": "252.2000",
+     "packs": 10,
+     "requested_qty": "2522.0000",
+     "quoted_qty": "2522.0000",
+     "incoterm": "CFR",
+     "currency": "USD",
+     "list_unit_usd": "2.5180",
+     "discount_pct": "4.0",
+     "discount_unit_usd": "0.1007",
+     "net_unit_usd": "2.4173",
+     "freight_unit_usd": "0.1755",
+     "dg_unit_usd": "0",
+     "insurance_unit_usd": "0",
+     "delivered_unit_usd": "2.5928",
+     "unit_price": "2.593",
+     "line_total": "6539.55",
+     "price_row_id": "PL-00154",
+     "price_tier": 2,
+     "freight_row_id": "FR-042",
+     "fx_row_id": "FX-01",
+     "fx_rate": "1.000000",
+     "fx_snapshot_date": "2026-10-01",
+     "lead_time_days": 18,
+     "transit_days": 33,
+     "rules_applied": [
+      "PACK-OFFERED-v1",
+      "PACK-ROUNDUP-v1",
+      "PRICE-TIER-v1",
+      "DISC-TIER-v1",
+      "FREIGHT-v1",
+      "FX-v1",
+      "ROUND-v1"
+     ],
+     "steps": [
+      {
+       "rule_id": "PACK-OFFERED-v1",
+       "label": "200 L drum, as requested",
+       "value": null,
+       "unit": "",
+       "source": "DRUM200"
+      },
+      {
+       "rule_id": "PACK-ROUNDUP-v1",
+       "label": "10 x 200 L drum (252.2 kg each); requested 2,522 kg",
+       "value": "2522.0000",
+       "unit": "kg",
+       "source": null
+      },
+      {
+       "rule_id": "PRICE-TIER-v1",
+       "label": "List price, tier 2 (1,000 to <5,000 kg)",
+       "value": "2.5180",
+       "unit": "USD/kg",
+       "source": "PL-00154"
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Discount tier B (4%), Vale Verde Farmac\u00eautica Ltda",
+       "value": "-0.1007",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "DISC-TIER-v1",
+       "label": "Net price",
+       "value": "2.4173",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "CFR Mundra to Santos: 0.1755 USD/kg",
+       "value": "0.1755",
+       "unit": "USD/kg",
+       "source": "FR-042"
+      },
+      {
+       "rule_id": "FREIGHT-v1",
+       "label": "Delivered CFR",
+       "value": "2.5928",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Unit price, 3 decimals",
+       "value": "2.593",
+       "unit": "USD/kg",
+       "source": null
+      },
+      {
+       "rule_id": "ROUND-v1",
+       "label": "Line total: 2.593 x 2,522 kg, 2 decimals",
+       "value": "6539.55",
+       "unit": "USD",
+       "source": null
+      }
+     ],
+     "flags": []
+    },
+    "reading_flags": [],
+    "edited": false,
+    "approved": false,
+    "flags": [],
+    "needs_human": false
+   }
+  ],
+  "quote_flags": [],
+  "header_approved": false,
+  "currency": "USD",
+  "total": "22622.41",
+  "valid_until": "2026-10-21",
+  "email": {
+   "subject": "Quotation Q-261007-AA0427 - MPG USP and glycerine EP",
+   "body": "Dear Dewi Pagano,\n\nThank you for your request for quotation regarding MPG USP and glycerine EP.\n\nPlease find our offer below, reference Q-261007-AA0427:\n\n1. Propylene Glycol, Pharma Grade USP (QX-MPG-USP)\nQuantity: 4,144 kg\nPacking: 20 x 200 L drum\nUnit price: 3.881 USD/kg\nLine total: 16,082.86 USD\nLead time: 16 days from order\n\n2. Glycerine, Pharma Grade EP (QX-GLY-EP)\nQuantity: 2,522 kg\nPacking: 10 x 200 L drum\nUnit price: 2.593 USD/kg\nLine total: 6,539.55 USD\nLead time: 18 days from order\n\nTotal: 22,622.41 USD\n\nDelivery terms: CFR Santos\nCurrency: USD\nPayment terms: Net 90\nOffer valid until: 21 October 2026\n\nSales desk",
+   "source": "llm",
+   "check": "all 18 numbers occur in the quote data; every price is present"
+  },
+  "timings": [
+   {
+    "stage": "extract",
+    "seconds": 14.2087
+   },
+   {
+    "stage": "match",
+    "seconds": 0.0009
+   },
+   {
+    "stage": "normalise",
+    "seconds": 0.0001
+   },
+   {
+    "stage": "price",
+    "seconds": 0.0002
+   },
+   {
+    "stage": "reply",
+    "seconds": 22.0062
+   }
+  ],
+  "llm": {
+   "calls": 2,
+   "prompt_tokens": 3700,
+   "cached_tokens": 0,
+   "completion_tokens": 672,
+   "reasoning_tokens": 0,
+   "cost_usd": "0.0056480",
+   "seconds": 2.214,
+   "waited_seconds": 34.0,
+   "models": [
+    "qwen/qwen3.8-27b"
+   ]
+  },
+  "rules_version": "2026.10.2",
+  "data_version": "38262f49184a",
+  "model": "qwen/qwen3.8-27b",
+  "needs_human": false
+ }
+}
